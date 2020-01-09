@@ -1,0 +1,320 @@
+<resources>
+    <string name="app_name">Consultoras</string>
+
+    <string name="button_aceptar">Aceptar</string>
+    <string name="button_agregar">Agregar</string>
+    <string name="button_acepto">Acepto</string>
+    <string name="button_entendido">Entendido</string>
+    <string name="button_cancelar">Cancelar</string>
+    <string name="button_reintentar">Reintentar</string>
+    <string name="button_omitir">Omitir</string>
+    <string name="button_continuar">Continuar</string>
+
+    <string name="button_eliminar">Sí. eliminar todo</string>
+    <string name="ganaMasTutorial">Gana+</string>
+    <string name="ofertasDigitalesTutorial">Ofertas Digitales</string>
+
+    <string name="connection_title">Internet</string>
+    <string name="connection_offline">No hay conexión a internet</string>
+    <string name="connection_reconnect">Reconectando…</string>
+    <string name="connection_multi_order">¡Ya tienes Multipedido!</string>
+
+    <!-- Datami -->
+    <string name="connection_datami_available">Estás navegando ¡GRATIS!</string>
+    <string name="connection_datami_not_available">Uso de plan de datos</string>
+    <string name="datami_message_image">Internet\nGratis</string>
+    <string name="datami_message_description">No te preocupes por los datos, solo disfruta tu navegación gratuita</string>
+    <string name="datami_message_terms">* El plan de datos gratis está sujeto a la cantidad de MB contratados por la empresa, y no incluye la visualización de los catálogos en línea.</string>
+    <string name="datami_message_terms_1">* El beneficio no incluye la visualización de catálogos en línea.</string>
+    <string name="datami_message_option">No volver a mostrar este mensaje.</string>
+    <!-- End Datami -->
+
+    <string name="loading">Cargando&#8230;</string>
+    <string name="loading_sync_title">Sincronizando&#8230;</string>
+    <string name="loading_sync_message">Tu información se está sincronizando. Espere un momento&#8230;</string>
+
+    <!-- Paises -->
+    <string name="country_name_bo">Bolivia</string>
+    <string name="country_name_cl">Chile</string>
+    <string name="country_name_co">Colombia</string>
+    <string name="country_name_cr">Costa Rica</string>
+    <string name="country_name_do">República Dominicana</string>
+    <string name="country_name_ec">Ecuador</string>
+    <string name="country_name_gt">Guatemala</string>
+    <string name="country_name_mx">México</string>
+    <string name="country_name_pa">Panamá</string>
+    <string name="country_name_pe">Perú</string>
+    <string name="country_name_pr">Puerto Rico</string>
+    <string name="country_name_sv">El Salvador</string>
+    <string name="country_name_ve">Venezuela</string>
+
+    <!-- End Paises -->
+
+    <string name="button_go_to_settings">Ir a Ajustes</string>
+    <string name="whatsapp_not_installed">Necesita instalar WhatsApp para poder enviar mensajes.</string>
+
+    <string name="youtube_not_updated">Debes descargar la última actualización de Youtube para poder visualizar los videos.</string>
+    <string name="youtube_not_activated">Necesita activar Youtube para poder visualizar los videos.</string>
+    <string name="youtube_not_installed">Necesita instalar Youtube para poder visualizar los videos.</string>
+
+    <string name="go_play_store">Ir a Playstore</string>
+
+    <string name="permission_read_contacts_rationale">Debe aceptar los permisos para leer los contactos del celular. ¿Desea continuar?</string>
+    <string name="permission_read_contacts_denied">Permiso para realizar leer contactos denegado.</string>
+    <string name="permission_read_contacts_neverask">Debe aceptar los permisos para leer los contactos del celular desde la configuración del aplicativo.</string>
+
+    <string name="permission_write_contacts_rationale">Debe aceptar los permisos para registrar los contactos en el celular. ¿Desea continuar?</string>
+    <string name="permission_write_contacts_denied">Permiso para realizar el registro de contactos denegado.</string>
+    <string name="permission_write_contacts_neverask">Debe aceptar los permisos para registrar los contactos en el celular desde la configuración del aplicativo.</string>
+
+    <string name="permission_write_rationale">Debe aceptar los permisos para escritura y lectura de archivos. ¿Desea continuar?</string>
+    <string name="permission_write_denied">Permiso para realizar escritura y lectura de archivos denegado.</string>
+    <string name="permission_write_neverask">Debe aceptar los permisos para escritura y lectura de archivos del celular desde la configuración del aplicativo.</string>
+
+    <string name="permission_camera_rationale">Debe aceptar los permisos para el uso de la camara. ¿Desea continuar?</string>
+    <string name="permission_camera_denied">Permiso para hacer uso de la camara denegado.</string>
+    <string name="permission_camera_neverask">Debe aceptar los permisos para acceder al uso de la camara desde la configuración del aplicativo.</string>
+
+    <string name="error_network_title">Error de conexión</string>
+    <string name="error_network_message">Revisa tu conexión a internet</string>
+    <string name="catalog_share_no_items">Catalogo no disponible</string>
+    <string name="catalog_share_top">Compartir catálogos</string>
+    <string name="top_share_title">Accede y comparte tu catálogo digital con tus clientes y ellos podrán enviarte sus pedidos para que los apruebes en tu APP o Somos Belcorp</string>
+
+    <string name="error_update_version_title">Actualizar aplicación</string>
+    <string name="error_update_version_message">Hay una nueva versión disponible</string>
+
+    <string name="error_expire_session_title">Sesión Expirada</string>
+    <string name="error_expire_session_message">Vuelve a intentar nuevamente</string>
+    <string name="activity_not_found">No se encontro la aplicación necesaria para la acción</string>
+
+    <string name="error_postulant_title">TE ENCUENTRAS EN UNA SESIÓN DE PRUEBA</string>
+    <string name="error_postulant_message">En este momento podrás simular el ingreso de tu pedido.</string>
+
+    <string name="consultant_approved_description">Inicia sesión nuevamente en el app para que puedas disfrutar de todos los beneficios que tenemos para ti.</string>
+    <string name="consultant_approved_option">OK! Entendido</string>
+
+    <string name="consultant_approved_description_two">Ya puedes comprar ofertas y hacer pedidos.</string>
+
+    <string name="credit_application_title">VINCULACIÓN COMO CONSULTORA</string>
+    <string name="credit_application_description">Querid@ %s,\n\nPara poder continuar con tu proceso de vinculación como consultora, es necesario que aceptes la Solicitud de Crédito y Autorización de consulta y reporte de datos financieros.</string>
+    <string name="credit_application_link">Si deseas conocer el detalle, haz <u>click aquí</u></string>
+    <string name="credit_application_option">Acepto</string>
+
+    <string name="tuvoz_title">Tu voz online</string>
+    <string name="paga_en_linea">PAGA EN LÍNEA</string>
+    <string name="pay_online">PAGO EN LÍNEA</string>
+    <string name="elige_metodo">Elige el método de pago</string>
+    <string name="recuerda_habilitar">Recuerda habilitar tu tarjeta para pagos por internet.</string>
+    <string name="redireccion">Te redireccionaremos al banco que elijas.</string>
+    <string name="banca_internet">PAGOS EN BANCA POR INTERNET</string>
+    <string name="tipo_pago">SELECCIONA EL TIPO DE PAGO</string>
+    <string name="pague_seguro">PAGO SEGURO CON</string>
+    <string name="pago_total">PAGO TOTAL:</string>
+    <string name="monto">Monto:</string>
+    <string name="gastos_admin">Gastos Adm.</string>
+    <string name="total_por_pagar">Total por pagar:</string>
+    <string name="terms_pay">Al presionar Continuar aceptas \n los <u>términos y condiciones</u></string>
+    <string name="contiuar">Continuar</string>
+    <string name="pago_parcial">pago parcial:</string>
+    <string name="pago_rechazado">PAGO RECHAZADO</string>
+    <string name="pago_no_realizado">Tu pago no se pudo realizar.  Contáctate con tu Banco para mayor información.</string>
+    <string name="numero_operacion">Número de operación:</string>
+    <string name="fecha_operacion">Fecha de Operación:</string>
+    <string name="confirmar_monto">Confirmar el monto final</string>
+    <string name="check">\u2713</string>
+    <string name="sin_deuda">No tienes deudas </string>
+    <string name="pagar_visa">PAGAR CON VISA</string>
+    <string name="constancia_envio_email">Te enviamos una constancia de pago a tu correo. También puedes revisarla <u>aquí.</u></string>
+    <string name="resumen_pago">Resumen del pago</string>
+    <string name="total_pagado">TOTAL PAGADO:</string>
+    <string name="saldo_pendiente">Saldo pendiente:</string>
+    <string name="actualizacion_pendiente">En unos minutos podrás ver actualizado tu Estado de Cuenta. Recuerda que los pagos realizados después de las 10:00 pm serán efectivos al día siguiente.</string>
+    <string name="ver_estado_cuenta">VER ESTADO DE CUENTA</string>
+    <string name="tu_deuda_vence">Tu deuda</string>
+    <string name="tu_monto">Monto:</string>
+
+    <string name="nro_tarjeta">Nro. Tarjeta:</string>
+    <string name="fecha_pago">Fecha de Pago:</string>
+    <string name="monto_exceder">El monto no debe exceder tu deuda total.</string>
+    <string name="monto_minimo">El monto debe ser mayor a</string>
+    <string name="pago_en_linea">PAGO EN LÍNEA</string>
+    <string name="pago_exitoso">¡PAGO EXITOSO!</string>
+    <string name="resumen_del_pago">resumen del pago</string>
+    <string name="numero_operacion_recibo">Número de operación: %s</string>
+    <string name="ir_home">Ir al home</string>
+    <string name="volver_intentar">Volver a intentar</string>
+    <string name="revisar_terminos">Revisar Términos y Condiciones de uso del App <b><u>aquí</u></b></string>
+    <string name="chat">CHAT</string>
+    <string name="ayuda">¿Necesitas Ayuda?</string>
+    <string name="chatea">¡Chatea con nosotr@s!</string>
+    <string name="camino_brillante">Camino brillante</string>
+    <string name="dream_meter">Medidor de sueños</string>
+
+    <string name="banner">Banner</string>
+
+
+    <!-- Permission Content provider MQVirtual -->
+
+    <string name="permission_group_belcorp">Belcorp</string>
+    <string name="duoPerfectoTag">"Duo Perfecto"</string>
+    <string name="permission_provider_mqvirtual_rationale">Debe aceptar los permisos para acceder a la lista de productos del App Asesor de Belleza. ¿Desea continuar?</string>
+    <string name="permission_provider_mqvirtual_denied">Permiso para acceder a la lista de productos del App Asesor de Belleza denegado.</string>
+    <string name="permission_provider_mqvirtual_neverask">Debe aceptar los permisos para acceder a la lista de productos del App Asesor de Belleza desde la configuración del aplicativo.</string>
+    <string name="agregalo_pedido">AGRÉGALO A TU PEDIDO</string>
+    <string name="duo_perfecto">Duo Perfecto</string>
+    <string name="arma_tu_pack">Arma tu Pack</string>
+    <string name="tag_kit_socias">KIT DE SOCIAS</string>
+    <string name="elegir">ELEGIR</string>
+    <string name="cambiar">CAMBIAR</string>
+    <string name="regaloElegido">REGALO ELEGIDO</string>
+    <string name="productoElegido">PRODUCTO ELEGIDO</string>
+    <string name="yaElegisteRegalo">¡YA ELEGISTE TU REGALO!</string>
+    <string name="yaElegisteProducto">¡YA ELEGISTE TU PRODUCTO!</string>
+    <string name="regaloPuedeCambiar">Recuerda que puedes cambiarlo en cualquier momento.</string>
+    <string name="sigueComprando">SIGUE COMPRANDO</string>
+    <!--<string name="sigueComprandoLLevartelo">SIGUE COMPRANDO PARA LLEVÁRTELO</string>-->
+    <string name="puedesElegirRegalo">¡Puedes elegir tu regalo del Programa de Nuevas ahora!</string>
+    <string name="puedesElegirProducto">¡Puedes elegir tu producto del Kit de Inicio!</string>
+    <string name="seraTuyoSi">Será tuyo si pasas</string>
+    <string name="sigueComprandoLlevartelo">SIGUE COMPRANDO PARA LLEVÁRTELO</string>
+    <string name="tagProgNueva">REGALO PROGRAMA NUEVAS</string>
+    <string name="tagProdKitIni">PRODUCTO KIT DE INICIO</string>
+    <string name="tagFestival">Festival</string>
+    <string name="soloSiLLegasA">Solo si llegas a</string>
+    <string name="si">Si</string>
+    <string name="label_no">No</string>
+    <string name="enterateLoNuevo">¡Entérate de lo último!</string>
+    <string name="ver_beneficios_camino_brillante">Ver beneficios</string>
+    <string name="ver_todos">Ver todos</string>
+    <string name="subtitulo_mis_logros">Estos son los logros que obtienes por ser constante con los pedidos y las ventas.</string>
+    <string name="ahoraNo">Por ahora no</string>
+    <string name="cerrarPopUp">Cerrar Pop up</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="importante">Importante</string>
+    <string name="vuelvaMasTarde">vuelve a intentar más tarde</string>
+    <string name="errorCargaImagen">Por ahora no está disponible este contenido</string>
+    <string name="titulo_mis_logros">Mis logros</string>
+
+    <string name="titulo_mis_niveles">Mi nivel</string>
+
+    <string name="titulo_mis_beneficios">Mis beneficios</string>
+    <string name="subtitulo_mis_beneficios">Todos los beneficios que tienes actualmente en tu nivel.</string>
+    <string name="btn_ofertas_especiales">Ver ofertas</string>
+
+    <!--<string name="titulo_monto_minimo">Lo logras con:</string>-->
+    <!--<string name="titulo_monto_maximo">Te falta:</string>-->
+    <string name="descripcion_benefeciones_detalle">Conoce los beneficios:</string>
+    <string name="camino_brillante_">Camino\nBrillante</string>
+    <string name="mis_beneficios">Mis beneficios</string>
+    <string name="como_lograrlo">¿Cómo lograrlo?</string>
+    <string name="precio_normal">Precio normal</string>
+    <string name="precio_para_ti">Precio para ti</string>
+    <string name="precio_para_cliente">Precio para tu cliente</string>
+    <string name="tag_promocion_landing">Promo</string>
+
+    <string name="tag_festival">FEST</string>
+
+    <string name="ganancia">Ganancia</string>
+
+    <string name="kit_agregado_con_exito">¡Listo! Agregaste con éxito el kit</string>
+    <string name="demostrador_agregado_con_exito">¡Listo! Agregaste con éxito el demostrador</string>
+    <string name="demostradores_agregado_con_exito">¡Listo! Agregaste con éxito los demostradores</string>
+    <string name="sin_conexion_a_internet">Oh… parece que no tienes\nconexión a internet.</string>
+    <string name="error_agregar_kit">Ocurrió un error al agregar el kit.</string>
+    <string name="error_agregar_demostrador">Ocurrió un error al agregar el demostrador.</string>
+    <string name="error_cargar_kits">Ocurrió un error al cargar los kits.</string>
+    <string name="error_cargar_demostradores">Ocurrió un error al cargar los demostradores.</string>
+    <string name="problemas_con_los_kits">¡Oh no! Hay problemas\ncon los kits.</string>
+    <string name="problemas_con_los_demostradores">¡Oh no! Hay problemas\ncon los demostradores.</string>
+    <string name="ofertas_especiales_kits">Kits</string>
+    <string name="ofertas_especiales_demostradores">Demostradores</string>
+    <string name="para_cambiar_a">para cambiar a</string>
+    <string name="mantienes_tu_nivel">Mantienes tu nivel</string>
+    <string name="para_cambiar_de_nivel_a">para cambiar de nivel a</string>
+    <string name="ver_mas">Ver más</string>
+    <string name="error_agregar_producto">No se podido agregar el producto</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tienes_pedidos_pendientes">Tienes pedidos pendientes</string>
+    <string name="tienes_pedidos_pendientes_detalle">Recuerda que perderás los pedidos si no\nlos apruebas.</string>
+    <string name="ver_pedidos_por_aprobar">Ver pedidos por aprobar</string>
+    <string name="lo_vere_despues">Quiero verlo después</string>
+    <string name="lo_vere_despues_calltoaction">Quiero verlo después,\nguardar de todos modos</string>
+    <string name="prefiero_ignorarlo">Prefiero ignorarlo</string>
+    <string name="guardaste_tu_pedido_con_exito">¡Guardaste tu pedido con éxito!</string>
+    <string name="tienes_pedidos_pendientes_prefijo">Tienes pedidos pendientes apruebalos</string>
+    <string name="aqui">aqui</string>
+    <string name="incentives_bright_path">Programa brillante</string>
+    <string name="mas_info">Más info</string>
+    <string name="volver">Volver</string>
+
+    <string name="tienes">Tienes</string>
+    <string name="puntos">puntos</string>
+    <string name="te_faltan">Te faltan</string>
+    <string name="para_ser">para ser</string>
+    <string name="nivel_actual">Nivel actual</string>
+    <string name="puntaje_minimo">Puntaje mínimo</string>
+    <string name="buscar_ofertas">Buscar ofertas</string>
+    <string name="info_campania_estas_en">Estás en:</string>
+    <string name="facturacion_">Facturación:</string>
+    <string name="calendario_facturacion">Fechas de campaña</string>
+    <string name="anteriores">Anteriores</string>
+    <string name="proximas">Próximas</string>
+    <string name="proximamente">Próximamente</string>
+    <string name="enviandoSms">Te estamos enviando tu código</string>
+    <string name="fecha_pago_pedido">Fecha de pago pedido anterior</string>
+
+    <string name="siguiente_campanias_main">Próximamente podrás ver\naquí tus campañas</string>
+    <string name="sin_historial_campanias_main">No tienes historial en\nlas últimas 6 campañas</string>
+    <string name="sin_historial_campanias_detail">Próximamente podrás ver aquí\ntus campañas pasadas.</string>
+    <string name="title_activity_dream_meter">DreamMeterActivity</string>
+
+    <string name="dialog_duo_perfecto">¡Llévate el Dúo Perfecto a un súper precio!</string>
+    <string name="dialog_duo_perfecto_falta">¡Te falta elegir un producto para completar tu Dúo Perfecto!</string>
+    <string name="hare_luego_subrayado">Lo haré luego</string>
+
+    <!--DECORA TU NAVIDAD-->
+    <string name="compartir">Compartir</string>
+    <string name="downloadable_content_title">Decora tu navidad</string>
+    <string name="descarga_graficas_content">Descarga las gráficas que tenemos para navidad y úsalas en <b>whatsapp, instagram o facebook</b></string>
+    <string name="problemas_conexion">Oh…Al parecer\nhay problemas de conexión</string>
+    <string name="volver_intentarlo">Volver a intentarlo</string>
+    <string name="sin_contenido">No hay imagenes disponibles</string>
+    <string name="sin_contenido_subtitle">Vuelve en otro momento</string>
+    <string name="guardar_imagen">Guardar imagen</string>
+    <string name="descarga_iniciada">Descarga iniciada</string>
+    <string name="gallery_download">Descargando</string>
+    <string name="especial_campania">Especial de campaña</string>
+    <string name="gallery_started_download">Obteniendo imagen</string>
+    <string name="gallery_finished_download">Su descarga a finalizado</string>
+    <string name="gallery_error_download_message">Ocurrió un error al obtener la imagen</string>
+    <string name="campania">Campaña</string>
+    <string name="campania_title_catalog">CAMPAÑA C%s</string>
+    <string name="compartir_catalogo">Compartir catálogo</string>
+    <string name="comenzo_campania_catalogo">¡Ya comenzó la C%s!</string>
+    <string name="gallery_sin_conexion">Sin conexion</string>
+    <string name="ver_productos">Ver productos</string>
+
+    <!-- Rate dialog -->
+    <string name="rate_title">¿Quieres valorar nuestra aplicación?</string>
+    <string name="rate_after">Lo hago despues</string>
+    <string name="rate_yes">Si</string>
+    <string name="rate_already">Ya lo hice</string>
+
+    <string name="filtros">Filtros</string>
+    <string name="filtra_descargables">Filtra tus descargables</string>
+    <string name="limpiar_filtro">Limpiar</string>
+    <string name="aplicar_filtro">Aplicar</string>
+    <string name="redes_sociales">Redes Sociales</string>
+    <string name="tipo_imagen">Tipo de imagen</string>
+    <string name="para_imprimir">Para imprimir</string>
+
+    <!-- -->
+    <string name="message_not_pending_orders">Ya no tienes más pedidos pendientes</string>
+
+    <!-- PROMOCIONES -->
+    <string name="button_obs_promo">Ver productos seleccionados</string>
+
+</resources>

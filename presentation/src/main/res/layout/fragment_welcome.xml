@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lltMain"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingStart="@dimen/welcome_padding"
+    android:paddingEnd="@dimen/welcome_padding"
+    android:layout_marginTop="@dimen/dp40">
+
+
+    <TextView
+        android:id="@+id/tvwWelcomeTitle"
+        style="@style/WelcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/welcome_title" />
+
+
+    <TextView
+        android:id="@+id/tvwWelcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WelcomeText"
+        android:text="@string/welcome_text"/>
+
+
+    <LinearLayout
+        android:id="@+id/btn_send_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/welcome_send_sms_margin_big"
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_big"
+        android:background="@drawable/shape_button_verify_account"
+        android:orientation="horizontal"
+        android:padding="@dimen/welcome_send_sms_padding"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.2"
+            app:srcCompat="@drawable/ic_cell" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/WelcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_sms" />
+
+            <TextView
+                android:id="@+id/tvwCelular"
+                style="@style/WelcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_send_sms_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/welcome_send_sms_margin_big"
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_big"
+        android:background="@drawable/shape_button_verify_account_off"
+        android:orientation="horizontal"
+        android:padding="@dimen/welcome_send_sms_padding"
+        android:weightSum="1"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.2"
+            app:srcCompat="@drawable/ic_cell" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/WelcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_sms" />
+
+            <TextView
+                android:id="@+id/tvwCelularOff"
+                style="@style/WelcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_send_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_button_verify_account"
+        android:weightSum="1"
+        android:layout_marginBottom="@dimen/welcome_send_sms_margin_big"
+        android:padding="@dimen/welcome_send_sms_padding">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            app:srcCompat="@drawable/ic_help_black"
+            android:layout_weight="0.2"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.8"
+            android:gravity="center|start">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/WelcomeText"
+                android:text="CORREO ELECTRÓNICO"/>
+
+            <TextView
+                android:id="@+id/tvwEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/WelcomeText"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltAlerta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp20">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/alerta"/>
+
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <TextView
+                style="@style/WelcomeTextBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Superaste el máximo de envíos."/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/WelcomeTextBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Podrás volver a intentar en "/>
+
+                <TextView
+                    style="@style/WelcomeTextBoldRed"
+                    android:id="@+id/tvwTiempoRestante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvwCallCenter"
+        style="@style/WelcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/welcome_call_center_1" />
+
+</LinearLayout>

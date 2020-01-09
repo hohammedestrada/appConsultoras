@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ficha_new">Nuevo</string>
+    <string name="ficha_promotion">Promo</string>
+    <string name="title_sello_new">NUEVO</string>
+    <string name="title_sello_promo">Promo</string>
+    <string name="ficha_add">Agregar</string>
+    <string name="ficha_update">Modificar</string>
+    <string name="ficha_remove">Eliminar oferta</string>
+    <string name="ficha_otras_ofertas">Otras ofertas que podrían interesarte</string>
+    <string name="ficha_content">Contenido</string>
+    <string name="disableWithClic">disableWithClic</string>
+
+    <string name="ficha_price">Precio:\u0020</string>
+    <!--<string name="ficha_price_simple">Precio para ti:\u0020</string>-->
+    <string name="ficha_price_client">Para tu cliente:\u0020</string>
+    <!--<string name="ficha_gain">Gana hasta: </string>-->
+
+    <string name="ficha_ver_detalle">Ver detalle</string>
+    <string name="ficha_detalle_de">Detalle de %s</string>
+    <string name="ficha_type_section_video">video</string>
+    <string name="ficha_type_section_text">text</string>
+    <string name="ficha_message_error_video">Oh no... \n En este momento el contenido no se puede visualizar.</string>
+    <string name="ficha_price_client_simple">Precio para tu cliente:\u0020</string>
+    <string name="ficha_assign_client">Asignar cliente</string>
+    <string name="ficha_btn_text_agotado">Agotado</string>
+    <string name="ficha_message_agotado">No hay stock disponible</string>
+    <string name="ficha_price_for_you">Precio para ti:\u0020</string>
+    <string name="ficha_price_normal">Precio normal:\u0020</string>
+    <string name="ficha_earn_up">Gana hasta:\u0020</string>
+    <string name="ficha_para_ti">Para ti:\u0020</string>
+
+    <string name="ficha_premio_status_unready">Te falta:</string>
+    <string name="ficha_premio_status_ready">¡Listo!</string>
+    <string name="ficha_premio_message_unready"></string>
+    <string name="ficha_premio_message_ready">Alcanzaste el premio</string>
+    <string name="ficha_premio_agregar">Agregar</string>
+    <string name="ficha_premio_eliminar">Eliminar premio</string>
+
+    <string name="ficha_premio_eliminar_titulo">Solo puedes elegir un premio.</string>
+    <string name="ficha_premio_eliminar_contenido">¿Quieres cambiar el que ya tienes?</string>
+    <string name="ficha_premio_eliminar_boton_cancelar">Cancelar</string>
+    <string name="ficha_premio_eliminar_boton_cambiar">Cambiar</string>
+
+</resources>

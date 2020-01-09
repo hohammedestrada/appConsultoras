@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="my_orders_title">Mis Pedidos</string>
+    <string name="my_orders_ingresados">Ingresados (%d)</string>
+    <string name="my_orders_facturados">Facturados (%d)</string>
+    <string name="my_orders_no_items">No tienes ningún pedido aún.</string>
+    <string name="my_orders_ingresar_pedido">Ingresar pedido</string>
+    <string name="my_orders_not_available">Información no disponible</string>
+    <string name="my_orders_not_available_app">No se encontró la aplicación necesaria para visualizar el documento.</string>
+    <string name="pending_orders_count">Pedidos pendientes (%1$s)</string>
+    <string name="my_orders_califica">Satisfacción</string>
+</resources>

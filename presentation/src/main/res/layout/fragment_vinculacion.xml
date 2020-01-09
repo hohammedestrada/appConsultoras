@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lltOptions"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            style="@style/ActivityContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/ActivityTitle"
+                android:id="@+id/tvwTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/credit_application_title"/>
+
+            <TextView
+                android:id="@+id/tvwMessage"
+                style="@style/ActivityDescription"
+                android:layout_marginTop="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_application_description"/>
+
+            <TextView
+                android:id="@+id/tvwLink"
+                style="@style/ActivityDescription"
+                android:layout_marginTop="35dp"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_application_link"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/lltOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/disabled" />
+
+        <Button
+            android:id="@+id/btnAccept"
+            style="@style/ButtonTheme.Primary"
+            android:text="@string/button_acepto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="25dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

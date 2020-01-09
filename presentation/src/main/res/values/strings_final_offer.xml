@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="final_offer_no_stock">AGOTADO</string>
+    <string name="final_offer_add_item">AGRÉGALO</string>
+    <string name="final_offer_select_choice">ELIGE TU\n OPCIÓN</string>
+    <string name="final_offer_response_add">AGREGADO</string>
+
+    <string name="final_offer_order">TERMINAR PEDIDO</string>
+
+    <string name="final_offer_title_1">Aún te falta %s%s para llegar al monto mínimo.</string>
+    <string name="final_offer_subtitle_1">Te ayudamos a alcanzarlo con estas ofertas:</string>
+
+    <string name="final_offer_title_2">¡GUARDASTE TU\nPEDIDO CON ÉXITO!</string>
+    <string name="final_offer_subtitle_2_1">Agrega %s %s y obtén </string>
+    <string name="final_offer_subtitle_2_2">en tu compra</string>
+    <string name="final_offer_subtitle_2_3">Aprovecha estas ofertas y gana más esta campaña</string>
+
+    <string name="final_offer_title_3">¡Llegaste al monto mínimo!</string>
+    <string name="final_offer_subtitle_3">Ahora tu ganancia estimada total es %1$s %2$s \nMonto total: %3$s %4$s</string>
+
+    <string name="final_offer_title_4">¡Llegaste al %s dscto!</string>
+
+</resources>

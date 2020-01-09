@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/llt_left"
+        style="@style/ClientCardSection"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        app:cardElevation="8dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/img_background_duo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/rltCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/ivProducto"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_container_placeholder" />
+
+                <TextView
+                    android:id="@+id/tvwCUV"
+                    style="@style/AddOrdersMarcaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvwDescription"
+                    style="@style/AddOrdersModeloText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:minLines="2" />
+
+                <TextView
+                    android:id="@+id/tvwPrecioFinal"
+                    style="@style/AddOrdersPriceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvwGanancia"
+                    style="@style/AddOrdersGanaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include layout="@layout/view_product_operator" />
+
+                <TextView
+                    android:id="@+id/tvwAddResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="AGREGADO"
+                    android:textColor="#a6a6a6"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvwNewTag"
+                style="@style/Multi.Text.Tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="guideline17,guideline12,guideline18,guideline10,guideline15,guideline16,lnr_btn_banner,guideline14,guideline13,img_background_duo,textView12,textView17" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".29" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".787" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".213" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".46" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".48" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".32" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".18" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".82" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/lnr_btn_banner"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/linear_btn_black"
+                app:layout_constraintBottom_toTopOf="@+id/guideline15"
+                app:layout_constraintEnd_toStartOf="@+id/guideline18"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toTopOf="@+id/guideline16">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView15"
+                    style="@style/textbtnbanner"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/add_order_banner_duo_perfecto"
+                    android:textAllCaps="true"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView17"
+                style="@style/textbanner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="ELIGE DOS PRODUCTOS"
+                android:textAlignment="center"
+                app:autoSizeMaxTextSize="50sp"
+                app:autoSizeMinTextSize="1sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toTopOf="@+id/guideline21"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
+                app:layout_constraintStart_toStartOf="@+id/guideline12"
+                app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView12"
+                style="@style/textbannerarma"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Y ARMA TU DÚO PERFECTO"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toTopOf="@+id/guideline14"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
+                app:layout_constraintStart_toStartOf="@+id/guideline12"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

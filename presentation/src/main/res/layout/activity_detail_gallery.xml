@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frlScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/lnlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivwClose"
+            style="@style/DialogClose"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_gravity="center_horizontal|end"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_close_black" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ivwClose"
+            android:layout_marginTop="@dimen/dp4" />
+
+    </RelativeLayout>
+</FrameLayout>

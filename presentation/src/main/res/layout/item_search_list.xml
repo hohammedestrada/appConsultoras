@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:paddingTop="15dp"
+        android:paddingBottom="7dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/lnlFicha"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:id="@+id/img_product"
+                    android:src="@drawable/ic_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="13sp"
+                    android:textColor="@color/colorBlack"
+                    android:id="@+id/txt_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:minHeight="33dp">
+                    <TextView
+                        android:textSize="11sp"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/txt_precio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/txt_precio_oferta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="10sp"
+                    android:id="@+id/txt_catalogo"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1.4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/lnl_panel"
+                layout="@layout/view_product_operator" />
+
+            <include
+                android:id="@+id/lnl_panel_disabled"
+                android:visibility="gone"
+                layout="@layout/view_product_operator_disabled" />
+
+            <TextView
+                android:visibility="visible"
+                android:layout_gravity="center_horizontal"
+                android:textSize="9sp"
+                android:id="@+id/txt_agregado"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/grey_edit"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

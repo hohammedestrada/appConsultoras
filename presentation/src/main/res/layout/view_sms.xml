@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lnlFirst"
+                android:background="@drawable/bg_sms"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:tag="1"
+                    android:id="@+id/edtFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/WelcomeInput"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlSecond"
+                android:background="@drawable/bg_sms"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:tag="2"
+                    android:hint=""
+                    android:id="@+id/edtSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/WelcomeInput"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlThird"
+                android:background="@drawable/bg_sms"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:tag="3"
+                    android:id="@+id/edtThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/WelcomeInput"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlFourth"
+                android:background="@drawable/bg_sms"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:tag="4"
+                    android:id="@+id/edtFourth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/WelcomeInput"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlFifth"
+                android:background="@drawable/bg_sms"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:tag="5"
+                    android:id="@+id/edtFifth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/WelcomeInput"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlSixth"
+                android:background="@drawable/bg_sms"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:tag="6"
+                    android:id="@+id/edtSixth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/WelcomeInput"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnlStatus"
+            android:visibility="gone"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgStatus"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_marginStart="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnlTouch"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

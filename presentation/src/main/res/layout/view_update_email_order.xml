@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/updateEmailTitleSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_update_email" />
+
+    <TextView
+        style="@style/updateEmailSubTitleSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subtitle_update_email" />
+
+
+    <EditText
+        android:id="@+id/edtUpdateEmail"
+        style="@style/updateEmailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
+        android:imeOptions="actionDone"
+        android:inputType="textEmailAddress"
+        android:maxLength="100"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tvwErrorMessage"
+        style="@style/updateEmailErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_wrong_email" />
+
+    <Button
+        android:id="@+id/btnUpdateEmail"
+        style="@style/updateEmailButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/submit_update_email" />
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageBenefit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp" />
+
+    <LinearLayout
+        android:id="@+id/content_data_benefit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:layout_toRightOf="@id/imageBenefit"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleBenefit"
+            style="@style/FontLatoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="TITULO"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/descriptionBenefit"
+            style="@style/FontLatoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPCION"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

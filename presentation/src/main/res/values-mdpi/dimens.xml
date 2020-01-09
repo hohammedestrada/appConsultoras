@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    1 - DIMENSIONES:
+    4.0”    480x800 hdpi
+    3.7”    480x854 hdpi
+-->
+<resources>
+
+    <dimen name="menu_top_text_size">10sp</dimen>
+    <!-- escala 0.5-->
+    <dimen name="altura_contenedor">27.5dp</dimen>
+    <dimen name="ancho_contenedor">35dp</dimen>
+
+    <dimen name="txt_size_deuda">6.5sp</dimen>
+
+    <!-- Dimension Referencia MDPI -->
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_7">4.53dp</dimen>
+    <dimen name="_16dp">10.35dp</dimen>
+    <dimen name="_18dp">11.64dp</dimen>
+    <dimen name="txt_size_btn_chat">9.7sp</dimen>
+
+    <dimen name="altura_icon_chatbot">24.57dp</dimen>
+
+    <dimen name="ancho_icon_chatbot">31.42dp</dimen>
+
+    <dimen name="ancho_boton_chatbot">98.60dp</dimen>
+    <dimen name="alto_boton_chatbot">61.10dp</dimen>
+    <dimen name="_13">8.41dp</dimen>
+    <dimen name="_13sp">8.41sp</dimen>
+    <dimen name="_28">18.10dp</dimen>
+    <dimen name="_22">14.22dp</dimen>
+
+    <dimen name="_28dp">28dp</dimen>
+    <dimen name="_36dp">36dp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_9sp">5.82sp</dimen>
+    <dimen name="_197">127.38dp</dimen>
+
+    <!--step-->
+    <dimen name="wizard_step_title_size">4sp</dimen>
+
+    <!-- camino brillante -->
+    <dimen name="textsize_title_frame">6.50sp</dimen>
+    <dimen name="textsize_subtitle_frame">9.50sp</dimen>
+    <dimen name="textsize_barra_monto">13sp</dimen>
+    <dimen name="textsize_ganancia_title">9sp</dimen>
+
+</resources>

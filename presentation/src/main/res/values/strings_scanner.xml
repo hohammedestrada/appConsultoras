@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scanner_title">ESCANEAR</string>
+    <string name="scanner_first_message">Centra tu código QR y\nevita mover tu teléfono</string>
+    <string name="scanner_second_message">El escaneo es automático,\nevita brillo y reflejos.</string>
+    <string name="scanner_message_error">Hubo un error al ingresar al cargar la url. Por favor inténtelo nuevamente en unos minutos.</string>
+    <string name="scanner_message_url_invalid">Hubo un error al cargar la url. No es un formato valido</string>
+</resources>

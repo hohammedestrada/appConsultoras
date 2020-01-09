@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tracking_title">SEGUIMIENTO DE PEDIDO</string>
+    <string name="tracking_campania">SEGUIMIENTO DE PEDIDO C%s</string>
+    <string name="tracking_estado">Estado:</string>
+    <string name="tracking_pedido">Nº Pedido:</string>
+    <string name="tracking_pedido_recibido">Pedido Recibido:</string>
+
+    <string name="tracking_no_items">No has realizado pedidos en las últimas campañas.</string>
+    <string name="tracking_no_items_conexion">No has realizado pedidos en las últimas campañas, o es posible que no tengas conexión a internet.</string>
+</resources>

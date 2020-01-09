@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/DebtPaymentHistoryItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:id="@+id/layoutItem" >
+
+        <LinearLayout
+            style="@style/DebtPaymentHistoryItemContent"
+            android:id="@+id/llt_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_campaing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DebtPaymentHistoryItemDataCTitle"/>
+
+            <LinearLayout
+                android:id="@+id/llt_contest_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvw_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="left"
+                    style="@style/DebtPaymentHistoryItemDataTitle"/>
+
+                <View
+                    android:id="@+id/view_separator"
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_weight="0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/history_item_charge" />
+
+                <TextView
+                    android:id="@+id/tvw_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center_horizontal"
+                    style="@style/DebtPaymentHistoryItemDataTitle"/>
+
+                <View
+                    android:id="@+id/view_separator2"
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_weight="0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/history_item_charge" />
+
+                <TextView
+                    android:id="@+id/edt_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    style="@style/DebtPaymentHistoryItemDataTitle"/>
+
+                <ImageView
+                    android:id="@+id/ivw_next"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_index"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            style="@style/DebtPaymentHistoryItemSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/llt_content" />
+
+    </RelativeLayout>
+
+</layout>

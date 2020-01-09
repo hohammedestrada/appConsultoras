@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notifiaction_list_title">NOTIFICACIONES</string>
+    <string name="notifiaction_list_empty_title">Aún no tienes notificaciones.</string>
+    <string name="notifiaction_list_empty_body">Pronto encontrarás tus noticias\nen este espacio.</string>
+</resources>

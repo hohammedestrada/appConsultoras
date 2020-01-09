@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="survey_title">¿Que te pareció el servicio de la C%1$s?</string>
+    <string name="survey_inconvenient_message">Debe ingresar el inconveniente para poder continuar</string>
+    <string name="survey_validation_reason">Debe seleccionar un motivo</string>
+    <string name="survey_question">¿Tuviste algún incoveniente?</string>
+    <string name="survey_other">Otros</string>
+    <string name="survey_confirm">Confirmar</string>
+    <string name="survey_thanks_title">¡Gracias por tu opinión!</string>
+    <string name="survey_thanks_message">Tu información es valiosa para \n mejorar nuestro servicio</string>
+</resources>

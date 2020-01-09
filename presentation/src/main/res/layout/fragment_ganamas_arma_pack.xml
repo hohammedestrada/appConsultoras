@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/fltContainerBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivwBanner"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"
+            tools:background="@color/golden_gana"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvwTitleBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:gravity="center"
+                tools:text="Elige 4 productos y llévatelos a S/100!" />
+
+            <TextView
+                android:id="@+id/tvwSubTitleBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:gravity="center"
+                tools:text="2 Fragancias + 1 Maquillaje + 1 Tratamiento Corporal" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <biz.belcorp.mobile.components.design.tone.pic.PickedTone
+        android:id="@+id/pickedProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <biz.belcorp.mobile.components.design.tone.group.CategoryTagList
+        android:id="@+id/categoryTagList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <biz.belcorp.mobile.components.design.button.Button
+        android:id="@+id/btnComplete"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        app:btn_color="@color/magenta"/>
+
+</LinearLayout>

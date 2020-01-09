@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oferta_final_error_load_data">Oferta Final no está disponible por fallas técnicas.</string>
+    <string name="oferta_final_recomendados_title">Alcanza tu premio con estas ofertas</string>
+    <string name="oferta_final_premio_title">Premio</string>
+    <string name="oferta_final_premios_title">Premios</string>
+    <string name="oferta_final_reserved">¡Listo! Reservaste tu pedido con éxito.</string>
+    <string name="oferta_final_continue_shop">Seguir comprando</string>
+    <string name="oferta_final_popup_header_color">#569C04</string>
+    <string name="oferta_final_popup_title_color">#454549</string>
+    <string name="oferta_final_alcanzaste_premio">Alcanzaste el premio</string>
+</resources>

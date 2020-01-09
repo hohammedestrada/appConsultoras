@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DebtPaymentRecordatoryTitle" parent="FontLatoBold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="DebtPaymentRecordatorySubtitle" parent="FontLatoBold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="DebtPaymentRecordatorySubtitle2" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="DebtPaymentRecordatoryContent">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <style name="RecordatoryContent">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@color/content_activity_third</item>
+    </style>
+
+    <style name="DebtPaymentHistoryContentHeader">
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="DebtPaymentHistoryTitle" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+    </style>
+
+    <style name="DebtPaymentHistorySubtitle" parent="FontLatoBold">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="DebtPaymentHistoryLabel" parent="FontLatoBold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <style name="DebtPaymentHistoryInputIcon">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">@dimen/size_login_input_icon</item>
+        <item name="android:layout_height">@dimen/size_login_input_icon</item>
+    </style>
+
+    <style name="DebtPaymentHistoryInputIcon.Left">
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+
+    <style name="DebtPaymentHistoryLink" parent="FontLatoBold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryButton" parent="FontLatoBold">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:background">@drawable/selector_button_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_payment_register</item>
+    </style>
+
+    <style name="DebtHistoryButton" parent="ButtonTheme.Base">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textSize">@dimen/textsize_payment_register</item>
+    </style>
+
+    <style name="DebtHistoryAddButton" parent="FontLatoBold">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:background">@drawable/selector_button_alternative</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/textsize_payment_register</item>
+    </style>
+
+    <style name="DebtPaymentHistoryHeaderTitle" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryMovementsTitle" parent="FontLatoBold">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryMovementsMessage" parent="FontLatoRegular">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#99000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+    </style>
+
+
+    <style name="DebtPaymentHistoryCardSectionArrow">
+        <item name="android:layout_alignBottom">@+id/tvw_personal_data</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignTop">@+id/tvw_personal_data</item>
+        <item name="android:clickable">false</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="srcCompat">@drawable/ic_arrow_up_black</item>
+    </style>
+
+    <style name="DebtPaymentHistoryCardSectionBody">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="DebtPaymentHistoryAnimationTitleText" parent="FontLatoBold">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemIconText" parent="FontLatoBold">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemSlash" >
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <!-- View: Item List -->
+    <style name="DebtPaymentHistoryItem">
+        <item name="android:background">#fff</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemContent">
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemDataCTitle" parent="FontLatoHeavy">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemDataTitle" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemRecordatorio" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemDataTitleA" parent="FontLatoRegular">
+        <item name="android:textColor">@color/history_item_payment</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemDataDescription" parent="FontLatoLight">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryItemSeparator">
+        <item name="android:background">@color/separator</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+    </style>
+
+    <!--  View: Progress   -->
+
+    <style name="DebtPaymentHistoryPoints" parent="FontLatoBold">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryPointsMessage" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryProgressTitle" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+    </style>
+
+    <style name="DebtPaymentHistoryProgressMessage" parent="FontLatoRegular">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+    </style>
+
+    <style name="DebtCardSectionArrow">
+
+        <item name="android:layout_alignBottom">@+id/tvw_personal_data</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignTop">@+id/tvw_personal_data</item>
+        <item name="android:clickable">false</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="srcCompat">@drawable/ic_arrow_up_black</item>
+    </style>
+
+    <style name="DebtPriceEditText" parent="FontLatoRegular">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/text_filter</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/shape_edittext_no_bottom_line</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

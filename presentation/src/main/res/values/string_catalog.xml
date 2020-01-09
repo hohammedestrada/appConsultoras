@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="catalog_title">Catálogos y Revistas</string>
+    <string name="programa_brillante">Programa brillante</string>
+    <string name="catalog_share_magazine">Catálogos</string>
+    <string name="non_sharing_app_instaled">No tienes instalada la aplicación para compartir tus catálogos</string>
+    <string name="catalog_campaign_header">Revisa y comparte los \n<b>Catálogos</b> con tus clientes.</string>
+    <string name="catalog_activity_not_found">No se encontró la aplicación necesaria para visualizar catálogos o revistas</string>
+    <string name="catalog_no_items">No hay catálogos y revistas para visualizar.</string>
+    <string name="catalog_no_items_conexion">No hay catálogos y revistas para visualizar, o es posible que no tengas conexión a internet.</string>
+    <string name="catalog_instructions_title">A continuación te contamos cómo funciona:</string>
+    <string name="catalog_instructions_1">Comparte los 3 catálogos con un solo click</string>
+    <string name="catalog_instructions_2">Tu cliente podrá seleccionar los productos directamente en el catálogo, agregarlos a su bolsa de compras y enviártelos.</string>
+    <string name="catalog_instructions_3">Te llegará una notificación cada vez que tengas un nuevo pedido y podrás aceptarlo o rechazarlo. Si lo aceptas, se agregará automáticamente a tu pase de pedido.</string>
+    <string name="catalog_footer_1">¡Olvídate de las capturas de pantalla y las libretas, nosotros llevamos los apuntes por ti!</string>
+    <string name="catalog_footer_2">Empieza a compartir los catálogos digitales por los medios que más uses.</string>
+    <string name="catalog_share">Compartir</string>
+    <string name="catalog_share_subtitle">Comparte y descarga el catálogo que desees</string>
+    <string name="catalog_url_download_fail">Ocurrió un error obteniendo el link de descarga, vuelve a intentarlo</string>
+    <string name="catalog_download">Descargando</string>
+    <string name="catalog_pop_up_compartir">Compartir catálogo</string>
+</resources>

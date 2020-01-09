@@ -1,0 +1,29 @@
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'findbugs'
+
+task findbugs(type: FindBugs) {
+    def h = project.hasProperty('html') ? project.getProperty('html').toBoolean() : false
+
+    description 'Find bugs mainly design flaws, bad practices, multithreaded correctness and code vulnerabilities.'
+    group 'verification'
+
+    excludeFilter = file("$project.rootDir/tools/rules-findbugs.xml")
+    classes = fileTree("$project.buildDir/intermediates/classes")
+    source fileTree('src/main/java')
+    include '**/*.java'
+    exclude '**/gen/**'
+    classpath = files()
+
+    effort 'max'
+    reportLevel = 'high'
+    ignoreFailures = true
+
+    reports {
+        xml.enabled = !h
+        html.enabled = h
+
+        xml.destination = file("$project.buildDir/reports/findbugs.xml")
+        html.destination = file("$project.buildDir/reports/findbugs.html")
+    }
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rll_seguimiento"
+        style="@style/SeguimientoContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <RelativeLayout
+            android:id="@+id/llt_image"
+            android:layout_width="50dp"
+            android:layout_height="200dp"
+            android:layout_alignBottom="@+id/llt_left"
+            android:layout_alignTop="@+id/llt_left"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:minHeight="100dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivw_status"
+                        android:layout_width="@dimen/dp16"
+                        android:layout_height="@dimen/dp16"
+                        android:padding="4dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/ivw_status_big"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:visibility="gone"
+                        android:padding="4dp" />
+
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="#d1d1d1" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_left"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@+id/llt_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_estado"
+                style="@style/SeguimientoItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvw_fecha"
+                style="@style/SeguimientoItemTextData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="YoutubeVideo"/>
+
+    <style name="YoutubeVideo.ProgressBar">
+        <item name="colorAccent">@color/magenta</item>
+    </style>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        style="@style/ConnectionTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/connectionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivw_connection"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_alert" />
+
+            <TextView
+                android:id="@+id/tvw_connection_message"
+                style="@style/ConnectionTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/connection_offline"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/size_notification_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/multiOrderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@null"
+                android:rotation="180"
+                android:tint="@android:color/black"
+                app:srcCompat="@drawable/ic_alert" />
+
+            <TextView
+                android:id="@+id/tvwMultiOrdermessage"
+                style="@style/ConnectionTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/connection_multi_order"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/size_notification_text" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

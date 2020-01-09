@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray"
+    tools:context=".feature.legal.LegalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/btn_legal_aceptar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvw_legal_subtitle"
+            style="@style/ToolbarTitle.Light"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/legal_subtitle" />
+
+        <TextView
+            android:id="@+id/tvw_legal_description"
+            style="@style/TextAppearance.Message.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/legal_descripcion"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/llt_legal_aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tvw_legal_check"
+                style="@style/TextAppearance.Message.Normal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/legal_check" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_privacity_aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" >
+
+            <CheckBox
+                android:id="@+id/chk_privacy_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvw_privacy_check"
+                style="@style/TextAppearance.Message.Normal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/legal_privacy_check" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_legal_aceptar"
+        style="@style/ButtonTheme.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/legal_accept" />
+
+</RelativeLayout>

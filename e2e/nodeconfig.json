@@ -1,0 +1,12 @@
+{
+    "configuration":
+    {
+        "max_old_space_size":8000 ,
+        "nodePolling": 5000,
+        "cleanUpCycle": 2000,
+        "timeout": 30000,        
+        "maxSession": 1, 
+        "registerCycle": 5000
+        
+    }
+}

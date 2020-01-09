@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.home.incentives.IncentivesContainerFragment">
+
+    <RelativeLayout
+        android:id="@+id/groupDefaultView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <biz.belcorp.consultoras.common.component.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@color/white"
+            app:pstsActivateTextColor="@color/black"
+            app:pstsDeactivateTextColor="#FFCCCCCC"
+            app:pstsDividerColor="#00000000"
+            app:pstsIndicatorColor="@color/primary"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="true"
+            app:pstsTabSwitch="false"
+            app:pstsTextAllCaps="true"
+            app:pstsUnderlineColor="#00000000" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tabs"
+            android:background="@color/disabled" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

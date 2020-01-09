@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/FullScreenDialog"
+    android:id="@+id/rlt_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/ivw_close"
+        style="@style/DialogClose"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        app:srcCompat="@drawable/ic_close_black"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rvw_animation"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center">
+
+            <biz.belcorp.consultoras.common.animation.ripple.RippleView
+                android:id="@+id/ripple_view"
+                android:layout_width="220dp"
+                android:layout_height="220dp" />
+
+            <ImageView
+                android:id="@+id/ivw_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:paddingLeft="25dp"
+            android:paddingStart="25dp"
+            android:paddingRight="25dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_title"
+                style="@style/MessageAnimPrimaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/consultant_approved_title" />
+
+            <TextView
+                android:id="@+id/tvw_message"
+                style="@style/MessageAnimSecondText"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/consultant_approved_description" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                style="@style/DialogMessageAnimButtonSecond.Cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_aceptar"
+                style="@style/DialogMessageAnimButton.Aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

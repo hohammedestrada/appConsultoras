@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rltMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <biz.belcorp.mobile.components.core.custom.CustomVerticalNestedScrollView
+            android:id="@+id/nsvContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lnlFloat"
+            android:descendantFocusability="blocksDescendants"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnlProductInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <biz.belcorp.mobile.components.offers.Product
+                        android:id="@+id/viewProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/lnlContent"
+                        style="@style/FichaContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/vwComponentDivider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray_3"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvwTitleContenido"
+                            style="@style/Ficha.Text.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvwOffersTone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+                        <!-- Cliente -->
+
+                        <LinearLayout
+                            android:id="@+id/lnlClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:descendantFocusability="blocksDescendants"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <View
+                                android:id="@+id/vwComponentDivider3"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/gray_3" />
+
+                            <TextView
+                                android:id="@+id/tvwTitleCliente"
+                                android:text="Asignado a:"
+                                style="@style/Ficha.Text.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <biz.belcorp.mobile.components.design.boxsection.BoxSection
+                                android:id="@+id/bsClient"
+                                app:box_section_text_button="Cambiar cliente"
+                                app:box_section_text_content="Para mí"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/vwComponentDivider2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray_3" />
+
+                        <LinearLayout
+                            android:id="@+id/lnlStatic"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lnlButtons"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <biz.belcorp.mobile.components.design.counter.Counter
+                                    android:id="@+id/simpleCounter"
+                                    android:layout_width="104dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="@dimen/simple_default_button_margin_ficha"
+                                    app:border_size="1dp"
+                                    app:editable="true"
+                                    app:max="99"
+                                    app:min="1" />
+
+                                <biz.belcorp.mobile.components.design.button.Button
+                                    android:id="@+id/simpleButton"
+                                    style="@style/Simple.Buttons"
+                                    app:btn_color="@color/magenta"
+                                    app:btn_icon_left="@drawable/ic_comp_add_to_cart"
+                                    app:btn_text="@string/ficha_add"/>
+
+                                <TextView android:id="@+id/simpleText"
+                                    style="@style/Ficha.Text.Agotado"
+                                    android:visibility="gone"
+                                    android:gravity="right"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="10dp"
+                                    android:text="@string/ficha_message_agotado" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Otros productos -->
+
+                <LinearLayout
+                    style="@style/FichaContentOffers"
+                    android:id="@+id/lnlExtraSection"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+            </LinearLayout>
+
+        </biz.belcorp.mobile.components.core.custom.CustomVerticalNestedScrollView>
+
+        <android.support.design.widget.BottomNavigationView
+
+            android:id="@+id/bnvBottomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/shape_sombra_superior" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/lnlFloat"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.design.widget.BottomNavigationView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
+
+

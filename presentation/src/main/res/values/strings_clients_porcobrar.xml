@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clients_porcobrar_title">Clientes por cobrar</string>
+
+    <plurals name="per_charge_reminder">
+        <item quantity="one">vence en %1$d día: %2$s</item>
+        <item quantity="many">vence en %1$d días: %2$s</item>
+        <item quantity="other">vence en %1$d días: %2$s</item>
+    </plurals>
+
+    <string name="per_charge_reminder_cobro">Fecha de cobro: %s</string>
+    <string name="per_charge_reminder_zero">Fecha de cobro hoy: %s</string>
+    <string name="per_charge_reminder_zero_old">Vencido: %s</string>
+    <string name="per_charge_reminder_old">Vencido: %s</string>
+</resources>

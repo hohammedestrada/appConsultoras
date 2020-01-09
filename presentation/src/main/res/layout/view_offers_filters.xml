@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_below="@id/laySections"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingBottom="10dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="8dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/lltOrderContainer"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_order"
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
+
+            <TextView
+                style="@style/FontLatoBold"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:text="Ordenar Por"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/FontLatoBold"
+            android:id="@+id/txtOfferSize"
+            android:textSize="14sp"
+            android:textColor="@color/text_gray"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingBottom="10dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/lnlFiltro"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_filter"
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
+
+            <TextView
+                style="@style/FontLatoBold"
+                android:id="@+id/txtFiltrar"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:text="Filtros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cnrtGiftbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvwProgress"
+        style="@style/NewAddOrderPorcentajeProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="0.5sp"
+        android:layout_gravity="center"
+        app:autoSizeMaxTextSize="200sp"
+        app:autoSizeMinTextSize="5sp"
+        android:layout_marginEnd="@dimen/margin_addOrderContainer"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/borderProgressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/styleprogressbar"
+        android:padding="1dp"
+        android:layout_marginEnd="@dimen/margin_addOrderContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwProgress"
+        app:layout_constraintVertical_bias="0.060000002">
+
+        <ProgressBar
+            android:id="@+id/seekbarPuntosBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:maxHeight="15dp"
+            android:minHeight="15dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressDrawable="@drawable/progressbar_orders"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <biz.belcorp.consultoras.common.animation.ripple.customripple.RippleBackground
+        android:id="@+id/ripple"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGifbar"
+        app:layout_constraintEnd_toEndOf="@+id/imgGifbar"
+        app:layout_constraintStart_toStartOf="@+id/imgGifbar"
+        app:layout_constraintTop_toTopOf="@+id/imgGifbar"
+        app:rb_color="@color/default_magenta_ripley"
+        app:rb_duration="2000"
+        app:rb_radius="9dp"
+        app:rb_rippleAmount="4"
+        app:rb_scale="2.7" />
+
+    <ImageView
+        android:id="@+id/imgGifbar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_regalo"
+        app:layout_constraintBottom_toBottomOf="@+id/borderProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/borderProgressBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/borderProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/tvwProgress"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <android.support.constraint.Group
+        android:id="@+id/groupripplegift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ripple,imgGifbar"
+        app:layout_constraintBottom_toTopOf="@+id/cnrtContainerTag"
+        app:layout_constraintEnd_toEndOf="@+id/borderProgressBar"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="@+id/borderProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/tvwProgress" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cnrtContainerTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:paddingRight="3dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/borderProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/borderProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/borderProgressBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cnrtGiftbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/margin_addOrderContainer">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvwProgress"
+            style="@style/NewAddOrderPorcentajeProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:lineSpacingMultiplier="1.25"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="200sp"
+            app:autoSizeMinTextSize="10sp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/borderProgressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/styleprogressbar"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.060000002">
+
+        <ProgressBar
+            android:id="@+id/seekbarPuntosBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:maxHeight="15dp"
+            android:minHeight="15dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressDrawable="@drawable/progressbar_orders"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <biz.belcorp.consultoras.common.animation.ripple.customripple.RippleBackground
+        android:id="@+id/ripple"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGifbar"
+        app:layout_constraintEnd_toEndOf="@+id/imgGifbar"
+        app:layout_constraintStart_toStartOf="@+id/imgGifbar"
+        app:layout_constraintTop_toTopOf="@+id/imgGifbar"
+        app:rb_color="@color/default_magenta_ripley"
+        app:rb_duration="2000"
+        app:rb_radius="9dp"
+        app:rb_rippleAmount="4"
+        app:rb_scale="2.7" />
+
+    <ImageView
+        android:id="@+id/imgGifbar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_regalo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/borderProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/borderProgressBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/borderProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <android.support.constraint.Group
+        android:id="@+id/groupripplegift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:constraint_referenced_ids="ripple,imgGifbar"
+        app:layout_constraintBottom_toTopOf="@+id/cnrtContainerTag"
+        app:layout_constraintEnd_toEndOf="@+id/borderProgressBar"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="@+id/borderProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cnrtContainerTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:paddingRight="3dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/borderProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/borderProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/borderProgressBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>-->

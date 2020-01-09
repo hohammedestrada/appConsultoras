@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_formatted">Ésika Conmigo</string>
+    <string name="app_feedback_subject">Envío de Sugerencias App Ésika Conmigo</string>
+    <string name="tutorial_bienvenida_titulo_2">ÉSIKA CONMIGO!</string>
+
+    <string name="datami_message_title">¡Eres una de nuestras consultoras\nque está navegando gratis gracias\na tu APP Ésika Conmigo!</string>
+
+    <string name="consultant_approved_title">¡YA ERES CONSULTORA ÉSIKA!</string>
+    <string name="consultant_approved_title_two">¡FELICITACIONES!\nYA ERES CONSULTORA ÉSIKA</string>
+
+
+    <!--    Content provider permission message     -->
+    <string name="content_provider_title">Acceso a Esika Conmigo</string>
+    <string name="content_provider_message">Se necesita dar permisos de lectura de datos del App Esika Conmigo.</string>
+
+    <!-- End Relaunching -->
+
+</resources>

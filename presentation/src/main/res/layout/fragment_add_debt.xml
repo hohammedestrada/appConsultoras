@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    tools:context=".feature.debt.AddDebtFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_above="@+id/tvw_add_debt">
+
+        <LinearLayout
+            android:id="@+id/llt_helper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rlt_client"
+                style="@style/LoginInputContent.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/ivw_select"
+                    style="@style/LoginInputIcon.Right"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_arrow_down_black" />
+
+                <TextView
+                    android:id="@+id/tvw_client_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:text="@string/debt_pick_client_label"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llt_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvw_amount_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="27dp"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="20dp"
+                        android:text="¿CUÁNTO TE DEBE?"
+                        android:textColor="#8a8a8a"
+                        android:textSize="11sp"
+                        tools:ignore="SmallSP" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="27dp"
+                        android:layout_marginStart="27dp"
+                        android:background="@drawable/border_bottom_dark"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:id="@+id/tvw_currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="end"
+                            android:maxLength="18"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+
+                        <biz.belcorp.consultoras.common.component.CurrencyEditText
+                            android:id="@+id/edt_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLength="14"
+                            android:padding="8dp"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvw_campaign_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="27dp"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="20dp"
+                        android:text="CAMPAÑA"
+                        android:textColor="#8a8a8a"
+                        android:textSize="11sp"
+                        tools:ignore="SmallSP" />
+
+                    <FrameLayout
+                        android:id="@+id/flt_campaign"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="27dp"
+                        android:layout_marginStart="27dp">
+
+                        <Spinner
+                            android:id="@+id/spr_campaign"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:clickable="true" />
+
+                        <ImageView
+                            style="@style/LoginInputIcon.Right"
+                            android:layout_gravity="end|center_vertical"
+                            android:contentDescription="@null"
+                            app:srcCompat="@drawable/ic_arrow_down_black" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvw_note_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:text="NOTA (OPCIONAL):"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:ignore="SmallSP" />
+
+            <EditText
+                android:id="@+id/edt_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="4dp"
+                android:minHeight="70dp"
+                android:background="@drawable/bg_note"
+                android:hint="Me compró..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="2"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:textSize="14sp"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvw_add_debt"
+        style="@style/BottomButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:text="AGREGAR DEUDA" />
+</RelativeLayout>

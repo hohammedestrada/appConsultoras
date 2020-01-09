@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlvwSinData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.5"
+                android:src="@drawable/ic_info_campanias"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp42" />
+
+            <TextView
+                android:text="@string/sin_historial_campanias_main"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/dp15"
+                style="@style/FontLatoBold"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:text="@string/sin_historial_campanias_detail"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp8"
+                style="@style/FontLatoLight"
+                android:textSize="@dimen/dp13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</FrameLayout>

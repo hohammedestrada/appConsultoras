@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvw_nombre"
+                style="@style/PayTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/estado_cuenta_user_valoracion" />
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_artboard" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvw_constancia_pago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/constancia_envio_email"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <include layout="@layout/view_resumen_pago" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/actualizacion_pendiente"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvw_terminos_condiciones_uso"
+            style="@style/PayTextStyle.Recordatorio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/revisar_terminos"
+            android:textColor="@color/black" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="24dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/lnr_estado_cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_arrow_right_black" />
+
+                <TextView
+                    style="@style/PayTextStyle.Recordatorio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/ver_estado_cuenta"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="terms_title">INFORMACIÓN LEGAL</string>
+    <string name="terms_subtitle">TÉRMINOS Y CONDICIONES DE USO DE</string>
+    <string name="terms_descripcion">Para poder utilizar esta aplicación y acceder a todos sus beneficios para gestionar tu negocio en cualquier momento y lugar, debes haber aceptado los términos y condiciones de uso.</string>
+    <string name="terms_check">Acepto los <u>términos y condiciones</u> del app.*</string>
+    <string name="terms_privacy_check">Acepto la <u>política de privacidad</u> de uso del app.</string>
+    <string name="terms_continue">Continuar</string>
+    <string name="terms_error_server">Hubo un error al conectarse al servidor. Inténtelo nuevamente</string>
+    <string name="terms_error_title">ERROR</string>
+    <string name="terms_error_accept">Acepte los términos y condiciones para continuar.</string>
+    <string name="terms_activity_not_found">No se encontró la aplicación necesaria para visualizar los términos.</string>
+    <string name="terms_message"> ( * ) Campos obligatorios</string>
+    <string name="terms_finish">FINALIZAR</string>
+
+</resources>

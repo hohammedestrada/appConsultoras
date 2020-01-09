@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/ivw_item"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tvw_item"
+        style="@style/HomeMenuGridItemText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minLines="2" />
+
+</LinearLayout>

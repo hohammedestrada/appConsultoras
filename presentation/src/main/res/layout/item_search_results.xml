@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <biz.belcorp.mobile.components.offers.Multi
+        android:id="@+id/carouselMulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:visibility="gone"
+        xmlns:card="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card:cardElevation="5dp"
+        card:cardCornerRadius="5dp">
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/lnlFicha"
+            android:paddingBottom="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                android:id="@+id/img_product"
+                android:src="@drawable/ic_product"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:textSize="10sp"
+                    android:text="!SOLO HOY!"
+                    android:id="@+id/txt_catalogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="13sp"
+                    android:textColor="@color/colorBlack"
+                    android:text="1 shampoo agu sueños "
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/txt_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="11sp"
+                        android:text="RD $ 99.999,999"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/txt_precio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:text="RD $ 99.999,999"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/txt_precio_oferta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        android:visibility="invisible"
+                        android:id="@+id/lnl_panel"
+                        layout="@layout/view_product_operator" />
+
+                    <include
+                        android:id="@+id/lnl_panel_disabled"
+                        android:visibility="gone"
+                        layout="@layout/view_product_operator_disabled" />
+
+                    <include
+                        android:id="@+id/lnl_panel_opcion"
+                        layout="@layout/view_product_opcion" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="9sp"
+                    android:text="AGREGADO"
+                    android:minLines="1"
+                    android:maxLines="1"
+                    android:id="@+id/txt_agregado"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+
+
+

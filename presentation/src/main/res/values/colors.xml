@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors: Basicos -->
+    <color name="gray_disabled">#d4d4d4</color>
+    <color name="gray_client_card">#66c7c7c7</color>
+
+    <color name="brand_general">#b9007e</color>
+
+    <color name="white">#FFF</color>
+    <color name="whiteTransparent">#20FFFFFF</color>
+    <color name="grey_edit">#c5c5c5</color>
+    <color name="grey_edit_disabled">#EEEEEE</color>
+    <color name="black">#000</color>
+    <color name="black_medium">#7F000000</color>
+    <color name="black_text">#010000</color>
+    <color name="red">#CF2D3A</color>
+    <color name="black_lock">#80000000</color>
+    <color name="black_transparent">#44000000</color>
+    <color name="yellow">#b4963c</color>
+    <color name="shadow">#30CACACA</color>
+    <color name="tab_disabled">#767376</color>
+    <color name="sms_correct">#6bbe11</color>
+    <color name="home_background">#f9f9f9</color>
+    <color name="neon_red">#e81c36</color>
+    <color name="desactivate_color">#FFCCCCCC</color>
+    <color name="divide_color">#00000000</color>
+
+    <color name="gray_4">#909094</color>
+
+    <color name="brown_grey">#a2a2a2</color>
+
+    <color name="button_fourth">#000000</color>
+    <color name="button_fourth_pressed">#171717</color>
+    <color name="button_fourth_text">#ffffff</color>
+
+    <color name="button_fb">#39579a</color>
+    <color name="button_fb_pressed">#3949ab</color>
+    <color name="button_fb_text">#FFF</color>
+    <color name="button_fb_disabled">#BBB</color>
+    <!-- End Colors Basicos -->
+
+    <!-- Colors: Controls -->
+    <color name="disabled">#AABDBDBD</color>
+    <color name="border_black">#73000000</color>
+
+    <!--    Controls: Tooltip -->
+    <color name="tooltip_light_inside">#FFF</color>
+    <color name="tooltip_light_text">#000</color>
+    <!--    End Controls Tooltip -->
+
+    <!--    Controls: Grid -->
+    <color name="border_vertical">#d3d3d3</color>
+    <!--    End Controls Grid -->
+    <!-- End Colors Controls -->
+
+    <color name="white_medium">#ccc</color>
+
+    <color name="text_light">#FFF</color>
+    <color name="hint_light">#DADADA</color>
+
+    <color name="text_dark">#000</color>
+    <color name="hint_dark">#7f7f7f</color>
+
+    <color name="switch_title">#AA000000</color>
+    <color name="switch_message">#585858</color>
+
+    <color name="link_small">#AABDBDBD</color>
+
+    <color name="text_filter">#1d1d26</color>
+    <color name="border_filter">#9b9b9b</color>
+
+    <color name="border_bottom_card">#dbdbdb</color>
+
+    <color name="border_annotation">#ece6d4</color>
+    <color name="border_message">#ededed</color>
+    <color name="dorado">#a18328</color>
+    <color name="dorado_transparente">#50a18328</color>
+    <color name="menu_separator">#44000000</color>
+    <color name="menu_separator_v2">#33000000</color>
+
+    <color name="content_activity_third">#f8f8f8</color>
+    <color name="tooltip_outside_2">#000000</color>
+
+    <color name="fab_option_1">#f8f8f8</color>
+    <color name="fab_option_2">#f8f8f8</color>
+    <color name="fab_option_text">#fff</color>
+    <color name="fab_content_bg">#cc000000</color>
+
+    <color name="toolbar_light">#fff</color>
+
+
+    <color name="button_disabled">#BBB</color>
+
+    <color name="separator">#979797</color>
+
+    <color name="separator_2">#44979797</color>
+
+    <color name="separator3">#eaeaec</color>
+    <color name="share_green">#66b763</color>
+    <color name="share_blue">#39579a</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="view_line_active">#a18328</color>
+    <color name="view_line_inactive">#d1d1d1</color>
+
+    <!-- Ripple Gray -->
+    <color name="ripple_gray">#d8d8d8</color>
+
+
+    <color name="item_text_title">#1a1a1a</color>
+    <color name="item_text_description">#7F000000</color>
+
+    <!--    Belcorp Fifty Years    -->
+    <color name="home_belcorp_fifty_debt">#5d5d5d</color>
+    <color name="home_belcorp_fifty_user">#9f6726</color>
+    <color name="home_belcorp_fifty_color">#ac7733</color>
+    <color name="home_belcorp_fifty_color_second">#a18328</color>
+    <color name="home_belcorp_fifty_ripple_color">#4Dac7733</color>
+    <color name="home_belcorp_fifty_ripple_color_second">#1Aa18328</color>
+
+
+    <color name="text_gray">#808080</color>
+    <color name="border_button_verify_account">#e7e1e1</color>
+
+    <color name="voice_recognition">#7f0161</color>
+    <color name="voice_recognition_ripple">#207f0161</color>
+
+    <color name="magenta_gallery">#ad1f78</color>
+    <color name="default_magenta">#B9007E</color>
+    <color name="default_magenta_ripley">#80B9007E</color>
+
+    <color name="violeta_anuncio">#C93D9C</color>
+    <color name="bg_grey">#f5f5f5</color>
+    <color name="red_grey">#cdc7c8</color>
+
+    <color name="notification">#20B9007E</color>
+
+    <color name="payment_intense">#808080</color>
+    <color name="gray_storie">#f5f5f5</color>
+
+    <color name="celeste">#00c7b3</color>
+    <color name="lila">#95009f</color>
+    <color name="naranja">#ff6000</color>
+
+    <!-- nuevo diseño de bonificaciones-->
+
+    <color name="lograste_puntaje">#569c04</color>
+    <color name="bonificaciones_barra_up">#E21D64</color>
+    <color name="bonificaciones_barra_down">#9D0066</color>
+
+    <color name="gray">#CACACA</color>
+
+    <color name="warm_grey">#808080</color>
+    <color name="rippelColor">#0099CC</color>
+
+    <color name="tag_new_start">#815fa7</color>
+    <color name="tag_new_end">#50358a</color>
+
+    <color name="tag_promo_start">#c7135a</color>
+    <color name="tag_promo_end">#c7135a</color>
+
+    <color name="green_switch_activate">#569c04</color>
+
+    <color name="gray_blocked">#D1D1D4</color>
+    <color name="white_opacity">#E6FFFFFF</color>
+    <color name="gray_body_receive_will">#505050</color>
+
+    <color name="text_hint_tvo">#454549</color>
+
+    <color name="renew">#b283bb</color>
+    <color name="yellow_renew">#FFC62C</color>
+    <color name="bg_home_rose">#FFDED7</color>
+
+    <!-- colores de las pagina de los stories -->
+    <color name="storie_page_progress_secondary">#8affffff</color>
+    <color name="progress_max_active">@color/white</color>
+
+    <color name="select_bar">#4f0036</color>
+
+    <!-- Camino Brillante -->
+    <color name="product_added_success">#569C04</color>
+    
+    <!--<color name="gray_1">#454545</color>-->
+    <color name="gray_disabled_1">#454545</color>
+
+    <color name="back_searchview_for_ab_testing">#26000000</color>
+
+    <color name="level_coral">#FFF1F1</color>
+    <color name="level_ambar">#FFF9EB</color>
+    <color name="level_perla">#F6EAE6</color>
+    <color name="level_topacio">#EBF7FF</color>
+    <color name="level_brillante">#F1E4D1</color>
+
+    <color name="consultora">#b66fa6</color>
+    <color name="coral">#cd5b5b</color>
+    <color name="ambar">#e8b74b</color>
+    <color name="perla">#db9e8a</color>
+    <color name="topacio">#2d7ab0</color>
+    <color name="brillante">#b19260</color>
+
+    <color name="gray_disabled_text">#c7c7c7</color>
+
+    <color name="gray_item_unselect">#454549</color>
+    <color name="gray_my_orders">#d2d2d2</color>
+
+    <color name="gana_mas_festival_start">#66115d</color>
+    <color name="gana_mas_festival_center">#611766</color>
+    <color name="gana_mas_festival_end">#55277d</color>
+    <color name="green_download_content">#469253</color>
+    <color name="sello_promocion">#c7135a</color>
+
+
+    <color name="gana_mas_promotion_start">#c7135a</color>
+    <color name="gana_mas_promotion_center">#c7135a</color>
+    <color name="gana_mas_promotion_end">#c7135a</color>
+    <color name="gana_mas_promotion_text">#FFFFFF</color>
+
+
+
+    <color name="text_disabled_dream_meter">#909094</color>
+
+    <color name="red_tooltip_order">#fff3ec</color>
+    <color name="green_tooltip_order">#e6f0da</color>
+    <color name="gray_multi_order_block">#fafafa</color>
+    <color name="gray_multi_order_block_stroke">#dcdcdc</color>
+</resources>

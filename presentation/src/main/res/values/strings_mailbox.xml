@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mailbox_select_client">SELECCIONA AL CLIENTE</string>
+    <string name="mailbox_add_button">Continuar</string>
+    <string name="mailbox_description_hint">Sus productos favoritos, fechas especiales, etc.</string>
+    <string name="mailbox_reminder_description_hint">Me compró&#8230;</string>
+
+    <string name="mailbox_card">NOTAS</string>
+    <string name="mailbox_pedido">PEDIDOS</string>
+    <string name="mailbox_pedido_simple">PEDIDO</string>
+    <string name="mailbox_search_client">Buscar...</string>
+
+</resources>

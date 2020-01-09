@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/llt_menu_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <biz.belcorp.consultoras.feature.home.menu.lateral.MenuList
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/mlt_menu"
+                android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            style="@style/HomeMenuItemDiv"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/llt_menu_header"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/llt_menu_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/view"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_info_app"
+                style="@style/HomeMenuLateralTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp" />
+
+            <biz.belcorp.consultoras.feature.home.menu.lateral.MenuGrid
+                android:id="@+id/mgd_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

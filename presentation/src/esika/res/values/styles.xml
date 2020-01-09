@@ -1,0 +1,7 @@
+<resources>
+    <!--    Control: Toolbar -->
+    <style name="ToolbarTheme">
+        <item name="android:background">@color/new_primary</item>
+        <item name="actionMenuTextColor">@android:color/black</item>
+    </style>
+</resources>

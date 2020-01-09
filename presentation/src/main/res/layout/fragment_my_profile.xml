@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvwGuardar"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/MiPerfilHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlt_camera"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <biz.belcorp.consultoras.common.component.CircleImageView
+                        android:id="@+id/ivwPhoto"
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_contact_default" />
+
+                    <ImageView
+                        android:id="@+id/ivw_camera"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/ic_circle_indicator"
+                        android:contentDescription="@null"
+                        android:padding="7dp"
+                        android:tag="unchecked"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_camera" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvwUser"
+                        style="@style/MiPerfilUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/MiPerfilSubtitleSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/my_profile_codigo" />
+
+                    <TextView
+                        android:id="@+id/tvwCode"
+                        style="@style/MiPerfilSubtitleDataSecondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/MiPerfilSubtitleSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/my_profile_zona" />
+
+                    <TextView
+                        android:id="@+id/tvwZone"
+                        style="@style/MiPerfilSubtitleDataSecondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_change_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="8dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="7.5dp"
+                        app:srcCompat="@drawable/ic_padlock" />
+
+                    <TextView
+                        style="@style/MiPerfilPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_profile_change_password" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MiPerfilContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/MiPerfilSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_profile_apodo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtApodo"
+                        style="@style/MiPerfilSubtitleData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:digits="aábcdeéfghiíjklmnñoópqrstuúvwxyzÁABCDÉEFGHÍIJKLMNÑÓOPQRSTÚUVWXYZ0123456789 "
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:maxLength="50" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5dp"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                        <TextView
+                            style="@style/MiPerfilCambiar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_profile_actualizar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvwErrorApodo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_alerta_small"
+                    android:drawablePadding="8dp"
+                    android:text="Error Alias"
+                    android:textColor="@color/red"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    style="@style/MiPerfilSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/my_profile_email" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgstaConfirMail"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/ic_icono_confirmacion" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edtEmail"
+                            style="@style/MiPerfilSubtitleData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="100"
+                            android:textAllCaps="false" />
+
+
+                        <TextView
+                            android:id="@+id/tvwErrorEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_alerta_small"
+                            android:drawablePadding="8dp"
+                            android:text="Error Correo Electrónico"
+                            android:textColor="@color/red"
+                            android:textSize="10sp"
+                            android:visibility="gone"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lltCambiarEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                app:srcCompat="@drawable/ic_edit" />
+
+                            <TextView
+                                style="@style/MiPerfilCambiar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/my_profile_editar"
+                                android:textColor="@color/magenta"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <biz.belcorp.mobile.components.design.button.Button
+                            android:id="@+id/btnConfirmarCorreo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="3dp"
+                            app:btn_color="@color/magenta"
+                            app:btn_text="@string/phone_confirm" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/MiPerfilSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/my_profile_celular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgstaConfirCel"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/ic_icono_confirmacion" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edtCelular"
+                            style="@style/MiPerfilSubtitleData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLength="15" />
+
+
+                        <TextView
+                            android:id="@+id/tvwErrorMobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_alerta_small"
+                            android:drawablePadding="8dp"
+                            android:text="Error Celular"
+                            android:textColor="@color/red"
+                            android:textSize="10sp"
+                            android:visibility="gone"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lltCambiarCelular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                app:srcCompat="@drawable/ic_edit" />
+
+                            <TextView
+                                style="@style/MiPerfilCambiar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/my_profile_editar"
+                                android:textColor="@color/magenta"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <biz.belcorp.mobile.components.design.button.Button
+                            android:id="@+id/btnConfirmarCelular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="3dp"
+                            app:btn_color="@color/magenta"
+                            app:btn_text="@string/phone_confirm" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnrCheckWhatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkRecibirWhatsapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                    <TextView
+                        android:id="@+id/tvwRecibirWhatsapp"
+                        style="@style/MiPerfilSubtitleSecondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_profile_recibir_whatsapp"
+                        android:textAllCaps="false" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/mensajeErrorWhatsapp"
+                    layout="@layout/tooltip_error"
+                    android:visibility="gone" />
+
+                <TextView
+                    style="@style/MiPerfilSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/my_profile_fijo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtTelefono"
+                        style="@style/MiPerfilSubtitleData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:digits="0123456789"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="15" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5dp"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                        <TextView
+                            style="@style/MiPerfilCambiar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_profile_actualizar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvwErrorPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_alerta_small"
+                    android:drawablePadding="8dp"
+                    android:text="Error Número Fijo"
+                    android:textColor="@color/red"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/lltAddNumero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        app:srcCompat="@drawable/ic_add" />
+
+                    <TextView
+                        style="@style/MiPerfilCambiar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_profile_add_otro_numero" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvwCallCenter"
+                    style="@style/MiPerfilSubtitleData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/my_profile_call_center"
+                    android:textAllCaps="false" />
+
+                <LinearLayout
+                    android:id="@+id/lltNumeroAdicional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/MiPerfilSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/my_profile_otro_numero" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtOtroNumero"
+                            style="@style/MiPerfilSubtitleData"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="0123456789"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLength="15" />
+
+                        <LinearLayout
+                            android:id="@+id/llt_eliminar_numero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                app:srcCompat="@drawable/ic_trash_black" />
+
+                            <TextView
+                                style="@style/MiPerfilCambiar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/my_profile_eliminar" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkTermsAccept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvwTerms"
+                        style="@style/MiPerfilSubtitleSecondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_profile_terms"
+                        android:textAllCaps="false" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvwGuardar"
+        style="@style/MiPerfilSave"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:enabled="false"
+        android:text="@string/my_profile_guardar" />
+
+</RelativeLayout>

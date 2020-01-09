@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="biz.belcorp.consultoras.feature.ofertafinal.OfertaFinalLandingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llt_premios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_premios_title"
+                style="@style/Ficha.Text.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/oferta_final_margin_side"
+                android:layout_marginTop="@dimen/oferta_final_margin_top"
+                android:layout_marginRight="@dimen/oferta_final_margin_side"
+                android:text="@string/oferta_final_premio_title" />
+
+            <biz.belcorp.mobile.components.offers.PremioSimple
+                android:id="@+id/premio_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/oferta_final_margin_side"
+                android:layout_marginRight="@dimen/oferta_final_margin_side"
+                android:layout_marginBottom="@dimen/oferta_final_margin_top"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvw_premios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/oferta_final_margin_side"
+                android:layout_marginRight="@dimen/oferta_final_margin_side"
+                android:layout_marginBottom="@dimen/oferta_final_margin_top"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <biz.belcorp.mobile.components.design.progressbar.ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="16dp"
+                app:progressbar_height="26"
+                app:progressbar_isReadonly="true"
+                app:progressbar_max="200"
+                app:progressbar_progress="100"
+                app:progressbar_set_meta_top="true"
+                app:progressbar_show_hito="false"
+                app:progressbar_show_meta="true"
+                app:progressbar_show_thumb="false"
+                app:progressbar_text_titulo="Te falta S/. 00.00 para llevarte el premio" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_offers_recommended"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/vw_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oferta_final_divider_height"
+                android:background="@color/gray_3"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvw_ofertas_title"
+                style="@style/Ficha.Text.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/oferta_final_margin_side"
+                android:layout_marginTop="@dimen/oferta_final_margin_top"
+                android:layout_marginRight="@dimen/oferta_final_margin_side"
+                android:text="@string/oferta_final_recomendados_title"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvw_offers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lltTotal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+
+
+    <biz.belcorp.mobile.components.offers.OrderTotal
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderTotalComponent"
+        app:tvganancia_text_size="14dp"
+        app:tvganancia_text_bold="true"
+        app:tvtotal_text_size="14dp"
+        app:tvtotal_text_bold="true">
+    </biz.belcorp.mobile.components.offers.OrderTotal>
+
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rltContentError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivw_image_null"
+            style="@style/MyOrdersErrorIcon"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_network_error" />
+
+        <TextView
+            style="@style/MyOrdersErrorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivw_image_null"
+            android:layout_centerInParent="true"
+            android:text="@string/tvo_error"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/view_loading"
+        layout="@layout/view_loading_app"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/view_loading_sync"
+        layout="@layout/view_loading_sync"
+        android:visibility="gone" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/updateEmailView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ScrollView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/updateButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    style="@style/TVOTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tvo_title_margin_horizontal"
+                    android:layout_marginTop="@dimen/tvo_title_margin_top"
+                    android:layout_marginEnd="@dimen/tvo_title_margin_horizontal"
+                    android:text="@string/title_tvo" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/emailInputLayout"
+                    style="@style/TVOInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tvo_body_margin_horizontal"
+                    android:layout_marginTop="@dimen/tvo_email_input_margin_top"
+                    android:layout_marginEnd="@dimen/tvo_body_margin_horizontal"
+                    android:theme="@style/TVOInput"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/emailEdit"
+                        style="@style/TVOEmailEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TVOEmailEdit" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/tvo_body_margin_horizontal"
+                    android:layout_marginStart="@dimen/tvo_body_margin_horizontal"
+                    android:layout_marginTop="@dimen/tvo_terms_margin_top"
+                    android:layout_marginEnd="@dimen/tvo_body_margin_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/termsCheckBox"
+                        style="@style/TVOCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TVOCheckBox" />
+
+                    <TextView
+                        android:id="@+id/termsText"
+                        style="@style/TVOTextTerms"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/phone_terms" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/updateButton"
+            style="@style/TVOButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/tvo_update_margin_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

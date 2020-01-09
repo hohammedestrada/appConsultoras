@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titulo_monto_minimo">Lo logras con:</string>
+    <string name="titulo_monto_minimo_brillante">Tu puntaje es:</string>
+    <string name="titulo_monto_maximo">Te falta:</string>
+
+
+    <string name="camino_brillante_campana">Campañas</string>
+    <string name="camino_brillante_monto_pedido">Monto de mi pedido</string>
+    <string name="camino_brillante_ganancia">Ganancia</string>
+
+    <string name="camino_brillante_nivel_consultora">Beneficios de Consultora</string>
+    <string name="camino_brillante_nivel_coral">Beneficios de Coral</string>
+    <string name="camino_brillante_nivel_ambar">Beneficios de Ambar</string>
+    <string name="camino_brillante_nivel_perla">Beneficios de Perla</string>
+    <string name="camino_brillante_nivel_topacio">Beneficios de Topacio</string>
+    <string name="camino_brillante_nivel_brillante">Beneficios de Brillante</string>
+
+    <string name="camino_brillante_nivel_consultora_descripcion">Nivel Consultora</string>
+    <string name="camino_brillante_nivel_coral_descripcion">Nivel Coral</string>
+    <string name="camino_brillante_nivel_ambar_descripcion">Nivel Ámbar</string>
+    <string name="camino_brillante_nivel_perla_descripcion">Nivel Perla</string>
+    <string name="camino_brillante_nivel_topacio_descripcion">Nivel Topacio</string>
+    <string name="camino_brillante_nivel_brillante_descripcion">Nivel Brillante</string>
+
+    <string name="camino_brillante_content">Contenido</string>
+    <string name="camino_brillante_price">Precio</string>
+    <string name="camino_brillante_price_for_you">Precio para ti</string>
+    <string name="camino_brillante_price_normal">Precio normal</string>
+    <string name="camino_brillante_price_client">Para tu cliente</string>
+    <string name="camino_brillante_earn_up">Gana hasta</string>
+    <string name="camino_brillante_para_ti">Para ti</string>
+    <string name="camino_brillante_gain">Ganancia</string>
+
+    <string name="camino_brillante_kits_y_demostradores">Kits y Demostradores</string>
+    <string name="en_el_periodo">En el periodo:</string>
+    <string name="acumulaste">Acumulaste</string>
+    <string name="pts">pts</string>
+    <string name="recuerda_pasar_pedido_hasta">Recuerda pasar pedido hasta</string>
+    <string name="te_falta">Te falta</string>
+    <string name="con">con</string>
+    <string name="nivel">Nivel</string>
+    <string name="enterate_mas">Entérate más</string>
+    <string name="beneficios_de">Beneficios de</string>
+    <string name="tus_logros">Tus logros</string>
+    <string name="todo_tu_esfuerzo_tiene_grandes_resultados">Todo tu esfuerzo tiene grandes resultados.</string>
+    <string name="mis_ganancias">Mis ganancias</string>
+    <string name="campanas">Campañas</string>
+    <string name="ganancia_de_periodo">Ganancia de periodo</string>
+    <string name="ver_menos">Ver menos</string>
+    <string name="ultimo_obtenido">Último obtenido</string>
+    <string name="titulo_popup_onboarding">¿Quieres seguir viendo lo nuevo de Camino Brillante?</string>
+    <string name="content_popup_onboarding">Cada vez que ingreses verás esta información.</string>
+    <string name="mensaje_pedidos_campanias_landing">Vas <![CDATA[<b>%s de %s pedidos,</b>]]> te quedan %s campañas en el periodo</string>
+
+    <!--tutorial -->
+    <string name="title_1">Niveles y beneficios</string>
+    <string name="description_1">Ahora estarás en un nivel con beneficios personalizados.</string>
+    <string name="title_2">Monto acumulado</string>
+    <string name="description_2">Podrás ver el monto acumulado en el periodo y cuanto te falta para subir de nivel.</string>
+    <string name="title_3">Logros</string>
+    <string name="description_3">Mira todo lo que has alcanzado durante este tiempo juntos.</string>
+    <string name="suenio">Sueño:</string>
+
+</resources>

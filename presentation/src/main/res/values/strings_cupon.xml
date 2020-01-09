@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cupon_recuerda">Condiciones:</string>
+    <string name="cupon_conmigo">Conmigo</string>
+    <string name="cupon_usuario_tipo1">%1$s,\n¡Tienes un cupón\nde %2$s%% de dscto!</string>
+    <string name="cupon_usuario_tipo2">%1$s,\n¡Puedes ganar un cupón\nde %2$s%% de dscto!</string>
+
+    <string name="cupon_tipo1_option1">Sólo válido en la campaña C%1$s.</string>
+    <string name="cupon_tipo1_option2">Tu dscto. lo verás reflejado en tu facturación (dscto. hasta %1$s %2$s).</string>
+
+    <string name="cupon_tipo2_option1">Agrega mínimo 1 oferta de Gana+* pasando pedido por el App %s.</string>
+    <string name="cupon_tipo2_option2">Válido sólo en C%1$s (Dscto. máximo %2$s %3$s). El Dscto. se reflejará en tu facturación.</string>
+
+    <string name="cupon_condicion">*No están incluidas las ofertas de las secciones \"Guía de Negocio Digital\" y \"Herramientas de Venta\".</string>
+    <string name="cupon_condicion2">Revisa los</string>
+    <string name="cupon_condicion3">términos y condiciones.</string>
+    <string name="cupon_aceptar">OK! entendido</string>
+</resources>

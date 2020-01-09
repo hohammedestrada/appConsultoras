@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nsvwMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ctlMain"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivwBgMedidor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"
+            android:src="@drawable/bg_texture_dream_meter"
+            app:layout_constraintBottom_toBottomOf="@id/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ivwRegalo"
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="@dimen/dream_meter_margin_top_bottom_header_pantalla_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivwAdorno1"
+            android:layout_width="65dp"
+            android:layout_height="125dp"
+            android:contentDescription="@null"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_deco_1_dream_meter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivwBgMedidor" />
+
+        <ImageView
+            android:contentDescription="@null"
+            android:id="@+id/ivwAdorno2"
+            android:layout_width="65dp"
+            android:layout_height="229dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_deco_2_dream_meter"
+            app:layout_constraintBottom_toBottomOf="@+id/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space" />
+
+        <TextView
+            android:id="@+id/tvwLabelSuenio"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="@string/pregunta_suenio"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/dream_meter_text_size_pregunta"
+            app:layout_constraintEnd_toStartOf="@+id/ivwAdorno2"
+            app:layout_constraintStart_toEndOf="@+id/ivwAdorno1"
+            app:layout_constraintTop_toBottomOf="@id/ivwRegalo" />
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dream_meter_margin_top_bottom_header_pantalla_1"
+            app:layout_constraintTop_toBottomOf="@id/tvwLabelSuenio" />
+
+        <LinearLayout
+            android:id="@+id/llNameDream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dream_meter_margin_top_definelo_con_un_nombre"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivwBgMedidor">
+
+            <TextView
+                android:id="@+id/tvwDefinelo"
+                style="@style/FontLatoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/definelo_con_un_nombre"
+                android:textColor="#000"
+                android:textSize="@dimen/dream_meter_text_size_definelo_con_un_nombre" />
+
+            <biz.belcorp.mobile.components.design.edittext.EditText
+                android:id="@+id/edtDreamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dream_meter_margin_top_dream_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:longClickable="false"
+                app:regex="^[\\s]"
+                app:showMaxLenght="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAmountDream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btnEmpezar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llNameDream"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <TextView
+                android:id="@+id/tvwCuantoNecesitas"
+                style="@style/FontLatoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cuanto_necesitas_para_lograrlo"
+                android:textColor="#000"
+                android:textSize="@dimen/dream_meter_text_size_cuanto_necesitas_para_lograrlo" />
+
+            <TextView
+                android:id="@+id/tvwEscribelo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:text="@string/escribelo_abajo"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dream_meter_text_size_escribelo_abajo" />
+
+            <biz.belcorp.mobile.components.design.edittext.EditText
+                android:id="@+id/edtDreamAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dream_meter_margin_top_dream_amount"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:longClickable="false"
+                app:regex="^[0]"
+                app:helperText="*Verifica tu estado crediticio" />
+
+        </LinearLayout>
+
+        <biz.belcorp.mobile.components.design.button.Button
+            android:id="@+id/btnEmpezar"
+            android:layout_width="132dp"
+            android:layout_height="40dp"
+            app:btn_color="#909094"
+            app:btn_disable="true"
+            app:btn_text="Empezar"
+            app:btn_text_color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llAmountDream" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="145dp"
+            android:scaleType="fitStart"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_deco_3_dream_meter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

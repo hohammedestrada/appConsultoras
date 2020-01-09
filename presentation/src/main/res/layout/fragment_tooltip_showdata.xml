@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/history_item_payment"
+    android:clickable="true"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_tooltip_delete"
+        android:orientation="vertical"
+        android:paddingTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/skill_balls"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <biz.belcorp.mobile.components.charts.circle.Indicador
+                    android:id="@+id/indicador"
+                    style="@style/FontLatoBold"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <biz.belcorp.mobile.components.charts.circle.Torta
+                    android:id="@+id/torta"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <biz.belcorp.mobile.components.charts.wizard.Step
+                    android:id="@+id/step"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <biz.belcorp.mobile.components.charts.circle.Medalla
+                    android:id="@+id/premiun"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <biz.belcorp.mobile.components.charts.circle.MedallaPremium
+                    android:id="@+id/medallaPremium"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/modalTitle"
+                        style="@style/FontLatoBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/modalDescription"
+                        style="@style/FontLatoRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        tools:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <biz.belcorp.mobile.components.design.button.Button
+                android:id="@+id/btnShowData"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                app:btn_color="@color/magenta"
+                app:btn_text="Entendido" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

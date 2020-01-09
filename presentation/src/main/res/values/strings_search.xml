@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Search Single-->
+    <string name="search_agotado">Este producto esta agotado</string>
+    <string name="search_sugerencia">Te sugerimos:</string>
+    <string name="search_order_error">El texto indicado no es valido, pruebe nuevamente</string>
+    <string name="search_agotado2">Este producto está agotado pero no te preocupes, te sugerimos estos:</string>
+    <string name="search_oferta_relacionada">Ofertas similares que te podrían gustar</string>
+
+    <!-- Search List-->
+    <string name="search_hint">Buscar Ofertas</string>
+    <string name="search_empty_title">Ups... no tenemos ofertas con este nombre.</string>
+    <string name="search_empty_body">Vuelve a intentar.</string>
+    <string name="search_error_title">Ups... ocurrió un problema.</string>
+    <string name="search_error_body">Vuelve a intentar.</string>
+    <string name="search_error">La busqueda no obtuvo valores, intentelo mas tarde</string>
+    <string name="search_add_product_error">No se pudo añadir el producto solicitado, intentelo mas tarde</string>
+    <string name="search_voice_permission">Debes aceptar los permisos de micrófono para usar el reconocimiento por voz.</string>
+    <string name="search_voice_title">Ahora también puedes\nbuscar por voz</string>
+    <string name="search_added">AGREGADO</string>
+    <string name="search_see_more_results">VER MÁS RESULTADOS</string>
+
+    <!-- Search Results -->
+    <string name="search_result_label">Resultados de la búsqueda</string>
+    <string name="search_result_number">resultados para :</string>
+    <string name="search_result_order_by">Ordenado por :</string>
+    <string name="search_result_error">Hubo un error.</string>
+    <string name="search_result_empty">Lo sentimos. No encontramos productos para los filtros aplicados.</string>
+
+
+    <!-- Voice Recognition-->
+    <string name="voice_recognition_buscar">Indica el código o el nombre\n del producto ¡y listo!</string>
+    <string name="voice_recognition_error">No entendí.\n Por favor, vuelve a intentarlo.</string>
+    <string name="voice_recognition_intentar">Intentar de nuevo</string>
+    <string name="voice_recognition_order">Di en voz alta el código,\nluego la palabra \"CANTIDAD\"\nseguido del número.</string>
+    <string name="voice_recognition_order_sub">Ejemplo:\n12345 CANTIDAD 1</string>
+
+    <!-- Search Filter -->
+    <string name="search_filter_title">FILTRA TUS OFERTAS</string>
+    <string name="search_filter_aplicar">APLICAR</string>
+    <string name="search_filter_limpiar">LIMPIAR</string>
+    <string name="search_filter_chips">Filtros:</string>
+    <string name="search_filter_text">Filtrar</string>
+
+    <!-- Búsquedas recientes Alert Dialog -->
+    <string name="recent_search_delete_title">¿Quieres borrar el historial de lo que viste recientemente?</string>
+    <string name="recent_search_delete_negative">Cancelar</string>
+    <string name="recent_search_delete_positive">Borrar</string>
+
+
+
+</resources>

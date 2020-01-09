@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lltContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imgEmpty"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/FontLatoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtSubtitle"
+            style="@style/FontLatoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <biz.belcorp.mobile.components.design.button.Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            app:btn_color="@color/magenta"
+            app:btn_text="@string/ganamas_empty_button" />
+
+    </LinearLayout>
+
+</LinearLayout>

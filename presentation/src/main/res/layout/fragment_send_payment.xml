@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/PaymentFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_above="@+id/btn_send"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/llt_content_header"
+                style="@style/PaymentContentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PaymentTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send_payment_title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="75dp" >
+
+                        <ImageView
+                            android:id="@+id/ivw_enviar_sms"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_circle_black"
+                            android:contentDescription="@null"
+                            android:padding="8dp"
+                            app:srcCompat="@drawable/ic_sms" />
+
+                        <ImageView
+                            android:id="@+id/ivw_sms_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_check"
+                            android:contentDescription="@null"
+                            android:visibility="visible"
+                            android:tag="unchecked"
+                            app:srcCompat="@drawable/ic_check_selector_gray"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true" />
+
+                        <TextView
+                            android:id="@+id/tvw_sms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivw_enviar_sms"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/client_sms"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="75dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginStart="40dp">
+
+                        <ImageView
+                            android:id="@+id/ivw_enviar_mail"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_circle_black"
+                            android:contentDescription="@null"
+                            app:srcCompat="@drawable/ic_message"
+                            android:padding="8dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivw_mail_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_check"
+                            android:contentDescription="@null"
+                            android:visibility="visible"
+                            android:tag="unchecked"
+                            app:srcCompat="@drawable/ic_check_selector_gray"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true" />
+
+                        <TextView
+                            android:id="@+id/tvw_correo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivw_enviar_mail"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/client_correo"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="75dp" >
+
+                        <ImageView
+                            android:id="@+id/ivw_enviar_wapp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_circle_black"
+                            android:contentDescription="@null"
+                            android:padding="8dp"
+                            app:srcCompat="@drawable/ic_whatsapp_white" />
+
+                        <ImageView
+                            android:id="@+id/ivw_wapp_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_check"
+                            android:contentDescription="@null"
+                            android:visibility="visible"
+                            android:tag="unchecked"
+                            app:srcCompat="@drawable/ic_check_selector_gray"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true" />
+
+                        <TextView
+                            android:id="@+id/tvw_whatsapp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivw_enviar_wapp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/client_whatsapp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_message"
+                style="@style/PaymentMessageComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_send"
+        style="@style/BottomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/send_payment_button" />
+
+</RelativeLayout>

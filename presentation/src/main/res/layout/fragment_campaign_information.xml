@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/vw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp29"
+            android:paddingRight="@dimen/dp29">
+
+            <TextView
+                style="@style/campaignInfoMagentaRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_campania_estas_en"
+                android:textSize="@dimen/dp12" />
+
+            <TextView
+                android:id="@+id/tvwCampania"
+                style="@style/campaignInfoMagentaBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/vw"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/campaignInfoBlackBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp19"
+                android:text="@string/facturacion_"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                android:id="@+id/tvwFechaFacturacion"
+                style="@style/campaignInfoBlackRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                style="@style/campaignInfoBlackBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvwInfoFechaPago"
+                android:layout_marginTop="@dimen/dp7"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                android:id="@+id/tvwFecha"
+                style="@style/campaignInfoBlackRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp24"
+                android:textSize="@dimen/dp14" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <biz.belcorp.consultoras.common.component.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@color/white"
+        app:pstsActivateTextColor="@color/black"
+        app:pstsDeactivateTextColor="@color/desactivate_color"
+        app:pstsDividerColor="@color/divide_color"
+        app:pstsIndicatorColor="@color/primary"
+        app:pstsIndicatorHeight="@dimen/dp2"
+        app:pstsShouldExpand="true"
+        app:pstsTabSwitch="false"
+        app:pstsTextAllCaps="true"
+        app:pstsUnderlineColor="@color/divide_color" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp2"
+        android:background="@color/disabled"
+        android:visibility="visible" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

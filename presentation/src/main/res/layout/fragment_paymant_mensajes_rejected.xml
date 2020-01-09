@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Aqui esta el pago rechazado -->
+        <LinearLayout
+            android:id="@+id/lnr_bag_rechazado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="26dp"
+                app:srcCompat="@drawable/ic_bag" />
+
+            <TextView
+                style="@style/PayTextStyle.Recordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="@string/pago_rechazado"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/PayTextStyle.Recordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/pago_no_realizado"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                style="@style/ButtonPaid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        style="@style/PayTextStyle.Recordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/numero_operacion"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvw_numero_operacion"
+                        style="@style/PayTextStyle.Recordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/PayTextStyle.Recordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/fecha_operacion"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvw_fecha_operacion"
+                        style="@style/PayTextStyle.Recordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/PayTextStyle.Recordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="17dp"
+                        android:text="Mensaje:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvw_mensaje"
+                        style="@style/PayTextStyle.Recordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="17dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center|center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_ir_home"
+                    style="@style/ButtonPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="30dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/ir_home" />
+
+                <Button
+                    android:id="@+id/btn_volver_intentar"
+                    style="@style/ButtonPaidRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/volver_intentar" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

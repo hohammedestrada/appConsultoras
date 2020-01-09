@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<biz.belcorp.mobile.components.offers.Multi
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/oferta"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center_horizontal"
+    app:multi_height_wrap_content="true"
+    app:multi_placeholder="@drawable/ic_container_placeholder" />

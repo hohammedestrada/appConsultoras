@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="biz.belcorp.consultoras.feature.caminobrillante.feature.tutorial.TutorialCardFragment">
+
+    <ImageView
+        android:id="@+id/tutorial_image_camino_brillante"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:contentDescription="@null"
+        android:padding="32dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/title_tutorial_camino_brillante"
+                style="@style/FontLatoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="3dp"
+                android:text="Title 1"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tutorial_description_camino_brillante"
+            style="@style/FontLatoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:text="Ahora estarás en un nivel con beneficios personalizados."
+            tools:ignore="HardcodedText" />
+
+        <biz.belcorp.mobile.components.design.button.Button
+            android:id="@+id/btn_omitir_camino_brillante"
+            android:layout_width="132dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:btn_color="@color/magenta"
+            app:btn_text="Empezar"
+            app:btn_text_color="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

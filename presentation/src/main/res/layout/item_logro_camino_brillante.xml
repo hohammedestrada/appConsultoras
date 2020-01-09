@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<biz.belcorp.mobile.components.design.box.Box
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/box_item_logro_camino_brillante"
+    android:layout_width="266dp"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    app:button_is_visible="true"
+    app:button_text="@string/ver_todos"
+    app:button_text_underline="true"
+    app:subtitle_size="14sp"
+    app:subtitle_text="Tu progreso tiene recompensas"
+    app:title_size="16sp"
+    app:title_text="Crecimiento" />

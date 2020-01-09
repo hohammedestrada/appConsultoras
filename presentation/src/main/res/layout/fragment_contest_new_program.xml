@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.contest.news.NewProgramFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            style="@style/IncentivosContentProgramaNuevas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_current_title"
+                style="@style/IncentivesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:text="@string/incentives_item_title"
+                android:visibility="visible"
+                android:clickable="false"
+                android:background="@drawable/bg_header_title"
+                android:gravity="center_horizontal" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvw_contest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingTop="5dp"
+                android:paddingBottom="20dp"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_incentive_detail_new_program" />
+
+            <TextView
+                android:id="@+id/tvw_asterisco"
+                style="@style/FontLatoRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/incentives_new_program_message"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

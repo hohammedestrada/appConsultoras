@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp24"
+    android:paddingEnd="@dimen/dp24"
+    android:gravity="center">
+
+    <TextView
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WelcomeTitle"
+        android:layout_marginBottom="@dimen/welcome_send_sms_margin_medium"
+        android:text="@string/my_profile_email_title"/>
+
+    <ImageView
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_big"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="@dimen/welcome_send_sms_margin_medium"
+        android:src="@drawable/ic_email"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WelcomeText"
+        android:text="@string/my_profile_email_message"/>
+
+    <TextView
+        android:id="@+id/tvwNewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WelcomeSubtitle"
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_small"
+        android:text="@string/my_profile_email_address"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WelcomeText"
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_big"
+        android:text="@string/my_profile_email_resend_message"/>
+
+    <TextView
+        android:id="@+id/tvwReenviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WelcomeTextBold"
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_medium"
+        android:layout_marginBottom="@dimen/welcome_send_sms_margin_medium"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/my_profile_email_resend"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_big"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/WelcomeTextBold"
+            android:layout_marginEnd="4dp"
+            android:text="@string/my_profile_email_change_message"/>
+
+        <TextView
+            android:id="@+id/tvwCambiarCorreo"
+            style="@style/WelcomeTextBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_profile_email_change" />
+
+    </LinearLayout>
+
+</LinearLayout>

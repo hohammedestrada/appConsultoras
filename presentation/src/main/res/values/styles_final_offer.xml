@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FinalOfferItemCardSection">
+        <item name="cardElevation">3dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="FinalOfferAwardText" parent="FontLatoBold">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="FinalOfferItemBrandText" parent="FontLatoLight">
+        <item name="android:textColor">#8a8a8a</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="FinalOfferItemDescriptionText" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="FinalOfferItemPromoPriceText" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="FinalOfferItemPriceText" parent="FontLatoLight">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+</resources>

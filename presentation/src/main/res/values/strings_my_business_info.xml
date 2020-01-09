@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_business_info_title">ESTADO DE CUENTA</string>
+    <string name="my_business_info_my_profit">MI GANANCIA</string>
+    <string name="my_business_info_my_account">MI CUENTA</string>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="debt_title">Deudas</string>
+    <string name="debt_add_debt_client">AGREGAR DEUDA</string>
+    <string name="debt_send_debt_client">ENVIARLE DEUDA</string>
+    <string name="debt_pick_client_label">Selecciona al cliente</string>
+
+    <string name="debt_amount_error">Debes ingresar un monto</string>
+    <string name="debt_amount_by_product_error">Debes ingresar un monto en cada producto</string>
+    <string name="debt_client_filter_error">Debes seleccionar un cliente</string>
+    <string name="debt_detail_title">Detalle Movimientos</string>
+    <string name="debt_add_recordatory_title">Fecha de Cobro</string>
+    <string name="debt_add_recordatory">Agregar Recordatorio</string>
+    <string name="debt_update_recordatory">Actualizar Recordatorio</string>
+    <string name="debt_set_recordatory">Establece tu Recordatorio</string>
+    <string name="debt_recordatory_eliminar">Eliminar</string>
+    <string name="debt_recordatory_dia">Día</string>
+    <string name="debt_recordatory_hora">Hora</string>
+    <string name="debt_recordatory_alarm">Recuerda que hoy tienes que ir a cobrar a %1$s a las %2$s</string>
+    <string name="debt_birthday_alarm">Hoy es cumpleaños de %1$s</string>
+
+    <string name="send_debt_gretting">Hola %s\n\n</string>
+
+    <string name="send_debt_central_message">No te olvides que tienes una deuda pendiente conmigo.</string>
+    <string name="send_debt_residual_debt">Saldo anterior: %s\n</string>
+    <string name="send_debt_total_debt">TOTAL: %s</string>
+    <string name="send_debt_detail_label">PEDIDO:\n</string>
+    <string name="send_debt_dead_line">FECHA DE PAGO: %s</string>
+
+    <string name="send_debt_subject">Recordatorio de pago a tu consultora de belleza</string>
+
+    <string name="debt_pick_share_type_error">Elige un tipo de envio</string>
+    <string name="debt_share_debt_error">No se encontro la aplicación para compartir la deuda</string>
+
+    <string name="send_debt_no_email">El cliente no tiene registrado correo, seleccione otro medio.</string>
+    <string name="send_debt_no_mobile">El cliente no tiene registrado celular, seleccione otro medio.</string>
+    <string name="send_debt_share_type_error">Selecciona un medio para enviar tu mensaje.</string>
+    <string name="send_debt_error">No se encontró la aplicación para compartir.</string>
+    <string name="debt_edit_title_amount">DEUDA</string>
+    <string name="debt_edit_title_note">NOTA</string>
+    <string name="debt_edit_title_pedido">PEDIDOS</string>
+
+    <string name="debt_dg_delete_title">Eliminar Movimiento</string>
+    <string name="debt_dg_delete_message">¿Desea eliminar el movimiento?</string>
+
+
+    <string name="debt_title_desc">EDITAR %s</string>
+    <string name="debt_title_payment">PAGO</string>
+    <string name="debt_title_debt">DEUDA</string>
+    <string name="debt_debt_update_label">ACTUALIZAR PAGO</string>
+    <string name="debt_payment_update_label">ACTUALIZAR DEUDA</string>
+    <string name="debt_payment_label">PAGO</string>
+    <string name="debt_order_info_label">Puedes editar el monto de los productos y cambiar la deuda total de %s.</string>
+    <string name="debt_order_zero_msg">No tienes pedidos agregados</string>
+
+</resources>

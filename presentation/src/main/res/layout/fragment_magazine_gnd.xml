@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/tvw_campaign_name"
+            style="@style/CatalogTextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/ivw_magazine"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/tvw_campaign_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tvw_info"
+            style="@style/CatalogTextInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivw_magazine"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="Tú guía de negocio de siempre,\nAHORA DIGITAL." />
+
+        <Button
+            android:id="@+id/btn_aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvw_info"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_button_alternative"
+            android:text="ENCUENTRALA AQUÍ" />
+
+    </RelativeLayout>
+
+</ScrollView>

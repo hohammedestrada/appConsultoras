@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            style="@style/PayTextStyle"
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5.6sp"
+            android:gravity="center_horizontal"
+            android:text="@string/elige_metodo" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textView4"
+            style="@style/PayTextStyle.Recordatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5.6sp"
+            android:text="@string/recuerda_habilitar"
+            app:autoSizeTextType="uniform" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvwmethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_metodo_pago"
+            android:orientation="vertical"/>
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

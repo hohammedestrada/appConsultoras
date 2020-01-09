@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_ingresar">INGRESAR</string>
+    <string name="tutorial_siguiente">SIGUIENTE</string>
+    <string name="tutorial_bienvenida_titulo_1">¡BIENVENIDA A </string>
+    <string name="tutorial_bienvenida_titulo_3" />
+    <string name="tutorial_bienvenida_descripcion">Lleva tu negocio contigo a donde vayas y empieza a GANAR +. Ahora más simple , más rápido y más conectada que nunca.</string>
+    <string name="tutorial_bienvenida_descripcion_cr">Lleva tu negocio contigo a donde vayas. Ahora más simple , más rápido y más conectada que nunca</string>
+    <string name="tutorial_clientes_titulo_1" />
+    <string name="tutorial_clientes_titulo_2">GESTIONA  </string>
+    <string name="tutorial_clientes_titulo_3">CLIENTES</string>
+    <string name="tutorial_clientes_descripcion">Podrás registrar, contactar, agregar pedidos y gestionar tu cobranza por cada uno de tus Clientes de manera fácil y rápida.</string>
+    <string name="tutorial_pedidos_titulo_1" />
+    <string name="tutorial_pedidos_titulo_2">INGRESA  </string>
+    <string name="tutorial_pedidos_titulo_3">PEDIDOS</string>
+    <string name="tutorial_pedidos_descripcion">Podrás pasar pedido de manera rápida y fácil, con todos los beneficios de somosbelcorp.com y acceder a tus  ofertas personalizadas.</string>
+    <string name="tutorial_deudas_titulo_1" />
+    <string name="tutorial_deudas_titulo_2">GESTIONA  </string>
+    <string name="tutorial_deudas_titulo_3">DEUDAS</string>
+    <string name="tutorial_deudas_descripcion">Podrás registrar las deudas de tus clientes, añadir sus pagos y ver su saldo actualizado. También podrás enviarles la información de sus deudas, pagos y saldo por WhatsApp, SMS o correo electrónico.</string>
+    <string name="tutorial_incentivos_titulo_1" />
+    <string name="tutorial_incentivos_titulo_2">VER  </string>
+    <string name="tutorial_incentivos_titulo_3">INCENTIVOS</string>
+    <string name="tutorial_bonificacion_titulo_3">BONIFICACIÓN</string>
+    <string name="tutorial_bonificaciones_titulo_3">BONIFICACIONES</string>
+    <string name="tutorial_incentivos_descripcion">Podrás revisar el estado de tu puntaje y ver los incentivos de la campaña para que no te pierdas ningún premio.</string>
+    <string name="tutorial_bonificaciones_descripcion">Podrás revisar el estado de tu puntaje y ver las bonificaciones de la campaña para que no te pierdas ningún premio.</string>
+</resources>

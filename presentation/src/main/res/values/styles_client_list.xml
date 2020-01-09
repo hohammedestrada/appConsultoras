@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Screen: Lista de Clientes -->
+    <style name="ClientListTheme">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="ClientListContentHeader">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="ClientListAppContent">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ClientListNullText" parent="FontLatoBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+    </style>
+
+    <style name="ClientListNullText2" parent="FontLatoLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+    </style>
+
+    <style name="FavoritoListNullText" parent="FontLatoBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:text">@string/favorito_no_clients</item>
+    </style>
+
+    <style name="FavoritoListNullText2" parent="FontLatoLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:text">@string/favorito_no_clients2</item>
+    </style>
+
+    <style name="PedidoListNullText" parent="FontLatoBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:text">@string/pedido_no_clients</item>
+    </style>
+
+    <style name="PedidoListNullText2" parent="FontLatoLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:text">@string/pedido_no_clients2</item>
+    </style>
+
+    <style name="PorCobrarListNullText" parent="FontLatoBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:text">@string/porcobrar_no_clients</item>
+    </style>
+
+    <style name="PorCobrarListNullText2" parent="FontLatoLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:text">@string/porcobrar_no_clients2</item>
+    </style>
+
+    <style name="ClientListFilterContent">
+        <item name="android:background">@drawable/shape_edittext_round</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ClientListFilterText" parent="FontLatoLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ClientListTitleText" parent="FontLatoRegular">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ClientListItemContent">
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="ClientItemDiv" >
+        <item name="android:background">#dbdbdb</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="ClientListItemNameText" parent="FontLatoRegular">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ClientListItemBoldText" parent="FontLatoBold">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ClientListItemBirthdayText" parent="FontLatoRegular">
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/text_fourth</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ClientFilterText" parent="FontLatoLight">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/text_filter</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/shape_edittext_no_bottom_line</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="ClientFabText" parent="FontLatoRegular">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textColor">@color/fab_option_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--    End Lista de Clientes -->
+
+    <style name="ClientListPorCobrarItemNameText" parent="FontLatoRegular">
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ClientListPorCobrarItemReminder" parent="FontLatoRegular">
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="ClientListPorCobrarDescripcion" parent="FontLatoLight">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ClientListPorCobrarMonto" parent="FontLatoRegular">
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+</resources>

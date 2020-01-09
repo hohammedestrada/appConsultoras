@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlt_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    tools:context=".feature.home.HomeActivity">
+
+    <biz.belcorp.consultoras.feature.home.menu.top.MenuTop
+        android:id="@+id/menuTop"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rlt_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menuTop">
+
+        <FrameLayout
+            android:id="@+id/frameChristmas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|left"
+                android:background="@drawable/bg_christmas_frost"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="top|right"
+                android:background="@drawable/bg_christmas_frost"
+                android:rotation="180"
+                android:contentDescription="@null"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/fltContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <View
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/shape_sombra_inferior"/>
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/shape_sombra_superior"/>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/vwLoading"
+            layout="@layout/view_loading_app"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/vwLoadingSync"
+            layout="@layout/view_loading_sync"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/fltHoliday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

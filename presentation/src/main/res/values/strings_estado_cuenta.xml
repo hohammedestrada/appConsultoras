@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="estado_cuenta_title">ESTADO DE CUENTA</string>
+    <string name="estado_cuenta_deuda">Mi deuda es</string>
+    <string name="estado_cuenta_vencimiento">Vencimiento: %s</string>
+    <string name="estado_cuenta_user_valoracion">¡Muy bien %s!</string>
+    <string name="estado_cuenta_status_valoracion">Cumplir con tus pagos puntualmente te llevará muy lejos.</string>
+    <string name="estado_cuenta_user_valoracion2">¡Falta poco para el vencimiento %s!</string>
+    <string name="estado_cuenta_status_valoracion2">Paga a tiempo para que puedas pasar tu siguiente pedido.</string>
+    <string name="estado_cuenta_user_valoracion3">Ya venció tu fecha de pago %s</string>
+    <string name="estado_cuenta_status_valoracion3">Tienes que pagar cuanto antes para que puedas pasar pedido.</string>
+    <string name="estado_cuenta_message_no_items">No cuentas con movimientos en tu estado de cuenta.</string>
+    <string name="estado_cuenta_message_no_items_conexion">No cuentas con movimientos en tu estado de cuenta, o es posible que no tengas conexión a internet.</string>
+</resources>

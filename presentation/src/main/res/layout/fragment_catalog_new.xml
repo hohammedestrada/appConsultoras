@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/fab_option_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60">
+
+        <TextView
+            android:id="@+id/tvwCampaignName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/FontLatoBold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dp16" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/vwConsultoraStandar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp15">
+
+                <RelativeLayout
+                    android:id="@+id/ivwCatalogs"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivwCatalogo1"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:layout_width="@dimen/dp150"
+                        android:layout_height="@dimen/dp200"
+                        android:layout_toStartOf="@id/ivwCatalogo2"
+                        android:layout_toLeftOf="@id/ivwCatalogo2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dpmenos100"
+                        android:layout_marginEnd="@dimen/dpmenos100"
+                        android:contentDescription="@null" />
+
+                    <ImageView
+                        android:id="@+id/ivwCatalogo3"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:layout_width="@dimen/dp150"
+                        android:layout_height="@dimen/dp200"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ivwCatalogo2"
+                        android:layout_toEndOf="@id/ivwCatalogo2"
+                        android:layout_marginLeft="@dimen/dpmenos100"
+                        android:layout_marginStart="@dimen/dpmenos100"
+                        android:contentDescription="@null" />
+
+                    <ImageView
+                        android:id="@+id/ivwCatalogo2"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:layout_width="@dimen/dp165"
+                        android:layout_centerInParent="true"
+                        android:layout_height="@dimen/dp220"
+                        android:contentDescription="@null" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:layout_marginRight="@dimen/dp40"
+                    android:id="@+id/layoutCatalogo"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/especial_campania"
+                        android:textSize="@dimen/dp16"
+                        style="@style/FontLatoBold"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/ivwCatalogo"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="@dimen/dp7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp80" />
+
+                </LinearLayout>
+
+                <Button
+                    style="@style/ButtonPink"
+                    android:id="@+id/btnCompartir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/catalog_share"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:paddingLeft="@dimen/dp50"
+                    android:paddingRight="@dimen/dp50"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/lltCatalogDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dp18"
+                    android:layout_marginRight="@dimen/dp18"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp15"
+                    style="@style/ButtonPaid"
+                    android:padding="@dimen/dp10">
+
+                    <WebView
+                        android:id="@+id/wvwCatalogDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></WebView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vwConsultoraTopBrilla"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp20">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/dp26"
+                    android:layout_marginRight="@dimen/dp26"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/ivwCatalogsTop"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ivwCatalogoTop1"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            android:layout_width="@dimen/dp80"
+                            android:layout_height="@dimen/dp104"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null" />
+
+                        <ImageView
+                            android:id="@+id/ivwCatalogoTop3"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            android:layout_width="@dimen/dp80"
+                            android:layout_alignParentEnd="true"
+                            android:layout_height="@dimen/dp104"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null" />
+
+                        <ImageView
+                            android:id="@+id/ivwCatalogoTop2"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            android:layout_width="@dimen/dp94"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/dp124"
+                            android:contentDescription="@null" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:singleLine="false"
+                        android:textSize="@dimen/dp14"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:text="@string/top_share_title"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:layout_marginRight="@dimen/dp40"
+                    android:id="@+id/layoutCatalogoTop"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/especial_campania"
+                        android:textSize="@dimen/dp16"
+                        style="@style/FontLatoBold"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/ivwCatalogoTop"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="@dimen/dp7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp80" />
+
+                </LinearLayout>
+
+                <Button
+                    style="@style/ButtonPink"
+                    android:id="@+id/btnTopCompartir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:textAllCaps="false"
+                    android:text="@string/catalog_share_top"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp24"
+                    android:paddingLeft="@dimen/dp50"
+                    android:paddingRight="@dimen/dp50"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    style="@style/FontLatoBold"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dp25"
+                    android:text="@string/catalog_share_subtitle"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/dp12"
+                    android:paddingLeft="@dimen/dp26"
+                    android:paddingRight="@dimen/dp26"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvwCatalogTop"
+                    android:paddingLeft="@dimen/dp26"
+                    android:paddingRight="@dimen/dp26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

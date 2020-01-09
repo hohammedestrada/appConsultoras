@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="280dp"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_dialog_border"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivw_close"
+        android:layout_width="@dimen/size_image_button_all"
+        android:layout_height="@dimen/size_image_button_all"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@null"
+        android:padding="4dp"
+        app:srcCompat="@drawable/ic_close_black" />
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/DebtPaymentRecordatorySubtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="DEUDA" />
+
+            <TextView
+                android:id="@+id/tvw_monto"
+                style="@style/DebtPaymentRecordatoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="999"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvw_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:text="¿Cuánto vas a cobrarle?"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/border_bottom_dark">
+
+            <TextView
+                android:id="@+id/tvw_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                tools:ignore="LabelFor" />
+
+            <biz.belcorp.consultoras.common.component.CurrencyEditText
+                android:id="@+id/edt_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:maxLength="14"
+                android:padding="8dp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="30sp"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_action_1"
+        style="@style/ButtonTheme.Base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="GUARDAR"
+        android:textSize="12sp" />
+
+</RelativeLayout>

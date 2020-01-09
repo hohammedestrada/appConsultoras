@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="AnnotationContent">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">30dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@drawable/shape_annotation_border</item>
+    </style>
+
+    <style name="AnnotationItemContent">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+
+    <style name="AnnotationMessage" parent="FontLatoRegular">
+        <item name="android:padding">3dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#353535</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="AnnotationDate" parent="FontLatoRegular">
+        <item name="android:padding">3dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#c6c6c6</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="AnnotationTextButton" parent="FontLatoRegular">
+        <item name="android:padding">3dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_third</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/closeImage"
+        android:layout_width="@dimen/size_close_incentive_dialog"
+        android:layout_height="@dimen/size_close_incentive_dialog"
+        android:layout_marginTop="@dimen/margin_close_incentive_gift"
+        android:layout_marginEnd="@dimen/margin_close_incentive_gift"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_icon_close" />
+
+    <ImageView
+        android:id="@+id/giftImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_horizontal_incentive_gift"
+        android:layout_marginTop="@dimen/margin_top_incentive_gift"
+        android:layout_marginEnd="@dimen/margin_horizontal_incentive_gift"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closeImage" />
+
+    <TextView
+        android:id="@+id/nameText"
+        style="@style/IncentivesGiftDialogName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_horizontal_incentive_gift"
+        android:layout_marginTop="@dimen/margin_horizontal_incentive_gift"
+        android:layout_marginEnd="@dimen/margin_horizontal_incentive_gift"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giftImage" />
+
+</android.support.constraint.ConstraintLayout>

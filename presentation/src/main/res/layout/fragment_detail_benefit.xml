@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlt_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/skill_balls"
+            android:contentDescription="@null" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageBenefit"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:id="@+id/dataDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="vertical"
+                android:padding="25dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/description_level"
+                    style="@style/MessageAnimPrimaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_description_level"
+                            style="@style/FontLatoBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="3"
+                            android:text="@string/titulo_monto_minimo"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cashMin"
+                            style="@style/MessageAnimSecondText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtTitleDetail"
+                            style="@style/FontLatoBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="3"
+                            android:text="@string/titulo_monto_maximo"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/cashMax"
+                            style="@style/MessageAnimSecondText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <biz.belcorp.mobile.components.design.button.Button
+                    android:id="@+id/btn_see_more"
+                    android:layout_width="118dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="18dp"
+                    app:btn_border_color="@color/white"
+                    app:btn_color="@color/white"
+                    app:btn_text="Entérate más"
+                    app:btn_text_bold="true"
+                    app:btn_text_color="@color/black"
+                    app:btn_text_underline="true" />
+
+                <!-- JL-FIX
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/blue_grey" />
+                -->
+
+                <TextView
+                    style="@style/MessageAnimPrimaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/descripcion_benefeciones_detalle"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerCoral"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:scrollbars="none"
+                android:scrollY="0dp"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+
+                android:scrollbarSize="0dp"
+                app:fastScrollEnabled="false"
+                android:isScrollContainer="false"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_list_beneficios" />
+
+
+            <biz.belcorp.mobile.components.design.button.Button
+                android:id="@+id/btnBack"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone"
+                app:btn_text="Volver" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

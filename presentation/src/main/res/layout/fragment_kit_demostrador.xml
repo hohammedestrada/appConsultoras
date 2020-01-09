@@ -1,0 +1,33 @@
+<LinearLayout
+    android:id="@+id/lltMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/lltOffersFilters"
+        layout="@layout/view_offers_filters"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvwOfertas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" />
+
+        <include
+            android:id="@+id/view_error"
+            layout="@layout/view_error"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

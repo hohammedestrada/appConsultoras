@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".feature.search.list.SearchListActivity">
+
+    <LinearLayout
+        android:elevation="5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/lnlBack"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="2.8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:hint="@string/search_hint"
+                android:textSize="16dp"
+                android:paddingLeft="1dp"
+                android:background="@android:color/transparent"
+                android:singleLine="true"
+                android:inputType="textNoSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/lnlClear"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_weight="2.8"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:theme="@style/ThemeMagenta"
+                android:visibility="gone"
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"/>
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/img_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_cancel_grey"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_voice"
+            android:layout_gravity="center"
+            android:src="@drawable/a_icon_microphone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:contentDescription="@null"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <android.support.v4.widget.NestedScrollView-->
+<!--            android:id="@+id/nsvList"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvw_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+            />
+
+        </LinearLayout>
+
+<!--        </android.support.v4.widget.NestedScrollView>-->
+
+        <LinearLayout
+            android:id="@+id/lnlEmpty"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="gone"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_bag"
+                android:layout_marginTop="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/lnl_empty_title"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="@string/search_empty_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/lnl_empty_body"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:text="@string/search_empty_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContainerCategorias"
+            android:visibility="visible"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <biz.belcorp.mobile.components.offers.CatInSearch
+                android:id="@+id/catInSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContainerRecentOffers"
+            android:visibility="gone"
+            android:background="@color/gray_1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+              <biz.belcorp.mobile.components.offers.MiniVerticalOffer
+                android:id="@+id/miniVerticalOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mini_offer_title="Lo que viste recientemente"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnlResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_edit"/>
+
+            <biz.belcorp.mobile.components.design.button.Button
+                android:visibility="gone"
+                android:id="@+id/btnResultados"
+                android:layout_margin="20dp"
+                style="@style/Multi.Buttons"
+                app:btn_text="@string/search_see_more_results"
+                app:btn_outline="true" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

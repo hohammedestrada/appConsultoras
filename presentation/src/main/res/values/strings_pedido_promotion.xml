@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pedido_text_obs_look_details">\nVer detalles</string>
+    <string name="pedido_text_obs_product">Este producto tiene observaciones. </string>
+</resources>

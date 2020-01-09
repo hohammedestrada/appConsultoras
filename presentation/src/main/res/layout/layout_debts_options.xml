@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvw_tooltip_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxWidth="@dimen/width_tooltip_size"
+        android:padding="@dimen/padding_text"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#111d1d26"
+        />
+
+    <TextView
+        android:id="@+id/tvw_tooltip_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/width_tooltip_size"
+        android:text="@string/client_edit_2"
+        android:padding="@dimen/padding_text"
+        android:layout_weight="0.26" />
+
+    <View
+        android:id="@+id/vie_middle_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#111d1d26"
+        />
+
+    <TextView
+        android:id="@+id/tvw_tooltip_eliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/width_tooltip_size"
+        android:text="@string/client_delete_2"
+        android:padding="@dimen/padding_text" />
+
+</LinearLayout>

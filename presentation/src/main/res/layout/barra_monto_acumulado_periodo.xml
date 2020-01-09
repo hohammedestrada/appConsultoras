@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.caminobrillante.CaminoBrillanteActivity"
+    tools:parentTag="android.support.constraint.ConstraintLayout">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gdl_start_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="tvwSiguienteNivel,tvwMontoSgteNivel"
+        tools:layout_editor_absoluteX="345dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="ivwFlag" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="#e3e3e3"
+        app:layout_constraintEnd_toEndOf="@id/barrier_2"
+        app:layout_constraintStart_toStartOf="@id/gdl_start_progress_bar"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+
+    <ImageView
+        android:id="@+id/ivwIndicadorActual"
+        android:layout_width="14dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="2dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_indicador_monto_actual"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_2"
+        app:layout_constraintStart_toStartOf="@+id/gdl_start_progress_bar"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+
+    <TextView
+        android:id="@+id/tvwMontoAcumulado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/bg_monto_actual"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ivwIndicadorActual"
+        app:layout_constraintStart_toStartOf="@+id/ivwIndicadorActual"
+        app:layout_constraintTop_toBottomOf="@id/ivwIndicadorActual"
+        tools:text="S/600" />
+
+    <biz.belcorp.consultoras.feature.caminobrillante.components.CustomProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="7dp"
+        android:indeterminate="false"
+        app:backgroundColor="#e3e3e3"
+        app:layout_constraintEnd_toEndOf="@+id/barrier_2"
+        app:layout_constraintStart_toEndOf="@id/gdl_start_progress_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:progressColor="#4f0036" />
+
+    <ImageView
+        android:id="@+id/ivwFlag"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="2dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_flag"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_1"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar" />
+
+    <ImageView
+        android:id="@+id/ivwIndicadorMinimo"
+        android:layout_width="14dp"
+        android:layout_height="19dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_indicador_monto_minimo"
+        app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_2"
+        app:layout_constraintStart_toStartOf="@+id/gdl_start_progress_bar" />
+
+    <TextView
+        android:id="@+id/tvwSiguienteNivel"
+        style="@style/FontLatoBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/tvwMontoSgteNivel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/barrier_1"
+        app:layout_constraintTop_toTopOf="@+id/ivwFlag"
+        tools:text="Brillante" />
+
+    <TextView
+        android:id="@+id/tvwMontoSgteNivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#616161"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivwFlag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/barrier_1"
+        app:layout_constraintTop_toBottomOf="@+id/tvwSiguienteNivel"
+        tools:text="S/7.500.250" />
+
+    <ImageView
+        android:id="@+id/ivwIcon1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_indicador_monto_minimo"
+        app:layout_constraintStart_toStartOf="@+id/gdl_4"
+        app:layout_constraintTop_toTopOf="@+id/tvw1" />
+
+    <TextView
+        android:id="@+id/tvw1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_barra_monto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivwIcon1"
+        app:layout_constraintTop_toBottomOf="@+id/tvwMontoAcumulado"
+        tools:text="Mantienes tu nivel Coral con S/80" />
+
+    <ImageView
+        android:id="@+id/ivwIcon2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_flag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvw2" />
+
+    <TextView
+        android:id="@+id/tvw2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_barra_monto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivwIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/tvw1"
+        tools:text="Te falta S/90 para cambiar a Nivel Ámbar" />
+
+    <ImageView
+        android:id="@+id/ivwIcon3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:srcCompat="@drawable/ic_pedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvw3" />
+
+    <TextView
+        android:id="@+id/tvw3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_barra_monto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivwIcon3"
+        app:layout_constraintTop_toBottomOf="@+id/tvw2"
+        tools:text="Vas 1 de 6 pedidos, te quedan X campañas en el periodo" />
+
+</merge>

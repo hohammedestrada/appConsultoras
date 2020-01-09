@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.orderdetail.OrderDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/vieNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewConnection"
+        android:orientation="vertical">
+
+        <biz.belcorp.consultoras.common.notification.home.OrderNotification
+            android:id="@+id/vieOrderNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <biz.belcorp.consultoras.common.notification.home.postulant.PostulantNotification
+            android:id="@+id/viePostulantNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vieNotification"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inc_toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fltContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbarLayout"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include
+        android:id="@+id/viewConnection"
+        layout="@layout/view_connection"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include
+        android:id="@+id/viewLoading"
+        layout="@layout/view_loading_app"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/viewLoadingSync"
+        layout="@layout/view_loading_sync"
+        android:visibility="gone" />
+
+</RelativeLayout>

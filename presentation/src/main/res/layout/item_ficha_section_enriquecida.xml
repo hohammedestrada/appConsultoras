@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<biz.belcorp.mobile.components.design.accordion.Accordion
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/accordionSectionEnriquecida"
+    android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+    app:accordion_divider_inset_start="16dp"
+    app:accordion_divider_inset_end="16dp"/>

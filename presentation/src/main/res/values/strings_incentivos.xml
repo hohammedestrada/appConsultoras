@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="incentives_title">Incentivos</string>
+    <string name="bonificaciones_title">Bonificaciones</string>
+
+    <string name="incentives_title_activity">Regalo por pedido</string>
+    <string name="bonificaciones_title_activity">Bonificación por pedido</string>
+    <string name="incentives_title_constancia_activity">Regalo por constancia</string>
+    <string name="bonificaciones_title_constancia_activity">Bonificación por constancia</string>
+    <string name="incentives_pedido_title_activity_simple">REGALO POR PEDIDO C%1$s</string>
+    <string name="bonificaciones_pedido_title_activity_simple">BONIFICACIÓN POR PEDIDO C%1$s</string>
+    <string name="incentives_pedido_title_activity">REGALO POR PEDIDO C%1$s-C%2$s</string>
+    <string name="bonificaciones_pedido_title_activity">BONIFICACIÓN POR PEDIDO C%1$s-C%2$s</string>
+    <string name="incentives_constancia_title_activity_simple">CONSTANCIA C%1$s</string>
+    <string name="incentives_constancia_title_activity">CONSTANCIA C%1$s-C%2$s</string>
+
+    <string name="incentives_pedido_title_activity_simple_history">REGALO POR PEDIDO C%1$s</string>
+    <string name="bonificaciones_pedido_title_activity_simple_history">BONIFICACIÓN POR PEDIDO C%1$s</string>
+    <string name="incentives_pedido_title_activity_history">REGALO POR PEDIDO C%1$s-C%2$s</string>
+    <string name="bonificaciones_pedido_title_activity_history">BONIFICACIÓN POR PEDIDO C%1$s-C%2$s</string>
+    <string name="incentives_constancia_title_activity_simple_history">REGALO POR CONSTANCIA C%1$s</string>
+    <string name="bonificaciones_constancia_title_activity_simple_history">BONIFICACIÓN POR CONSTANCIA C%1$s</string>
+    <string name="incentives_constancia_title_activity_history">REGALO POR CONSTANCIA C%1$s-C%2$s</string>
+    <string name="bonificaciones_constancia_title_activity_history">BONIFICACIÓN POR CONSTANCIA C%1$s-C%2$s</string>
+
+    <string name="incentives_previous_campaing">Campaña anterior - C%1$s</string>
+    <string name="incentives_current_campaing">Campaña actual - C%1$s</string>
+    <string name="incentives_current_contests">Concursos vigentes</string>
+    <string name="incentives_past_contests">Concursos anteriores</string>
+
+    <string-array name="incentives_titles">
+        <item>Bonificaciones Activas</item>
+        <item>Histórico</item>
+    </string-array>
+
+    <string-array name="incentives_titles_co">
+        <item>Concursos Activos</item>
+        <item>Histórico</item>
+    </string-array>
+
+    <string name="incentives_win">Felicitaciones</string>
+    <string name="incentives_nivel_1">Nivel 1</string>
+    <string name="incentives_nivel_2">Nivel 2</string>
+
+    <string name="incentives_title_history">Resultado de %s </string>
+    <string name="incentives_item_title">No hay concurso vigente esta campaña.</string>
+    <string name="incentives_item_title_history">No hay concursos históricos.</string>
+    <string name="incentives_item_description">Estamos preparando una gran sorpresa&#8230;</string>
+
+    <string name="incentives_item_description_win">¡Llegaste a los %1$s* puntosNivel requeridos!</string>
+
+    <string name="incentives_item_image_text_win">¡FELICITACIONES!</string>
+    <string name="incentives_item_image_text">¡TE FALTA!</string>
+
+    <string name="incentives_progress_title">%1$s por %1$s Puntos</string>
+    <string name="incentives_progress_bar_message">Te faltan %s puntos</string>
+    <string name="incentives_progress_message">Te faltan %1$s* puntos</string>
+    <string name="incentives_progress_message_previous">Te faltan %1$s puntos</string>
+
+    <string name="incentives_progress_message_hasta">Te faltan %1$s* puntos hasta C%2$s</string>
+    <string name="incentives_progress_message_previous_hasta">Te faltan %1$s puntos hasta C%2$s</string>
+
+    <string name="incentives_points_previous">Acumulaste %1$s Puntos</string>
+    <string name="incentives_points">Vas acumulando %1$s* Puntos</string>
+    <string name="incentives_points_message">Puedes llevarte un premio mejor:</string>
+    <string name="incentives_points_message_two">Puedes llevarte:</string>
+    <string name="incentives_ganaste_previous">¡Lograste el puntaje*!</string>
+    <string name="incentives_ganaste">¡Lograste el puntaje*!</string>
+    <string name="incentives_no_ganaste">No alcanzaste el puntaje</string>
+    <string name="incentives_points_acumulativo_message">¡Llévate también otro premio!</string>
+    <string name="incentives_points_no_acumulativo_message">¡Llévate un mejor premio!</string>
+    <string name="incentives_points_elective_message">Escoge entre:</string>
+
+    <string name="incentives_message_1">Obtenlo pasando pedido esta campaña.</string>
+    <string name="incentives_message_2">Obtenlo pasando pedido de %s esta campaña.</string>
+    <string name="incentives_message_campania_1">Obtenlo pasando pedido en %s</string>
+    <string name="incentives_message_campania_2">Obtenlo pasando pedido de %1$s en %2$s</string>
+    <string name="incentives_message_3">Acumula puntaje comprando en Belcenter hasta el %s y llévate el premio.</string>
+
+    <string name="incentives_current_gift">%1$s POR %2$s PUNTOS</string>
+
+    <string name="incentives_condiciones_message_1">Recuerda que para este premio debes acumular %s puntos de productos exigidos. Revisa tu flyer para conocer cuáles son estos productos.</string>
+    <string name="incentives_condiciones_message_2">Te faltan %s puntos de productos exigidos</string>
+
+    <string name="incentives_condiciones">Ver Condiciones</string>
+    <string name="incentives_back">Regresar</string>
+    <string name="incentives_error">ERROR</string>
+    <string name="incentives_error_network_title">Error de conexión</string>
+    <string name="incentives_error_network_message">Revisa tu conexión a internet</string>
+
+    <string name="incentives_error_message_default">Ocurrió un error al llamar al servicio, intente nuevamente.</string>
+    <string name="incentives_asterisco">* Todos los puntos y premios están sujetos a que tu pedido no tenga ninguna observación.</string>
+    <string name="incentives_winner_label">¡Lograste el puntaje*! %s </string>
+    <string name="incentives_loser_label">No lograste el puntaje* %s </string>
+
+
+    <string name="incentives_new_program_title">PROGRAMA DE NUEVAS - %d° PEDIDO</string>
+    <string name="incentives_new_program_title_gift_1">%1$s, A SOLO %2$s %3$s</string>
+    <string name="incentives_new_program_title_gift_2">%s, GRATIS</string>
+
+    <string name="incentives_new_program_title_activity">PROGRAMA DE NUEVAS</string>
+
+    <string name="incentives_new_program_message">**En algunas campañas el precio catálogo puede ser menor. \n\n Importante: Si dejas de pasar pedido una campaña o no pasas la condición del monto de pedido en la 4ta, 5ta y 6ta campaña pierdes las bonificaciones de esa campaña y las posteriores. Imágenes referenciales.</string>
+    <string name="add_cupon_incentives">Agrégalo</string>
+
+    <string name="slide_more">desliza para ver más</string>
+
+    <string name="incentives_nuevas_progress_message">Te faltan %1$s %2$s para obtenerlo</string>
+    <string name="incentives_nuevas_progress_message_previous">Te faltan %1$s Puntos</string>
+
+    <plurals name="incentives_activas_title_plu">
+        <item quantity="one">Estás participando en un concurso</item>
+        <item quantity="other">Estás participando en %d concursos</item>
+    </plurals>
+
+    <string name="incentives_activas_title">Estás participando en %d concursos</string>
+    <string name="incentives_activas_sin_concursos">No hay concurso vigente esta campaña.</string>
+
+    <string name="incentives_nuevas_progress_message_new">Vas %1$s*, te faltan %2$s</string>
+    <string name="incentives_nuevas_progress_message_two">Vas %1$s*, te faltan %2$s</string>
+
+    <string name="incentives_nuevas_progress_message_obtenido">Lo lograste.</string>
+
+    <string name="incentives_nuevas_title">Estás en tu %1$d° pedido \ntienes %2$s* en tu pedido</string>
+    <string name="incentives_add_order">Producto agregado correctamente</string>
+    <string name="incentives_message_add_order_disable">El cupón no se encuentra activo, debes estar en tu %d° Pedido.</string>
+
+    <string name="incentives_nuevas_legal">*Revísalos y elige sólo uno. Debes llegar a los %s para obtenerlo</string>
+
+    <string name="incentives_nuevas_ganaste">¡Alcanzaste el monto exigido! %s</string>
+
+    <string name="incentives_remove_reservation">La reserva de tu Pedido fue modificada.</string>
+
+
+    <string name="incentives_ptos">%s PTOS.</string>
+    <string name="incentives_another_gift">¡Llévate un mejor premio!</string>
+    <string name="incentives_choice">Escoge entre:</string>
+    <string name="incentives_choice_previous">Opciones:</string>
+    <string name="incentives_view_content">Ver contenido</string>
+    <string name="incentives_option_cod">OPCIÓN %1$s (Cód %2$s):</string>
+    <string name="incentives_pack">Conjunto de productos</string>
+    <string name="incentives_level">Nivel %s : </string>
+    <string name="incentives_image_disclaimer">**Las imagenes mostradas son referenciales.</string>
+    <string name="incentives_content">Contiene:</string>
+    <string name="incentives_level_points">Nivel %1$s: %2$s PTOS</string>
+
+    <string name="incentives_level_reached">¡Ya lo alcanzaste!\nPasaste al siguiente nivel. </string>
+
+</resources>

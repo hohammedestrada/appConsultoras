@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_title">Mis Clientes /\nMis Ganancias!</string>
+    <string name="splash_subtitle">Para ti Consultora</string>
+    <string name="splash_download">Descargando información</string>
+    <string name="splash_version">Verificando versión</string>
+    <string name="splash_restore">Restaurando aplicación</string>
+    <string name="splash_backup">Generando backup</string>
+    <string name="splash_subida">Envíando información</string>
+
+    <string name="splash_retry_title">Reintentar</string>
+    <string name="splash_retry_message_service">Ocurrió un error al obtener la información, por favor intentar nuevamente</string>
+    <string name="splash_retry_message_sql">Ocurrió un error al guardar la información, por favor intentar nuevamente</string>
+    <string name="splash_update_title">Actualizar aplicación</string>
+    <string name="splash_restore_title">Restaurando aplicación</string>
+    <string name="splash_message_version">Hay una nueva versión disponible</string>
+    <string name="splash_message_restore">Esto puede llevar unos minutos</string>
+    <string name="splash_loading_from_offers_title">Espera un momento.</string>
+    <string name="splash_loading_from_offers_message">Tu suscripción se está completando.</string>
+</resources>

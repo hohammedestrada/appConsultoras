@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="biz.belcorp.consultoras.feature.home.tutorial.TutorialActivity">
+
+    <ImageView
+        android:id="@+id/ivw_tutorial_imagen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:contentDescription="@null"
+        android:padding="@dimen/tutorial_padding_32dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/tutorial_padding_32dp">
+
+            <TextView
+                android:id="@+id/tvw_tutorial_title_1"
+                style="@style/Tutorial.TitleRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title 1"
+                android:paddingEnd="@dimen/tutorial_padding_3dp"
+                android:paddingStart="@dimen/tutorial_no_padding"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvw_tutorial_title_2"
+                style="@style/Tutorial.TitleRedBold"
+                android:paddingEnd="@dimen/tutorial_padding_3dp"
+                android:paddingStart="@dimen/tutorial_padding_3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title 1"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvw_tutorial_title_3"
+                style="@style/Tutorial.TitleBlackBold"
+                android:layout_width="wrap_content"
+                android:paddingEnd="@dimen/tutorial_no_padding"
+                android:paddingStart="@dimen/tutorial_padding_3dp"
+                android:layout_height="wrap_content"
+                android:text="Title 2"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvw_tutorial_description"
+            style="@style/Tutorial.Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tutorial_margin"
+            android:layout_marginRight="@dimen/tutorial_margin"
+            android:layout_marginTop="@dimen/tutorial_margin"
+            android:gravity="center_horizontal"
+            android:text="Descripcion"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>

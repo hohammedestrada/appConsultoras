@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Informacion de productos (Edicion) -->
+            <include
+                android:id="@+id/lnlInformation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/view_product_information" />
+
+
+            <!-- Informacion del producto con Componentes (Arma Tu Pack) -->
+            <include
+                android:visibility="gone"
+                android:id="@+id/lnlComponents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/view_product_components" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="86dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_disabled" />
+
+        <Button
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:id="@+id/btn_accept"
+            android:layout_margin="20dp"
+            style="@style/ProductCUVSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_aceptar"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btnDisabled"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_margin="20dp"
+            style="?android:textAppearanceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_disabled"
+            android:text="@string/button_aceptar"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

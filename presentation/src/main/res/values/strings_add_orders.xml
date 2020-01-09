@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="add_order_title">Agregar Pedido</string>
+    <string name="add_order_select_client">Selecciona cliente</string>
+    <string name="add_order_select_product">Ingresa el código del producto</string>
+    <string name="add_order_empty_orders">Todavía no has agregado ningún producto.</string>
+    <string name="add_order_button_reservar">Reservar</string>
+    <string name="add_order_button_guardar">Guardar</string>
+    <string name="add_order_button_modificar">Modificar</string>
+    <string name="add_order_button_eliminar_one">Para eliminar el pedido completo haz</string>
+    <string name="add_order_button_eliminar_second">clic aquí</string>
+    <string name="add_order_params">%1$s %2$s</string>
+    <string name="add_order_total">Total :</string>
+    <string name="add_order_ganancia">Ganancia :</string>
+    <string name="add_order_descuento_oferta_nivel">Total sin descuento:</string>
+    <string name="add_order_descuento_oferta_web">(-) Dscto. por Niveles</string>
+    <string name="add_order_ganancia_estimada_total">Ganancia Est. Tot.</string>
+    <string name="add_order_product_quantity_empty">Ingrese una cantidad correcta</string>
+    <string name="add_order_not_found_product_message1">El código que ingresaste no existe.</string>
+    <string name="add_order_not_found_product_message2">Revisa nuevamente el código</string>
+    <string name="add_order_question_one_delete">Estás a punto de eliminar este producto</string>
+    <string name="add_order_question_all_delete">Estás a punto de eliminar\ntodo tu pedido</string>
+    <string name="add_order_desea_continuar">¿Deseas continuar?</string>
+    <string name="add_order_importante">Importante</string>
+    <string name="add_order_reservado_title">Pedido reservado</string>
+    <string name="add_order_promocion">(PROMOCIÓN)</string>
+
+    <plurals name="add_order_producto">
+        <item quantity="one">Unidad</item>
+        <item quantity="other">Unidades</item>
+    </plurals>
+
+    <plurals name="add_order_unidad">
+        <item quantity="one">%d UNIDAD</item>
+        <item quantity="other">%d UNIDADES</item>
+    </plurals>
+
+    <plurals name="add_order_client">
+        <item quantity="one">Cliente</item>
+        <item quantity="other">Clientes</item>
+    </plurals>
+
+    <string name="order_detail_title_zero">PEDIDO RESERVADO</string>
+
+    <plurals name="order_detail_title">
+        <item quantity="zero">PEDIDO RESERVADO</item>
+        <item quantity="one">PEDIDO RESERVADO PARA %d CLIENTE</item>
+        <item quantity="other">PEDIDO RESERVADO PARA %d CLIENTES</item>
+    </plurals>
+
+    <string name="add_order_saved">¡GUARDASTE TU\nPEDIDO CON ÉXITO!</string>
+    <string name="add_order_reserved">¡RESERVASTE TU\nPEDIDO CON ÉXITO!</string>
+
+    <string name="add_order_counter">(%d)</string>
+
+    <string name="add_order_precio_niveles_disclaimer">(*) El precio final de la Oferta por Niveles se verá en tu factura. Al validar tu pedido, el sistema elegirá la mejor combinación de precios posibles para ti.</string>
+    <string name="add_order_empty">Todavía no has agregado productos</string>
+
+    <string name="add_order_tab_one">¡Ofertas!</string>
+    <string name="add_order_tab_second">Pedido</string>
+
+    <string name="add_order_tab_filter_one">Clientes</string>
+    <string name="add_order_tab_filter_second">Unidades</string>
+    <string name="add_order_see_by">Ver por:</string>
+
+    <string name="add_order_offers_more">Ver más</string>
+    <string name="add_order_offers_empty">Estamos preparando las mejores ofertas para ti</string>
+
+    <string name="add_order_consultant">PARA MÍ</string>
+
+    <string name="add_order_backorder_message">El producto excedió las ventas estimadas, queremos que no te lo pierdas. ¿Aceptas recibirlo al mismo precio con tu siguiente pedido?\n\n Recuerda que debes ingresar pedido esta campaña y la siguiente para que te llegue.</string>
+
+    <string name="add_order_obs_dg_title">OBSERVACIONES DEL PACK</string>
+    <string name="add_order_obs_promo_dg_title">OBSERVACIONES DEL PRODUCTO</string>
+
+    <string name="add_order_obs_dg_message">El producto tiene las siguientes observaciones:</string>
+    <string name="add_order_obs_promo_dg_message">Debes tener en cuenta que tu pedido ha sido reservado pero:</string>
+    <string name="add_order_obs_promo_dg_message2">¡Compra más productos seleccionados para llevarte esta promoción y no pierdas este beneficio!</string>
+
+
+    <!-- Option receive order -->
+    <string name="add_order_option_receive_title">Autorizo que otra persona reciba por mi este pedido</string>
+    <string name="will_receive">Lo va a recibir:</string>
+
+    <!-- Dialog enter dni -->
+    <string name="dialog_enter_dni_title">Recepción de pedido</string>
+    <string name="receive_message">Ingresa los datos de la persona</string>
+    <string name="hint_enter_name">Nombre y Apellido</string>
+    <string name="hint_enter_dni">Número de documento (DNI)</string>
+    <string name="digits_validation_message">Deben ser 8 dígitos</string>
+    <string name="name_validation_message">Deben ser 2 caracteres como mínimo</string>
+    <string name="close_message_enter_dni">Cerrar</string>
+    <string name="accept_message_enter_dni">Continuar</string>
+    <string name="message_loading_enter_dni">Estamos actualizando los datos</string>
+    <string name="update_data_successful">Los datos se actualizaron\ncon éxito!</string>
+    <string name="receive_title">Lo va a recibir</string>
+    <string name="document_entity">Documento de identidad</string>
+    <string name="change_person">Cambia de persona</string>
+
+    <!-- NEXT -->
+    <string name="add_order_tefalta">Te falta %1$s %2$s para el %3$s</string>
+    <string name="add_order_para_alcanzar_min">Te falta %1$s %2$s para alcanzar el M. mínimo</string>
+    <string name="add_order_dialog_title">¡Felicidades! Llegaste al</string>
+    <string name="add_order_alcanzaste">¡Alcanzaste el descuento máximo de %s</string>
+    <string name="add_order_alcanzaste_min">¡Alcanzaste el Monto mínimo!</string>
+    <string name="add_order_alcanzaste_max">¡Alcanzaste el Monto máximo!</string>
+    <string name="add_order_regalo_credit_limit">¡Ya alcanzaste tu regalo y monto máximo!</string>
+    <string name="add_order_regalo_solo_puedes_agregar">¡Alcanzaste tu regalo!\nSólo puedes agregar %1$s %2$s más</string>
+    <string name="add_order_regalo_solo_puedes_agregar_sin">Sólo puedes agregar %1$s %2$s más</string>
+    <string name="add_order_solo_puedes_agregar">¡Sólo puedes agregar %1$s %2$s más!</string>
+    <string name="add_order_banner_duo_perfecto">Elegir Ahora</string>
+    <string name="add_order_para_alcanzar_regalo">Te falta %1$s %2$s para llevarte tu regalo</string>
+    <string name="add_order_para_alcanzar_producto">Te falta %1$s %2$s para llevarte tu producto</string>
+    <string name="add_order_alcanzaste_regalo">¡Alcanzaste tu regalo!</string>
+    <string name="add_order_alcanzaste_producto">¡Alcanzaste tu producto!</string>
+    <string name="add_order_alcanzaste_regalo_tefalta">¡Alcanzaste tu regalo!\nTe falta %1$s %2$s para el %3$s</string>
+    <string name="felicidades_regalo">¡FELICIDADES! \n TIENES UN REGALO</string>
+    <string name="felicidades_producto">¡FELICIDADES! \n LLEGASTE AL MONTO MINIMO</string>
+    <string name="escogeremos_por_ti">Elígelo si aún no lo has hecho, o si no te asignaremos uno.</string>
+    <string name="escogeremos_por_ti_kit">Elige un producto o si aún no lo has hecho, te asignaremos uno como parte de tu Kit de Inicio.</string>
+    <string name="add_order_alcanzaste_regalo_maximo">¡Alcanzaste tu regalo y el descuento máximo de %s!</string>
+
+    <!-- Multipedido -->
+    <string name="multi_order_title">Deseo facturar mi pedido hoy</string>
+    <string name="multi_message_info_off">Recuerda que el boton debe estar encendido para que se efectue hoy la facturación</string>
+    <string name="multi_message_info_on">¡Perfecto, su pedido será facturado hoy! Caso contrario perderá la reserva</string>
+
+    <!-- Final Offer Landing Button -->
+    <string name="final_offer_landing_blocked">Te falta poco para alcanzar el premio</string>
+    <string name="final_offer_landing_allowed">Alcanzaste el premio\n¡Elígelo!</string>
+    <string name="final_offer_landing_chosed">Ver premio elegido</string>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient android:angle="180"
+        android:type="linear"
+        android:startColor="@color/sello_promocion"
+        android:endColor="@color/sello_promocion"/>
+
+    <padding
+        android:left="15dp"
+        android:top="12dp"
+        android:right="10dp"
+        android:bottom="18dp" />
+    <corners android:bottomLeftRadius="75dp"/>
+
+</shape>
+

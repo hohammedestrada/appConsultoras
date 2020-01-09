@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparent"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/lltTooltipDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tooltip_delete"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingTop="11dp">
+
+        <LinearLayout
+            style="@style/AddOrderTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivwTooltipDelete"
+                android:layout_width="@dimen/dp24"
+                android:layout_height="@dimen/dp24"
+                android:src="@drawable/alertblack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="@dimen/dp10">
+
+
+            <TextView
+                android:id="@+id/tvw_tooltip_limite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_tooltip_close"
+                    style="@style/BtnTooltipDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:text="@string/ok" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

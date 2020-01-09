@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <biz.belcorp.mobile.components.design.button.Button
+        android:id="@+id/btnOpcion"
+        style="@style/Multi.Buttons"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        app:btn_icon_left="@drawable/ic_comp_choose_hand"
+        app:btn_outline="true"
+        app:btn_text="@string/simple_button_select" />
+
+</LinearLayout>

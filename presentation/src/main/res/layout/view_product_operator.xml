@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <biz.belcorp.mobile.components.design.counter.Counter
+        style="@style/Multi.Buttons"
+        android:layout_marginTop="5dp"
+        android:id="@+id/lltOperators"
+        app:editable="false"
+        app:min="1"
+        app:max="99"/>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <biz.belcorp.mobile.components.design.button.Button
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnGoItem"
+            android:layout_width="match_parent"
+            style="@style/Multi.Buttons"
+            app:btn_outline="true"
+            app:btn_text="@string/simple_button_select"
+            android:layout_marginBottom="@dimen/multi_default_button_margin"
+            app:btn_icon_left="@drawable/ic_comp_choose_hand"/>
+
+        <biz.belcorp.mobile.components.design.button.Button
+            style="@style/Multi.Buttons"
+            android:id="@+id/btnAddItem"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/multi_default_button_margin"
+            app:btn_text="@string/simple_button_add"
+            app:btn_icon_left="@drawable/ic_comp_add_to_cart"/>
+        
+        <biz.belcorp.mobile.components.design.button.Button
+            android:id="@+id/btnAgotado"
+            android:layout_width="@dimen/multi_default_button_border_soldOut"
+            android:layout_height="@dimen/multi_default_button_height"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/multi_default_button_margin"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            app:btn_text="@string/mutli_button_soldout"
+            app:btn_border_radius="@dimen/multi_default_button_border_soldOut"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

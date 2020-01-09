@@ -1,0 +1,188 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def config = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion config["androidCompileSdkVersion"]
+
+    testBuildType "develop"
+
+    defaultConfig {
+        minSdkVersion config["androidMinSdkVersion"]
+
+        versionCode config["androidVersionCode"]
+        versionName config["androidVersionName"]
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage'  // Some libraries have issues with this
+        disable 'OldTargetApi'
+        // Due to Robolectric that modifies the manifest when running tests
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled true
+            matchingFallbacks = ['prd']
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'BASE_API', '"https://api.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://ws.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_OAPI', '"https://api.belcorp.biz"'
+            buildConfigField 'String', 'BASE_ANALYTICS', '"https://api.belcorp.biz"'
+        }
+
+        stage {
+            debuggable true
+            minifyEnabled true
+            matchingFallbacks = ['prd']
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            /*buildConfigField 'String', 'BASE_API', '"https://apiqa.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://wsppr.somosbelcorp.com"'*/
+
+            buildConfigField 'String', 'BASE_API', '"https://api.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://ws.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_ANALYTICS', '"https://api.belcorp.biz"'
+            buildConfigField 'String', 'BASE_OAPI', '"https://api-qa.belcorp.biz"'
+        }
+
+        develop {
+            debuggable true
+            //minifyEnabled false
+            minifyEnabled true
+            matchingFallbacks = ['dev']
+
+            buildConfigField 'String', 'BASE_API', '"https://apiqa.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://wsqa.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_ANALYTICS', '"https://api-qa.belcorp.biz"'
+            buildConfigField 'String', 'BASE_OAPI', '"https://api-qa.belcorp.biz"'
+        }
+
+        review {
+            debuggable true
+            minifyEnabled false
+            matchingFallbacks = ['dev']
+
+            buildConfigField 'String', 'BASE_API', '"https://apiqa.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_ANALYTICS', '"https://api-qa.belcorp.biz"'
+            buildConfigField 'String', 'BASE_URL', '"https://wsappqa.somosbelcorp.com"'
+            buildConfigField 'String', 'BASE_OAPI', '"https://api-qa.belcorp.biz"'
+        }
+    }
+
+    flavorDimensions "marca"
+
+    productFlavors {
+        esika {
+            dimension "marca"
+        }
+
+        lbel {
+            dimension "marca"
+        }
+    }
+
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+
+    libraryVariants.all { variant ->
+        def bType = ""
+        if (variant.variantData.variantConfiguration.buildType.name != "release"
+            && variant.variantData.variantConfiguration.buildType.name != "stage")
+            bType = '.' + variant.variantData.variantConfiguration.buildType.name
+
+        def subId = 'biz.belcorp.consultoras.' + variant.productFlavors[0].name + bType
+        buildConfigAndResStringField variant, "CONTENT_PROVIDER_AUTHORITY", subId + ".provider.data"
+    }
+
+}
+
+def static buildConfigAndResStringField(variant, name, value) {
+    variant.resValue 'string', name.toLowerCase(), value
+    variant.buildConfigField 'String', name, "\"$value\""
+}
+
+dependencies {
+    def dataDependencies = rootProject.ext.dataDependencies
+    def testDependencies = rootProject.ext.dataTestDependencies
+
+    api project(':library')
+    api project(':domain')
+
+    // LIBRARY: SERVICES
+    implementation dataDependencies.retrofit
+    implementation dataDependencies.converterScalars
+    implementation dataDependencies.converterGson
+    implementation dataDependencies.adapterRxjava2
+    implementation dataDependencies.gson
+    implementation(dataDependencies.stetho, {
+        exclude module: 'jsr305'
+    })
+    implementation(dataDependencies.stethoOkHttp, {
+        exclude module: 'jsr305'
+    })
+
+    // LIBRARY: DEPENDENCIES
+    implementation dataDependencies.dagger
+    kapt dataDependencies.daggerCompiler
+    implementation dataDependencies.rxandroid
+    implementation dataDependencies.rxjava
+
+    // LIBRARY: DB
+    implementation dataDependencies.dbflowCore
+    implementation dataDependencies.dbflow
+    kapt dataDependencies.dbflowCompiler
+    implementation dataDependencies.dbflowRxJava
+    implementation dataDependencies.dbflowKotlin
+
+    testImplementation testDependencies.junit
+    testImplementation testDependencies.assertj
+    testImplementation testDependencies.mockitoCore
+    testImplementation testDependencies.roboelectric
+
+    androidTestImplementation dataTestDependencies.runner
+    androidTestImplementation dataTestDependencies.rules
+    androidTestImplementation(dataTestDependencies.espressoCore, {
+        exclude module: 'support-annotations'
+        exclude module: 'jsr305'
+    })
+    androidTestImplementation testDependencies.mockitoAndroid
+
+    developImplementation testDependencies.debugDB
+    reviewImplementation testDependencies.debugDB
+
+    kapt dataDependencies.dataBinding
+    implementation dataDependencies.kotlin
+
+    // Android Coroutines
+    implementation presentationDependencies.coroutinesCore
+    implementation presentationDependencies.coroutinesAndroid
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never" >
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rltContentError"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/MyOrdersErrorIcon"
+            android:id="@+id/ivw_image_null"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_network_error"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            style="@style/MyOrdersErrorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivw_image_null"
+            android:layout_centerInParent="true"
+            android:text="@string/my_offers_error"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/view_loading"
+        layout="@layout/view_loading_app"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/view_loading_sync"
+        layout="@layout/view_loading_sync"
+        android:visibility="gone" />
+</RelativeLayout>

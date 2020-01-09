@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nsvMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ctlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="invisible"
+        app:layout_optimizationLevel="standard|dimensions|chains|barrier|groups|direct">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="27dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.022" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.978" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.073" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.927" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <biz.belcorp.mobile.components.charts.wizard.Wizard
+            android:id="@+id/wzdNiveles"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@+id/gdl_1" />
+
+        <android.support.constraint.Group
+            android:id="@+id/grpBarraMontoAcumulado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvwEnElPeriodo, barraMontoAcumulado, vwDivider" />
+
+        <TextView
+            android:id="@+id/tvwEnElPeriodo"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/en_el_periodo"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/gdl_5"
+            app:layout_constraintStart_toStartOf="@id/gdl_4"
+            app:layout_constraintTop_toBottomOf="@id/wzdNiveles" />
+
+        <biz.belcorp.consultoras.feature.caminobrillante.components.BarraMontoAcumuladoPeriodo
+            android:id="@+id/barraMontoAcumulado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toStartOf="@+id/gdl_5"
+            app:layout_constraintStart_toStartOf="@+id/gdl_4"
+            app:layout_constraintTop_toBottomOf="@id/tvwEnElPeriodo" />
+
+        <View
+            android:id="@+id/vwDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:background="#f2f2f2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barraMontoAcumulado" />
+
+        <android.support.constraint.Group
+            android:id="@+id/grpNivelesSuperiores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ctlNivelesSuperiores, btnEnterateMas" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ctlNivelesSuperiores"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_radius"
+            android:minHeight="60dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="@id/gdl_3"
+            app:layout_constraintStart_toStartOf="@id/gdl_2"
+            app:layout_constraintTop_toBottomOf="@id/vwDivider">
+
+            <TextView
+                android:id="@+id/tvw1NivelesSuperiores"
+                style="@style/FontLatoBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/tvw2NivelesSuperiores"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nivel Ámbar S/120" />
+
+            <TextView
+                android:id="@+id/tvw2NivelesSuperiores"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvw1NivelesSuperiores"
+                tools:text="Actualmente estas en Nivel Consultora con S/30" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <biz.belcorp.mobile.components.design.button.Button
+            android:id="@+id/btnEnterateMas"
+            android:layout_width="168dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:btn_text="@string/enterate_mas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ctlNivelesSuperiores" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvwBeneficios"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/gdl_3"
+            app:layout_constraintStart_toStartOf="@+id/gdl_2"
+            app:layout_constraintTop_toBottomOf="@+id/btnEnterateMas">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                app:layout_optimizationLevel="standard|dimensions|chains|barrier|groups|direct">
+
+                <ImageView
+                    android:id="@+id/ivwNivelBeneficio"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="21dp"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvwBeneficios"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvwBeneficios"
+                    app:layout_constraintTop_toTopOf="@id/tvwBeneficios" />
+
+                <TextView
+                    android:id="@+id/tvwBeneficios"
+                    style="@style/FontLatoBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="21dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivwNivelBeneficio"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Beneficios de Coral" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvwBeneficios"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@id/tvwBeneficios"
+                    app:layout_constraintStart_toStartOf="@+id/ivwNivelBeneficio"
+                    app:layout_constraintTop_toBottomOf="@id/tvwBeneficios" />
+
+                <biz.belcorp.mobile.components.design.button.Button
+                    android:id="@+id/btnSeeLessMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:btn_border_color="@color/white"
+                    app:btn_color="@color/white"
+                    app:btn_ripple_color="@color/white"
+                    app:btn_text="Ver más"
+                    app:btn_text_bold="true"
+                    app:btn_text_color="@color/black"
+                    app:btn_text_underline="true"
+                    app:layout_constraintEnd_toStartOf="@id/arrow"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@+id/rvwBeneficios"
+                    app:layout_constraintTop_toBottomOf="@+id/rvwBeneficios" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:rotation="360"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnSeeLessMore"
+                    app:layout_constraintEnd_toEndOf="@id/rvwBeneficios"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@+id/btnSeeLessMore"
+                    app:layout_constraintTop_toTopOf="@+id/btnSeeLessMore"
+                    app:srcCompat="@drawable/ic_arrow_down_black" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <biz.belcorp.mobile.components.offers.Offer
+            android:id="@+id/offerKitsDemostradores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvwBeneficios"
+            app:offer_item_placeholder="@drawable/ic_container_placeholder"
+            app:offer_pack="false"
+            app:offer_see_more="true"
+            app:offer_simple="false"
+            app:offer_title="@string/camino_brillante_kits_y_demostradores" />
+
+        <biz.belcorp.mobile.components.design.button.Button
+            android:id="@+id/btnVerOfertas"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:btn_color="@color/magenta"
+            app:btn_text="Ofertas especiales"
+            app:btn_text_color="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/offerKitsDemostradores" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvwLogros"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/gdl_3"
+            app:layout_constraintStart_toStartOf="@+id/gdl_2"
+            app:layout_constraintTop_toBottomOf="@+id/btnVerOfertas">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/gdl_center_logro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_logros"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/gdl_center_logro"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvwTituloLogros"
+                    style="@style/FontLatoBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/tus_logros"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/gdl_center_logro"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvwDescricpionLogros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/todo_tu_esfuerzo_tiene_grandes_resultados"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/gdl_center_logro"
+                    app:layout_constraintTop_toBottomOf="@id/tvwTituloLogros" />
+
+                <biz.belcorp.mobile.components.design.button.Button
+                    android:id="@+id/btnVerLogros"
+                    android:layout_width="128dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="25dp"
+                    app:btn_text="Ver logros"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/gdl_center_logro"
+                    app:layout_constraintTop_toBottomOf="@id/tvwDescricpionLogros" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.constraint.Group
+            android:id="@+id/grpMisGanancias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="lblTituloMisGanancias,lblTituloMonto,bchtGanancias,lblTituloCampanias,
+                                        lblGananciaCampania,ivwGananciaCampania,tvwGananciaCampania,vwDividerGanancia,
+                                        lblGananciaPeriodo,ivwGananciaPeriodo,tvwGananciaPeriodo" />
+
+        <TextView
+            android:id="@+id/lblTituloMisGanancias"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/mis_ganancias"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/gdl_5"
+            app:layout_constraintStart_toStartOf="@id/gdl_6"
+            app:layout_constraintTop_toBottomOf="@id/cvwLogros" />
+
+        <TextView
+            android:id="@+id/lblTituloMonto"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/camino_brillante_monto_pedido"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/gdl_8"
+            app:layout_constraintStart_toStartOf="@id/gdl_7"
+            app:layout_constraintTop_toBottomOf="@id/lblTituloMisGanancias" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bchtGanancias"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblTituloMonto" />
+
+        <ImageView
+            android:id="@+id/fingerBack"
+            android:visibility="gone"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@id/bchtGanancias"
+            app:layout_constraintEnd_toEndOf="@id/bchtGanancias"
+            app:layout_constraintStart_toStartOf="@id/bchtGanancias"
+            app:layout_constraintTop_toTopOf="@id/bchtGanancias" />
+
+        <TextView
+            android:id="@+id/lblTituloCampanias"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:gravity="end"
+            android:text="@string/campanas"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/gdl_8"
+            app:layout_constraintStart_toStartOf="@id/gdl_7"
+            app:layout_constraintTop_toBottomOf="@id/bchtGanancias" />
+
+        <Space
+            android:id="@+id/space_3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/lblTituloCampanias" />
+
+        <TextView
+            android:id="@+id/lblGananciaCampania"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ganancia"
+            android:textColor="@color/black"
+            android:textSize="12.5sp"
+            app:layout_constraintEnd_toEndOf="@id/gdl_center"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/gdl_7"
+            app:layout_constraintTop_toBottomOf="@+id/space_3"
+            app:layout_constraintWidth_default="wrap" />
+
+        <ImageView
+            android:id="@+id/ivwGananciaCampania"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="@id/gdl_7"
+            app:layout_constraintTop_toBottomOf="@id/space_4"
+            app:srcCompat="@drawable/ic_money" />
+
+        <TextView
+            android:id="@+id/tvwGananciaCampania"
+            style="@style/FontLatoRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/ivwGananciaCampania"
+            app:layout_constraintEnd_toEndOf="@id/gdl_center"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/ivwGananciaCampania"
+            app:layout_constraintTop_toTopOf="@+id/ivwGananciaCampania"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="S/ 100.04" />
+
+        <View
+            android:id="@+id/vwDividerGanancia"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#979797"
+            app:layout_constraintBottom_toBottomOf="@+id/barrier_4"
+            app:layout_constraintStart_toStartOf="@id/gdl_center"
+            app:layout_constraintTop_toBottomOf="@id/space_3" />
+
+        <TextView
+            android:id="@+id/lblGananciaPeriodo"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:text="@string/ganancia_de_periodo"
+            android:textColor="@color/black"
+            android:textSize="12.5sp"
+            app:layout_constraintEnd_toEndOf="@id/gdl_8"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/gdl_center"
+            app:layout_constraintTop_toBottomOf="@id/space_3"
+            app:layout_constraintWidth_default="wrap" />
+
+        <ImageView
+            android:id="@+id/ivwGananciaPeriodo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="@id/lblGananciaPeriodo"
+            app:layout_constraintTop_toBottomOf="@id/space_4"
+            app:srcCompat="@drawable/ic_money" />
+
+        <TextView
+            android:id="@+id/tvwGananciaPeriodo"
+            style="@style/FontLatoRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/ivwGananciaPeriodo"
+            app:layout_constraintEnd_toEndOf="@id/gdl_8"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/ivwGananciaPeriodo"
+            app:layout_constraintTop_toTopOf="@+id/ivwGananciaPeriodo"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="S/ 300.04" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.061" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gdl_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.969" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="lblGananciaCampania,lblGananciaPeriodo" />
+
+        <Space
+            android:id="@+id/space_4"
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            app:layout_constraintTop_toBottomOf="@id/barrier_3" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="ivwGananciaCampania,ivwGananciaPeriodo " />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:layout_constraintTop_toBottomOf="@id/barrier_4" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

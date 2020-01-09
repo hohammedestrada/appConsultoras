@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    2 - DIMENSIONES:
+    5.4”    480x854 mdpi
+    5.1”    480x800 mdpi
+-->
+<resources>
+    <!--    Dimension: Tooltip -->
+    <dimen name="width_tooltip_size">150dp</dimen>
+    <!--    End Dimension Tooltip -->
+
+    <!--    Dimension: Splash -->
+    <dimen name="padding_all_splash">16dp</dimen>
+    <dimen name="width_splash_logo">240dp</dimen>
+    <dimen name="height_splash_logo">80dp</dimen>
+    <dimen name="margin_bottom_splash_content">80dp</dimen>
+    <dimen name="margin_bottom_splash_image">67dp</dimen>
+    <dimen name="margin_bottom_splash_title">42dp</dimen>
+    <dimen name="padding_left_splash_text">12dp</dimen>
+    <dimen name="textsize_splash_title">20sp</dimen>
+    <dimen name="textsize_splash_subtitle">10sp</dimen>
+    <dimen name="textsize_splash_download">9sp</dimen>
+    <!--    End Dimension Splash -->
+
+    <!--    Dimension: Login -->
+    <dimen name="width_login_logo">150dp</dimen>
+    <dimen name="height_login_logo">50dp</dimen>
+    <dimen name="margin_top_login_logo">32dp</dimen>
+    <dimen name="margin_bottom_login_logo">16dp</dimen>
+    <dimen name="textsize_login_title">16sp</dimen>
+    <dimen name="padding_login_title">16dp</dimen>
+    <dimen name="margin_login_input_content">8dp</dimen>
+    <dimen name="padding_login_input_content">8dp</dimen>
+    <dimen name="padding_login_input_edit_content">6dp</dimen>
+    <dimen name="size_login_input_icon">20dp</dimen>
+    <dimen name="margin_login_input_icon">15dp</dimen>
+    <dimen name="margin_login_input_icon_show">16dp</dimen>
+    <dimen name="padding_top_login_input_text">2dp</dimen>
+    <dimen name="padding_left_login_input">16dp</dimen>
+    <dimen name="padding_right_login_input">8dp</dimen>
+    <dimen name="size_login_input">20dp</dimen>
+    <dimen name="size_login_input_edit">30dp</dimen>
+    <dimen name="textsize_login_input">13sp</dimen>
+    <dimen name="textsize_login_hint">12sp</dimen>
+    <dimen name="textsize_login_forgot">12sp</dimen>
+    <dimen name="size_login_imagen">120dp</dimen>
+    <dimen name="margin_login_facebook_icon">8dp</dimen>
+    <dimen name="margin_bottom_login_register">40dp</dimen>
+    <dimen name="margin_login_controls_all">16dp</dimen>
+    <dimen name="margin_login_button">20dp</dimen>
+    <dimen name="margin_login_facebook">12dp</dimen>
+    <dimen name="textsize_login_button">14sp</dimen>
+    <dimen name="margin_login_not_user">8dp</dimen>
+    <dimen name="margin_login_change_user">28dp</dimen>
+    <dimen name="textsize_login_register">12sp</dimen>
+
+    <dimen name="textsize_payment_register">10sp</dimen>
+    <!--    End Dimension Login -->
+
+    <!--    Start Dimension Home-->
+    <dimen name="home_profile_width">40dp</dimen>
+    <dimen name="home_profile_height">40dp</dimen>
+    <dimen name="home_profile_margin_start">12dp</dimen>
+    <dimen name="home_profile_margin_end">10dp</dimen>
+    <dimen name="home_profile_image_margin_bottom">5dp</dimen>
+    <dimen name="home_profile_image_margin_top">10dp</dimen>
+
+    <dimen name="home_welcome_message_margin_top">10dp</dimen>
+    <dimen name="home_welcome_message_text_size">14sp</dimen>
+
+    <dimen name="home_divider_width">28dp</dimen>
+    <dimen name="home_divider_margin_bottom">5dp</dimen>
+    <dimen name="home_divider_margin_start">24dp</dimen>
+
+    <dimen name="home_campaign_margin_bottom">0dp</dimen>
+    <dimen name="home_campaign_margin_end">20dp</dimen>
+    <dimen name="home_campaign_margin_start">24dp</dimen>
+    <dimen name="home_campaign_text_size">10sp</dimen>
+
+    <dimen name="home_time_left_margin_bottom">4dp</dimen>
+    <dimen name="home_time_left_margin_end">20dp</dimen>
+    <dimen name="home_time_left_margin_start">24dp</dimen>
+    <dimen name="home_time_left_text_size">10sp</dimen>
+
+    <dimen name="home_item_campaign_text_size">10sp</dimen>
+    <dimen name="home_item_title_text_size">12sp</dimen>
+    <dimen name="home_item_title_padding_left">10dp</dimen>
+    <dimen name="home_item_title_padding_right">4dp</dimen>
+    <dimen name="home_item_title_margin_top">4dp</dimen>
+
+    <dimen name="home_item_sub_title_text_size">12sp</dimen>
+
+    <dimen name="home_item_divider_margin_top">6dp</dimen>
+    <dimen name="home_item_divider_margin_left">10dp</dimen>
+
+    <dimen name="home_item_detail_margin_top">6dp</dimen>
+    <dimen name="home_item_detail_margin_bottom">12dp</dimen>
+    <dimen name="home_item_detail_text_size">11sp</dimen>
+    <dimen name="home_item_detail_padding_left">10dp</dimen>
+    <dimen name="home_item_detail_padding_right">10dp</dimen>
+
+    <dimen name="home_item_top_padding_left_v2">8dp</dimen>
+    <dimen name="home_item_top_padding_right_v2">8dp</dimen>
+    <dimen name="home_item_top_padding_bottom">0dp</dimen>
+    <dimen name="home_item_bottom_padding_bottom">8dp</dimen>
+
+    <dimen name="home_item_bottom_margin">2dp</dimen>
+
+    <dimen name="home_bg_left_top_width">40dp</dimen>
+    <dimen name="home_bg_left_top_height">40dp</dimen>
+    <dimen name="home_img_left_top_width">20dp</dimen>
+    <dimen name="home_img_left_top_height">20dp</dimen>
+    <dimen name="home_bg_left_top_bar_padding">34dp</dimen>
+    <dimen name="home_bg_left_top_radius_corner">30dp</dimen>
+
+    <dimen name="home_bg_margin">9dp</dimen>
+    <dimen name="home_bg_left">-150dp</dimen>
+    <dimen name="home_fab">0dp</dimen>
+    <dimen name="menu_top_selector_size">20dp</dimen>
+    <dimen name="home_campaign_margin_top">4dp</dimen>
+    <!--    End Dimension Home-->
+
+    <!-- Dimension Referencia MDPI -->
+    <dimen name="_12sp">12sp</dimen>
+
+    <dimen name="_28dp">56dp</dimen>
+    <dimen name="_36dp">72dp</dimen>
+    <dimen name="_32dp">64dp</dimen>
+    <dimen name="_12dp">24dp</dimen>
+    <dimen name="_10dp">20dp</dimen>
+    <dimen name="_13sp">16.81sp</dimen>
+    <dimen name="_9sp">11.64sp</dimen>
+    <dimen name="_197">254.76dp</dimen>
+
+    <dimen name="_18dp">23.28dp</dimen>
+
+    <!--step-->
+    <dimen name="wizard_step_title_size">9sp</dimen>
+
+    <!-- camino brillante -->
+    <dimen name="textsize_barra_monto">11sp</dimen>
+
+    <dimen name="textsize_ganancia_title">18sp</dimen>
+
+    <!-- medidor de sueños -->
+    <!-- textos -->
+    <dimen name="dream_meter_text_size_pregunta">15sp</dimen>
+    <dimen name="dream_meter_text_size_definelo_con_un_nombre">13sp</dimen>
+    <dimen name="dream_meter_text_size_cuanto_necesitas_para_lograrlo">13sp</dimen>
+    <dimen name="dream_meter_text_size_escribelo_abajo">12sp</dimen>
+    <dimen name="dream_meter_text_size_mensaje">15sp</dimen>
+    <dimen name="dream_meter_text_size_monto">12sp</dimen>
+    <dimen name="dream_meter_text_size_header">13sp</dimen>
+
+    <!-- margenes -->
+    <!-- pantalla 1 -->
+    <dimen name="dream_meter_margin_top_definelo_con_un_nombre">10dp</dimen>
+    <dimen name="dream_meter_margin_top_bottom_header_pantalla_1">15dp</dimen>
+    <dimen name="dream_meter_margin_top_dream_name">10dp</dimen>
+    <dimen name="dream_meter_margin_top_dream_amount">10dp</dimen>
+    <!-- pantalla 2 -->
+    <dimen name="dream_meter_margin_top_mensaje">15dp</dimen>
+    <dimen name="dream_meter_margin_top_money">9dp</dimen>
+    <dimen name="dream_meter_margin_top_bottom_header_pantalla_2">10dp</dimen>
+
+</resources>
+

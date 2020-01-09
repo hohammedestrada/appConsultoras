@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="debt_history_toolbar_title">CLIENTE</string>
+
+    <string name="debt_history_title">DEUDA TOTAL DE %S</string>
+    <string name="debt_history_title_two">DEUDA TOTAL DE %s</string>
+    <string name="debt_history_reminder">Recordatorio +</string>
+    <string name="debt_history_add_payment">Guardar Pago</string>
+    <string name="debt_history_register_payment">Registrar un pago</string>
+    <string name="debt_history_send_payment">Registrar pago</string>
+    <string name="debt_history_send_debt">Enviar detalle de deuda</string>
+    <string name="debt_history_add_debt">Añadir Deuda</string>
+    <string name="debt_history_update_debt">Actualizar Deuda</string>
+
+    <string name="debt_history_movements">Movimientos</string>
+
+    <string name="debt_history_vencida_recordatorio">Deuda Vencida: %S</string>
+    <string name="debt_history_recordatorio">RECORDATORIO +</string>
+    <string name="debt_history_recordatorio_cobrar">Cobrar el</string>
+
+    <string name="debt_history_debt">0.00</string>
+
+    <string name="debt_history_debt_no_debts">¡CLIENTE SIN DEUDA!</string>
+
+    <string name="debt_history_debt_no_deuda_title">El cliente no cuenta con deuda pendiente</string>
+    <string name="debt_history_debt_no_movements_title">El cliente no presenta movimientos</string>
+    <string name="debt_history_debt_no_movements_message">Agrega un pago o una deuda a tu cliente</string>
+
+    <string name="debt_history_debt_dg_delete_title">El cliente canceló su deuda</string>
+    <string name="debt_history_debt_dg_delete_message">¿Desea eliminar el recordatorio del Cliente?</string>
+
+</resources>

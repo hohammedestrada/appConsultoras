@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        style="@style/StockoutsItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llt_content"
+            style="@style/StockoutsItemSlash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_title"
+                style="@style/StockoutsItemDataTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvw_description"
+                style="@style/StockoutsItemDataDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/DebtPaymentHistoryItemSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/llt_content" />
+
+    </RelativeLayout>
+
+</layout>

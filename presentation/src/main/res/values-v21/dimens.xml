@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_top_selector_size">20dp</dimen>
+    <dimen name="home_campaign_margin_top">4dp</dimen>
+
+    <dimen name="home_item_top_padding_bottom">5dp</dimen>
+    <dimen name="home_item_bottom_margin">8dp</dimen>
+
+    <dimen name="home_bg_left_top_height">45dp</dimen>
+    <dimen name="home_bg_left_top_width">45dp</dimen>
+
+    <dimen name="altura_contenedor">55dp</dimen>
+    <dimen name="ancho_contenedor">70dp</dimen>
+
+    <dimen name="txt_size_deuda">13sp</dimen>
+</resources>

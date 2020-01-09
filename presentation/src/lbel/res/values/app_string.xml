@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_formatted">L\'Bel Conmigo</string>
+    <string name="app_feedback_subject">Envío de Sugerencias App L\'Bel Conmigo</string>
+    <string name="tutorial_bienvenida_titulo_2">L\'BEL CONMIGO!</string>
+
+    <string name="datami_message_title">¡Eres una de nuestras consultoras\nque está navegando gratis gracias\na tu APP L\'Bel Conmigo!</string>
+
+    <string name="consultant_approved_title">¡YA ERES CONSULTORA L\'Bel!</string>
+    <string name="consultant_approved_title_two">¡FELICITACIONES!\nYA ERES CONSULTORA L\'Bel</string>
+
+
+    <!--    Content provider permission message     -->
+    <string name="content_provider_title">Acceso a L\'Bel Conmigo</string>
+    <string name="content_provider_message">Se necesita dar permisos de lectura de datos del App L\'Bel Conmigo.</string>
+</resources>

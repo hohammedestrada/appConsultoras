@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <biz.belcorp.consultoras.common.component.CircleImageView
+            android:id="@+id/ivwAvatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@null"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_contact_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/ivwHeart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_heart"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/tvwTiempo"
+            app:layout_constraintEnd_toStartOf="@id/tvwTiempo"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toTopOf="@+id/tvwTiempo" />
+
+        <TextView
+            android:id="@+id/tvwTiempo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            tools:text="10 años"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            style="@style/FontLatoBold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_2"
+            app:layout_constraintStart_toEndOf="@+id/ivwHeart"
+            app:layout_constraintTop_toBottomOf="@+id/ivwAvatar"
+            app:layout_constraintWidth_default="wrap" />
+
+        <TextView
+            android:id="@+id/tvwMensaje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            tools:text="¡Gracias por este tiempo juntos!"
+            style="@style/FontLatoRegular"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvwTiempo" />
+
+        <Space
+            android:id="@+id/space_1"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvwMensaje" />
+
+        <Space
+            android:id="@+id/space_2"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_2" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.672" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.322" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvwlblIndicador1,tvwlblIndicador2,tvwlblIndicador3" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvwIndicador1,tvwIndicador2,tvwIndicador3"
+            tools:layout_editor_absoluteY="245dp" />
+
+        <TextView
+            android:id="@+id/tvwlblIndicador1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="center"
+            tools:text="Escala \nMáxima"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_4"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/space_1"
+            app:layout_constraintWidth_default="wrap" />
+
+        <TextView
+            android:id="@+id/tvwIndicador1"
+            style="@style/FontLatoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            tools:text="25%"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvwlblIndicador1"
+            app:layout_constraintStart_toStartOf="@+id/tvwlblIndicador1"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_1" />
+
+        <TextView
+            android:id="@+id/tvwIndicador3"
+            style="@style/FontLatoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            tools:text="30%"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvwlblIndicador3"
+            app:layout_constraintStart_toStartOf="@+id/tvwlblIndicador3"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_1" />
+
+        <TextView
+            android:id="@+id/tvwIndicador2"
+            style="@style/FontLatoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            tools:text="5 de 6"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvwlblIndicador2"
+            app:layout_constraintStart_toStartOf="@+id/tvwlblIndicador2"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="#dedede"
+            app:layout_constraintBottom_toBottomOf="@id/space_2"
+            app:layout_constraintEnd_toEndOf="@id/guideline_4"
+            app:layout_constraintStart_toStartOf="@id/guideline_4"
+            app:layout_constraintTop_toBottomOf="@id/space_1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="#dedede"
+            app:layout_constraintBottom_toBottomOf="@id/space_2"
+            app:layout_constraintEnd_toEndOf="@id/guideline_3"
+            app:layout_constraintStart_toStartOf="@id/guideline_3"
+            app:layout_constraintTop_toBottomOf="@id/space_1" />
+
+        <View
+            android:id="@+id/vwDivider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#dedede"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2"
+            app:layout_constraintStart_toStartOf="@id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@id/space_2" />
+
+        <TextView
+            android:id="@+id/tvwlblIndicador2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_3"
+            app:layout_constraintStart_toStartOf="@+id/guideline_4"
+            app:layout_constraintTop_toBottomOf="@+id/space_1"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Constancia de periodo" />
+
+        <TextView
+            android:id="@+id/tvwlblIndicador3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            tools:text="Incremento Máximo"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_2"
+            app:layout_constraintStart_toStartOf="@+id/guideline_3"
+            app:layout_constraintTop_toBottomOf="@+id/space_1"
+            app:layout_constraintWidth_default="wrap" />
+
+        <android.support.v7.widget.RecyclerView
+            android:paddingTop="20dp"
+            android:id="@+id/rvwLogros"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwDivider" />
+
+        <ProgressBar
+            android:id="@+id/progressLogros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwDivider" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/PayTextStyle.Recordatorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/resumen_pago"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        style="@style/ButtonPaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="9dp"
+        android:paddingEnd="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvw_operacion"
+                style="@style/PayTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/numero_operacion_recibo"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PayTextStyle.Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/nro_tarjeta"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    style="@style/PayTextStyle.Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/fecha_pago"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    style="@style/PayTextStyle.Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/monto"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    style="@style/PayTextStyle.Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/gastos_admin"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvw_num_tarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvw_fecha_pago"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvw_monto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvw_gastos_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginBottom="3dp"
+            android:background="@color/gray_disabled" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/PayTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/total_pagado"
+                android:textDirection="ltr"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvw_total_pagado"
+                style="@style/PayTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/PayTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="start"
+                android:text="@string/saldo_pendiente"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvw_saldo_pendiente"
+                style="@style/PayTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="start"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvw_vencimiento"
+            style="@style/PayTextStyle.Recordatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="18dp"
+            android:text="@string/estado_cuenta_vencimiento"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

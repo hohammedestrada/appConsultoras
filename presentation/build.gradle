@@ -1,0 +1,926 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'spoon'
+apply plugin: 'io.fabric'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$project.rootDir/tools/findbugs.gradle"
+apply from: "$project.rootDir/tools/checkstyle.gradle"
+apply from: "$project.rootDir/tools/pmd.gradle"
+
+
+androidExtensions {
+    experimental = true
+}
+
+android {
+    def config = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion config["androidCompileSdkVersion"]
+
+    testBuildType "develop"
+
+    bundle {
+        density {
+            enableSplit true
+        }
+        abi {
+            enableSplit true
+        }
+        language {
+            enableSplit false
+        }
+    }
+
+    defaultConfig {
+        applicationId config["androidApplicationId"]
+        minSdkVersion config["androidMinSdkVersion"]
+
+        versionCode config["androidVersionCode"]
+        versionName config["androidVersionName"]
+        targetSdkVersion config["androidTargetSdkVersion"]
+
+        testApplicationId config["testApplicationId"]
+        testInstrumentationRunner config["testInstrumentationRunner"]
+
+        multiDexEnabled true
+
+        vectorDrawables.useSupportLibrary = true
+
+        resConfigs "es", "en"
+    }
+
+    dexOptions {
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+        jumboMode true
+        preDexLibraries true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        checkAllWarnings true
+        warningsAsErrors false
+        noLines true
+        showAll true
+
+        disable "TypographyFractions", "TypographyQuotes"
+        disable "InvalidPackage"            //Some libraries have issues with this.
+        disable "OldTargetApi"
+        //Lint gives this warning but SDK 20 would be Android L Beta.
+        disable "IconDensities"             //For testing purpose. This is safe to remove.
+        disable "IconMissingDensityFolder"  //For testing purpose. This is safe to remove.
+
+        lintConfig file("${project.rootDir}/tools/rules-lint.xml")
+
+        xmlOutput file("$project.buildDir/reports/lint-app.xml")
+        htmlOutput file("$project.buildDir/reports/lint-app.html")
+    }
+
+    signingConfigs {
+
+        def env = new Properties()
+
+        if (rootProject.file('env.properties').exists())
+            env.load(new FileInputStream(rootProject.file('env.properties')))
+
+        ci {
+            storeFile rootProject.file(env['store.release.file'])
+            storePassword env['key.store.password']
+            keyAlias env['key.store.alias']
+            keyPassword env['key.password']
+        }
+    }
+
+    buildTypes {
+        def date = new Date().format('yyyyMMdd')
+
+        release {
+            debuggable false
+            shrinkResources true
+            minifyEnabled true
+            signingConfig signingConfigs.ci
+            matchingFallbacks = ['prd', 'release']
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            manifestPlaceholders = [build_prefix   : '',
+                                    facebook_app_id: '1667019216926472',
+                                    host           : 'www.somosbelcorp.com',
+                                    path_gana      : "GanaMas",
+                                    pkg_mqvirtual  : 'biz.belcorp.maquillador.provider.data']
+
+            buildConfigField 'String', 'VERSION_APP', "\"${config["androidVersionName"]}\""
+            buildConfigField 'String', 'ANALYTICS', '"Prd"'
+            buildConfigField 'String', 'PASE_PEDIDO', '"https://www.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_OFERTA', '"https://www.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_CUPON', '"https://s3.amazonaws.com/consultorasPRD/SomosBelcorp/AppConsultora/PE/TyCCupon.pdf"'
+
+            buildConfigField 'String', 'WP_ACADEMIA', '"http://qasucb.cyzone.com/moodleventas?token="'
+
+            buildConfigField 'String', 'HM_DIRECT_URL', '"https://my301056.s4hana.ondemand.com:443"'
+            buildConfigField 'String', 'HM_MIDDLEWARE_URL', '"https://hmprdmiddlewared28e1bcbb.us2.hana.ondemand.com/mobilechannel"'
+
+            buildConfigField 'String', 'LOG_ACCESS_ID', '"us-east-1:9bc53455-f6ec-4809-a1bb-02818540154a"'
+            buildConfigField 'String', 'LOG_ACCESS_DIR', '"AWS_LOGS"'
+            buildConfigField 'String', 'LOG_ACCESS_STREAM', '"log-usabilidad-stream-prd"'
+            buildConfigField 'int', 'LOG_ACCESS_REGION', '1'
+
+            buildConfigField 'String', 'URL_CAMINO_ALEXITO', '"http://landing.showroombelcorp.com/page/landing/"'
+            buildConfigField 'String', 'URL_CHATBOT', '"https://m.me/BotEsikaCyzoneLbel?ref="'
+
+            buildConfigField 'String', 'APP_MQVIRTUAL_PACKAGE', '"biz.belcorp.maquillador"'
+            buildConfigField 'String', 'APP_MQVIRTUAL_CONTENT_PROVIDER', '"content://biz.belcorp.maquillador.provider.data/Pedidos"'
+
+            buildConfigField 'String', 'URL_REDIRECT_OFERTA', '"/RevistaDigital/ConfirmacionAPP"'
+
+            buildConfigField "boolean", "TIME_SERVER", "true"
+
+            buildConfigField "String", "API_YOUTUBE", '"IzaSyA1EKhJaXH9yiI4yPeYzeWaOwCGd0beZUs"'
+
+            resValue 'string', 'facebook_app_id', '1667019216926472'
+        }
+
+        stage {
+            debuggable false
+            shrinkResources true
+            minifyEnabled true
+            signingConfig signingConfigs.ci
+            matchingFallbacks = ['prd', 'release']
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            if (!config["isCiServer"]) {
+                applicationIdSuffix ".stage"
+                versionNameSuffix "-rc.${date}"
+            }
+
+            /*manifestPlaceholders = [build_prefix   : 'STAGE ',
+                                        facebook_app_id: '1394138023978921',
+                                        host           : 'sb2ppr.somosbelcorp.com',
+                                        path_gana      : "GanaMas",
+                                        pkg_mqvirtual  : 'biz.belcorp.maquillador.provider.data']
+
+            buildConfigField 'String', 'VERSION_APP', "\"${config["androidVersionName"]}\""
+            buildConfigField 'String', 'ANALYTICS', '"ppr"'
+            buildConfigField 'String', 'PASE_PEDIDO', '"https://sb2ppr.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_OFERTA', '"https://sb2ppr.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_CUPON', '"https://s3.amazonaws.com/consultorasPRD/SomosBelcorp/AppConsultora/PE/TyCCupon.pdf"'
+
+            buildConfigField 'String', 'WP_ACADEMIA', '"http://qasucb.cyzone.com/moodleventas?token="'
+
+            buildConfigField 'String', 'HM_DIRECT_URL', '"https://my300972.s4hana.ondemand.com:443"'
+            buildConfigField 'String', 'HM_MIDDLEWARE_URL', '"https://hmqasmiddlewared3a6b9482.us2.hana.ondemand.com/mobilechannel"'
+
+            buildConfigField 'String', 'LOG_ACCESS_ID', '"us-east-1:61066a78-ce02-4c96-bec1-1ea9b9639b52"'
+            buildConfigField 'String', 'LOG_ACCESS_DIR', '"AWS_LOGS"'
+            buildConfigField 'String', 'LOG_ACCESS_STREAM', '"log-usabilidad-consultora-stream-qas"'
+            buildConfigField 'int', 'LOG_ACCESS_REGION', '1'
+
+            buildConfigField 'String', 'URL_CAMINO_ALEXITO', '"http://showroombelcorp.com/crecimiento/page/landing/"'
+            buildConfigField 'String', 'URL_CHATBOT', '"https://m.me/BotEsikaCyzoneLbel?ref="'
+
+            buildConfigField 'String', 'APP_MQVIRTUAL_PACKAGE', '"biz.belcorp.maquillador"'
+            buildConfigField 'String', 'APP_MQVIRTUAL_CONTENT_PROVIDER', '"content://biz.belcorp.maquillador.provider.data/Pedidos"'
+
+            buildConfigField 'String', 'URL_REDIRECT_OFERTA', '"/RevistaDigital/ConfirmacionAPP"'
+
+            buildConfigField "boolean", "TIME_SERVER", "false"
+
+            buildConfigField "String", "API_YOUTUBE", '"IzaSyA1EKhJaXH9yiI4yPeYzeWaOwCGd0beZUs"'
+
+            resValue 'string', 'facebook_app_id', '1394138023978921'*/
+
+
+            /** BETA */
+            manifestPlaceholders = [build_prefix   : '',
+                                    facebook_app_id: '1667019216926472',
+                                    host           : 'www.somosbelcorp.com',
+                                    path_gana      : "GanaMas",
+                                    pkg_mqvirtual  : 'biz.belcorp.maquillador.provider.data']
+
+            buildConfigField 'String', 'VERSION_APP', "\"${config["androidVersionName"]}\""
+            buildConfigField 'String', 'ANALYTICS', '"Prd"'
+            buildConfigField 'String', 'PASE_PEDIDO', '"https://www.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_OFERTA', '"https://www.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_CUPON', '"https://s3.amazonaws.com/consultorasPRD/SomosBelcorp/AppConsultora/PE/TyCCupon.pdf"'
+
+            buildConfigField 'String', 'WP_ACADEMIA', '"http://qasucb.cyzone.com/moodleventas?token="'
+
+            buildConfigField 'String', 'HM_DIRECT_URL', '"https://my301056.s4hana.ondemand.com:443"'
+            buildConfigField 'String', 'HM_MIDDLEWARE_URL', '"https://hmprdmiddlewared28e1bcbb.us2.hana.ondemand.com/mobilechannel"'
+
+            buildConfigField 'String', 'LOG_ACCESS_ID', '"us-east-1:9bc53455-f6ec-4809-a1bb-02818540154a"'
+            buildConfigField 'String', 'LOG_ACCESS_DIR', '"AWS_LOGS"'
+            buildConfigField 'String', 'LOG_ACCESS_STREAM', '"log-usabilidad-stream-prd"'
+            buildConfigField 'int', 'LOG_ACCESS_REGION', '1'
+
+            buildConfigField 'String', 'URL_CAMINO_ALEXITO', '"http://landing.showroombelcorp.com/page/landing/"'
+            buildConfigField 'String', 'URL_CHATBOT', '"https://m.me/BotEsikaCyzoneLbel?ref="'
+
+            buildConfigField 'String', 'APP_MQVIRTUAL_PACKAGE', '"biz.belcorp.maquillador"'
+            buildConfigField 'String', 'APP_MQVIRTUAL_CONTENT_PROVIDER', '"content://biz.belcorp.maquillador.provider.data/Pedidos"'
+
+            buildConfigField 'String', 'URL_REDIRECT_OFERTA', '"/RevistaDigital/ConfirmacionAPP"'
+
+            buildConfigField "boolean", "TIME_SERVER", "true"
+
+            buildConfigField "String", "API_YOUTUBE", '"IzaSyA1EKhJaXH9yiI4yPeYzeWaOwCGd0beZUs"'
+
+            resValue 'string', 'facebook_app_id', '1667019216926472'
+
+        }
+
+        develop {
+            debuggable !config["isCiServer"]
+            //minifyEnabled config
+            //shrinkResources config["isCiServer"]
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.ci
+            matchingFallbacks = ['dev', 'develop']
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            if (!config["isCiServer"]) {
+                testCoverageEnabled true
+                applicationIdSuffix '.develop'
+                versionNameSuffix "-nb.${date}"
+            }
+
+            manifestPlaceholders = [build_prefix   : 'DEVELOP ',
+                                    facebook_app_id: '1394138023978921',
+                                    host           : 'sb2qa.somosbelcorp.com',
+                                    path_gana      : "GanaMas",
+                                    pkg_mqvirtual  : 'biz.belcorp.maquillador.provider.data']
+
+            buildConfigField 'String', 'VERSION_APP', "\"${config["androidVersionName"]}\""
+            buildConfigField 'String', 'ANALYTICS', '"Qas"'
+            buildConfigField 'String', 'PASE_PEDIDO', '"https://sb2qa.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_OFERTA', '"https://sb2qa.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_CUPON', '"https://s3.amazonaws.com/consultorasQAS/SomosBelcorp/AppConsultora/PE/TyCCupon.pdf"'
+
+            buildConfigField 'String', 'WP_ACADEMIA', '"http://qasucb.cyzone.com/moodleventas?token="'
+
+            buildConfigField 'String', 'HM_DIRECT_URL', '"https://my300972.s4hana.ondemand.com:443"'
+            buildConfigField 'String', 'HM_MIDDLEWARE_URL', '"https://hmqasmiddlewared3a6b9482.us2.hana.ondemand.com/mobilechannel"'
+
+            buildConfigField 'String', 'LOG_ACCESS_ID', '"us-east-1:61066a78-ce02-4c96-bec1-1ea9b9639b52"'
+            buildConfigField 'String', 'LOG_ACCESS_DIR', '"AWS_LOGS"'
+            buildConfigField 'String', 'LOG_ACCESS_STREAM', '"log-usabilidad-consultora-stream-qas"'
+            buildConfigField 'int', 'LOG_ACCESS_REGION', '1'
+
+            buildConfigField 'String', 'URL_CAMINO_ALEXITO', '"http://showroombelcorp.com/crecimiento/page/landing/"'
+            buildConfigField 'String', 'URL_CHATBOT', '"https://m.me/BotEsikaCyzoneLbel?ref="'
+
+            buildConfigField 'String', 'APP_MQVIRTUAL_PACKAGE', '"biz.belcorp.maquillador"'
+            buildConfigField 'String', 'APP_MQVIRTUAL_CONTENT_PROVIDER', '"content://biz.belcorp.maquillador.provider.data/Pedidos"'
+
+            buildConfigField 'String', 'URL_REDIRECT_OFERTA', '"/RevistaDigital/ConfirmacionAPP"'
+
+            buildConfigField "boolean", "TIME_SERVER", "false"
+
+            buildConfigField "String", "API_YOUTUBE", '"IzaSyA1EKhJaXH9yiI4yPeYzeWaOwCGd0beZUs"'
+
+            resValue 'string', 'facebook_app_id', '1394138023978921'
+        }
+
+        review {
+            debuggable !config["isCiServer"]
+            minifyEnabled config["isCiServer"]
+            signingConfig signingConfigs.ci
+            shrinkResources config["isCiServer"]
+            matchingFallbacks = ['dev', 'develop']
+
+            applicationIdSuffix '.review'
+            versionNameSuffix "-nb.${date}"
+
+            if (!config["isCiServer"]) {
+                testCoverageEnabled true
+            } else {
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+
+            manifestPlaceholders = [build_prefix   : 'REVIEW ',
+                                    facebook_app_id: '1948838345332866',
+                                    host           : 'sbappqa.somosbelcorp.com',
+                                    path_gana      : "GanaMas",
+                                    pkg_mqvirtual  : 'biz.belcorp.maquillador.provider.data']
+
+            buildConfigField 'String', 'VERSION_APP', "\"${config["androidVersionName"]}\""
+            buildConfigField 'String', 'ANALYTICS', '"Qas"'
+            buildConfigField 'String', 'PASE_PEDIDO', '"https://sbappqa.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_OFERTA', '"https://sbappqa.somosbelcorp.com/Login/IngresoExterno?token="'
+            buildConfigField 'String', 'PASE_CUPON', '"https://s3.amazonaws.com/consultorasQAS/SomosBelcorp/AppConsultora/PE/TyCCupon.pdf"'
+
+            buildConfigField 'String', 'WP_ACADEMIA', '"http://qasucb.cyzone.com/moodleventas?token="'
+
+            buildConfigField 'String', 'HM_DIRECT_URL', '"https://my300972.s4hana.ondemand.com:443"'
+            buildConfigField 'String', 'HM_MIDDLEWARE_URL', '"https://hmqasmiddlewared3a6b9482.us2.hana.ondemand.com/mobilechannel"'
+
+            buildConfigField 'String', 'LOG_ACCESS_ID', '"us-east-1:61066a78-ce02-4c96-bec1-1ea9b9639b52"'
+            buildConfigField 'String', 'LOG_ACCESS_DIR', '"AWS_LOGS"'
+            buildConfigField 'String', 'LOG_ACCESS_STREAM', '"log-usabilidad-consultora-stream-qas"'
+            buildConfigField 'int', 'LOG_ACCESS_REGION', '1'
+
+            buildConfigField 'String', 'URL_CAMINO_ALEXITO', '"http://showroombelcorp.com/crecimiento/page/landing/"'
+            buildConfigField 'String', 'URL_CHATBOT', '"https://m.me/BotEsikaCyzoneLbel?ref="'
+
+            buildConfigField 'String', 'APP_MQVIRTUAL_PACKAGE', '"biz.belcorp.maquillador"'
+            buildConfigField 'String', 'APP_MQVIRTUAL_CONTENT_PROVIDER', '"content://biz.belcorp.maquillador.provider.data/Pedidos"'
+
+            buildConfigField 'String', 'URL_REDIRECT_OFERTA', '"/RevistaDigital/ConfirmacionAPP"'
+
+            buildConfigField "boolean", "TIME_SERVER", "false"
+
+            buildConfigField "String", "API_YOUTUBE", '"IzaSyA1EKhJaXH9yiI4yPeYzeWaOwCGd0beZUs"'
+
+            resValue 'string', 'facebook_app_id', '1948838345332866'
+
+
+        }
+    }
+
+    flavorDimensions "marca"
+
+    productFlavors {
+        esika {
+            manifestPlaceholders = [marca_prefix: "Esika ", app_name: 'Conmigo', path_share: "EsikaConmigo.html", package_ending: "esika"]
+            applicationIdSuffix '.esika'
+
+            dimension "marca"
+
+            matchingFallbacks = ['esika']
+
+            buildConfigField 'String', 'APP_NAME', '"EsikaConmigo"'
+            buildConfigField 'String', 'WP_TUVOZ', '"https://esikatuvozonline.questionpro.com/"'
+        }
+
+        lbel {
+            manifestPlaceholders = [marca_prefix: "L'Bel ", app_name: 'Conmigo', path_share: "LBelConmigo.html", package_ending: "lbel"]
+            applicationIdSuffix '.lbel'
+
+            dimension "marca"
+
+            matchingFallbacks = ['lbel']
+
+            buildConfigField 'String', 'APP_NAME', '"LbelConmigo"'
+            buildConfigField 'String', 'WP_TUVOZ', '"https://lbeltuvozonline.questionpro.com"'
+        }
+    }
+
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def project = config["appName"]
+            def marca = variant.productFlavors[0].name
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def version = variant.versionName
+            outputFileName = "${project}-${marca}-${buildType}-${version}.apk"
+        }
+
+        def subId = variant.productFlavors[0].name + '.' + variant.variantData.variantConfiguration.buildType.name
+
+        switch (subId) {
+            case 'esika.release':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_pdr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "CLIENT_ID"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "CLIENT_SECRET"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "CLIENT_ID"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "CLIENT_SECRET"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_prd"
+                break
+
+            case 'esika.stage':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "CLIENT_ID"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "CLIENT_SECRET"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_prd"
+                break
+
+            case 'esika.develop':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_qas"
+                break
+
+            case 'esika.review':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_qas"
+                break
+
+            case 'lbel.release':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_pdr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "CLIENT_ID"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "CLIENT_SECRET"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "CLIENT_ID"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "CLIENT_SECRET"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_prd"
+                break
+
+            case 'lbel.stage':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_ppr"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "CLIENT_ID"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "CLIENT_SECRET"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_prd"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_prd"
+                break
+
+            case 'lbel.develop':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_qas"
+                break
+
+            case 'lbel.review':
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_USABILITY", "usability_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ANALYTICS", "analytics_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MENU", "menu_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SECRET", "secret_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_NOTIFICATION_DAYS", "notification_max_days_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CHATBOT", "chatbot_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BONUS", "bonificacion_digital_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_REGION", "bonificacion_region_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ONLINE_TIME", "api_cache_online_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_TIME", "api_cache_offline_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_ENABLED", "api_cache_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CACHE_OFFLINE_CAMINO_BRILLANTE_TIME", "api_cache_offline_camino_brillante_time_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_DIALOG_ENABLED", "image_dialog_enabled_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_HIDE_VIEWS_GRID_GANA_MAS", "hide_brand_and_amount_client"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGES_MAX_FICHA", "images_max_ficha_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_BANNER_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_EXPANDED_SEARCHVIEW", "expanded_searchview_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_ORDER_CONFIGURABLE_LEVER", "order_configurable_lever_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_PROMOTION_GROUP_LIST_ENABLE", "promotion_group_list_enable_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_IMAGE_FOURTH_CATALOG", "image_fourth_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_DESCRIPTION_CATALOG", "message_description_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_TEXT_SHARE_CATALOG", "message_share_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_ID", "API_CLIENT_ID_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_API_CLIENT_SECRET", "API_CLIENT_SECRET_QA"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_COUNT_MAX_RECENT_SEARCH", "recent_offers_max_count"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DOWNLOAD_CATALOG_PDF", "download_catalog_pdf_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_DIALOG_SHARE_CATALOG","message_share_dialog_catalog_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MESSAGE_MULTI_ORDER", "message_multi_order_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_MOVER_BARRA_NAVEGACION", "mover_barra_navegacion_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_SHOW_RATE_PLAY_STORE", "show_rate_play_store_qas"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_FLAG_MENU_SUBCAMPAIGN","flag_menu_subcampaign"
+                buildConfigAndResStringField variant, "REMOTE_CONFIG_AB_TESTING_BONIFICACIONES", "ab_testing_bonificaciones_qas"
+                break
+        }
+
+        buildConfigAndResStringField variant, "ACCOUNT_TYPE", variant.applicationId
+        buildConfigAndResStringField variant, "CONTENT_AUTHORITY", variant.applicationId + ".provider.sync"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+spoon {
+    debug = true
+
+    baseOutputDir = file("$buildDir/reports")
+
+    if (project.hasProperty('spoonClassName')) {
+        className = project.spoonClassName
+
+        if (project.hasProperty('spoonMethodName')) {
+            methodName = project.spoonMethodName
+        }
+    }
+
+    adbTimeout = 30
+    codeCoverage = true
+    grantAllPermissions = true
+}
+
+def static buildConfigAndResStringField(variant, name, value) {
+    variant.resValue 'string', name.toLowerCase(), value
+    variant.buildConfigField 'String', name, "\"$value\""
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    def appCenterSdkVersion = '1.0.0'
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+    def dataDependencies = rootProject.ext.dataDependencies
+    def developmentDependencies = rootProject.ext.developmentDependencies
+    def belcorpComponentDependencies = rootProject.ext.belcorpComponentDependencies
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':ymktmobile')
+    api project(path: ':library')
+    api project(path: ':data')
+    //api project(path: ':components')
+
+
+    // COMPONENTS
+
+    implementation(belcorpComponentDependencies.core, { transitive = false })
+    implementation(belcorpComponentDependencies.design, {
+        transitive = false
+        exclude group: "com.github.bumptech.glide"
+    })
+    implementation(belcorpComponentDependencies.charts, { transitive = false })
+    implementation(belcorpComponentDependencies.offers, {
+        transitive = false
+        exclude group: "com.github.bumptech.glide"
+    })
+
+    implementation(belcorpComponentDependencies.dialogs, { transitive = false })
+
+    implementation(presentationDependencies.glideIntegration, {
+        transitive = false
+        exclude group: 'glide-parent'
+    })
+
+    implementation(belcorpComponentDependencies.scanner, { transitive = false })
+
+    // LIBRARY: SUPPORT
+    implementation presentationDependencies.gridlayoutV7
+    implementation presentationDependencies.cardviewV7
+    implementation presentationDependencies.appcompatV7
+    implementation presentationDependencies.supportV4
+    implementation presentationDependencies.supportAnnotations
+    implementation presentationDependencies.design
+
+    implementation(presentationDependencies.crashlytics) {
+        transitive = true
+    }
+
+    // LIBRARY: GOOGLE / FIREBASE
+    implementation presentationDependencies.playServices
+    implementation presentationDependencies.playServicesTagManager
+    implementation presentationDependencies.playServicesAnalytics
+    implementation presentationDependencies.firebaseCore
+    implementation presentationDependencies.firebaseMessaging
+    implementation presentationDependencies.firebaseInvites
+    implementation presentationDependencies.firebaseAppindexing
+    implementation presentationDependencies.firebasePerf
+    implementation presentationDependencies.gson
+    implementation presentationDependencies.volley
+
+    // LIBRARY: VIEWS
+    implementation presentationDependencies.butterknife
+    kapt presentationDependencies.butterknifeCompiler
+    implementation presentationDependencies.calligraphy
+    implementation presentationDependencies.viewpump
+    implementation presentationDependencies.confetti
+
+    // LIBRARY: DB
+    implementation dataDependencies.dbflowCore
+    implementation dataDependencies.dbflow
+    kapt dataDependencies.dbflowCompiler
+    implementation dataDependencies.dbflowRxJava
+
+    // LIBRARY: SERVICES
+    implementation dataDependencies.retrofit
+    implementation presentationDependencies.glide
+    kapt presentationDependencies.glideCompiler
+    implementation presentationDependencies.glideIntegration
+
+    implementation(dataDependencies.stetho, {
+        exclude module: 'jsr305'
+    })
+    implementation presentationDependencies.awsCore
+    implementation presentationDependencies.awsKinesis
+    implementation presentationDependencies.anko
+    implementation presentationDependencies.coroutinesCore
+    implementation presentationDependencies.coroutinesAndroid
+
+    // LIBRARY: DEPENDENCIES
+    implementation presentationDependencies.dagger
+    kapt presentationDependencies.daggerCompiler
+    implementation presentationDependencies.rxandroid
+    implementation presentationDependencies.rxjava
+    implementation presentationDependencies.eventbus
+
+    // LIBRARY: UTILS
+    implementation presentationDependencies.logger
+    implementation(presentationDependencies.permissions) {
+        exclude module: 'support-v13'
+    }
+    kapt presentationDependencies.permissionsProcessor
+
+    // LIBRARY: FACEBOOK
+    implementation presentationDependencies.facebook
+
+    //Firebase JobDispatcher
+    implementation presentationDependencies.firebaseJobDispatcher
+    reviewImplementation presentationTestDependencies.debugDB
+    developImplementation presentationTestDependencies.debugDB
+
+    //UCrop
+    implementation presentationDependencies.uCrop
+
+    //Apache Lang
+    implementation presentationDependencies.apacheLang
+
+    //UxCam
+    implementation 'com.uxcam:uxcam:3.1.6@aar'
+
+    // LIBRARY: BELCORP ANALYTICS
+    implementation('biz.belcorp.library.mobile:analytics:0.4.0-SNAPSHOT', {
+        exclude module: 'gson'
+        exclude module: 'retrofit'
+        exclude module: 'converter-gson'
+    })
+
+    // APP CENTER
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+    androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.2', {
+        exclude module: 'gson'
+    })
+
+    // LIBRARY: DEV
+    reviewImplementation developmentDependencies.leakCanary
+    developImplementation developmentDependencies.leakCanary
+    stageImplementation developmentDependencies.leakCanaryNoOp
+    releaseImplementation developmentDependencies.leakCanaryNoOp
+    testImplementation developmentDependencies.leakCanaryNoOp
+    implementation developmentDependencies.multidex
+
+    implementation presentationDependencies.commonsCodec
+
+    // LIBRARY: TEST
+    androidTestImplementation presentationTestDependencies.jsr305
+    androidTestImplementation(presentationTestDependencies.runner, {
+        exclude module: 'support-annotations'
+    })
+    androidTestImplementation(presentationTestDependencies.rules, {
+        exclude module: 'support-annotations'
+    })
+    testImplementation presentationTestDependencies.assertj
+    testImplementation presentationTestDependencies.junit
+    androidTestImplementation presentationTestDependencies.mockitoCore
+    androidTestImplementation presentationTestDependencies.dexmaker
+    androidTestImplementation presentationTestDependencies.dexmakerMockito
+    androidTestImplementation(presentationTestDependencies.espressoCore, {
+        exclude module: 'support-annotations'
+        exclude module: 'jsr305'
+    })
+    androidTestImplementation(presentationTestDependencies.espressoContrib, {
+        exclude module: 'support-annotations'
+        exclude module: 'support-v4'
+        exclude module: 'support-v13'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'design'
+    })
+    androidTestImplementation presentationTestDependencies.espressoIntents
+    androidTestImplementation(presentationTestDependencies.espressoWeb, {
+        exclude module: 'support-annotations'
+    })
+    androidTestImplementation presentationTestDependencies.spoon
+    androidTestImplementation developmentDependencies.multidex
+
+    // LIBRARY: VISA
+    implementation files('../visanetlib/visanetlib-2.1.8.jar')
+    implementation files('../TrustDefenderMobile/TrustDefenderMobile-3.0-105.jar')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    // LIBRARY: YOUTUBE
+    implementation files('../YouTubeAndroidPlayerApi/YouTubeAndroidPlayerApi.jar')
+
+    implementation presentationDependencies.trueTime
+    implementation presentationDependencies.androidChart
+}
+
+apply plugin: 'com.google.gms.google-services'

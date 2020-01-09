@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="product_title">DETALLE</string>
+    <string name="product_reassignment">¿Asignar a otro cliente?</string>
+    <string name="product_client">Cliente</string>
+    <string name="product_for_me">Para mí</string>
+    <string name="product_owner">Asignado a</string>
+    <string name="product_error_reservation_button">Entendido</string>
+    <string name="product_error_reservation_body">Recuerda que si modificas tu pedido perderás la reservación de los demas productos</string>
+</resources>

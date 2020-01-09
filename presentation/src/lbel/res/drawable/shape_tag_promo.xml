@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient android:angle="180"
+        android:type="linear"
+        android:startColor="@color/brand_lbel"
+        android:endColor="@color/brand_esika"/>
+
+    <padding
+        android:left="20dp"
+        android:top="18dp"
+        android:right="7dp"
+        android:bottom="25dp" />
+    <corners android:bottomLeftRadius="75dp"/>
+
+</shape>

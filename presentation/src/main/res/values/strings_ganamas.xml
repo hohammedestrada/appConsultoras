@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Empty screen -->
+    <string name="error_message">No se obtuvo respuesta del servidor</string>
+    <string name="error_title"></string>
+    <string name="error_zero_quantity">La cantidad no puede ser 0</string>
+
+    <string name="msj_offer_added">¡Listo! Agregaste con éxito la(s) oferta(s)</string>
+    <string name="msj_offer_updated">¡Listo! Modificaste con éxito la(s) oferta(s)</string>
+
+    <string name="msj_offer_added_default">¡Listo! Agregaste con éxito la(s) oferta(s)</string>
+    <string name="msj_offer_removed_default">Eliminaste con éxito la(s) oferta(s)</string>
+    <string name="msj_entendido">Entendido</string>
+    <string name="ganamas_btn_text_pack_atp">Elegir productos</string>
+    <string name="ganamas_btn_text_pack_duo">Elegir ahora</string>
+    <string name="ganamas_singular_offer">Oferta</string>
+    <string name="ganamas_plural_offer">Ofertas</string>
+    <string name="ganamas_empty_filter_offer">Lo sentimos. No encontramos productos para los filtros aplicados</string>
+
+
+
+    <!-- Error Messages -->
+    <string name="ganamas_empty_button">Volver a intentar</string>
+
+    <string name="ganamas_empty_category_title">¡Oh no! No hay ofertas en esta categoria</string>
+    <string name="ganamas_empty_category_subtitle">Intentalo en otro momento</string>
+
+    <string name="ganamas_empty_container_title">¡Oh no! Hay problemas con las ofertas.</string>
+    <string name="ganamas_empty_container_subtitle">Pero estamos trabajando para solucionarlos.\nVuelve pronto.</string>
+
+    <string name="ganamas_empty_network_title">Oh.. Al parecer hay problemas de conexión</string>
+
+    <string name="arma_tu_pack_empty_product">¡Oh no! No hay ofertas en Arma tu Pack.</string>
+    <string name="arma_tu_pack_error_load_data">Arma Tu Pack no está disponible por fallas técnicas.</string>
+
+    <string name="arma_tu_pack_dialog_title">¿Quieres eliminar el pack que tienes y empezar de nuevo?</string>
+    <string name="arma_tu_pack_dialog_message">Recuerda que solo puedes armar un pack.</string>
+
+    <string name="arma_tu_pack_btn_text_add">Agregar</string>
+    <string name="arma_tu_pack_btn_text_update">Modificar</string>
+
+    <string name="arma_tu_pack_banner_subtitle_default">Elige tus productos y llévatelos a un gran precio</string>
+
+
+    <string name="ganamas_btn_text_default_update_pack_atp">Modificar</string>
+    <string name="ganamas_btn_text_default_add_pack_atp">Comenzar</string>
+
+
+    <string name="arma_tu_pack_failed_load_data">Arma Tu Pack no está disponible por fallas técnicas.</string>
+
+
+    <string name="oferta_final_selecciona_premio_dialog_title">¿Quieres eliminar el pack que tienes y empezar de nuevo?</string>
+    <string name="oferta_final_selecciona_premio_dialog_message">Recuerda que solo puedes armar un pack.</string>
+
+
+</resources>

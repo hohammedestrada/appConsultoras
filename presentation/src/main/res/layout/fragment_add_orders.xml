@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".feature.home.addorders.AddOrdersFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsvOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lltTotal"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/lltOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Header-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F4F4F4"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivwOrderTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_order"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/frame_christmas"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="top"
+                            android:background="@drawable/bg_christmas_frost_full" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rltCliente"
+                            style="@style/AddOrderFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true">
+
+                            <TextView
+                                android:id="@+id/tvwClientFilter"
+                                style="@style/AddOrderInputText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:text="@string/add_order_select_client"
+                                android:textColor="@android:color/black" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignEnd="@+id/tvwClientFilter"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_arrow_down_gray" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rltClienteDisabled"
+                            style="@style/AddOrderFilterDisabled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvwClientFilterDisabled"
+                                style="@style/AddOrderInputText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:text="@string/add_order_select_client"
+                                android:textColor="@android:color/black" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignEnd="@+id/tvwClientFilterDisabled"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:contentDescription="@null" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlt_add_product"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                style="@style/AddOrderFilter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/edtProductFilter"
+                                    style="@style/AddOrderInputText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/white"
+                                    android:hint="@string/add_order_select_product"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"
+                                    android:maxLength="@integer/cuv_max_length"
+                                    android:maxLines="1"
+                                    android:textColor="@android:color/black"
+                                    android:transitionName="profile" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/llt_product_filter"
+                                style="@style/AddOrderFilter"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="0dp">
+
+                                <TextView
+                                    style="@style/AddOrderInputText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:clickable="false"
+                                    android:hint="@string/add_order_select_product"
+                                    android:transitionName="profile" />
+
+                                <LinearLayout
+                                    android:id="@+id/lnlVoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="12dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:contentDescription="@null"
+                                        app:srcCompat="@drawable/ic_microphone" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lltProgress"
+                            style="@style/AddOrderProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="0dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tvwProgress"
+                                style="@style/NewAddOrderPorcentajeProgress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
+                            <ProgressBar
+                                android:id="@+id/seekbarPuntosBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="15dp"
+                                android:max="100"
+                                android:maxHeight="15dp"
+                                android:minHeight="15dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar_orders"
+                                android:visibility="gone" />
+
+                            <biz.belcorp.consultoras.common.component.GiftBarView
+                                android:id="@+id/seekbarPuntosBar2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp" />
+
+                            <biz.belcorp.mobile.components.offers.PremioSimple
+                                android:id="@+id/btnAccesoPremioLanding"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/tvwNoProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_bag" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/add_order_empty"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tvwPendingOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp36"
+                        android:layout_height="@dimen/dp42"
+                        android:contentDescription="@null"
+                        android:padding="4dp"
+                        android:src="@drawable/mano" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:padding="0dp"
+                        android:singleLine="true"
+                        android:text="@string/tienes_pedidos_pendientes_prefijo"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvwALertPedidosPendientes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:text="@string/aqui"
+                        android:textColor="@color/magenta"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Tabs-->
+            <LinearLayout
+                android:id="@+id/lltContent"
+                style="@style/AddOrderContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                style="@style/FontLatoBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/add_order_tab_second"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp">
+
+                            <ImageView
+                                android:id="@+id/ivwOffer"
+                                android:layout_width="24dp"
+                                android:layout_height="48dp"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/tab_offer" />
+
+                            <TextView
+                                android:id="@+id/tvwOfertas"
+                                style="@style/FontLatoBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/add_order_tab_one"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        app:tabSelectedTextColor="@color/black">
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/tabItemPedidos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minWidth="150dp" />
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/tabItemOfertas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </android.support.design.widget.TabLayout>
+
+                    <View
+                        android:id="@+id/viewSeparator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray_disabled" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltClub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|end"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/lltVerMas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvwVerMas"
+                            style="@style/AddOrderVerMasText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_order_offers_more" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_comp_arrow_right" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvwOfertasEmpty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/add_order_offers_empty"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <biz.belcorp.mobile.components.offers.carousel.Carousel
+                        android:id="@+id/carouselOffers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltListContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/lltListarPorCliente"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="14dp"
+                            android:paddingLeft="14dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/tvwListarPorCliente"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="3dp"
+                                android:paddingEnd="3dp"
+                                android:paddingRight="3dp"
+                                android:text="@string/add_order_tab_filter_one"
+                                android:textSize="@dimen/title_filter_order" />
+
+                            <TextView
+                                android:id="@+id/tvwListarPorClienteCounter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="3dp"
+                                android:paddingRight="3dp"
+                                android:textSize="@dimen/title_filter_order" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/separator"
+                            android:layout_width="1px"
+                            android:layout_height="13dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_toRightOf="@id/lltListarPorCliente"
+                            android:background="@color/black_medium" />
+
+                        <LinearLayout
+                            android:id="@+id/lltListarPorProducto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/separator"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/tvwListarPorProducto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="3dp"
+                                android:paddingLeft="3dp"
+                                android:paddingEnd="3dp"
+                                android:paddingRight="3dp"
+                                android:text="@string/add_order_tab_filter_second"
+                                android:textSize="@dimen/title_filter_order" />
+
+                            <TextView
+                                android:id="@+id/tvwListarPorProductoCounter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="3dp"
+                                android:paddingRight="3dp"
+                                android:textSize="@dimen/title_filter_order" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnPedidosPorAprobar"
+                            style="@style/ButtonPinkOrders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Pedidos por aprobar (0)"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:visibility="gone">
+
+                        </Button>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <biz.belcorp.consultoras.feature.orders.OrdersList
+                            android:id="@+id/ordersList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            app:orders_mode="preview" />
+
+                        <biz.belcorp.consultoras.feature.orders.OrdersGroup
+                            android:id="@+id/ordersGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            app:orders_mode="preview" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvwDisclaimer"
+                        style="@style/AddOrderDisclaimerText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:gravity="right|start"
+                        android:text="@string/add_order_precio_niveles_disclaimer" />
+
+                    <TextView
+                        android:id="@+id/tvwEliminar"
+                        style="@style/AddOrderEliminarText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="18dp" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/multiOrderContentLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/padding_vertical_container_receiver"
+                        android:layout_marginTop="@dimen/margin_vertical_container_receiver"
+                        android:layout_marginEnd="@dimen/margin_vertical_container_receiver"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/backgroundMultiOrderView"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp64"
+                            android:background="@drawable/bg_gray_order_check"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/AddOrderReceiveText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/padding_horizontal_container_receiver"
+                            android:layout_marginEnd="@dimen/margin_end_message_receiver"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:text="@string/multi_order_title"
+                            app:layout_constraintBottom_toBottomOf="@+id/backgroundMultiOrderView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/multiOrderSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/padding_horizontal_container_receiver"
+                            android:background="@null"
+                            android:button="@drawable/switch_selector"
+                            android:thumb="@null"
+                            app:layout_constraintBottom_toBottomOf="@+id/backgroundMultiOrderView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:track="@null" />
+
+                        <View
+                            android:id="@+id/backgroundMultiOrderBlockView"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp64"
+                            android:alpha="0.8"
+                            android:background="@drawable/bg_gray_order_check_block"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/triangleTooltipMultiOrderView"
+                            android:layout_width="@dimen/dp18"
+                            android:layout_height="@dimen/dp18"
+                            android:layout_marginTop="@dimen/dp4"
+                            android:rotation="-90"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="@+id/multiOrderSwitch"
+                            app:layout_constraintStart_toStartOf="@+id/multiOrderSwitch"
+                            app:layout_constraintTop_toBottomOf="@+id/multiOrderSwitch" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/multiOrderTooltipView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp64"
+                            android:background="@drawable/bg_red_order_tooltip_check"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/triangleTooltipMultiOrderView">
+
+                            <ImageButton
+                                android:id="@+id/tooltipMultiOrderCloseButton"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_marginTop="@dimen/dp4"
+                                android:layout_marginEnd="@dimen/dp6"
+                                android:background="@null"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_close" />
+
+                            <ImageView
+                                android:id="@+id/tooltipMultiOrderImage"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/dp20"
+                                android:layout_marginTop="@dimen/dp12"
+                                android:layout_marginBottom="@dimen/dp12"
+                                android:src="@drawable/mt_info"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tooltipMultiOrderText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp10"
+                                android:layout_marginEnd="@dimen/dp6"
+                                android:maxLines="2"
+                                android:text="@string/multi_message_info_off"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                app:autoSizeMinTextSize="10sp"
+                                app:autoSizeStepGranularity="1sp"
+                                app:autoSizeTextType="uniform"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/tooltipMultiOrderCloseButton"
+                                app:layout_constraintStart_toEndOf="@+id/tooltipMultiOrderImage"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </android.support.constraint.ConstraintLayout>
+                    </android.support.constraint.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/receiveLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/padding_vertical_container_receiver"
+                        android:layout_marginTop="@dimen/margin_vertical_container_receiver"
+                        android:layout_marginEnd="@dimen/margin_vertical_container_receiver"
+                        android:background="@drawable/bg_gray_order_check"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/padding_horizontal_container_receiver"
+                        android:paddingEnd="@dimen/padding_horizontal_container_receiver"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_vertical_container_receiver"
+                            android:layout_marginBottom="@dimen/margin_vertical_container_receiver">
+
+                            <TextView
+                                style="@style/AddOrderReceiveText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_end_message_receiver"
+                                android:layout_weight="1"
+                                android:text="@string/add_order_option_receive_title" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/receiveOrderSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:button="@drawable/switch_selector"
+                                android:thumb="@null"
+                                app:track="@null" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/receiveDetailLinear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                style="@style/AddOrderWillReceiveText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/will_receive" />
+
+                            <TextView
+                                android:id="@+id/nameReceiverText"
+                                style="@style/AddOrderWillReceiveBodyText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_top_name_to_will_receiver" />
+
+                            <TextView
+                                android:id="@+id/dniReceiverText"
+                                style="@style/AddOrderWillReceiveBodyText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_top_dni_to_name" />
+
+                            <Button
+                                android:id="@+id/changePersonButton"
+                                style="@style/AddOrderWillReceiveButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/size_button_change_person"
+                                android:layout_marginTop="@dimen/margin_top_button_to_dni"
+                                android:layout_marginBottom="@dimen/margin_vertical_container_receiver"
+                                android:text="@string/change_person" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/fragment_total" />
+
+</RelativeLayout>

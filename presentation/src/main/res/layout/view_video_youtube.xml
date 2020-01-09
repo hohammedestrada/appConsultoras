@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:layout_width="@dimen/youtube_video_default_width"
+    tools:layout_height="wrap_content"
+    tools:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivwPlaceholder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/gray_2"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.youtube.player.YouTubeThumbnailView
+            android:id="@+id/videoPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivwPlay"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_youtube"
+            app:layout_constraintBottom_toBottomOf="@+id/ivwPlaceholder"
+            app:layout_constraintEnd_toEndOf="@+id/ivwPlaceholder"
+            app:layout_constraintStart_toStartOf="@+id/ivwPlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/ivwPlaceholder" />
+
+        <ProgressBar
+            android:id="@+id/pbrLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/YoutubeVideo.ProgressBar"
+            app:layout_constraintBottom_toBottomOf="@+id/ivwPlaceholder"
+            app:layout_constraintEnd_toEndOf="@+id/ivwPlaceholder"
+            app:layout_constraintStart_toStartOf="@+id/ivwPlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/ivwPlaceholder"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvwTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/youtube_video_default_title_margin_top"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:textSize="@dimen/youtube_video_default_title_size"
+        android:textColor="@color/black"
+        tools:text="Video titulo"/>
+
+</merge>

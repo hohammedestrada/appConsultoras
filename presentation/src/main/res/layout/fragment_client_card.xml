@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ClientContent"
+    android:id="@+id/llt_client_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.client.card.ClientCardFragment">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingTop="@dimen/home_item_top_padding_bottom"
+        android:weightSum="3">
+
+        <include
+            layout="@layout/view_client_one_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            layout="@layout/view_client_two_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            layout="@layout/view_client_three_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </TableRow>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvw_data_personal"
+        android:layout_width="match_parent"
+        style="@style/ClientCardSection"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llt_personal_data"
+            style="@style/ClientCardContentInactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlt_personal_data"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tvw_personal_data"
+                    style="@style/ClientSubtitleActive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:text="@string/client_subtitle_datos_personales" />
+
+                <ImageView
+                    android:id="@+id/ivw_arrow_data"
+                    android:layout_width="@dimen/size_image_button_all"
+                    android:layout_height="@dimen/size_image_button_all"
+                    android:contentDescription="@null"
+                    style="@style/ClientCardSectionArrow"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llt_content_personal_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                style="@style/ClientCardSectionBody.Personal">
+
+                <LinearLayout
+                    android:id="@+id/llt_mobile"
+                    style="@style/ClientCardItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/ClientLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_mobile" />
+
+                    <TextView
+                        android:id="@+id/tvw_mobile"
+                        style="@style/ClientValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        style="@style/ClientLineBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_phone"
+                    style="@style/ClientCardItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ClientLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_phone_2" />
+
+                    <TextView
+                        android:id="@+id/tvw_phone"
+                        style="@style/ClientValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        style="@style/ClientLineBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_email"
+                    style="@style/ClientCardItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ClientLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_email" />
+
+                    <TextView
+                        android:id="@+id/tvw_email"
+                        style="@style/ClientValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        style="@style/ClientLineBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llt_birthday"
+                        style="@style/ClientCardItemContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/ClientLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/client_birthday" />
+
+                        <TextView
+                            android:id="@+id/tvw_birthday"
+                            style="@style/ClientValue.Birthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            style="@style/ClientLineBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivw_calendar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        style="@style/ClientBirthdayIcon"
+                        android:contentDescription="@null"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlt_personal_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/tvw_personal_address"
+                        style="@style/ClientSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="@string/client_subtitle_direccion" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_address"
+                    style="@style/ClientCardItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ClientLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_address" />
+
+                    <TextView
+                        android:id="@+id/tvw_address"
+                        style="@style/ClientValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        style="@style/ClientLineBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_reference"
+                    style="@style/ClientCardItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ClientLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_reference" />
+
+                    <TextView
+                        android:id="@+id/tvw_reference"
+                        style="@style/ClientValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        style="@style/ClientLineBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvw_new_data"
+                    style="@style/ClientTextCardButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/client_new_data"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvw_annotations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ClientCardSection">
+
+        <LinearLayout
+            android:id="@+id/llt_annotations"
+            style="@style/ClientCardContentInactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlt_annotations"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tvw_annotations"
+                    style="@style/ClientSubtitleActive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:text="@string/client_annotations" />
+
+                <ImageView
+                    android:id="@+id/ivw_arrow_annotations"
+                    android:layout_width="@dimen/size_image_button_all"
+                    android:layout_height="@dimen/size_image_button_all"
+                    android:contentDescription="@null"
+                    style="@style/ClientCardSectionArrow"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llt_content_annotations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                style="@style/ClientCardSectionBody">
+
+                <LinearLayout
+                    android:id="@+id/llt_nueva_nota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/ClientTextCardButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/client_new_annotation" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_add"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvw_note_label"
+                    style="@style/ClientSubtitleMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/client_card_annotations_message" />
+
+                <biz.belcorp.consultoras.feature.client.note.NotesView
+                    android:id="@+id/vw_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

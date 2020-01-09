@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context="biz.belcorp.consultoras.feature.contest.rewards.GiftsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvwTitulo"
+        android:textSize="15sp"
+        style="@style/FontLatoBold"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp">
+
+        <biz.belcorp.consultoras.common.animation.carousel.CarouselPicker
+            android:id="@+id/carousel"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            app:items_visible="three" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvwNombreRegalo"
+        android:gravity="center"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="13dp"
+        android:text="Cautivant 500 ml"
+        android:textSize="13sp"
+        style="@style/FontLatoBold"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/tvwPrecioValorizado"-->
+        <!--android:textSize="15sp"-->
+        <!--style="@style/FontLatoRegular"-->
+        <!--android:layout_marginBottom="13dp"-->
+        <!--android:text="Pack valorizado en S/.3,903"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contiene"
+        android:textSize="13sp"
+        style="@style/FontLatoBold"
+        android:layout_marginBottom="13dp"/>
+
+    <TextView
+        android:id="@+id/tvwRegalos"
+        android:layout_width="match_parent"
+        android:textSize="13sp"
+        style="@style/FontLatoRegular"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Tutorial.TitleBlackBold" parent="ToolbarTitle.Light">
+        <item name="fontPath">fonts/lato-bold.ttf</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Tutorial.TitleRed" parent="ToolbarTitle.Light">
+        <item name="fontPath">fonts/lato-regular.ttf</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Tutorial.TitleRedBold" parent="ToolbarTitle.Light">
+        <item name="fontPath">fonts/lato-bold.ttf</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Tutorial.BottomButton" parent="FontLatoBold">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="Tutorial.Description" parent="ToolbarTitle.Light">
+        <item name="fontPath">fonts/lato-regular.ttf</item>
+        <item name="android:textColor">@color/black_medium</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.home.clients.pedido.PedidoClientsFragment" >
+
+    <RelativeLayout
+        android:id="@+id/rlt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            style="@style/ClientListContentHeader"
+            android:id="@+id/llt_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/ClientListTitleText"
+                android:id="@+id/tvw_clients_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clients_list_pedido"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvw_clients"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llt_header"
+            android:clipToPadding="false"
+            android:paddingBottom="70dp"
+            tools:listitem="@layout/item_client_pedido" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlt_content_list_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/ClientListContentHeader"
+            android:id="@+id/llt_no_clients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/ClientListTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="@string/clients_list_pedido" />
+
+            <TextView
+                style="@style/PedidoListNullText"
+                android:id="@+id/tvw_no_clients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/PedidoListNullText2"
+                android:id="@+id/tvw_no_clients2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

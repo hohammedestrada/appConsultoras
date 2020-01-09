@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stockouts_title_toolbar">PRODUCTOS AGOTADOS</string>
+    <string name="stockouts_filter_text">Ingrese el CUV o el producto</string>
+    <string name="stockouts_counter">Productos agotados</string>
+    <string name="stockouts_no_items">No existen productos agotados en la actual campaña.</string>
+    <string name="stockouts_no_items_conexion">No existen productos agotados en la actual campaña, o es posible que no tengas conexión a internet.</string>
+</resources>

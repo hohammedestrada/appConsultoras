@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/DialogMessageAnimContent"
+    android:id="@+id/rlt_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/ivw_close"
+        style="@style/DialogClose"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/ic_close_black"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rvw_animation"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center">
+
+            <biz.belcorp.consultoras.common.animation.ripple.RippleView
+                android:id="@+id/ripple_view"
+                android:layout_width="210dp"
+                android:layout_height="210dp" />
+
+            <ImageView
+                android:id="@+id/ivw_image"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="25dp"
+            android:paddingStart="25dp"
+            android:paddingRight="25dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_title"
+                style="@style/MessageAnimPrimaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/consultant_approved_title" />
+
+            <TextView
+                android:id="@+id/tvw_message"
+                style="@style/MessageAnimSecondText"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/consultant_approved_description" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                style="@style/DialogMessageAnimButtonSecond.Cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_aceptar"
+                style="@style/DialogMessageAnimButton.Aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnExtra1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp" />
+
+            <View
+                android:layout_width="@dimen/dp10"
+                android:layout_height="0dp"
+                android:id="@+id/separator"/>
+
+            <TextView
+                android:id="@+id/btnExtra2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlt_holiday"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp16"
+    android:layout_marginStart="@dimen/dp8"
+    android:layout_marginEnd="@dimen/dp8"
+    android:paddingTop="@dimen/dp16"
+    android:paddingEnd="@dimen/dp16"
+    android:background="@drawable/bg_rate"
+    android:paddingBottom="@dimen/dp8">
+
+    <ImageView
+        android:layout_width="@dimen/rate_size_image"
+        android:layout_height="@dimen/rate_size_image"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_rate" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp12"
+        android:text="@string/rate_title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/rate_size_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/alreadyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_outline"
+            android:text="@string/rate_already"
+            android:textAllCaps="false"
+            android:textSize="@dimen/rate_size_button" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/yesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_magenta_state"
+            android:text="@string/rate_yes"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/rate_size_button" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/afterButton"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/dp8"
+        android:paddingBottom="@dimen/dp8"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:text="@string/rate_after"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/rate_size_button" />
+</LinearLayout>

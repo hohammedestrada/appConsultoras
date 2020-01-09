@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.client.registration.ClientRegistrationFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:id="@+id/rlt_header"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/llt_toolbar_option_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_cancel" />
+
+                <TextView
+                    style="@style/ToolbarSecondaryOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/registration_cancel" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llt_toolbar_option_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_save" />
+
+                <TextView
+                    style="@style/ToolbarSecondaryOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/registration_save"
+                    tools:ignore="RelativeOverlap" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar_layout"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            style="@style/ClientContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlt_image"
+                    android:layout_width="110dp"
+                    android:layout_height="90dp">
+
+                    <biz.belcorp.consultoras.common.component.CircleImageView
+                        android:id="@+id/ivw_image"
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        app:srcCompat="@drawable/ic_contact_default" />
+
+                    <ImageView
+                        android:id="@+id/chk_favorite"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:button="@drawable/chk_favorite_stroke"
+                        android:checked="false"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_star" />
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/rlt_image"
+                    android:textColorHint="@color/hint_dark"
+                    app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/ted_name"
+                        style="@style/ClientTextActivityInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginTop="0dp"
+                        android:digits="aábcdeéfghiíjklmnñoópqrstuúvwxyzÁABCDÉEFGHÍIJKLMNÑÓOPQRSTÚUVWXYZ0123456789 "
+                        android:hint="@string/client_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:maxLength="50" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_name"
+                    android:layout_toEndOf="@id/rlt_image"
+                    android:textColorHint="@color/hint_dark"
+                    app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/ted_last"
+                        style="@style/ClientTextActivityInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginTop="0dp"
+                        android:digits="aábcdeéfghiíjklmnñoópqrstuúvwxyzÁABCDÉEFGHÍIJKLMNÑÓOPQRSTÚUVWXYZ0123456789 "
+                        android:hint="@string/client_lastname"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:maxLength="50" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvw_error_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlt_image"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_alerta_small"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/red"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvw_data_personal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="3dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/llt_personal_data"
+                    style="@style/ClientCardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlt_personal_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/tvw_personal_data"
+                            style="@style/ClientSubtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:clickable="false"
+                            android:text="@string/client_subtitle_datos_personales" />
+
+                        <ImageView
+                            android:id="@+id/ivw_arrow_data"
+                            android:layout_width="@dimen/size_image_button_all"
+                            android:layout_height="@dimen/size_image_button_all"
+                            android:layout_alignBottom="@+id/tvw_personal_data"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignTop="@+id/tvw_personal_data"
+                            android:clickable="false"
+                            android:contentDescription="@null"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_arrow_up_black" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt_content_personal_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="8dp">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/til_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/hint_dark"
+                                app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/ted_mobile"
+                                    style="@style/ClientTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/client_mobile"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:maxLength="15" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tvw_error_mobile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:drawablePadding="8dp"
+                                android:drawableStart="@drawable/ic_alerta_small"
+                                android:text="aca va el error de celular"
+                                android:textColor="@color/red"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:id="@+id/chk_mobile_favorite"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:checked="true"
+                                android:clickable="true"
+                                android:contentDescription="@null"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:padding="3dp"
+                                app:srcCompat="@drawable/ic_star" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="8dp">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/til_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/hint_dark"
+                                app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/ted_phone"
+                                    style="@style/ClientTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/client_phone_2"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:maxLength="15" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tvw_error_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:drawablePadding="8dp"
+                                android:drawableStart="@drawable/ic_alerta_small"
+                                android:text="aca va el error de telf fijo"
+                                android:textColor="@color/red"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:id="@+id/chk_phone_favorite"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginTop="15dp"
+                                android:checked="true"
+                                android:clickable="true"
+                                android:contentDescription="@null"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:padding="3dp"
+                                app:srcCompat="@drawable/ic_star" />
+
+                        </RelativeLayout>
+
+                        <biz.belcorp.consultoras.common.component.LeftTextInputLayout
+                            android:id="@+id/til_birthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="8dp"
+                            android:textColorHint="@color/hint_dark"
+                            app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/ted_birthday"
+                                style="@style/ClientTextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:drawableLeft="@drawable/ic_edt_calendar"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_edt_calendar"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                                android:hint="@string/client_birthday"
+                                android:imeOptions="actionNext"
+                                android:inputType="date"
+                                tools:ignore="RtlHardcoded" />
+
+                        </biz.belcorp.consultoras.common.component.LeftTextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlt_container_correo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="8dp">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/til_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/hint_dark"
+                                app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/ted_email"
+                                    style="@style/ClientTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/client_email"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLength="100" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tvw_error_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:drawablePadding="8dp"
+                                android:drawableStart="@drawable/ic_alerta_small"
+                                android:text="aca va el error de email"
+                                android:textColor="@color/red"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                tools:ignore="HardcodedText" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llt_direccion_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rlt_personal_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginBottom="10dp"
+                                android:clickable="true"
+                                android:paddingBottom="8dp">
+
+                                <TextView
+                                    android:id="@+id/tvw_personal_address"
+                                    style="@style/ClientSubtitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:clickable="false"
+                                    android:text="@string/client_subtitle_direccion" />
+
+                            </RelativeLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/til_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="8dp"
+                                android:textColorHint="@color/hint_dark"
+                                app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/ted_address"
+                                    style="@style/ClientTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/client_address"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapWords"
+                                    android:maxLength="100" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/til_reference"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="8dp"
+                                android:textColorHint="@color/hint_dark"
+                                app:hintTextAppearance="@style/ClientTextInputLayout">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/ted_reference"
+                                    style="@style/ClientTextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/client_reference"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapWords"
+                                    android:maxLength="100" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llt_agregar_correo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/ClientTextCardButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/client_agregar_correo" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_add" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llt_agregar_direccion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/ClientTextCardButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/client_agregar_direccion" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_add" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvw_annotations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="3dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/llt_annotations"
+                    style="@style/ClientCardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlt_annotations"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/tvw_annotations"
+                            style="@style/ClientSubtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:text="@string/client_annotations" />
+
+                        <ImageView
+                            android:id="@+id/ivw_arrow_annotations"
+                            android:layout_width="@dimen/size_image_button_all"
+                            android:layout_height="@dimen/size_image_button_all"
+                            android:layout_alignBottom="@+id/tvw_annotations"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignTop="@+id/tvw_annotations"
+                            android:clickable="false"
+                            android:contentDescription="@null"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_arrow_down_black" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt_content_annotations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/llt_nueva_nota"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/ClientTextCardButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/client_new_annotation" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_add" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvw_note_label"
+                            style="@style/ClientSubtitleMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/client_card_annotations_message" />
+
+                        <biz.belcorp.consultoras.feature.client.note.NotesView
+                            android:id="@+id/vw_notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvw_delete_contact"
+                style="@style/ClientTextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/client_delete"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

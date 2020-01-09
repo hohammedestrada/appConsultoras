@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clients_list_title">Mis Clientes</string>
+    <string name="clients_list_search_hint">¿A quién buscas?</string>
+    <string name="clients_list_all">Todos</string>
+    <string name="clients_list_favorites">Favoritos</string>
+    <string name="clients_list_pedido">Pedidos</string>
+    <string name="clients_list_all_clients">Todos mis clientes</string>
+    <string name="clients_list_new_registro">Se agregó un nuevo cliente.</string>
+
+    <string name="clients_list_delete_with_order">No se puede eliminar el cliente, tiene pedido en la campaña.</string>
+
+    <string name="clients_list_order_title_campaing">Clientes con pedido en C%s</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="fest_title">Fest</string>
+    <string name="fest_title_conditions">Participa con estos productos</string>
+    <string name="fest_empty_product">Uy… \nAl parecer no hay festivales disponibles en esta campaña.</string>
+    <string name="fest_empty_product_filter">Lo sentimos.\nNo encontramos productos\npara los filtros aplicados.</string>
+    <string name="fest_empty_sub_campaing_product">¡Oh no!\n No hay ofertas disponibles</string>
+    <string name="fest_error_load_data">Fest no está disponible por fallas técnicas.</string>
+    <string name="fest_title_more">Ver más</string>
+    <string name="fest_title_minus">Ver menos</string>
+
+    <string name="fest_tag_order">PACK EXCLUSIVO %1$s</string>
+
+    <string name="fest_alert_title">¿Solo puedes elegir un premio</string>
+    <string name="fest_alert_message">¿Quieres cambiar el que ya tienes?</string>
+    <string name="fest_alert_cancel">Cancelar</string>
+    <string name="fest_alert_ok">Cambiar</string>
+
+    <string name="fest_one_alert_title">Recuerda</string>
+    <string name="fest_one_alert_message">Solo puedes elegir un pack exclusivo del %1$s.</string>
+
+    <string name="fest_alert_arrived_cancel">Entendido</string>
+    <string name="fest_alert_arrived_title">¡Lo conseguiste!</string>
+    <string name="fest_alert_arrived_message">Haz llegado al monto establecido. Ahora elige (1) premio(s).</string>
+    <string name="fest_alert_arrived_ok">Ver premio</string>
+
+    <string name="fest_confirt_message_p1">¿Estás seguro? </string>
+    <string name="fest_confirt_calcel">Cancelar</string>
+    <string name="fest_confirt_ok">Sí, eliminar</string>
+
+    <string name="fest_win_alert_cancel">Entendido</string>
+    <string name="fest_win_alert_ok">Elegir Pack</string>
+
+    <string name="fest_award_title">¡Lo conseguiste!</string>
+    <string name="fest_award_message">Has llegado al monto establecido.</string>
+
+</resources>

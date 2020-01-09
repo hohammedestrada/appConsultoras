@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ClientListItemContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
+
+    <TextView
+        android:id="@+id/tvw_cantidad"
+        style="@style/ClientListItemNameText"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingEnd="10dp"
+        android:paddingStart="0dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvw_code"
+        style="@style/ClientListItemNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLength="@integer/cuv_max_length"
+        android:maxLines="1"
+        android:paddingEnd="10dp"
+        android:paddingStart="0dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvw_producto"
+        style="@style/ClientListItemNameText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:maxLines="3"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvw_costo"
+        style="@style/ClientListItemNameText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:maxWidth="62dp"
+        android:minWidth="58dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="4dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+</LinearLayout>

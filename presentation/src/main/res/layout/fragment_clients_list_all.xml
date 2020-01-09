@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.home.clients.all.AllClientsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlt_content_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llt_header"
+            style="@style/ClientListContentHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llt_search"
+                style="@style/ClientListFilterContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_filter"
+                    style="@style/ClientFilterText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="aábcdeéfghiíjklmnoópqrstuúvwxyzÁABCDÉEFGHÍIJKLMNÓOPQRSTÚUVWXYZ0123456789 "
+                    android:hint="@string/clients_list_search_hint"
+                    android:inputType="text">
+
+                    <requestFocus />
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/ivw_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:tag="0"
+                    app:srcCompat="@drawable/ic_lupe_black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvw_clients_counter"
+                style="@style/ClientListTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clients_list_all_clients" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvw_clients"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llt_header"
+            android:clipToPadding="false"
+            android:paddingBottom="70dp"
+            tools:listitem="@layout/item_client" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlt_content_list_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llt_no_clients"
+            style="@style/ClientListContentHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/ClientListTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="@string/clients_list_all_clients" />
+
+            <TextView
+                android:id="@+id/tvw_no_clients"
+                style="@style/ClientListNullText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/client_no_clients" />
+
+            <TextView
+                android:id="@+id/tvw_no_clients2"
+                style="@style/ClientListNullText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/client_no_clients2" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

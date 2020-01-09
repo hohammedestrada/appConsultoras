@@ -1,0 +1,85 @@
+<LinearLayout
+    android:id="@+id/lltObservation"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_below="@id/rltData"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:layout_marginTop="-15dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@drawable/tooltip_demo">
+
+            <LinearLayout
+                android:gravity="top|center_horizontal"
+                android:layout_weight="8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_alerta"
+                    android:contentDescription="@null"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvwMensajeError"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    style="@style/AddOrdersMessageError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:background="@drawable/triangle_tooltip_grey"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

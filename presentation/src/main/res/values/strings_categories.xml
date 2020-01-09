@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="categories_default_code">cat</string>
+    <string name="categories_default_name">Categoría</string>
+
+</resources>

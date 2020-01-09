@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ClientListItemContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvw_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_box_card_view_client_inactive"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/llt_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/llt_contact"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tvw_client"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_circle_black"
+                    android:contentDescription="@null"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvw_title"
+                        style="@style/ClientListItemNameText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlt_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/ivw_birthday"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_alignParentTop="true"
+                            android:contentDescription="@null"
+                            app:srcCompat="@drawable/ic_cake" />
+
+                        <TextView
+                            android:id="@+id/tvw_description"
+                            style="@style/ClientListItemBirthdayText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@+id/ivw_birthday"
+                            android:paddingStart="7dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llt_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/llt_data"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/ivw_whatstapp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/ic_whatsapp" />
+
+                <View
+                    android:id="@+id/view_separator"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/border_vertical" />
+
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/ivw_sms"-->
+                    <!--android:layout_width="40dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:contentDescription="@null"-->
+                    <!--android:padding="8dp"-->
+                    <!--app:srcCompat="@drawable/ic_client_sms" />-->
+
+                <!--<View-->
+                    <!--android:id="@+id/view_separator2"-->
+                    <!--android:layout_width="1dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginEnd="5dp"-->
+                    <!--android:layout_marginStart="5dp"-->
+                    <!--android:background="@color/border_vertical" />-->
+
+
+                <ImageView
+                    android:id="@+id/ivw_phone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/ic_client_phone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

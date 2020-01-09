@@ -1,0 +1,2224 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2019-08-26 13:15:59",
+    "containerVersion": {
+        "path": "accounts/1655411125/containers/7302464/versions/25",
+        "accountId": "1655411125",
+        "containerId": "7302464",
+        "containerVersionId": "25",
+        "name": "Update - Auditoria",
+        "container": {
+            "path": "accounts/1655411125/containers/7302464",
+            "accountId": "1655411125",
+            "containerId": "7302464",
+            "name": "Consultoras App",
+            "publicId": "GTM-NBJMJ3C",
+            "usageContext": [
+                "ANDROID_SDK_5"
+            ],
+            "fingerprint": "1566800636249",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/1655411125/containers/7302464/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "9",
+                "name": "ECC - ProductDetail",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "readDataFrom",
+                        "value": "FIREBASE_EVENT_DATA"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "ProductDetail"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1554996687586",
+                "firingTriggerId": [
+                    "31"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "6",
+                "name": "ECC - ProductImpression",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "readDataFrom",
+                        "value": "FIREBASE_EVENT_DATA"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "ProductImpression"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1554996712019",
+                "firingTriggerId": [
+                    "22"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "10",
+                "name": "ECC - PromotionClick",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "metric",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "metric",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "metric",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "metric",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "readDataFrom",
+                        "value": "FIREBASE_EVENT_DATA"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "promotionClick"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1554996880470",
+                "firingTriggerId": [
+                    "34"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "8",
+                "name": "ECC - PromotionImpression",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "readDataFrom",
+                        "value": "FIREBASE_EVENT_DATA"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "PromotionImpression"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1554996798363",
+                "firingTriggerId": [
+                    "29"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "7",
+                "name": "ECC - productClick",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "readDataFrom",
+                        "value": "FIREBASE_EVENT_DATA"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "ProductClick"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1554996669823",
+                "firingTriggerId": [
+                    "23"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "4",
+                "name": "EEC - Add to cart",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "readDataFrom",
+                        "value": "FIREBASE_EVENT_DATA"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "Add to Cart"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1554996822299",
+                "firingTriggerId": [
+                    "19"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "5",
+                "name": "EEC - Remove from Cart",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "readDataFrom",
+                        "value": "FIREBASE_EVENT_DATA"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "Remove from Cart"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1554996843547",
+                "firingTriggerId": [
+                    "20"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "1",
+                "name": "UA - Screenview",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "screenName"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Event Param - Screen Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "userId"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{UP - codigoconsultora}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_SCREENVIEW"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - campana}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - pais}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "3"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - region}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "4"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - zona}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "5"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - codigoconsultora}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "6"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - periodo}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "7"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ranking}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "11"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{DP - Segmento Patrocinado}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "12"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - seccion}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "13"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - segmentoConstancia}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "14"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - inscripcionEPM}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "15"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - grupoConsultora}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "19"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{up - rol}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "20"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - socianivel}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "21"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - semanaperiodo}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1566799249131",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "tagId": "3",
+                "name": "UA - Virtual Event",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "screenName"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Event Param - Screen Name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "userId"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{UP - codigoconsultora}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "{{Event Param - Category}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{Event Param - Action}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{Event Param - Label}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - ambiente}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - tipoIngreso}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{UP - nombrePushNotification}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{ID Property UA}}"
+                    }
+                ],
+                "fingerprint": "1548083596736",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "19",
+                "name": "Event - Add to Cart",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "add_to_cart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1531839521472"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "23",
+                "name": "Event - ProductClick",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "select_content"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1540919318441"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "31",
+                "name": "Event - Productdetail",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "VIEW_ITEM"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{promotions}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "undefined"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1554759749193"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "29",
+                "name": "Event - PromotionImpression",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "view_item"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{promotions}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "undefined"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1554760066215"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "20",
+                "name": "Event - Remove from Cart",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "remove_from_cart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1531839676334"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "5",
+                "name": "Event - ScreenView",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "screen_view|pantallaVista"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1554497624035"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "6",
+                "name": "Event - VirtualEvent",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "select_benefits|select_level|view_popup_nivel|close_popup_nivel|select_ofertas_especiales|Select_crecimiento|Select_compromiso|Select_como_lograrlo|view_popup_logros|close_popup_logros|filtrar_ordenar|elegirOpcion|verMas|view_showroom|menu|navigation|login|home_options|view_more|logout|catalog|client|incentive|debt|tutorial|notification|paquete_documentario|banner_postulante|add_product|reservation_complete|choose_client|add_product|tab_selection|remove_product|search|reservation_alter|product_view|choose_offer|virtualEvent|out_detail|share_detail|select_option|change_option|choose_option|view_popup|popup_choose_option|popup_apply_selection|verMas|seleccionar_buscador|busqueda_sin_resultados|busqueda_con_resultados|ver_mas_resultados|voz_con_resultados|voz_sin_resultados|agregar_filtros|aplicar_filtros|ordenar_productos|limpiar_filtros|ver_mas|guardar_pedido|tab_pedido_ganamas|tab_clientes_unidades|selecciona_cliente|ingresar_busqueda|seleccionar_producto_lista|modificar_ficha_resumida|choose_option|popup_apply_selection|select_option|change_option"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Param - Category}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^sika \\| Login|^sika \\| Navegaci.n|Lbel \\| Login|L.Bel \\| Login|L.Bel \\| Navegación|Resultados de B.squeda"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Param - Action}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Salir del detalle del producto|Eliminar Filtro|Cerrar Sesi.n|Cerrar Pop.up del nivel|\\{Compromiso\\} . \\{Programa de Nuevas\\}|\\{Crecimiento\\} . \\{Cambio de escala\\}|\\{Crecimiento\\} . \\{Cambio de nivel\\}|\\{Crecimiento\\} – \\{Constancia\\}"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Param - Action}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "\\{Crecimiento\\} . \\{Incremento en monto de pedidos\\}|Seleccionar Tab|Salir del detalle del producto|Seleccionar opci.n del producto|Actualizacion de correo"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1566800461595"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "22",
+                "name": "Event - productImpression",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "view_search_results"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1540919223236"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "triggerId": "34",
+                "name": "Event- promotionclick",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "select_content"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{promotions}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "undefined"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1554760017342"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "16",
+                "name": "DP - Segmento Patrocinado",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "segmento_patrocinado"
+                    }
+                ],
+                "fingerprint": "1550694957483"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "4",
+                "name": "Event Param - Action",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "CUSTOM"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "action"
+                    }
+                ],
+                "fingerprint": "1501523932889"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "3",
+                "name": "Event Param - Category",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "CUSTOM"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "category"
+                    }
+                ],
+                "fingerprint": "1501523890808"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "5",
+                "name": "Event Param - Label",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "CUSTOM"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "label"
+                    }
+                ],
+                "fingerprint": "1501523949106"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "1",
+                "name": "Event Param - Screen Name",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "CUSTOM"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "screen_name"
+                    }
+                ],
+                "fingerprint": "1501522521294"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "2",
+                "name": "ID Property UA",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "UA-102001169-1"
+                    }
+                ],
+                "fingerprint": "1501522806619"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "27",
+                "name": "UP - Lista Anterior",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "dimension18"
+                    }
+                ],
+                "fingerprint": "1566800636249"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "26",
+                "name": "UP - Seccion web",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "dimension17"
+                    }
+                ],
+                "fingerprint": "1566800602823"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "13",
+                "name": "UP - ambiente",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "ambiente"
+                    }
+                ],
+                "fingerprint": "1501524451883"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "6",
+                "name": "UP - campana",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "campana"
+                    }
+                ],
+                "fingerprint": "1501524317787"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "10",
+                "name": "UP - codigoconsultora",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "codigoconsultora"
+                    }
+                ],
+                "fingerprint": "1501524400229"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "20",
+                "name": "UP - grupoConsultora",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "grupoConsultora"
+                    }
+                ],
+                "fingerprint": "1551920484494"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "19",
+                "name": "UP - inscripcionEPM",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "inscripcionEPM"
+                    }
+                ],
+                "fingerprint": "1551920355391"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "15",
+                "name": "UP - nombrePushNotification",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "nombrePushNotification"
+                    }
+                ],
+                "fingerprint": "1545057271652"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "7",
+                "name": "UP - pais",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "pais"
+                    }
+                ],
+                "fingerprint": "1501524341564"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "25",
+                "name": "UP - palanca",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "dimension16"
+                    }
+                ],
+                "fingerprint": "1566800567221"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "11",
+                "name": "UP - periodo",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "periodo"
+                    }
+                ],
+                "fingerprint": "1501524421125"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "12",
+                "name": "UP - ranking",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "ranking"
+                    }
+                ],
+                "fingerprint": "1501524435971"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "8",
+                "name": "UP - region",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "region"
+                    }
+                ],
+                "fingerprint": "1501524365868"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "17",
+                "name": "UP - seccion",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "seccion"
+                    }
+                ],
+                "fingerprint": "1551920226494"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "18",
+                "name": "UP - segmentoConstancia",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "segmentoConstancia"
+                    }
+                ],
+                "fingerprint": "1551920316957"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "24",
+                "name": "UP - semanaperiodo",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "semanaperiodo"
+                    }
+                ],
+                "fingerprint": "1566799242265"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "23",
+                "name": "UP - socianivel",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "socianivel"
+                    }
+                ],
+                "fingerprint": "1566799128583"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "14",
+                "name": "UP - tipoIngreso",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "tipoIngreso"
+                    }
+                ],
+                "fingerprint": "1545057281844"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "9",
+                "name": "UP - zona",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "zona"
+                    }
+                ],
+                "fingerprint": "1501524380843"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "21",
+                "name": "promotions",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "CUSTOM"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "promotions"
+                    }
+                ],
+                "fingerprint": "1554759713996"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "variableId": "22",
+                "name": "up - rol",
+                "type": "fup",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "key",
+                        "value": "rol"
+                    }
+                ],
+                "fingerprint": "1566798901366"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "type": "EVENT_NAME",
+                "name": "Event Name"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "type": "APP_ID",
+                "name": "App ID"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "type": "APP_NAME",
+                "name": "App Name"
+            },
+            {
+                "accountId": "1655411125",
+                "containerId": "7302464",
+                "type": "APP_VERSION_CODE",
+                "name": "App Version Code"
+            }
+        ],
+        "fingerprint": "1566825352173",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/1655411125/containers/7302464/versions/25?apiLink=version"
+    }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/sectionCarouselPromotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+        <biz.belcorp.mobile.components.design.carousel.promotion.CarouselPromotion
+            android:id="@+id/carouselPromotion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:carouselpromotion_image_default="@drawable/ic_container_placeholder"
+            app:carouselpromotion_show_arrows="true"
+            app:carouselpromotion_show_dots="false"
+            app:carouselpromotion_show_limit="0"
+            app:carouselpromotion_title="Promoción">
+
+        </biz.belcorp.mobile.components.design.carousel.promotion.CarouselPromotion>
+
+        <biz.belcorp.mobile.components.design.carousel.promotiondual.CarouselPromotionDual
+            android:id="@+id/carouselPromotionDual1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:CarouselPromotionDual_titleButton="Entérate aquí"
+            app:CarouselPromotionDual_titleHead="Promoción">
+        </biz.belcorp.mobile.components.design.carousel.promotiondual.CarouselPromotionDual>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/linepromotion1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_edit" />
+
+</LinearLayout>
+

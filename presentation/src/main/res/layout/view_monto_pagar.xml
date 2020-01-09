@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/PayTextStyle.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/monto"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/label_porcentaje"
+                style="@style/PayTextStyle.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_mnt_bruto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textDirection="rtl"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/porcentaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textDirection="rtl"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="3dp"
+        android:background="@color/gray_disabled" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/PayTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/total_por_pagar"
+            android:textDirection="ltr"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/total_pagar"
+            style="@style/PayTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textDirection="rtl"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

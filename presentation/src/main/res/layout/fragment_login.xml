@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="25dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivw_bg"
+        style="@style/LoginBackground.Form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tvw_title"
+        style="@style/LoginTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/ButtonTheme.Login"
+        android:textSize="@dimen/textsize_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:text="@string/login_with_user" />
+
+    <LinearLayout
+        android:id="@+id/btn_facebook"
+        style="@style/LoginFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LoginFacebookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_facebook"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvw_register"
+        style="@style/LoginRegisterLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/login_register_consultant" />
+
+</LinearLayout>

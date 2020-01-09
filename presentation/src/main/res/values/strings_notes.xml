@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notes_select_client">SELECCIONA AL CLIENTE</string>
+    <string name="notes_add_button">GUARDAR NOTA</string>
+    <string name="notes_description_hint">Sus productos favoritos, fechas especiales, etc.</string>
+    <string name="notes_reminder_description_hint">Me compró&#8230;</string>
+
+    <string name="notes_card">NOTAS</string>
+    <string name="notes_pedido">PEDIDOS</string>
+    <string name="notes_pedido_simple">PEDIDO</string>
+    <string name="notes_search_client">Buscar...</string>
+
+    <string name="notes_description_empty">Debes ingresar texto.</string>
+
+</resources>

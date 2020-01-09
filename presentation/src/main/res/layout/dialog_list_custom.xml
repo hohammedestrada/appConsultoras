@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvw_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ivw_close"
+            android:gravity="center"
+            android:minHeight="@dimen/size_vertical_dialog_title"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivw_close"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_close_black" />
+
+        <ListView
+            android:id="@+id/lv_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvw_title" />
+
+    </RelativeLayout>
+
+</layout>

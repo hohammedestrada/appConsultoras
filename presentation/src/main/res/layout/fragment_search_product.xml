@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="biz.belcorp.consultoras.feature.home.addorders.AddOrdersActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:transitionName="profile"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:background="#F4F4F4"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rltCliente"
+                        style="@style/AddOrderFilter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <TextView
+                            android:id="@+id/tvwClientFilter"
+                            style="@style/AddOrderInputText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/add_order_select_client"
+                            android:textColor="@android:color/black" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignEnd="@+id/tvwClientFilter"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@null"
+                            app:srcCompat="@drawable/ic_arrow_down_gray"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltClienteDisabled"
+                        style="@style/AddOrderFilterDisabled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvwClientFilterDisabled"
+                            style="@style/AddOrderInputText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/add_order_select_client"
+                            android:textColor="@android:color/black" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignEnd="@+id/tvwClientFilterDisabled"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@null" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlt_add_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:background="@drawable/shape_border_order"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/lltEdtProductFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <EditText
+                                android:layout_margin="10dp"
+                                android:id="@+id/edtProductFilter"
+                                style="@style/AddOrderInputText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:hint="@string/add_order_select_product"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="@integer/cuv_max_length"
+                                android:maxLines="1"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:textColor="@android:color/black" />
+
+                            <FrameLayout
+                                android:background="?android:attr/selectableItemBackground"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:clickable="true"
+                                    android:id="@+id/lnlClose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/imgClose"
+                                        android:layout_margin="15dp"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginEnd="5dp"
+                                        android:contentDescription="@null"
+                                        app:srcCompat="@drawable/ic_cancel_grey"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:id="@+id/lnlVoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_margin="13dp"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginEnd="5dp"
+                                        android:contentDescription="@null"
+                                        app:srcCompat="@drawable/ic_microphone"/>
+
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/rlt_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lnlEmpty"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <biz.belcorp.mobile.components.offers.MiniOffer
+                        android:id="@+id/suggestOffers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

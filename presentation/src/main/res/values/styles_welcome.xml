@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Card Items-->
+    <style name="ButtonVerifyAccount">
+        <item name="android:background">@drawable/shape_button_verify_account</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="WelcomeText" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/welcome_text</item>
+    </style>
+
+    <style name="WelcomeTextBold" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/welcome_text</item>
+    </style>
+
+    <style name="WelcomeTextBoldRed" parent="FontLatoBold">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/welcome_text</item>
+    </style>
+
+    <style name="WelcomeTitle" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/welcome_title</item>
+    </style>
+
+    <style name="WelcomeSubtitle" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/welcome_subtitle</item>
+    </style>
+
+    <style name="WelcomeInput">
+        <item name="android:digits">1234567890</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:inputType">number|textNoSuggestions</item>
+        <item name="android:maxLength">2</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

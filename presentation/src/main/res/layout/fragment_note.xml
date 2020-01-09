@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray"
+    tools:context="biz.belcorp.consultoras.feature.client.note.NoteActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_above="@+id/btn_note_add">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlt_client"
+                style="@style/LoginInputContent.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:clickable="true">
+
+                <EditText
+                    android:id="@+id/ted_note_client"
+                    style="@style/LoginInputText"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/ivw_select"
+                    android:textSize="15sp"
+                    android:hint="@string/notes_select_client" />
+
+                <ImageView
+                    android:id="@+id/ivw_select"
+                    style="@style/LoginInputIcon.Right"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_arrow_down_black" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/ClientSubtitleMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/client_annotations_message" />
+
+            <FrameLayout
+                style="@style/NoteDetailEditTextContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/ted_note_description"
+                    style="@style/NoteDetailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/notes_description_hint"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="1000"
+                    android:maxLines="100"
+                    android:minLines="5" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_note_add"
+        style="@style/BottomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/notes_add_button" />
+
+</RelativeLayout>

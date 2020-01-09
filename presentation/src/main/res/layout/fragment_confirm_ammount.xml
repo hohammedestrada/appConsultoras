@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/TextViewCircleRed"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:gravity="center"
+                android:text="@string/check" />
+
+            <View
+                android:layout_width="66dp"
+                android:layout_height="2dp"
+                android:background="@color/primary" />
+
+            <TextView
+                style="@style/TextViewCircleRed"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:gravity="center"
+                android:text="2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView16"
+            style="@style/PayTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/confirmar_monto"
+            android:textAllCaps="true" />
+
+        <LinearLayout
+            style="@style/ButtonPaid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="28dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="23dp">
+
+            <include layout="@layout/view_monto_pagar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="61dp"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/PayTextStyle.Recordatorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-1dp"
+                android:text="@string/pague_seguro"
+                android:textColor="@color/warm_grey"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_ico_tarjeta"
+                android:layout_width="24dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                app:srcCompat="@drawable/ic_bancainternet" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_paid_continue"
+            style="@style/ButtonPaidRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:enabled="false"
+            android:text="@string/pagar_visa" />
+
+    </LinearLayout>
+</ScrollView>
+
+

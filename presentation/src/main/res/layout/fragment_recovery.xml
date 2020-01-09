@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".feature.auth.recovery.RecoveryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_max_content_all">
+
+        <TextView
+            android:id="@+id/tvw_comment"
+            style="@style/TextAppearance.Dark.Comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_weight="1"
+            android:letterSpacing="0.1"
+            android:text="@string/recovery_subtitle_2" />
+
+        <RelativeLayout
+            android:id="@+id/layout_select_country"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless">
+
+            <TextView
+                android:id="@+id/tvw_country"
+                style="@style/TextAppearance.Spinner.Text.Dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_flag"
+                android:clickable="false"
+                android:gravity="start"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/login_select_country"
+                android:textAllCaps="true"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/img_flag"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/tvw_country"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/tvw_country"
+                android:layout_marginStart="5dp"
+                android:clickable="false"
+                android:contentDescription="@null"
+                android:gravity="center_vertical"
+                app:srcCompat="@drawable/ic_world_black" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/tvw_country"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tvw_country"
+                android:layout_marginRight="10dp"
+                android:clickable="false"
+                android:contentDescription="@null"
+                android:gravity="center_vertical"
+                app:srcCompat="@drawable/ic_arrow_down_black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/ivw_user"
+                style="@style/LoginInputIcon.Edit.Left"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_user_black" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/black"
+                app:hintTextAppearance="@style/EditTextHint.Dark">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ted_username"
+                    style="@style/LoginEditText.Dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="top"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:paddingEnd="45dp"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="45dp"
+                    android:paddingStart="45dp"
+                    android:textSize="12dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_help_user"
+                android:layout_width="@dimen/size_image_button_all"
+                android:layout_height="@dimen/size_image_button_all"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/padding_image_button_all"
+                android:paddingEnd="@dimen/padding_image_button_all"
+                android:paddingStart="@dimen/padding_image_button_all"
+                android:paddingTop="@dimen/padding_image_button_all"
+                app:srcCompat="@drawable/ic_help_black" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvw_validation_message"
+            style="TextAppearance.Validation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_recovery_asociar"
+            style="?buttonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/recovery_enviar" />
+
+    </LinearLayout>
+
+</ScrollView>

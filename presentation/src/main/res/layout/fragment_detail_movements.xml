@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ClientContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context=".feature.history.DebtPaymentDetailMovementFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cdv_notes"
+            style="@style/ClientCardSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llt_notas_data"
+                style="@style/ClientCardContentInactive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlt_notas_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/tvw_notas_data"
+                        style="@style/ClientSubtitleInactive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:text="@string/notes_card"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/ivw_arrow_notas"
+                        style="@style/ClientCardSectionArrow"
+                        android:layout_width="@dimen/size_image_button_all"
+                        android:layout_height="@dimen/size_image_button_all"
+                        android:contentDescription="@null" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_content_notas"
+                    style="@style/ClientCardSectionBody.Personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvw_add_note"
+                        style="@style/ClientListItemBirthdayText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="right"
+                        android:text="Nueva Nota +"
+                        android:textAllCaps="true"
+                        android:textColor="#821827"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvw_notas"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/llt_header"
+                        android:clipToPadding="false"
+                        android:paddingBottom="10dp"
+                        android:visibility="visible"
+                        tools:listitem="@layout/item_note_movement" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cdv_orders"
+            style="@style/ClientCardSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llt_pedidos_data"
+                style="@style/ClientCardContentInactive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlt_pedidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/tvw_pedidos_data"
+                        style="@style/ClientSubtitleInactive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:text="@string/notes_pedido_simple"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/ivw_arrow_pedidos"
+                        style="@style/ClientCardSectionArrow"
+                        android:layout_width="@dimen/size_image_button_all"
+                        android:layout_height="@dimen/size_image_button_all"
+                        android:contentDescription="@null" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_content_pedidos"
+                    style="@style/ClientCardSectionBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="16dp"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            style="@style/ClientListItemNameText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:text="Producto"
+                            android:textAllCaps="true"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            style="@style/ClientListItemNameText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="right"
+                            android:text="Subtotal"
+                            android:textAllCaps="true"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/ClientItemDiv"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvw_pedidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_pedido_movement" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

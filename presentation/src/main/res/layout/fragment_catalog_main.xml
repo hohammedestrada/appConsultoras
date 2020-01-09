@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lltContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tblHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@color/brand_general"
+            app:tabSelectedTextColor="@color/brand_general" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/disabled" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vwpCatalogs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltNoCatalogs"
+        style="@style/CatalogContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvwMessage"
+            style="@style/CatalogListNullText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/catalog_no_items" />
+
+    </LinearLayout>
+
+</LinearLayout>

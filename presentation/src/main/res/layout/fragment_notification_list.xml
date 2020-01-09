@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:id="@+id/rvwNotification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lnlEmpty"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_bag"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:textSize="15sp"
+                style="@style/FontLatoBold"
+                android:layout_marginTop="20dp"
+                android:text="@string/notifiaction_list_empty_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/notifiaction_list_empty_body" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

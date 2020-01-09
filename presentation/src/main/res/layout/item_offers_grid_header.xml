@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <biz.belcorp.mobile.components.design.timer.Timer
+        android:id="@+id/oddTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/offers_grid_timer_margin_top"
+        android:layout_marginBottom="@dimen/offers_grid_timer_margin_bottom"
+        android:minHeight="@dimen/lever_default_timer_height"
+        android:visibility="gone"
+        app:points_color="@color/gray_4"
+        app:digit_size="@dimen/offers_grid_timer_text_size"/>
+
+</LinearLayout>

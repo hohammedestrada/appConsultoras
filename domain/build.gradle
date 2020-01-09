@@ -1,0 +1,41 @@
+apply plugin: "kotlin"
+apply plugin: "kotlin-kapt"
+apply plugin: 'java'
+
+//noinspection GroovyUnusedAssignment
+sourceCompatibility = JavaVersion.VERSION_1_8
+//noinspection GroovyUnusedAssignment
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    def domainDependencies = rootProject.ext.domainDependencies
+    def domainTestDependencies = rootProject.ext.domainTestDependencies
+
+    compileOnly domainDependencies.daggerCompiler
+
+    implementation domainDependencies.dagger
+    implementation domainDependencies.rxjava
+
+    testImplementation domainTestDependencies.junit
+    testImplementation domainTestDependencies.assertj
+    testImplementation domainTestDependencies.mockitoCore
+
+    implementation domainDependencies.okhttp
+    implementation domainDependencies.kotlin
+
+    // Android Coroutines
+    implementation presentationDependencies.coroutinesCore
+    implementation presentationDependencies.coroutinesAndroid
+
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}

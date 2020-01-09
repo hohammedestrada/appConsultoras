@@ -1,0 +1,2 @@
+include ':presentation', ':domain', ':data', ':library', ':ymktmobile', ':visanetlib', ':TrustDefenderMobile', ':YouTubeAndroidPlayerApi'
+project(':library').projectDir = new File(settingsDir, '../BelcorpLibrary-Android/library')

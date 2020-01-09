@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="offers_title">Ofertas</string>
+    <string name="offers_gana_title">Gana+</string>
+
+    <string name="offers_no_result_main_text">¡Oh no! No hay ofertas en esta categoría.</string>
+    <string name="offers_no_result_sub_text">Inténtalo en otro momento.</string>
+    <string name="offers_no_result_default_message">Ocurrió un problema, intentalo en otro momento.</string>
+
+    <string name="offers_share_chooser_title">Compartir imagen</string>
+
+    <string name="error_promotion_message">Por fallas técnicas no podemos mostrar más combinaciones. Inténtalo luego.</string>
+    <string name="error_share_message">Hubo una falla técnica y no se compartió lo que querías. Inténtalo luego.</string>
+    <string name="error_excedido_message">El producto está agotado.</string>
+
+    <string name="offers_default_title">Ofertas que contienen este nuevo producto</string>
+
+    <string name="offers_upselling_title">Packs que contienen %s</string>
+    <string name="offers_upselling_title_pack">Ofertas con alguno de estos productos</string>
+
+    <string name="offers_crossselling_title">Productos para acompañar %s</string>
+    <string name="offers_crossselling_title_pack">Productos que complementan tu pack </string>
+
+    <string name="offers_sugeridos_title">Productos parecidos a %s</string>
+    <string name="offers_sugeridos_title_pack">Packs parecidos al que escogiste</string>
+</resources>

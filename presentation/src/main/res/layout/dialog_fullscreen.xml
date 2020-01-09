@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/frlScreen"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/lnlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivwDialogCloseGeneral"
+            style="@style/DialogClose"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal|end"
+            android:contentDescription="@null"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_close_black" />
+
+        <LinearLayout
+            android:layout_margin="25dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rvwAnimation"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center">
+
+                <biz.belcorp.consultoras.common.animation.ripple.RippleView
+                    android:id="@+id/rippleView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp" />
+
+                <ImageView
+                    android:id="@+id/ivDialogRipple"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivDialog"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tvwTitle"
+                style="@style/FullDialogTitle"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvwMessage"
+                style="@style/FullDialogMessage"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnDialog"
+                android:layout_marginTop="5dp"
+                android:text="@string/button_aceptar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:padding="5dp"
+                android:id="@+id/tvwAction"
+                style="@style/DialogMessage"
+                android:textSize="14sp"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

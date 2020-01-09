@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlt_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.home.HomeFragment">
+
+    <ScrollView
+        android:id="@+id/svwHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <biz.belcorp.consultoras.feature.home.marquee.MarqueeView
+                android:id="@+id/mvwLaunchBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_banner"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivwShowRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/cntrHeaderStorie"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <biz.belcorp.consultoras.common.component.stories.bubble.StorieComponent
+                        android:id="@+id/storieBubble"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </FrameLayout>
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".04" />
+
+                <biz.belcorp.consultoras.common.component.CircleImageView
+                    android:id="@+id/ivwHomeImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="19dp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@+id/cntrHeaderStorie"
+                    app:srcCompat="@drawable/ic_contact_default" />
+
+                <ImageView
+                    android:id="@+id/editarPerfil"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_circle_indicator_magenta"
+                    android:contentDescription="@null"
+                    android:padding="4dp"
+                    android:tag="unchecked"
+                    android:translationX="2dp"
+                    android:translationY="-2dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivwHomeImage"
+                    app:layout_constraintEnd_toEndOf="@+id/ivwHomeImage"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/ivwHomeImage"
+                    app:layout_constraintTop_toTopOf="@+id/ivwHomeImage"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_edit_white" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="clip_vertical"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    android:paddingEnd="1dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline90"
+                    app:layout_constraintStart_toEndOf="@+id/ivwHomeImage"
+                    app:layout_constraintTop_toTopOf="@+id/ivwHomeImage">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvwHomeName"
+                        style="@style/HomeWelcomeMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        app:autoSizeMaxTextSize="100sp"
+                        app:autoSizeMinTextSize="2sp"
+                        app:autoSizeTextType="uniform" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvwHomeCampaign"
+                        style="@style/HomeCampaign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="1dp"
+                        app:autoSizeMaxTextSize="100sp"
+                        app:autoSizeMinTextSize="@dimen/home_item_campaign_text_size"
+                        app:autoSizeTextType="uniform" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/multiOrderDataView"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/dp5"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tvwDeudaMulti"
+                                style="@style/HomeCampaign"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:autoSizeMaxTextSize="100sp"
+                                tools:text="S/ 6,000"
+                                android:maxLines="1"
+                                app:autoSizeMinTextSize="@dimen/home_item_campaign_text_size"
+                                app:autoSizeTextType="uniform" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tvwVenceMultiOrder"
+                                style="@style/HomeCampaignBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:autoSizeMaxTextSize="100sp"
+                                app:autoSizeMinTextSize="@dimen/home_item_campaign_text_size"
+                                android:maxLines="1"
+                                app:autoSizeTextType="uniform" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lineaConsultoraView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tvwLineaConsultora"
+                                style="@style/HomeCampaign"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:autoSizeMaxTextSize="100sp"
+                                tools:text="S/ 999,000,000"
+                                android:maxLines="1"
+                                app:autoSizeMinTextSize="@dimen/home_item_campaign_text_size"
+                                app:autoSizeTextType="uniform" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/HomeCampaignBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:autoSizeMaxTextSize="100sp"
+                                android:text="@string/home_linea_disponible"
+                                app:autoSizeMinTextSize="@dimen/home_item_campaign_text_size"
+                                android:maxLines="1"
+                                app:autoSizeTextType="uniform" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnPayOnlineMultiOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/border_black"
+                        android:gravity="center"
+                        android:paddingStart="17dp"
+                        android:paddingTop="13dp"
+                        android:paddingEnd="17dp"
+                        android:visibility="gone"
+                        android:paddingBottom="13dp"
+                        app:layout_constraintVertical_bias="1.0">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="@string/paga_en_linea"
+                            android:textColor="@color/colorBlack"
+                            app:autoSizeMaxTextSize="100sp"
+                            app:autoSizeMinTextSize="2sp"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".872" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".93" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidepagoLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".09" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvwVence"
+                    style="@style/FontLatoRegular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_margin_to_profile"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="2sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline58"
+                    app:layout_constraintStart_toStartOf="@+id/guidepagoLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView6"
+                    style="@style/FontLatoRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/tu_monto"
+                    android:textColor="@color/black"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="2sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvwMntFinal"
+                    app:layout_constraintEnd_toStartOf="@+id/tvwMntFinal"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@+id/guidepagoLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/tvwVence" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvwMntFinal"
+                    style="@style/FontLatoBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="2sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline58"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/tvwVence" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.513382" />
+
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidePagoBotonCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".55" />
+
+                <LinearLayout
+                    android:id="@+id/btnPayOnline"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/border_black"
+                    android:gravity="center"
+                    android:paddingStart="17dp"
+                    android:paddingTop="13dp"
+                    android:paddingEnd="17dp"
+                    android:paddingBottom="13dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvwMntFinal"
+                    app:layout_constraintEnd_toStartOf="@+id/gidePagoRight"
+                    app:layout_constraintStart_toStartOf="@+id/guidePagoBotonCenter"
+                    app:layout_constraintTop_toTopOf="@+id/tvwVence"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/paga_en_linea"
+                        android:textColor="@color/colorBlack"
+                        app:autoSizeMaxTextSize="100sp"
+                        app:autoSizeMinTextSize="2sp"
+                        app:autoSizeTextType="uniform" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/separator3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvwMntFinal" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent=".32" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/gidePagoRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".91" />
+
+                <android.support.constraint.Group
+                    android:id="@+id/linearPago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="btnPayOnline,tvwVence,tvwMntFinal,textView6" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/ctlMainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ivwFooter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/bg_home" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/home_item_top_padding_left_v2"
+                    android:paddingTop="@dimen/home_item_top_padding_bottom"
+                    android:paddingEnd="@dimen/home_item_top_padding_right_v2"
+                    android:paddingBottom="@dimen/_10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/lnrCaminoBrillante"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="4dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingStart="14dp"
+                                android:paddingTop="11dp"
+                                android:paddingEnd="22dp"
+                                android:paddingBottom="11dp">
+
+                                <ImageView
+                                    android:id="@+id/ivwCaminoBrillante"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:contentDescription="@null" />
+
+                                <TextView
+                                    style="@style/FontLatoBold"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/camino_brillante_"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/btn_camino_brillante"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border_black"
+                                    android:gravity="center"
+                                    android:paddingStart="16dp"
+                                    android:paddingTop="9dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingBottom="9dp">
+
+                                    <TextView
+                                        style="@style/FontLatoBold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/mis_beneficios"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.GridLayout
+                        android:id="@+id/gldMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="3"
+                        app:orientation="horizontal">
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciClients"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciCatalog"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciOrders"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciMakeup"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciWinclick"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciDreams"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciIncentives"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            android:visibility="gone"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciDebts"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciChat"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+                        <biz.belcorp.consultoras.common.component.HomeCardItem
+                            android:id="@+id/hciSubcampaign"
+                            android:visibility="gone"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_item_height"
+                            app:layout_columnSpan="1"
+                            app:layout_columnWeight="1" />
+
+
+                    </android.support.v7.widget.GridLayout>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

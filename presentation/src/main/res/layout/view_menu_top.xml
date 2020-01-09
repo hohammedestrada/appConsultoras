@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvw_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_below="@id/rvw_menu"-->
+        <!--android:background="@android:color/black" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/selector"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_below="@id/rvw_menu"-->
+        <!--android:contentDescription="@null"-->
+        <!--android:gravity="top"/>-->
+
+</RelativeLayout>
+

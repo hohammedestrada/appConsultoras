@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="win_on_click_title">Conferencia Digital</string>
+    <string name="win_on_click_error">Hubo un error al cargar el video. Por favor inténtelo nuevamente en unos minutos.</string>
+</resources>

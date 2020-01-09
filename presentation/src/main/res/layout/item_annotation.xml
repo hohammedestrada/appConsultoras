@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/AnnotationItemContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <TextView android:id="@+id/tvw_annotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/AnnotationMessage"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tvw_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AnnotationDate" />
+
+            <TextView
+                android:id="@+id/tvw_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/annotation_delete"
+                style="@style/AnnotationTextButton" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

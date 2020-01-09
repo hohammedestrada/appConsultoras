@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_tvo">Ingresa tu correo para comenzar\na usar Tu Voz Online.</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="tvo_update">Actualizar</string>
+    <string name="tvo_error">Hubo un error al ingresar a Tu voz online. Por favor inténtelo nuevamente en unos minutos.</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="welcome_title">¡Nos alegras que hayas vuelto!</string>
+    <string name="welcome_text">Como hace tiempo que no sabíamos de ti, por tu seguridad vamos a verificar tus datos. \n\nHaz click en el botón que sigue para empezar:"</string>
+    <string name="welcome_call_center_1">Si no reconoces tu número de  celular, comunícate al &lt;b>%1$s&lt;/b> o al &lt;b>%2$s&lt;/b>.</string>
+    <string name="welcome_call_center_2">No tienes un número de celular registrado.\nComunícate al &lt;b>%1$s&lt;/b> o al &lt;b>%2$s&lt;/b> para continuar.</string>
+    <string name="welcome_call_center_one_1">Si no reconoces tu número de  celular, comunícate al &lt;b>%1$s&lt;/b>.</string>
+    <string name="welcome_call_center_one_2">No tienes un número de celular registrado.\nComunícate al &lt;b>%1$s&lt;/b>  para continuar.</string>
+
+    <string name="welcome_sms">MENSAJE DE TEXTO (SMS)</string>
+
+</resources>

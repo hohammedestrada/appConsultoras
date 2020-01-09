@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    style="?attr/actionButtonStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/imgCart"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/ic_cart" />
+
+    <TextView
+        android:clickable="false"
+        android:id="@+id/tvi_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:minWidth="16dp"
+        android:layout_gravity="right|end|top"
+        android:layout_marginRight="-3dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_cart_count"
+        android:gravity="center"
+        android:padding="2dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        tools:text="0"
+        tools:ignore="SmallSp" />
+
+</FrameLayout>

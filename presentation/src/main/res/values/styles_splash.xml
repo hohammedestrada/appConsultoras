@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Screen: Splash -->
+    <style name="SplashTheme">
+        <item name="android:padding">@dimen/padding_all_splash</item>
+        <item name="android:background">@drawable/bg_gradient</item>
+    </style>
+
+    <style name="SplashAppContent">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/margin_bottom_splash_content</item>
+    </style>
+
+    <style name="SplashAppImage">
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_splash_image</item>
+        <item name="android:layout_width">@dimen/width_splash_logo</item>
+        <item name="android:layout_height">@dimen/height_splash_logo</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="SplashTitle"  parent="FontLatoRegular">
+        <item name="android:paddingLeft">@dimen/padding_left_splash_text</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_splash_title</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/textsize_splash_title</item>
+    </style>
+
+    <style name="SplashSubTitle"  parent="FontLatoRegular">
+        <item name="android:paddingLeft">@dimen/padding_left_splash_text</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/textsize_splash_subtitle</item>
+    </style>
+
+    <style name="SplashAppName">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SplashProgressContent">
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="SplashProgressBar" parent="ProgressBarTheme.Indeterminate.Light" />
+
+    <style name="SplashProgressText" parent="FontLatoLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_splash_download</item>
+    </style>
+    <!--    End Screen Splash -->
+</resources>

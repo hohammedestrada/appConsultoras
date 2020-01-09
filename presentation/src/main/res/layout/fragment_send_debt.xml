@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/tvw_add_debt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="38dp"
+                android:text="Elige un medio para enviarle:"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="25dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="75dp" >
+
+                    <ImageView
+                        android:id="@+id/ivw_enviar_sms"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_circle_black"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_sms" />
+
+                    <ImageView
+                        android:id="@+id/ivw_sms_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_check"
+                        android:contentDescription="@null"
+                        android:visibility="visible"
+                        android:tag="unchecked"
+                        app:srcCompat="@drawable/ic_check_selector_gray"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:id="@+id/tvw_sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivw_enviar_sms"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/client_sms"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginStart="40dp">
+
+                    <ImageView
+                        android:id="@+id/ivw_enviar_msn"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_circle_black"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_message"
+                        android:padding="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/ivw_msn_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_check"
+                        android:contentDescription="@null"
+                        android:visibility="visible"
+                        android:tag="unchecked"
+                        app:srcCompat="@drawable/ic_check_selector_gray"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:id="@+id/tvw_correo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivw_enviar_msn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/client_correo"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="75dp" >
+
+                    <ImageView
+                        android:id="@+id/ivw_enviar_wapp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_circle_black"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_whatsapp_white" />
+
+                    <ImageView
+                        android:id="@+id/ivw_wapp_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_check"
+                        android:contentDescription="@null"
+                        android:visibility="visible"
+                        android:tag="unchecked"
+                        app:srcCompat="@drawable/ic_check_selector_gray"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:id="@+id/tvw_whatsapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivw_enviar_wapp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/client_whatsapp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="40dp"
+                android:text="PUEDES PERSONALIZAR EL TEXTO:"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/edt_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_note"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:minHeight="100dp"
+                    android:paddingBottom="36dp"
+                    android:paddingEnd="36dp"
+                    android:paddingStart="36dp"
+                    android:paddingTop="36dp"
+                    android:textSize="13sp"
+                    tools:ignore="LabelFor" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvw_add_debt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        style="@style/BottomButton"
+        android:text="ENVIAR DEUDA" />
+</RelativeLayout>

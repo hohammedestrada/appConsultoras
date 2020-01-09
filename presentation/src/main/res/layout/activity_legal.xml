@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray"
+    tools:context=".feature.legal.LegalActivity">
+
+    <include
+        android:id="@+id/view_connection"
+        layout="@layout/view_connection"
+        android:visibility="gone" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_connection">
+
+        <include layout="@layout/toolbar_black" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fltContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/appbar_layout" />
+
+    <include
+        android:id="@+id/view_loading"
+        layout="@layout/view_loading_app"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/view_loading_sync"
+        layout="@layout/view_loading_sync"
+        android:visibility="gone" />
+
+</RelativeLayout>

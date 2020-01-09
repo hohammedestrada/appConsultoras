@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvwCard"
+        style="@style/FinalOfferItemCardSection"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/lltCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivwProduct"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:contentDescription="@null"
+                android:padding="5dp"
+                android:src="@drawable/ic_product" />
+
+            <TextView
+                android:id="@+id/tvwBrand"
+                style="@style/FinalOfferItemBrandText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvwDescription"
+                style="@style/FinalOfferItemDescriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minLines="2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+
+                <LinearLayout
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvwPrice"
+                        style="@style/FinalOfferItemPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvwPricePromo"
+                        style="@style/FinalOfferItemPromoPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/view_product_operator" />
+
+            <TextView
+                android:id="@+id/tvwAddResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/final_offer_response_add"
+                android:visibility="invisible"
+                android:textColor="#a6a6a6"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

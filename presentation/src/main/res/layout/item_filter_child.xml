@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/chk_child"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/FontLatoLight"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:theme="@style/checkBoxStyleMagenta"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+</LinearLayout>

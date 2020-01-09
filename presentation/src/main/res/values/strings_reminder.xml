@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="reminder_alert_date">La fecha y hora ingresada debe ser mayor a la actual.</string>
+    <string name="reminder_alert_date_error">Error al obtener la fecha.</string>
+    <string name="reminder_key">RE</string>
+    <string name="reminder_birthday_key">HB</string>
+</resources>

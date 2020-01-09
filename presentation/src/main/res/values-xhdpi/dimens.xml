@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    3 - DIMENSIONES:
+    4.7”    1280x720 xhdpi
+    4.65”   720x1280 xhdpi
+-->
+<resources>
+    <dimen name="menu_top_text_size">11sp</dimen>
+    <!--    Dimension: Tooltip -->
+    <dimen name="width_tooltip_size">150dp</dimen>
+    <!--    End Dimension Tooltip -->
+
+    <!--    Dimension: Splash -->
+    <dimen name="padding_all_splash">16dp</dimen>
+    <dimen name="width_splash_logo">240dp</dimen>
+    <dimen name="height_splash_logo">80dp</dimen>
+    <dimen name="margin_bottom_splash_content">100dp</dimen>
+    <dimen name="margin_bottom_splash_image">77dp</dimen>
+    <dimen name="margin_bottom_splash_title">52dp</dimen>
+    <dimen name="padding_left_splash_text">12dp</dimen>
+    <dimen name="textsize_splash_title">25sp</dimen>
+    <dimen name="textsize_splash_subtitle">13sp</dimen>
+    <dimen name="textsize_splash_download">12sp</dimen>
+    <!--    End Dimension Splash -->
+
+    <!--    Dimension: Login -->
+    <dimen name="width_login_logo">150dp</dimen>
+    <dimen name="height_login_logo">50dp</dimen>
+    <dimen name="margin_top_login_logo">40dp</dimen>
+    <dimen name="margin_bottom_login_logo">16dp</dimen>
+    <dimen name="textsize_login_title">18sp</dimen>
+    <dimen name="padding_login_title">20dp</dimen>
+    <dimen name="margin_login_input_content">8dp</dimen>
+    <dimen name="padding_login_input_content">8dp</dimen>
+    <dimen name="padding_login_input_edit_content">6dp</dimen>
+    <dimen name="size_login_input_icon">24dp</dimen>
+    <dimen name="margin_login_input_icon">15dp</dimen>
+    <dimen name="margin_login_input_icon_show">20dp</dimen>
+    <dimen name="padding_top_login_input_text">4dp</dimen>
+    <dimen name="padding_left_login_input">20dp</dimen>
+    <dimen name="padding_right_login_input">10dp</dimen>
+    <dimen name="size_login_input">25dp</dimen>
+    <dimen name="size_login_input_edit">30dp</dimen>
+    <dimen name="textsize_login_input">15sp</dimen>
+    <dimen name="textsize_login_hint">14sp</dimen>
+    <dimen name="textsize_login_forgot">14sp</dimen>
+    <dimen name="size_login_imagen">120dp</dimen>
+    <dimen name="margin_login_facebook_icon">10dp</dimen>
+    <dimen name="margin_bottom_login_register">24dp</dimen>
+    <dimen name="margin_login_controls_all">40dp</dimen>
+    <dimen name="margin_login_button">24dp</dimen>
+    <dimen name="margin_login_facebook">16dp</dimen>
+    <dimen name="textsize_login_button">16sp</dimen>
+    <dimen name="margin_login_not_user">12dp</dimen>
+    <dimen name="margin_login_change_user">32dp</dimen>
+    <dimen name="textsize_login_register">14sp</dimen>
+
+    <dimen name="textsize_payment_register">10sp</dimen>
+    <!--    End Dimension Login -->
+
+    <!--    Start Dimension Home-->
+    <dimen name="home_profile_width">40dp</dimen>
+    <dimen name="home_profile_height">40dp</dimen>
+    <dimen name="home_profile_margin_start">12dp</dimen>
+    <dimen name="home_profile_margin_end">10dp</dimen>
+    <dimen name="home_profile_image_margin_bottom">8dp</dimen>
+    <dimen name="home_profile_image_margin_top">15dp</dimen>
+
+    <dimen name="home_welcome_message_margin_top">15dp</dimen>
+    <dimen name="home_welcome_message_text_size">16sp</dimen>
+
+    <dimen name="home_divider_width">30dp</dimen>
+    <dimen name="home_divider_margin_bottom">5dp</dimen>
+    <dimen name="home_divider_margin_start">24dp</dimen>
+
+    <dimen name="home_campaign_margin_bottom">4dp</dimen>
+    <dimen name="home_campaign_margin_end">20dp</dimen>
+    <dimen name="home_campaign_margin_start">20dp</dimen>
+    <dimen name="home_campaign_text_size">11sp</dimen>
+
+    <dimen name="home_time_left_margin_bottom">6dp</dimen>
+    <dimen name="home_time_left_margin_end">20dp</dimen>
+    <dimen name="home_time_left_margin_start">20dp</dimen>
+    <dimen name="home_time_left_text_size">14sp</dimen>
+
+
+    <dimen name="home_item_campaign_text_size">11sp</dimen>
+    <dimen name="home_item_title_text_size">13sp</dimen>
+    <dimen name="home_item_title_padding_left">14dp</dimen>
+    <dimen name="home_item_title_padding_right">4dp</dimen>
+    <dimen name="home_item_title_margin_top">4dp</dimen>
+    <dimen name="home_item_height">116dp</dimen>
+
+    <dimen name="home_item_sub_title_text_size">13sp</dimen>
+
+    <dimen name="home_item_divider_margin_top">10dp</dimen>
+    <dimen name="home_item_divider_margin_left">14dp</dimen>
+
+    <dimen name="home_item_detail_margin_top">10dp</dimen>
+    <dimen name="home_item_detail_margin_bottom">10dp</dimen>
+    <dimen name="home_item_detail_text_size">14sp</dimen>
+    <dimen name="home_item_detail_padding_left">14dp</dimen>
+    <dimen name="home_item_detail_padding_right">14dp</dimen>
+
+    <dimen name="home_item_top_padding_left_v2">5dp</dimen>
+    <dimen name="home_item_top_padding_right_v2">5dp</dimen>
+    <dimen name="home_item_top_padding_bottom">5dp</dimen>
+    <dimen name="home_item_bottom_padding_bottom">5dp</dimen>
+
+    <dimen name="home_item_bottom_margin">8dp</dimen>
+
+    <dimen name="home_item_card_text">52dp</dimen>
+
+    <dimen name="home_bg_left_top_width">45dp</dimen>
+    <dimen name="home_bg_left_top_height">45dp</dimen>
+    <dimen name="home_img_left_top_width">20dp</dimen>
+    <dimen name="home_img_left_top_height">20dp</dimen>
+    <dimen name="home_bg_left_top_bar_padding">38dp</dimen>
+    <dimen name="home_bg_left_top_radius_corner">35dp</dimen>
+
+    <dimen name="home_bg_left">-160dp</dimen>
+    <dimen name="home_fab">17dp</dimen>
+    <dimen name="menu_top_selector_size">20dp</dimen>
+    <dimen name="home_campaign_margin_top">4dp</dimen>
+    <!--    End Dimension Home-->
+    <dimen name="welcome_padding">20dp</dimen>
+    <dimen name="welcome_text">14sp</dimen>
+    <dimen name="welcome_send_sms_margin_big">32dp</dimen>
+    <dimen name="welcome_send_sms_margin_medium">11dp</dimen>
+    <dimen name="welcome_send_sms_padding">20dp</dimen>
+    <dimen name="welcome_title">18sp</dimen>
+    <dimen name="welcome_subtitle">16sp</dimen>
+    <dimen name="welcome_input">28sp</dimen>
+
+    <!-- ESCALA DE PUNTO DE REFERENCIA-->
+    <dimen name="altura_contenedor">55dp</dimen>
+    <dimen name="ancho_contenedor">70dp</dimen>
+
+    <dimen name="txt_size_deuda">13sp</dimen>
+    <dimen name="txt_size_btn_chat">19.4sp</dimen>
+
+    <dimen name="altura_icon_chatbot">49.14dp</dimen>
+
+    <!-- Dimension Referencia MDPI -->
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_7">9.05dp</dimen>
+    <dimen name="_16dp">20.69dp</dimen>
+    <dimen name="_18dp">23.28dp</dimen>
+
+    <dimen name="ancho_icon_chatbot">62.85dp</dimen>
+    <dimen name="ancho_boton_chatbot">197.21dp</dimen>
+
+    <dimen name="alto_boton_chatbot">81.47dp</dimen>
+    <dimen name="_13">16.81dp</dimen>
+    <dimen name="_13sp">16.81sp</dimen>
+    <dimen name="_28">36.21dp</dimen>
+    <dimen name="_22">28.45dp</dimen>
+
+    <dimen name="_28dp">56dp</dimen>
+    <dimen name="_36dp">72dp</dimen>
+    <dimen name="_32dp">64dp</dimen>
+    <dimen name="_12dp">24dp</dimen>
+    <dimen name="_10dp">20dp</dimen>
+    <dimen name="_9sp">11.64sp</dimen>
+    <dimen name="_197">254.76dp</dimen>
+
+    <!--step-->
+    <dimen name="wizard_step_title_size">9sp</dimen>
+
+    <!-- camino brillante -->
+    <dimen name="medalla_padding">5dp</dimen>
+    <dimen name="textsize_title_frame">10.5sp</dimen>
+    <dimen name="textsize_subtitle_frame">14sp</dimen>
+    <dimen name="textsize_barra_monto">13sp</dimen>
+
+    <dimen name="textsize_ganancia_title">18sp</dimen>
+
+</resources>

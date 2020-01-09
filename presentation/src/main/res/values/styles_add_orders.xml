@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AddOrderFilter">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:background">@drawable/shape_border_order</item>
+    </style>
+
+    <style name="AddOrderFilterDisabled">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:background">@drawable/shape_border_order_disabled</item>
+    </style>
+
+    <style name="AddOrderProgress">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_addOrderContainer</item>
+        <item name="android:layout_marginEnd">@dimen/margin_addOrderContainer</item>
+
+    </style>
+
+    <style name="AddOrderContent">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="AddOrderEliminarText" parent="FontLatoRegular">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="AddOrderDisclaimerText" parent="FontLatoRegular">
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black_medium</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+    </style>
+
+    <style name="AddOrderTotal">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:background">#F4F4F4</item>
+    </style>
+
+    <style name="AddOrderTotalText" parent="FontLatoRegular">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/total_tvw_total</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">7dp</item>
+    </style>
+
+    <style name="AddSubTotalText" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <style name="AddOrderTotalValue" parent="FontLatoBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/total_tvw_total</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+    </style>
+
+    <style name="AddOrderTotalTextColor" parent="FontLatoBold">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/total_tvw_ganancia</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">7dp</item>
+        <item name="android:layout_marginLeft">7dp</item>
+    </style>
+
+    <style name="AddOrderTotalValueColor" parent="FontLatoBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/total_tvw_ganancia</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginStart">3dp</item>
+    </style>
+
+    <style name="AddOrderVerMasText" parent="FontLatoBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="AddOrderGananciaTotal" parent="FontLatoBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:layout_marginStart">5dp</item>
+    </style>
+
+    <style name="AddOrderPorcentajeProgress" parent="FontLatoBold">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AddOrderMontoProgress" parent="FontLatoRegular">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AddOrderTextButton" parent="FontLatoBold">
+        <item name="android:background">@drawable/selector_button_black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AddOrderTextButtonAlternative" parent="FontLatoBold">
+        <item name="android:background">@drawable/selector_button_alternative</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DeleteOrderTextButton" parent="FontLatoBold">
+        <item name="android:background">@drawable/btn_selector_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DeleteOrderNoTextButton" parent="FontLatoBold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AddOrderInputText" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AddOrderReceiveText" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AddOrderWillReceiveText" parent="FontLatoBold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AddOrderWillReceiveBodyText" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_body_receive_will</item>
+    </style>
+
+    <style name="AddOrderWillReceiveButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontPath">fonts/lato-bold.ttf</item>
+        <item name="android:background">@drawable/bg_stroke_black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Dialog enter dni -->
+
+    <style name="EnterDniTitleText" parent="FontLatoBold">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="EnterDniMessageText" parent="FontLatoBold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextInput" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/text_gray</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="colorControlNormal">@color/text_gray</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+
+    <style name="EnterNameEditText" parent="FontLatoBold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text|textNoSuggestions</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/text_gray</item>
+        <item name="android:maxLength">150</item>
+    </style>
+
+    <style name="EnterDniEditText" parent="FontLatoBold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/text_gray</item>
+        <item name="android:maxLength">8</item>
+    </style>
+
+    <style name="EnterDniAcceptButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray_4</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/bg_blocked_gray</item>
+        <item name="fontPath">fonts/lato-bold.ttf</item>
+    </style>
+
+    <style name="EnterDniLoadingMessageText" parent="FontLatoBold">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SuccessfulUpdateDniMessageText" parent="FontLatoBold">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SuccessfulTitleMessageText" parent="FontLatoBold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SuccessfulBodyMessageText" parent="FontLatoBold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- -->
+
+    <style name="ProductCUVContent">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="ProductCUVDescription" parent="FontLatoRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVMessage" parent="FontLatoRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVPriceOld" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="ProductCUVPriceNew" parent="FontLatoRegular">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="ProductCUVQuantity" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVQuantityDisabled" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey_edit_disabled</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVPick" parent="FontLatoRegular">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">#c5c5c5</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVPicker" parent="FontLatoRegular">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">#c5c5c5</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVPickerDisabled" parent="FontLatoRegular">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/grey_edit_disabled</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="OffersCUVPick" parent="FontLatoRegular">
+        <item name="android:background">@color/white</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVOrder" parent="FontLatoBold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_button_black</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVSearch" parent="FontLatoBold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/btn_selector_primary</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductCUVSearchMagenta" parent="FontLatoBold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/btn_selector_magenta</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductNotFoundTitle" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="ProductNotFoundMessage" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>º
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ProductSuggest" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="AddOrdersClientNameText" parent="FontLatoBold">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AddOrdersQuantityText" parent="FontLatoRegular">
+        <item name="android:textColor">@color/text_filter</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="AddOrdersMessageError" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <!-- Offers -->
+
+    <style name="AddOrdersMarcaText" parent="FontLatoRegular">
+        <item name="android:textColor">#8a8a8a</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="AddOrdersModeloText" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="AddOrdersPriceText" parent="FontLatoHeavy">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="AddOrdersGanaText" parent="FontLatoBold">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="AddOrdersSaveText" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="AddOrdersObsDialog" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">35dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="BtnProductAdd" parent="FontLatoBold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_button_black</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BtnProductGo" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_button_white</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BtnProductAgotado" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_button_grey</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="NewAddOrderPorcentajeProgress" parent="FontLatoBold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Next -->
+    <style name="BtnTooltipNo" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/btn_selector_secondary</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="BtnTooltipDelete" parent="FontLatoBold">
+        <item name="android:background">@drawable/btn_selector_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="DelOrdersDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColorPrimary">#DD000000</item>
+        <item name="android:textColorSecondary">#8A000000</item>
+        <item name="android:textColorHint">#42000000</item>
+    </style>
+
+</resources>

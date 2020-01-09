@@ -1,0 +1,32 @@
+{
+  "name": "TestAutomation-AppConsultoras",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "codeceptjs run --features --plugins allure",
+    "test": "codeceptjs run --grep '@Esika @LoginExitoso' --debug",
+    "appium": "appium -a 127.0.0.1 -p 4723 -bp 4724 --chromedriver-executable '%APPDATA%/npm/node_modules/appium/node_modules/appium-android-driver/node_modules/appium-chromedriver/chromedriver/win/chromedriver.exe' --chromedriver-port=9515 --log ./log/ServerAppium.log",
+    "allure": "allure serve report",
+    "format": "prettier --write 'src/**/*.js'",
+    "gherkin-lint": "node ./node_modules/gherkin-lint/dist/main.js -c ./.gherkin-lintrc.json './src/features/**'"
+  },
+  "keywords": [],
+  "author": "H0h4mmed Estrada",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^2.1.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.1",
+    "webdriverio": "^5.4.17"
+  },
+  "devDependencies": {
+    "gherkin": "^5.1.0",
+    "gherkin-lint": "^3.3.6",
+    "prettier": "^1.18.2"
+  },
+  "comments": {
+    "removed_dependencies": "appium ^1.12.1"
+  }
+  
+}

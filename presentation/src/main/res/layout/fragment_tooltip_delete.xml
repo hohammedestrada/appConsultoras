@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparent"
+    android:padding="15dp"
+    tools:context=".feature.home.addorders.DelOrdersFragment">
+
+    <LinearLayout
+        android:id="@+id/lltTooltipDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tooltip_delete"
+        android:orientation="vertical"
+        android:paddingTop="11dp"
+        android:paddingBottom="4dp">
+
+        <LinearLayout
+            style="@style/AddOrderTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivwTooltipDelete"
+                android:layout_width="@dimen/dp24"
+                android:layout_height="@dimen/dp24"
+                android:src="@drawable/ic_trash_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvw_tooltip_estas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvw_tooltip_estas"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvw_tooltip_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    tools:text="Name for product" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_tooltip_no"
+                    style="@style/BtnTooltipNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_tooltip_no" />
+
+                <Button
+                    android:id="@+id/btn_tooltip_detele"
+                    style="@style/BtnTooltipDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_tooltip_delete" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

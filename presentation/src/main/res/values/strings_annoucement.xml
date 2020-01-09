@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 1F60B -->
+    <string name="announcement_header_1f60b">Tu pedido en 48 horas</string>
+    <string name="announcement_titulo_1f60b">¿Necesitas tu pedido en menos de 48 horas?</string>
+    <string name="announcement_subtitulo_1f60b">Pásalo hoy llamando al</string>
+    <string name="announcement_numero_1f60b">211-3611</string>
+    <string name="announcement_mensaje_adicional_1f60b">*Pase de pedido por call center solo aplica para la 1ra y 2da semana de campaña. La 3ra semana el pedido se pasa por web o app</string>
+
+    <!-- 1F40L -->
+    <string name="announcement_header_1f40l">Tu pedido ahora</string>
+    <string name="announcement_titulo_1f40l">No lo dudes mas!</string>
+    <string name="announcement_subtitulo_1f40l">Pásalo hoy mismo llamando al</string>
+    <string name="announcement_numero_1f40l">211-3611</string>
+    <string name="announcement_mensaje_adicional_1f40l">*Pase de pedido por call center solo aplica para la 1ra y 2da semana de campaña. La 3ra semana el pedido se pasa por web o app</string>
+
+
+</resources>

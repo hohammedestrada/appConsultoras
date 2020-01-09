@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_payment_toolbar_title">REGISTRAR PAGO</string>
+    <string name="add_payment_how_much_pay">¿Cuánto me pagó?</string>
+    <string name="add_payment_not_amount">Debes ingresar un monto.</string>
+
+    <!--        Send Payment Activity   -->
+
+    <string name="send_payment_toolbar_title">ENVÍO DE INFORMACIÓN DE PAGO</string>
+    <string name="send_payment_title">SELECCIONA EL MEDIO DE ENVÍO</string>
+    <string name="send_payment_message_title">Hola %1$s</string>
+    <string name="send_payment_message_comment">Soy tu consultora de Belleza %s.\nEsta es la información de tu pago.</string>
+    <string name="send_payment_message_payment">ABONO: %1$s</string>
+    <string name="send_payment_message_deuda">DEUDA TOTAL: %1$s</string>
+    <string name="send_payment_message_nueva_deuda">SALDO A PAGAR: %1$s</string>
+    <string name="send_payment_message_order">PEDIDO:</string>
+    <string name="send_payment_regards">Saludos,</string>
+    <string name="send_payment_thanks">Muchas gracias,</string>
+    <string name="send_payment_button">ENVIAR MENSAJE</string>
+    <string name="send_payment_no_type_selected">Selecciona un medio para enviar tu mensaje.</string>
+    <string name="send_payment_no_comment">Ingresa el mensaje a enviar.</string>
+
+
+    <string name="send_payment_no_email">El cliente no tiene registrado correo, seleccione otro medio.</string>
+    <string name="send_payment_no_mobile">El cliente no tiene registrado celular, seleccione otro medio.</string>
+    <string name="send_pick_share_type_error">Elige un tipo de envio</string>
+    <string name="send_payment_error">No se encontró la aplicación para compartir.</string>
+
+    <string name="send_payment_subject">Constancia de pago a tu consultora de belleza</string>
+    <string name="payment_send_transaction_label">Enviar información de pago a %s</string>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="updateEmailTitleSection" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">@dimen/dp24</item>
+        <item name="android:layout_marginLeft">@dimen/dp20</item>
+        <item name="android:layout_marginRight">@dimen/dp20</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="updateEmailSubTitleSection" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">@dimen/dp24</item>
+        <item name="android:layout_marginLeft">@dimen/dp20</item>
+        <item name="android:layout_marginRight">@dimen/dp20</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="updateEmailButton" parent="FontLatoBold">
+        <item name="android:background">@drawable/bg_button_magenta_state</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/dp10</item>
+        <item name="android:layout_marginLeft">@dimen/dp20</item>
+        <item name="android:layout_marginRight">@dimen/dp20</item>
+        <item name="android:layout_marginBottom">@dimen/dp20</item>
+    </style>
+
+    <style name="updateEmailTextInputLayout">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">#66000000</item>
+        <item name="android:textSize">10sp</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">#66000000</item>
+        <item name="colorControlHighlight">@color/black</item>
+        <item name="fontPath">fonts/lato-regular.ttf</item>
+    </style>
+
+    <style name="updateEmailEditText" parent="FontLatoRegular">
+        <item name="android:textColorHint">@color/hint_dark</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginLeft">@dimen/dp20</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">@dimen/dp20</item>
+    </style>
+
+    <style name="updateEmailErrorMessage" parent="FontLatoRegular">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:layout_marginLeft">@dimen/dp24</item>
+        <item name="android:layout_marginBottom">@dimen/dp10</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+    </style>
+</resources>

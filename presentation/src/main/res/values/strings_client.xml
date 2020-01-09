@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="client_title">Mi Cliente</string>
+    <string name="client_subtitle_datos_personales">DATOS PERSONALES</string>
+    <string name="client_save">Agregar nuevo Cliente</string>
+    <string name="client_update">Actualizar Cliente</string>
+    <string name="client_name">NOMBRE</string>
+    <string name="client_lastname">APELLIDOS</string>
+    <string name="client_birthday">CUMPLEAÑOS</string>
+    <string name="client_phone">TELÉFONO</string>
+    <string name="client_phone_2">TELÉFONO FIJO</string>
+    <string name="client_mobile">CELULAR</string>
+    <string name="client_other_mobile">OTRO CELULAR</string>
+    <string name="client_email">CORREO</string>
+    <string name="client_address">CALLE Y NÚMERO</string>
+    <string name="client_district">DISTRITO</string>
+    <string name="client_reference">REFERENCIA</string>
+    <string name="client_subtitle_direccion">DIRECCIÓN</string>
+
+    <string name="client_validation_0">Ingresa el nombre del Cliente.</string>
+    <string name="client_validation_1">Ingresa el apellido del Cliente.</string>
+    <string name="client_validation_2">Ingresa un número de celular.</string>
+    <string name="client_validation_3">Ingresa un correo electrónico.</string>
+    <string name="client_validation_4">El formato del correo electrónico ingresado no es correcto.</string>
+
+    <string name="client_error_title">Error</string>
+    <string name="client_error_message_1">No se pudo agregar al nuevo cliente.</string>
+
+    <string name="client_error_network_title">No se pudo agregar el nuevo Cliente</string>
+    <string name="client_error_network_message">Revisa tu conexión a internet.</string>
+    <string name="client_accept">Aceptar</string>
+    <string name="client_edit">Editar</string>
+
+    <string name="client_favorito_ok">Se agregó cliente a favoritos</string>
+    <string name="client_favorito_delete">Se eliminó cliente de favoritos</string>
+
+    <string name="client_llamar">Llamar</string>
+    <string name="client_sms">SMS</string>
+    <string name="client_correo">Correo</string>
+    <string name="client_whatsapp">WhatsApp</string>
+
+    <string name="client_card_order_title">Gestionar</string>
+    <string name="client_card_order_subtitle">Cobranza</string>
+
+    <string name="client_card_pedido_title">Ingresar</string>
+    <string name="client_card_pedido_subtitle">Pedido</string>
+
+    <string name="client_card_check_title">Revisar</string>
+    <string name="client_card_check_subtitle">Pedidos</string>
+
+    <string name="client_cantidad_productos">Cantidad Productos</string>
+    <string name="client_cantidad_pedidos">unidades ingresadas</string>
+
+    <string name="client_no_clients">Agrega aquí a todos tus clientes.</string>
+    <string name="client_no_clients2">Podrás contactarlos, pasar pedido y controlar tu cobranza.</string>
+
+    <string name="favorito_no_clients">Aún no tienes clientes favoritos</string>
+    <string name="favorito_no_clients2">Podrás agregarlos desde la ficha del cliente, haciendo click en el ícono de la estrella.</string>
+
+    <string name="pedido_no_clients">Aún no tienes clientes con pedido en la campaña actual</string>
+    <string name="pedido_no_clients2">Registra tus pedidos por cliente para que puedas visualizarlos aquí.</string>
+
+    <string name="porcobrar_no_clients">¿Algún cliente te debe por su pedido?</string>
+    <string name="porcobrar_no_clients2">Podrás ingresar aquí la deuda de tu cliente y controlar tu cobranza.</string>
+
+    <string name="porcobrar_title_material_tap">INGRESA LAS DEUDAS DE TUS CLIENTES DESDE AQUÍ</string>
+    <string name="porcobrar_description_material_tap">Y controla mejor la cobranza</string>
+
+    <string name="client_annotations">NOTAS</string>
+    <string name="client_annotations_message">Añade notas sobre tu cliente.\nEj: productos favoritos, fechas especiales, etc.</string>
+    <string name="client_card_annotations_message">Podrás añadir hasta %d notas o apuntes de tus clientes</string>
+
+    <string name="client_new_data">NUEVO DATO +</string>
+
+    <string name="client_new_annotation">NUEVA NOTA</string>
+
+    <string name="client_agregar_correo">AGREGAR CORREO</string>
+    <string name="client_agregar_direccion">AGREGAR DIRECCIÓN</string>
+
+    <string name="client_delete">ELIMINAR CLIENTE</string>
+
+    <string name="client_edit_2">EDITAR</string>
+    <string name="client_delete_2">ELIMINAR</string>
+    <string name="client_favorite_2">FAVORITO</string>
+
+    <string name="client_add_order">AGREGARLE\nUN PEDIDO</string>
+    <string name="client_view_orders">VER SUS\nPEDIDOS</string>
+    <string name="client_charge_account">COBRARLE\nS/. 0.00</string>
+
+    <string name="client_registration_validation_0">Debes ingresar un nombre.</string>
+    <string name="client_registration_validation_1">Ingresa un número.</string>
+    <string name="client_registration_validation_2">Correo inválido.</string>
+    <string name="client_registration_validation_3">Número inválido.</string>
+    <string name="client_registration_validation_4">Número inválido.</string>
+    <string name="client_registration_validation_5">Es requerido al menos un teléfono.</string>
+    <string name="client_registration_validation_6">Ingresa un email.</string>
+    <string name="client_registration_validation_7">Campo Obligatorio.</string>
+
+    <string name="client_todos">Todos</string>
+    <string name="client_deuda">Por Cobrar</string>
+    <string name="client_pedido">Con Pedido</string>
+    <string name="client_favoritos">Favoritos</string>
+
+    <string name="client_update_message">Contacto actualizado.</string>
+
+    <string name="client_dg_reload_title">Ups!</string>
+    <string name="terminos_y_condiciones">Términos y condiciones</string>
+    <string name="client_dg_reload_message">Algo ocurrio, Vuelve a intentarlo</string>
+
+    <string name="client_dg_delete_title">Eliminar cliente</string>
+    <string name="client_dg_delete_message">¿Desea eliminar al cliente?</string>
+
+    <string name="debt_delete_error_title">Error</string>
+    <string name="debt_delete_error_message_1">Solo se pueden eliminar movimientos si tiene acceso a internet.</string>
+    <string name="debt_delete_error_message_2">Solo se pueden eliminar deudas que esten asociadas a un pedido.</string>
+
+    <string name="client_new_client">Nuevo cliente</string>
+    <string name="client_add_from_contact">Agregar desde contacto</string>
+
+    <string name="client_ver">Ver</string>
+    <string name="client_te_debe">Te debe</string>
+
+    <plurals name="client_ha_pedido">
+        <item quantity="one">Ha pedido %d unidad</item>
+        <item quantity="other">Ha pedido %d unidades</item>
+    </plurals>
+
+    <string name="client_no_email">El cliente no tiene registrado correo.</string>
+    <string name="client_no_mobile">El cliente no tiene registrado celular.</string>
+
+    <string name="client_dg_cancel_register_title">ALERTA REGISTRO</string>
+    <string name="client_dg_cancel_register_message">¿Desea cancelar el registro de cliente? Se perderán los datos y notas registradas.</string>
+
+</resources>

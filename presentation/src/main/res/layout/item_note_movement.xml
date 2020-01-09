@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ClientListItemContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_annotation_border"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvw_title"
+        style="@style/ClientListItemNameText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Pedido" />
+
+    <TextView
+        android:id="@+id/tvw_description"
+        style="@style/ClientListPorCobrarDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingTop="4dp"
+        android:text="Fascina" />
+
+    <LinearLayout
+        android:id="@+id/rlt_detail"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvw_eliminar"
+            style="@style/ClientListItemBirthdayText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Eliminar"
+            android:textAllCaps="true"
+            android:textColor="#821827" />
+
+    </LinearLayout>
+
+</LinearLayout>

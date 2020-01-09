@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".feature.history.AddRecordatoryFragment">
+
+    <RelativeLayout
+        style="@style/RecordatoryContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/btn_send">
+
+        <LinearLayout
+            android:id="@+id/layoutPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvw_recordatory"
+            android:layout_above="@+id/btn_send"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/DebtPaymentRecordatoryContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/DebtPaymentRecordatorySubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="@string/debt_recordatory_dia"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <NumberPicker
+                        android:id="@+id/npk_dia"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                    <NumberPicker
+                        android:id="@+id/npk_mes"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                    <NumberPicker
+                        android:id="@+id/npk_anio"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/IncentivesCardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/DebtPaymentRecordatorySubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="@string/debt_recordatory_hora"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <NumberPicker
+                        android:id="@+id/npk_hora"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                    <NumberPicker
+                        android:id="@+id/npk_minuto"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                    <NumberPicker
+                        android:id="@+id/npk_turno"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_send"
+            style="@style/BottomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/debt_add_recordatory" />
+
+    </RelativeLayout>
+
+</LinearLayout>

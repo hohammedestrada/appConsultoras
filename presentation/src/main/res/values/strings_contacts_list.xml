@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="contact_title">Mis contactos</string>
+    <string name="contact_list_subtitle">Selecciona a tus clientes desde tu lista de contactos.</string>
+    <string name="contact_btn_sync">Agregar</string>
+    <string name="contact_select_all">Todos</string>
+
+    <string name="contact_list_dg_add_title">Nuevos Clientes</string>
+    <string name="contact_list_dg_add_message">Ahora tienes nuevos clientes agregados a tu agenda.</string>
+
+    <string name="contact_list_dg_add_accept">Aceptar</string>
+    <string name="contact_list_no_contacts_selected">Debes seleccionar al menos un contacto.</string>
+
+</resources>

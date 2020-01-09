@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnr_bag_sorprice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="97dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="110dp"
+                android:layout_height="95dp"
+                android:layout_marginBottom="35dp"
+                app:srcCompat="@drawable/ic_bolsa_sorprendida" />
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/PayTextStyle.Recordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="¿Qué pasó?"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                style="@style/PayTextStyle.Recordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Hubo un problema de conexión, pero tu transacción terminó correctamente. Quédate tranquil@"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

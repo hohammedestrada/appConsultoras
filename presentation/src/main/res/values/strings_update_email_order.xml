@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_update_email">Para recibir las últimas novedades, tips de negocio y recordatorios de pase de pedido actualiza tu correo.</string>
+    <string name="subtitle_update_email">¡Entérate de los últimos lanzamientos y las mejores ofertas de la campaña!</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="submit_update_email">Actualizar</string>
+    <string name="error_wrong_email">Debes ingresar tu correo</string>
+    <string name="confirm_email_title">Confirma tu correo</string>
+    <string name="confirm_email_description">Te enviamos un mensaje a:</string>
+    <string name="confirm_email_additional_question">¿Aún no recibes nuestro correo?</string>
+    <string name="resend_email">Reenviar el correo</string>
+</resources>

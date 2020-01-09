@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vw_item"
+    android:layout_width="@dimen/dp156"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp8"
+    android:paddingTop="@dimen/dp0"
+    android:paddingRight="@dimen/dp8"
+    android:paddingBottom="@dimen/dp0">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp126"
+        android:clickable="false"
+        android:focusable="false"
+        app:cardCornerRadius="@dimen/dp4"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/ivw_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp126"
+            android:clickable="false"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvw_image_name"
+        style="@style/FontLatoRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp6"
+        android:clickable="false"
+        android:focusable="false"
+        android:singleLine="false"
+        android:textColor="@color/gray_body_receive_will"
+        android:textSize="@dimen/_14sp" />
+
+</LinearLayout>

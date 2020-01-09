@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+              <LinearLayout
+                  android:background="@drawable/shape_border_black"
+                  android:paddingTop="15dp"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_width="60dp"
+                      android:layout_height="60dp"
+                      android:layout_gravity="center_horizontal"
+                      app:srcCompat="@drawable/ic_bag" />
+
+                  <LinearLayout
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+                      <TextView
+                          android:id="@+id/tvwTitle"
+                          style="@style/ProductNotFoundTitle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/add_order_not_found_product_message1" />
+
+                      <TextView
+                          android:id="@+id/tvwMessage"
+                          style="@style/ProductNotFoundMessage"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/add_order_not_found_product_message2" />
+
+                  </LinearLayout>
+
+              </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+

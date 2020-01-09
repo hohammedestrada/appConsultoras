@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tvwPeriodo"
+        style="@style/FontLatoRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="21dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="C09 a C14" />
+
+    <android.support.constraint.Group
+        android:id="@+id/grpUltimoObtenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvwUltimoObtenido,fmeUltimoObtenido" />
+
+    <TextView
+        android:id="@+id/tvwUltimoObtenido"
+        style="@style/FontLatoBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="14dp"
+        android:text="@string/ultimo_obtenido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvwPeriodo" />
+
+    <biz.belcorp.mobile.components.charts.circle.Frame
+        android:id="@+id/fmeUltimoObtenido"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/rvwMedallas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwUltimoObtenido" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvwMedallas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fmeUltimoObtenido"
+        app:layout_constraintTop_toBottomOf="@+id/tvwUltimoObtenido" />
+
+</android.support.constraint.ConstraintLayout>

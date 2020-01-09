@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="config_title">Mis Ajustes</string>
+    <string name="config_subtitle">Puedes cambiar los ajustes del app en cualquier momento.</string>
+
+    <string name="config_general">General</string>
+
+    <string name="config_data_mobile">Uso de datos móviles</string>
+    <string name="config_wifi">Sólo Wi-Fi</string>
+    <string name="config_wifi_datos">Wi-Fi y datos móviles</string>
+
+    <string name="config_clear_history">Borrar historial de búsqueda</string>
+    <string name="config_clear_history_message">Eliminar búsquedas realizadas con este dispositivo.</string>
+
+    <string name="config_dg_clear_history_message">¿Seguro que quieres borrar el historial? Esto no se puede deshacer.</string>
+    <string name="config_dg_clear_history">Borrar historial</string>
+    <string name="config_dg_cancel">Cancelar</string>
+
+    <string name="config_notifications">Notificaciones</string>
+
+    <string name="config_notifications_mobile">Notificaciones móviles</string>
+    <string name="config_notifications_this_mobile">Notificar en este dispositivo</string>
+    <string name="config_notifications_sound">Sonido</string>
+
+
+
+</resources>

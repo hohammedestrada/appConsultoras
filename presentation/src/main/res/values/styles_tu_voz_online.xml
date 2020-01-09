@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TVOTitleText">
+        <item name="fontPath">fonts/lato-bold.ttf</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TVOEmailEdit">
+        <item name="fontPath">fonts/lato-bold.ttf</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/text_hint_tvo</item>
+        <item name="android:hint">@string/email_hint</item>
+        <item name="colorControlNormal">@color/text_hint_tvo</item>
+        <item name="colorControlActivated">@color/text_hint_tvo</item>
+        <item name="colorControlHighlight">@color/text_hint_tvo</item>
+        <item name="colorAccent">@color/default_magenta</item>
+    </style>
+
+    <style name="TVOInput">
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="TVOCheckBox">
+        <item name="colorAccent">@color/default_magenta</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="TVOTextTerms">
+        <item name="fontPath">fonts/lato-regular.ttf</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TVOButton">
+        <item name="android:background">@drawable/bg_button_magenta_state</item>
+        <item name="fontPath">fonts/lato-bold.ttf</item>
+        <item name="android:text">@string/tvo_update</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/color_button</item>
+    </style>
+</resources>

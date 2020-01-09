@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="promotion_text_item">¡Aprovecha! Llévate un(a) %1$s a solo %2$s. Entérate aquí</string>
+    <string name="promotion_text_item_ficha1">Conoce aquí las condiciones de esta promoción</string>
+    <string name="promotion_text_item_ficha2">¡Aprovecha! Llévate un %1$s a solo %2$s. Entérate aquí</string>
+    <string name="promotion_title_promotion">¡Y llévate este producto en promoción!</string>
+    <string name="promotion_title_conditions">Selecciona la oferta que quieras comprar</string>
+    <string name="promotion_val_noresultlist">WK</string>
+    <string name="promotion_title_banner">Promoción</string>
+    <string name="promotion_title_condition">Aprovecha estas promociones con %1$s</string>
+
+    <string name="condition_text_item">¡Aprovecha! Compra esta oferta y llévate un(a) %1$s a solo %2$s.</string>
+</resources>

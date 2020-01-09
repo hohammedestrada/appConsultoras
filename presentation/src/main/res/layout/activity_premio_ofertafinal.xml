@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivPremioImg"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp40"
+            tools:src="@color/black" />
+
+        <TextView
+            android:id="@+id/tvPremioNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp20"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="Nombre producto" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:fontFamily="@font/lato_bold"
+            android:text="Detalle del premio"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:background="#D1D1D4" />
+
+        <TextView
+            android:id="@+id/tvPremioDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus metus vel sollicitudin tincidunt. In euismod mi non risus pulvinar interdum. Integer egestas tristique metus, vitae ultrices ante mollis a. Vivamus eu molestie arcu, faucibus iaculis justo. Nulla facilisi. Quisque dapibus elit blandit fringilla ullamcorper. Duis metus nisl, commodo ut metus tincidunt, rhoncus sodales tortor. Duis massa ligula." />
+
+    </LinearLayout>
+</ScrollView>

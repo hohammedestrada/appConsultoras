@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvw_left"
+        style="@style/ClientCardSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:id="@+id/rlt_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlt_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llt_level_header"
+                    style="@style/IncentiveCardContentData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvw_header_level"
+                            style="@style/IncentivesItemNivelTextBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start" />
+
+                        <TextView
+                            android:id="@+id/tvw_header_goal"
+                            style="@style/IncentivesItemNivelText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:paddingLeft="3dp"
+                            android:paddingStart="3dp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvw_header_title"
+                        style="@style/IncentivesItemPremio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvw_header_message"
+                        style="@style/IncentivesItemAcumulandoMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingTop="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_level_data"
+                    style="@style/IncentiveCardContentDataVertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/tvw_level"
+                        style="@style/IncentivesItemNivelTextCombine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvw_gift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:overScrollMode="never"
+                        android:visibility="gone"
+                        tools:listitem="@layout/fragment_new_program_gift" />
+
+                    <LinearLayout
+                        android:id="@+id/llt_seekbar"
+                        style="@style/IncentiveCardContentDataHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvw_score"
+                                style="@style/IncentivesItemProgressPuntosText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left|start" />
+
+                            <TextView
+                                android:id="@+id/tvw_goal"
+                                style="@style/IncentivesItemProgressPuntosText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end|right" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/seekbar_puntos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="100"
+                            android:maxHeight="9dp"
+                            android:minHeight="9dp"
+                            android:paddingEnd="0dp"
+                            android:paddingStart="0dp"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/progressbar_incentive"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/ic_progressbar_regalo"
+                            android:thumbOffset="0dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvw_data_message"
+                        style="@style/IncentivesItemTextFree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/llt_cupones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:id="@+id/view_separator_n"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/separator"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvw_cupon_n_title"
+                            style="@style/IncentivesItemCuponTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvw_cupon_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:overScrollMode="never"
+                            android:visibility="gone"
+                            tools:listitem="@layout/fragment_cupon" />
+
+                        <LinearLayout
+                            android:id="@+id/llt_slide_n"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingEnd="15dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingStart="15dp">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_arrow_indicator_left" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/slide_more"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_arrow_indicator_right" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvw_legal_message"
+                            style="@style/IncentivesItemTextFreeBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp" />
+
+                        <View
+                            android:id="@+id/view_separator_i"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/separator" />
+
+                        <TextView
+                            android:id="@+id/tvw_cupon_i_title"
+                            style="@style/IncentivesItemCuponTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvw_cupon_i"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:overScrollMode="never"
+                            android:visibility="gone"
+                            tools:listitem="@layout/fragment_cupon" />
+
+                        <LinearLayout
+                            android:id="@+id/llt_slide_i"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingEnd="15dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingStart="15dp">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_arrow_indicator_left" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/slide_more"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/ic_arrow_indicator_right" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_blocked"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/rlt_data"
+                android:layout_alignTop="@+id/rlt_data"
+                android:background="@color/incentive_blocked"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivw_locked"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:contentDescription="@null"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_locked" />
+
+            <ImageView
+                android:id="@+id/ivw_arrow"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:contentDescription="@null"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_arrow_down_black" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

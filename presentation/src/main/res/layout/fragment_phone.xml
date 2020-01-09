@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ScrollView
+        android:id="@+id/scrollMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:paddingBottom="40dp"
+            style="@style/MiPerfilContent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:id="@+id/txtHeader"
+                android:textColor="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_not_registered" />
+
+            <TextView
+                android:id="@+id/txtCurrent"
+                style="@style/ChangePasswordPrimaryDisbled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_current_number" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtCurrentPhone"
+                style="@style/ChanngePasswordSecondDisable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/ChangePasswordPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/phone_enter_number" />
+
+            <EditText
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="-5dp"
+                android:id="@+id/edtNewCell"
+                style="@style/ChangePasswordSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:digits="1234567890"
+                android:inputType="phone" />
+
+            <TextView
+                android:visibility="gone"
+                style="@style/NumberValidatorAlert"
+                android:id="@+id/txtNumberAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginLeft="-6dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/chkTerms"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/txt_terminos"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/phone_terms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lnlCancel"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtCancelar"
+                        android:padding="5dp"
+                        style="@style/MiPerfilPhoneCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/phone_cancel"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <Button
+                    style="@style/ButtonTheme.Primary"
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:paddingEnd="40dp"
+                    android:paddingStart="40dp"
+                    android:text="@string/phone_confirm"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+
+        android:id="@+id/lnrEnviandoSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+        <ProgressBar
+            android:theme="@style/ThemeMagenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/enviandoSms"
+            android:textAppearance="@style/TextAppearance.DS.Title1" />
+    </LinearLayout>
+
+</LinearLayout>

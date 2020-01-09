@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvwIncentiveConstancia"
+        style="@style/ClientCardSection"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lltPersonalData"
+            style="@style/IncentiveCardContentActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rltHeader"
+                style="@style/ClientCardContentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/incentives_header"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvwIncentiveConstanciaTitulo"
+                    style="@style/CardTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:text="REGALO POR PEDIDO" />
+
+                <ImageView
+                    android:id="@+id/ivwArrowData"
+                    style="@style/CardSectionActiveArrow"
+                    android:layout_width="@dimen/size_image_button_all"
+                    android:layout_height="@dimen/size_image_button_all"
+                    android:contentDescription="@null" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lltNivelOpcionMultiple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvwNivelGift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/IncentivesItemNivelText"/>
+
+                <TextView
+                    style="@style/IncentivesItemChooser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/incentives_another_gift"/>
+
+                <TextView
+                    android:id="@+id/incentivesChoiceText"
+                    style="@style/IncentivesItemChooser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/incentives_choice"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvwContestConstancia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

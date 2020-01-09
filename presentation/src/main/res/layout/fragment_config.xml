@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.config.ConfigFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_content_all"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvw_label1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/config_general"
+            style="TextAppearance.Label"/>
+
+        <Switch
+            android:id="@+id/swc_data_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/config_data_mobile"
+            style="TextAppearance.Switch.Title"/>
+
+        <TextView
+            android:id="@+id/tvw_data_mobile_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/config_wifi"
+            style="TextAppearance.Switch.Message"/>
+
+        <TextView
+            android:id="@+id/tvw_clear_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/config_clear_history"
+            style="TextAppearance.Switch.Title"/>
+
+        <TextView
+            android:id="@+id/tvw_clear_history_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/config_clear_history_message"
+            style="TextAppearance.Switch.Message"/>
+
+        <TextView
+            android:id="@+id/tvw_label2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/config_notifications_mobile"
+            style="TextAppearance.Label"/>
+
+        <Switch
+            android:id="@+id/swc_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/config_notifications_this_mobile"
+            style="TextAppearance.Switch.Title" />
+
+        <Switch
+            android:id="@+id/swc_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/config_notifications_sound"
+            style="TextAppearance.Switch.Title" />
+
+    </LinearLayout>
+
+</ScrollView>

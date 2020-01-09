@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MiPerfilDialog">
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="MiPerfilDialogTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MiPerfilHeader">
+        <item name="android:paddingTop">25dp</item>
+        <item name="android:paddingBottom">25dp</item>
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:background">#f8f8f8</item>
+    </style>
+
+    <style name="MiPerfilContent">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="MiPerfilTableRowContent">
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+    </style>
+
+    <style name="MiPerfilTitle" parent="FontLatoRegular">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+    </style>
+
+    <style name="MiPerfilSubtitle" parent="FontLatoRegular">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#808080</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="ChangePasswordPrimary" parent="FontLatoRegular">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="ChangeEmailOldPrimary" parent="FontLatoRegular">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#808080</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="ErrorMessage" parent="FontLatoRegular">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+    </style>
+
+    <style name="ChangePasswordText" parent="FontLatoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="ChangePasswordPrimaryDisbled" parent="FontLatoRegular">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/tab_disabled</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="ChangePasswordSecond" parent="FontLatoRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="OldEMailSecond" parent="FontLatoRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#808080</item>
+    </style>
+
+
+    <style name="ChanngePasswordSecondDisable" parent="FontLatoRegular">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/tab_disabled</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+    </style>
+
+    <style name="NumberValidatorAlert" parent="FontLatoRegular">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="MiPerfilSubtitleSecondary" parent="FontLatoLight">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="MiPerfilSubtitleDataSecondary" parent="FontLatoRegular">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="MiPerfilSubtitleData" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">2.5dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <style name="MiPerfilSave" parent="FontLatoBold">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">#cdc7c8</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MiPerfilUser" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="MiPerfilPassword" parent="FontLatoBold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="MiPerfilCambiar" parent="FontLatoBold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="MiPerfilItemText" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MiPerfilItemTextData" parent="FontLatoLight">
+        <item name="android:textColor">#636363</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MiPerfilCardSection">
+        <item name="cardElevation">3dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="MiPerfilCardContentInactive">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="MiPerfilItemDialog" parent="FontLatoRegular">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+    </style>
+
+    <style name="MiPerfilDialogTitle1" parent="FontLatoLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MiPerfilDialogTitle2" parent="FontLatoBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MiPerfilPhoneCancel" parent="FontLatoRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/welcome_text</item>
+    </style>
+
+    <style name="MiPerfilRetrySMS" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/welcome_text</item>
+    </style>
+
+    <style name="MiPerfilChangePhone" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+
+    <style name="ChangePasswordText1" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="ChangePasswordText2" parent="FontLatoBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+</resources>

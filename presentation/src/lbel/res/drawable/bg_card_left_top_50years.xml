@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="@dimen/home_bg_left_top_width"
+                android:height="@dimen/home_bg_left_top_height" />
+
+            <solid
+                android:color="#c39934" />
+
+            <corners
+                android:bottomRightRadius="@dimen/home_bg_left_top_radius_corner"
+                android:topRightRadius="0dp" />
+        </shape>
+    </item>
+</layer-list>

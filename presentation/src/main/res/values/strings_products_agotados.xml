@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="product_agotados_title">Productos agotados</string>
+    <string name="product_agotados_error">Hubo un error al consultar Productos Agotados. Por favor inténtelo nuevamente en unos minutos.</string>
+</resources>

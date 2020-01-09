@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/tvw_campaign_name"
+            style="@style/CatalogTextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/ivw_magazine"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/tvw_campaign_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ivw_magazine"
+            android:layout_marginTop="25dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/banner_suscrita" />
+
+            <TextView
+                android:id="@+id/tvw_info"
+                style="@style/CatalogTextBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="¡Sin Digitar Códigos!" />
+
+            <Button
+                android:id="@+id/btn_aceptar"
+                style="@style/CatalogButtonBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/selector_button_magazine"
+                android:layout_marginBottom="10dp"
+                android:text="VER TODAS MIS OFERTAS" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

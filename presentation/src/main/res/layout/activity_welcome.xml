@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rltMain"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".feature.terms.TermsActivity">
+
+    <include
+        android:id="@+id/view_connection"
+        layout="@layout/view_connection"
+        android:visibility="gone" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_connection">
+
+        <include layout="@layout/toolbar_black" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlt_leyenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/welcome_send_sms_margin_medium"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/ivw_welcome_line_cell"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@id/llt_leyenda"
+            android:layout_alignEnd="@id/llt_leyenda"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black" />
+
+
+        <LinearLayout
+            android:id="@+id/llt_leyenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/welcome_send_sms_margin_medium"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivw_welcome_cell"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_welcome_cell" />
+
+            <ImageView
+                android:id="@+id/ivw_welcome_lock"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_welcome_lock_off" />
+
+            <ImageView
+                android:id="@+id/ivw_welcome_validation"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_welcome_validation_off" />
+
+
+            <ImageView
+                android:id="@+id/ivw_welcome_terms"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_welcome_terms_off" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lltContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/rlt_leyenda"
+        >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpg_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/view_loading"
+        layout="@layout/view_loading_app"
+        android:visibility="gone" />
+
+</RelativeLayout>

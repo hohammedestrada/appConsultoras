@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvw_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/catalog_campaign_header"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        tools:ignore="RelativeOverlap" />
+
+    <biz.belcorp.consultoras.common.component.NonScrollableViewPager
+        android:id="@+id/vwp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvw_header"
+        android:overScrollMode="never" />
+
+    <RelativeLayout
+        android:id="@+id/rlt_back"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@id/vwp_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/ivw_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:padding="7dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_chevron_left" />
+
+        <TextView
+            android:id="@+id/tvw_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/ivw_back"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            style="@style/FontLatoBold"
+            tools:ignore="SmallSP" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlt_next"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/vwp_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/ivw_next"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:padding="7dp"
+            app:srcCompat="@drawable/ic_chevron_right"
+            android:textColor="#99000000" />
+
+        <TextView
+            android:id="@+id/tvw_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/ivw_next"
+            android:gravity="center_horizontal"
+            style="@style/FontLatoBold"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            tools:ignore="RelativeOverlap,SmallSP" />
+    </RelativeLayout>
+</RelativeLayout>

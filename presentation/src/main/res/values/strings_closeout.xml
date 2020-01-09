@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="closeout_title">Liquidaciones</string>
+    <string name="closeout_gana_title">Gana+</string>
+    <string name="closeout_error">Hubo un error al consultar Liquidaciones Web. Por favor inténtelo nuevamente en unos minutos.</string>
+
+</resources>

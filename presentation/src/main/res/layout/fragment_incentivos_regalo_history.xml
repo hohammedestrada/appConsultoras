@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.home.incentives.GiftHistoryFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/IncentivosContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvwCurrentTitle"
+                style="@style/IncentivesTitleHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/tvwCurrentSubtitle"
+                style="@style/IncentivesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/incentives_item_title_history"
+                android:visibility="gone"
+                android:clickable="false"
+                android:gravity="center_horizontal" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvwContest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:listitem="@layout/item_incentive_history" />
+
+            <TextView
+                android:id="@+id/tvwImageDisclaimer"
+                style="@style/FontLatoRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/incentives_image_disclaimer"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

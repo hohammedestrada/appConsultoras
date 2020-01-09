@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ctlPeriodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvwTituloPeriodo"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Constancia de periodo:" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvwPeriodos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_2"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/tvwTituloPeriodo" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.081" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.919" />
+
+        <ImageView
+            android:id="@+id/ivwBack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:padding="5dp"
+            android:src="@drawable/ic_comp_arrow_left"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvwPeriodos"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rvwPeriodos" />
+
+        <ImageView
+            android:id="@+id/ivwNext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:padding="5dp"
+            android:src="@drawable/ic_comp_arrow_right"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvwPeriodos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_2"
+            app:layout_constraintTop_toTopOf="@+id/rvwPeriodos" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ctlIndicador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_1_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.081" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_2_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.919" />
+
+        <TextView
+            android:id="@+id/tvwTituloIndicador"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="21dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2_"
+            app:layout_constraintStart_toStartOf="@id/guideline_1_"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Cambio de escala:" />
+
+        <android.support.constraint.Group
+            android:id="@+id/grpUltimoObtenidoIndicador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tvwUltimoObtenidoIndicador,fmeUltimoObtenidoIndicador" />
+
+        <TextView
+            android:id="@+id/tvwUltimoObtenidoIndicador"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14dp"
+            android:text="@string/ultimo_obtenido"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2_"
+            app:layout_constraintStart_toStartOf="@id/guideline_1_"
+            app:layout_constraintTop_toBottomOf="@id/tvwTituloIndicador" />
+
+        <biz.belcorp.mobile.components.charts.circle.Frame
+            android:id="@+id/fmeUltimoObtenidoIndicador"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/rvwMedallasIndicador"
+            app:layout_constraintStart_toStartOf="@id/guideline_1_"
+            app:layout_constraintTop_toBottomOf="@+id/tvwUltimoObtenidoIndicador" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvwMedallasIndicador"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guideline_2_"
+            app:layout_constraintStart_toEndOf="@id/fmeUltimoObtenidoIndicador"
+            app:layout_constraintTop_toBottomOf="@+id/tvwUltimoObtenidoIndicador" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/CuponItemHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_cancel_black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingEnd="25dp"
+        android:paddingStart="25dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/primary" />
+
+                    <biz.belcorp.consultoras.common.component.AdjustableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-5dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_half_circle" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/primary" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/CuponContentHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivw_cupon"
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@null"/>
+
+                    <TextView
+                        android:id="@+id/tvw_user"
+                        style="@style/CuponItemUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_dash" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/CuponContentBody"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CuponCondicionesBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:text="@string/cupon_recuerda"
+                    android:textAllCaps="true" />
+
+                <LinearLayout
+                    android:id="@+id/layoutOpt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_product" />
+
+                    <TextView
+                        android:id="@+id/tvw_option_1"
+                        style="@style/CuponItemBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutOpt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_date" />
+
+                    <TextView
+                        android:id="@+id/tvw_option_2"
+                        style="@style/CuponItemBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutOpt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_checklist" />
+
+                    <TextView
+                        android:id="@+id/tvw_option_3"
+                        style="@style/CuponItemBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CuponItemRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cupon_condicion" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/CuponItemRules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2.5dp"
+                        android:text="@string/cupon_condicion2" />
+
+                    <TextView
+                        android:id="@+id/tvw_rules"
+                        style="@style/CuponItemTerms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:text="@string/cupon_condicion3"
+                        android:textColor="@drawable/selector_textview" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/CuponItemHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/btn_aceptar"
+                style="@style/CuponItemAceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cupon_aceptar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

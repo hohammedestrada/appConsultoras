@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:clickable="true"
+    android:paddingTop="20dp"
+    tools:context=".feature.home.addorders.cuv.ProductFilterFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlt_cuv"
+        style="@style/LoginInputContent.Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:clickable="true">
+
+        <EditText
+            android:id="@+id/edt_cuv_filter"
+            style="@style/LoginInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/ivw_select"
+            android:background="@android:color/transparent"
+            android:hint="@string/add_order_select_product"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="@integer/cuv_max_length"
+            android:maxLines="1" />
+
+        <ImageView
+            android:id="@+id/ivw_select"
+            style="@style/LoginInputIcon.Right"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_arrow_down_black" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvw_cuv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlt_cuv"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="6dp" />
+
+</RelativeLayout>

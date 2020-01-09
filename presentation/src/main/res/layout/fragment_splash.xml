@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fltSplash"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/SplashTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            style="@style/SplashAppImage"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_brand_light" />
+
+        <RelativeLayout
+            android:id="@+id/rlt_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                style="@style/SplashProgressContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/pgb_download"
+                    style="@style/SplashProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvw_info"
+                    style="@style/SplashProgressText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltRestartScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <TextView
+                style="@style/FontLatoBold"
+                android:textColor="@color/black"
+                android:paddingTop="24dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/splash_loading_from_offers_title"/>
+
+            <TextView
+                style="@style/FontLatoRegular"
+                android:textColor="@color/black"
+                android:paddingTop="16dp"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/splash_loading_from_offers_message"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.stockouts.StockoutsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_activity_third"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llt_search"
+            style="@style/StockoutsFilterContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_filter"
+                style="@style/StockoutsFilterText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="aábcdeéfghiíjklmnoópqrstuúvwxyzÁABCDÉEFGHÍIJKLMNÓOPQRSTÚUVWXYZ0123456789 "
+                android:hint="@string/stockouts_filter_text"
+                android:inputType="text">
+
+                <requestFocus />
+
+            </EditText>
+
+            <ImageView
+                android:id="@+id/ivw_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:contentDescription="@null"
+                android:padding="8dp"
+                android:tag="0"
+                app:srcCompat="@drawable/ic_lupe_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_counter"
+            style="@style/StockoutsTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llt_search"
+            android:orientation="vertical"
+            android:paddingBottom="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvw_counter"
+                    style="@style/StockoutsHeaderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stockouts_counter" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/accent" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/disabled" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvw_stockouts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llt_counter"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="70dp"
+            tools:listitem="@layout/item_stockout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlt_content_list_null"
+        style="@style/StockoutsContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvw_message"
+            style="@style/StockoutsListNullText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stockouts_no_items" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

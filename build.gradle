@@ -1,0 +1,85 @@
+apply plugin: 'org.sonarqube'
+
+apply from: 'config/dependencies.gradle'
+
+buildscript {
+    ext.kotlin_version = '1.3.41'
+
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://s3.amazonaws.com/sdk-ga-releases.cloudmi.datami.com/android/mvn/smisdk/'
+        }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.google.gms:google-services:3.1.2'
+        classpath ('com.google.firebase:firebase-plugins:1.1.5') {
+            exclude group: 'com.google.guava', module: 'guava-jdk5'
+        }
+        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2'
+        classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'io.fabric.tools:gradle:1.31.1'
+        classpath "gradle.plugin.com.github.viswaramamoorthy:gradle-util-plugins:0.1.0-RELEASE"
+    }
+}
+
+allprojects {
+    ext {
+        projectName = 'AppConsultora-Android'
+        appName = 'consultoras'
+        androidApplicationId = 'biz.belcorp.consultoras'
+        androidVersionCode = 74
+        androidVersionName = '1.4.9'
+        testApplicationId = 'biz.belcorp.consultoras.test'
+        testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
+        isCiServer = System.getenv().containsKey("CI")
+    }
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://s3.amazonaws.com/sdk-ga-releases.cloudmi.datami.com/android/mvn/smisdk/'
+        }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.google.com/' }
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.projectKey', 'biz.belcorp.consultoras'
+        property 'sonar.projectName', 'Consultoras - Android - '
+        property "sonar.projectDescription", "App Mobile de Consultoras"
+
+        property "sonar.modules", "data,domain,presentation"
+
+        property "sonar.sources", "src/main/java"
+        property "sonar.sourceEncoding", "UTF-8"
+
+        property "sonar.exclusions", "**/*test*/**, **/*androidTest*/**, build/**, *.iml, **/*generated*"
+    }
+}
+
+project(":library") {
+    sonarqube {
+        skipProject = true
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xmaxerrs" << "500"
+    }
+}

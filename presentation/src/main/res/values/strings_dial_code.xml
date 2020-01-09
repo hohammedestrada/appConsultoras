@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="dialing_country_code" >
+        <item>591,BO</item>
+        <item>55,BR</item>
+        <item>56,CL</item>
+        <item>57,CO</item>
+        <item>506,CR</item>
+        <item>502,GT</item>
+        <item>593,EC</item>
+        <item>52,MX</item>
+        <item>503,SV</item>
+        <item>507,PA</item>
+        <item>51,PE</item>
+        <item>1,DO</item>
+        <item>1,PR</item>
+        <item>58,VE</item>
+    </string-array>
+
+</resources>

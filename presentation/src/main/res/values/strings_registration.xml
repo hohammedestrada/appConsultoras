@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="registration_title">Ingresa con Facebook</string>
+    <string name="registration_asociar_cuentas">Asociar Cuentas</string>
+    <string name="registration_ingresar">Ingresa a tu cuenta</string>
+    <string name="registration_subtitle_1">Solo un paso más…</string>
+    <string name="registration_subtitle_2">Para asociar ambas cuentas necesitamos tus datos:</string>
+    <string name="registration_user">USUARIO</string>
+    <string name="registration_password">CONTRASEÑA</string>
+
+    <string name="registration_validation_0">Selecciona tu país.</string>
+    <string name="registration_validation_1">Debes ingresar tu Usuario y Contraseña.</string>
+    <string name="registration_validation_2">Debes ingresar tu Usuario.</string>
+    <string name="registration_validation_3">Debes ingresar tu Contraseña.</string>
+
+    <string name="registration_error_title">Error</string>
+    <string name="registration_error_message_1">Usuario o Contraseña Incorrectas.</string>
+    <string name="registration_error_message_2">No estás autorizada para pasar pedido.</string>
+
+    <string name="registration_error_network_title">No se puede iniciar sesión</string>
+    <string name="registration_error_network_message">Revisa tu conexión a internet</string>
+    <string name="registration_accept">Aceptar</string>
+
+    <string name="registration_select_country">Elige tu País</string>
+    <string name="registration_save">GUARDAR</string>
+    <string name="registration_cancel">CANCELAR</string>
+    <string name="registration_add_from_contact">AGREGAR DESDE CONTACTO</string>
+
+</resources>

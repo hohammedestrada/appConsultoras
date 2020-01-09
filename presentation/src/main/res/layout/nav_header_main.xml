@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rltNav"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llt_nav_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rlt_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true">
+
+                <biz.belcorp.consultoras.common.component.CircleImageView
+                    android:id="@+id/ivwImageMain"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_contact_default" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ic_circle_indicator_magenta"
+                    android:contentDescription="@null"
+                    android:padding="6dp"
+                    android:tag="unchecked"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_edit_white" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/HomeNavBarEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="140dp"
+                android:text="@string/my_profile_editar"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvwNavbarTitle"
+            style="@style/HomeNavBarTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltFanPage"
+        style="@style/HomeMenuBelcorpFiftyItemContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llt_nav_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivw_item_imagen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tvwFanpageHashtag"
+            style="@style/HomeMenuLatBelcorpFiftyItemText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/home_fanpage_hashtag" />
+
+    </LinearLayout>
+
+</RelativeLayout>

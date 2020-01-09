@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="changes_title">Cambios y devoluciones</string>
+    <string name="changes_error">Hubo un error al consultar Cambios y devoluciones. Por favor inténtelo nuevamente en unos minutos.</string>
+
+</resources>

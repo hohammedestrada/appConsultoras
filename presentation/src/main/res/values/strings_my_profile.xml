@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_profile_title">MI PERFIL</string>
+    <string name="my_profile_change_password_title">CAMBIAR CONTRASEÑA</string>
+    <string name="my_profile_dialog">CAMBIA TU FOTO DE PERFIL</string>
+    <string name="my_profile_mis_datos">Mis Datos</string>
+    <string name="my_profile_editar">Editar</string>
+    <string name="my_profile_guardar">Guardar</string>
+    <string name="my_profile_eliminar">Eliminar</string>
+    <string name="my_profile_add_otro_numero">Agregar otro número</string>
+    <string name="my_profile_editar_foto">Editar Foto</string>
+    <string name="my_profile_codigo">Código:</string>
+    <string name="my_profile_zona">Zona:</string>
+    <string name="my_profile_change_password">Cambiar Contraseña</string>
+    <string name="my_profile_apodo">¿Cómo quieres que te llamemos?</string>
+    <string name="my_profile_celular">Celular</string>
+    <string name="my_profile_fijo">Número Fijo</string>
+    <string name="my_profile_otro_numero">Número adicional</string>
+    <string name="my_profile_email">Correo Electrónico</string>
+    <string name="my_profile_image_delete">La foto se eliminó correctamente.</string>
+    <string name="my_profile_image_upload">La foto se subió correctamente.</string>
+    <string name="my_profile_update">Los datos se actualizaron correctamente</string>
+    <string name="my_profile_error">Ocurrió un error al actualizar los datos</string>
+    <string name="my_profile_terms">(*) Declaro que he leído los términos y condiciones sobre Protección de Datos Personales y que me encuentro de acuerdo con los mismos.</string>
+    <string name="my_profile_datos_obligatorios">(*) Datos obligatorios</string>
+    <string name="my_profile_recibir_whatsapp">Quiero recibir tips, ofertas, capacitaciones y más a través de Whatsapp</string>
+    <string name="my_profile_dialog_title">Foto de Perfil</string>
+    <string name="my_profile_dialog_msg">¿Estás seguro de eliminar la foto de perfil?</string>
+    <string name="my_profile_postulant">Opción no disponible</string>
+    <string name="my_profile_call_center">Si deseas cambiar tu número de  celular o correo, comunícate al</string>
+    <string name="my_profile_whatsapp_deshabilitado">Actualice su número celular, para poder recibir tips, ofertas, capacitaciones y más a través de Whatsapp</string>
+
+    <!-- Camera -->
+
+    <string name="my_profile_directory">photos</string>
+    <string name="label_cancel">Cancelar</string>
+    <string name="label_ok">Aceptar</string>
+    <string name="label_select_picture">Seleccionar imagen</string>
+    <string name="permission_title_rationale">Debe aceptar los permisos para capturar imágenes. ¿Desea continuar?</string>
+    <string name="permission_read_storage_rationale">Debe aceptar los permisos para seleccionar imágenes. ¿Desea continuar?</string>
+    <string name="toast_cannot_retrieve_selected_image">No se puede recuperar la imagen seleccionada</string>
+    <string name="toast_cannot_retrieve_cropped_image">No se puede recuperar la imagen recortada</string>
+    <string name="toast_unexpected_error">Error inesperado</string>
+
+    <!-- Change Password -->
+    <string name="my_profile_cambiar_welcome_1">YA VERIFICAMOS TUS DATOS.</string>
+    <string name="my_profile_cambiar_welcome_2">Ahora por tu seguridad, es necesario que cambies tu contraseña.</string>
+    <string name="my_profile_actualizar">Actualizar</string>
+    <string name="my_profile_cancelar"><u>Cancelar</u></string>
+    <string name="my_profile_password">Contraseña Actual</string>
+    <string name="my_profile_new_password">Nueva Contraseña</string>
+    <string name="my_profile_repeat_new_password">Repite la Nueva Contraseña</string>
+    <string name="my_profile_error_password">Las contraseñas no coinciden</string>
+    <string name="my_profile_empty_password">Ingrese su contraseña actual</string>
+    <string name="my_profile_password_validation">Su contraseña actual no cumple con la cantidad mínima de 7 carácteres</string>
+    <string name="my_profile_new_password_validation">Su contraseña no cumple con la cantidad mínima de 7 carácteres</string>
+    <string name="my_profile_empty_new_password">Ingrese su nueva contraseña</string>
+    <string name="my_profile_empty_repeat_new_password">Repita su nueva contraseña</string>
+    <string name="my_profile_successful">La contraseña se actualizó correctamente</string>
+
+    <!-- Change Email -->
+    <string name="my_profile_new_email_message">Aún no has registrado un correo electrónico. Llena el siguiente campo para añadirlo.</string>
+    <string name="my_profile_current_email">TU CORREO ELECTRÓNICO ACTUAL ES:</string>
+    <string name="my_profile_new_email">INGRESA TU NUEVO CORREO ELECTRÓNICO</string>
+    <string name="my_profile_go_to_home">IR AL HOME</string>
+    <string name="my_profile_error_invalid_email">El correo electrónico no es válido. Vuelve a intentar.</string>
+    <string name="my_profile_error_empty_email">Debe ingresar un correo electrónico</string>
+
+    <string name="my_profile_email_title_1">¡ACTUALIZASTE</string>
+    <string name="my_profile_email_title_2">TU CORREO!</string>
+
+    <string name="my_profile_sms_title">REVISA TU CELULAR</string>
+    <string name="my_profile_sms_image">📲</string>
+    <string name="my_profile_sms_message">Te hemos enviado un código SMS al</string>
+    <string name="my_profile_sms_number">912 345 678</string>
+    <string name="my_profile_sms_widget">INGRESA EL CÓDIGO AQUÍ</string>
+    <string name="my_profile_sms_error">El código ha caducado</string>
+    <string name="my_profile_sms_resend">Renvieenme el código</string>
+    <string name="my_profile_email_confirm">Confirmar</string>
+
+    <!-- verify email -->
+
+    <string name="my_profile_email_title">REVISA TU CORREO</string>
+    <string name="my_profile_email_image">/uD83D/uDCE8</string>
+    <string name="my_profile_email_message">Te hemos enviado las instrucciones a:</string>
+    <string name="my_profile_email_address">prueba@gmail.com</string>
+    <string name="my_profile_email_resend_message">¿Aún no recibes nuestro correo?</string>
+    <string name="my_profile_email_resend"><u>REENVIARME LAS INSTRUCCIONES</u></string>
+    <string name="my_profile_email_change_message">¿Este no es tu correo? </string>
+    <string name="my_profile_email_change"><u>Cambia tu correo</u></string>
+    <string name="my_profile_cambiar"><u>Cambiar</u></string>
+
+
+    <string name="my_profile_go_to_my_profile"><u>IR A MI PERFIL</u></string>
+    <string name="change_email_title">ACTUALIZA TU CORREO</string>
+    <string name="verify_email_title">VERIFICA TU CORREO</string>
+
+
+    <string name="welcome_title_1">VERIFICA TU AUTENTICIDAD</string>
+    <string name="welcome_title_2">VERIFICA TU CELULAR</string>
+    <string name="welcome_title_3">CAMBIA TU CONTASEÑA</string>
+    <string name="welcome_title_4">INFORMACIÓN LEGAL</string>
+
+    <string name="ok">OK</string>
+
+
+</resources>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <!--  Config de Menu  -->
+    <entry>
+        <key>menu_qas</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>menu_ppr</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>menu_prd</key>
+        <value></value>
+    </entry>
+    <!--  Log de usabilidad  -->
+    <entry>
+        <key>usability_qas</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>usability_ppr</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>usability_prd</key>
+        <value></value>
+    </entry>
+    <!--  SDK  -->
+    <entry>
+        <key>analytics_qas</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>analytics_ppr</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>analytics_prd</key>
+        <value></value>
+    </entry>
+    <!--  Config de SECRET Key  -->
+    <entry>
+        <key>secret_qas</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>secret_ppr</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>secret_prd</key>
+        <value></value>
+    </entry>
+    <!--  Config de máximo de días de la notificacion -->
+    <entry>
+        <key>notification_max_days_qas</key>
+        <value>8</value>
+    </entry>
+    <entry>
+        <key>notification_max_days_prd</key>
+        <value>8</value>
+    </entry>
+
+
+    <!-- CHATBOT-->
+
+    <entry>
+        <key>chatbot_qas</key>
+        <value></value>
+    </entry>
+
+    <entry>
+        <key>chatbot_ppr</key>
+        <value></value>
+    </entry>
+
+    <entry>
+        <key>chatbot_pdr</key>
+        <value></value>
+    </entry>
+
+    <!-- cache gana+ -->
+
+    <entry>
+        <key>api_cache_online_time</key>
+        <value>3600</value>
+    </entry>
+
+    <entry>
+        <key>api_cache_offline_time</key>
+        <value>86400</value>
+    </entry>
+
+    <entry>
+        <key>api_cache_enabled</key>
+        <value>true</value>
+    </entry>
+
+    <!-- camino brillante -->
+
+    <entry>
+        <key>api_cache_offline_camino_brillante_time_prd</key>
+        <value>30</value>
+    </entry>
+
+    <entry>
+        <key>api_cache_offline_camino_brillante_time_qas</key>
+        <value>1</value>
+    </entry>
+
+    <entry>
+        <key>image_dialog_enabled_qas</key>
+        <value>true</value>
+    </entry>
+
+    <entry>
+        <key>image_dialog_enabled_prd</key>
+        <value>false</value>
+    </entry>
+
+    <entry>
+        <key>images_max_ficha_qas</key>
+        <value>10</value>
+    </entry>
+
+    <entry>
+        <key>images_max_ficha_prd</key>
+        <value>10</value>
+    </entry>
+
+    <!-- A/B testing -->
+
+    <entry>
+        <key>hide_brand_and_amount_client</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>expanded_searchview</key>
+        <value>false</value>
+    </entry>
+
+    <entry>
+        <key>order_configurable_lever_qas</key>
+        <value>""</value>
+    </entry>
+
+    <entry>
+        <key>order_configurable_lever_prd</key>
+        <value>""</value>
+    </entry>
+
+    <entry>
+        <key>ab_testing_bonificaciones_qas</key>
+        <value>""</value>
+    </entry>
+
+    <entry>
+        <key>ab_testing_bonificaciones_prd</key>
+        <value>""</value>
+    </entry>
+
+    <entry>
+        <key>mover_barra_navegacion_qas</key>
+        <value>""</value>
+    </entry>
+
+    <entry>
+        <key>mover_barra_navegacion_prd</key>
+        <value>""</value>
+    </entry>
+
+    <!-- Catalogo -->
+
+    <entry>
+        <key>image_fourth_catalog_prd</key>
+        <value>https://catalogodigitalbelcorp.s3.amazonaws.com/%s/%s/S/paginas/1.jpg</value>
+    </entry>
+
+    <entry>
+        <key>image_fourth_catalog_qas</key>
+        <value>https://catalogodigitalbelcorp.s3.amazonaws.com/%s/%s/S/paginas/1.jpg</value>
+    </entry>
+
+    <entry>
+        <key>message_description_catalog_prd</key>
+        <value><![CDATA[<html><head><meta charset=UTF-8><style type=text/css>@font-face{font-family:Lato;src: url(fonts/lato-light.ttf);}</style></head><body><p style=font-family:Lato>Comparte tu catálogo digital a través de un link único a tus clientes y ellos podrán enviar sus pedidos desde ahí para que tú los apruebes desde tu app o Somos Belcorp.</p></body></html>]]></value>
+    </entry>
+
+    <entry>
+        <key>message_description_catalog_qas</key>
+        <value><![CDATA[<html><head><meta charset=UTF-8><style type=text/css>@font-face{font-family:Lato;src: url(fonts/lato-light.ttf);}</style></head><body><p style=font-family:Lato>Comparte tu catálogo digital a través de un link único a tus clientes y ellos podrán enviar sus pedidos desde ahí para que tú los apruebes desde tu app o Somos Belcorp.</p></body></html>]]></value>
+    </entry>
+
+    <entry>
+        <key>message_share_catalog_prd</key>
+        <value><![CDATA[¡Hola! te invito a conocer mi catálogo digital donde podrás encontrar los mejores productos que te trae Ésika, L´Bel y Cyzone. No te olvides que me puedes mandar tu pedido desde el mismo catálogo]]></value>
+    </entry>
+
+    <entry>
+        <key>message_share_catalog_qas</key>
+        <value><![CDATA[¡Hola! te invito a conocer mi catálogo digital donde podrás encontrar los mejores productos que te trae Ésika, L´Bel y Cyzone. No te olvides que me puedes mandar tu pedido desde el mismo catálogo]]></value>
+    </entry>
+    <entry>
+        <key>message_multi_order_prd</key>
+        <value>¡Ya tienes Multipedido!</value>
+    </entry>
+    <entry>
+        <key>message_multi_order_qas</key>
+        <value>¡Ya tienes Multipedido!</value>
+    </entry>
+    <entry>
+        <key>show_rate_play_store_prd</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>show_rate_play_store_qas</key>
+        <value>false</value>
+    </entry>
+
+    <entry>
+        <key>message_share_dialog_catalog_prd</key>
+        <value>Comparte tu catálogo digital y llega a más clientes esta campaña</value>
+    </entry>
+    <entry>
+        <key>message_share_dialog_catalog_qas</key>
+        <value>Comparte tu catálogo digital y llega a más clientes esta campaña</value>
+    </entry>
+
+    <!-- Promotion Group List | Habilita el carrusel de promociones en el desplegable del buscador -->
+    <entry>
+        <key>promotion_group_list_enable_qas</key>
+        <value>false</value>
+    </entry>
+
+    <entry>
+        <key>promotion_group_list_enable_prd</key>
+        <value>false</value>
+    </entry>
+
+</defaultsMap>

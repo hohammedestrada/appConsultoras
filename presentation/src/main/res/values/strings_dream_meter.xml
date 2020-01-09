@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="editar_dream_meter"><u>Editar</u></string>
+    <string name="vende">Vende:</string>
+    <string name="vendiste">Vendiste:</string>
+    <string name="gana">Gana:</string>
+    <string name="ganaste">Ganaste:</string>
+    <string name="campania_dream_meter">C%s</string>
+    <string name="terminos_condiciones">*Ganancia referencial, calculada con base en el comportamiento de compra histórico. Recuerda cumplir el monto mínimo cada campaña.</string>
+    <string name="costo">Costo:</string>
+    <string name="como_alcanzarlo">¿Cómo alcanzarlo?</string>
+    <string name="ocurrio_un_error">Ocurrió un error</string>
+    <string name="pregunta_suenio">¿Que sueño quieres alcanzar en esta navidad?</string>
+    <string name="definelo_con_un_nombre">Defínelo con un nombre</string>
+    <string name="cuanto_necesitas_para_lograrlo">¿Cuánto necesitas para lograrlo?</string>
+    <string name="escribelo_abajo">Escribelo abajo</string>
+    <string name="revisa_la_ganancia_ingresada">¡Revisa la ganancia ingresada!</string>
+    <string name="ingresa_una_ganancia_menor">Ingresa una ganancia menor</string>
+    <string name="mensaje_sueno_ya_logrado">¡Felicitaciones, alcanzaste tu sueño!\nSigue pasando pedidos para obtener una mayor ganancia.</string>
+    <string name="mensaje_sueno_aun_no_logrado">Para lograr tu sueño te recomendamos pasar un monto de pedido entre %s y %s</string>
+</resources>

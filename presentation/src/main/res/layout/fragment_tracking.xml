@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.home.tracking.TrackingFragment" >
+
+    <RelativeLayout
+        android:id="@+id/rlt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_activity_third"
+        android:visibility="visible">
+
+        <biz.belcorp.consultoras.common.component.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@color/white"
+            app:pstsTabPaddingLeftRight="14dp"
+            app:pstsShouldExpand="true"
+            app:pstsTextAllCaps="true"
+            app:pstsTabSwitch="true"
+            app:pstsDividerColor="#00000000"
+            app:pstsActivateTextColor="@color/black"
+            app:pstsDeactivateTextColor="#FFCCCCCC"
+            app:pstsUnderlineColor="#00000000"
+            app:pstsIndicatorColor="@color/primary"
+            app:pstsIndicatorHeight="2dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tabs"
+            android:background="@color/disabled" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/TrackingContent"
+        android:id="@+id/rlt_content_list_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvw_message"
+            style="@style/TrackingListNullText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tracking_no_items"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

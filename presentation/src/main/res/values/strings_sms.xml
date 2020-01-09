@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Phone -->
+    <string name="phone_title">ACTUALIZA TU CELULAR</string>
+    <string name="phone_not_registered">Aún no has registrado un número de celular. Llena el siguiente campo para añadirlo.</string>
+    <string name="phone_current_number">TU NÚMERO ACTUAL ES</string>
+    <string name="phone_enter_number">INGRESA TU NUEVO NÚMERO</string>
+    <string name="phone_confirm">CONFIRMAR</string>
+    <string name="phone_cancel"><u>CANCELAR</u></string>
+    <string name="phone_terms">Estoy de acuerdo con los <b><u>términos y condiciones</u></b> sobre protección de datos personales</string>
+
+    <!-- SMS -->
+    <string name="sms_title">INGRESAR EL CÓDIGO</string>
+    <string name="sms_main_tittle">REVISA TU CELULAR</string>
+    <string name="sms_send_message">Te hemos enviado un\ncódigo SMS al $</string>
+    <string name="sms_time_left">El código caduca en </string>
+    <string name="sms_time_out">El código ha caducado</string>
+    <string name="sms_new_code"><u>REENVIARME EL CÓDIGO</u></string>
+    <string name="sms_not_my_number">¿Este no es tu número?</string>
+    <string name="sms_change_number"><u>Cambia tu número</u></string>
+    <string name="sms_sending_code">Enviando código...</string>
+    <string name="sms_phone_changed">Se cambio el número correctamente</string>
+    <string name="sms_max_retries">Has alcanzado el número máximo de envios.</string>
+
+    <!-- NUMBER VALIDATIONS -->
+    <string name="length_validation">El número debe tener $ digitos</string>
+    <string name="start_number_validation">El número debe empezar con $</string>
+    <string name="no_valid_number">Por favor verifique su número de telefono</string>
+    <string name="no_terms_accepted">Debe aceptar los termines y condiciones para continuar</string>
+
+    <!-- COMPONENTE -->
+    <string name="sms_component_success">Código Correcto</string>
+    <string name="sms_component_failure">Código Incorrecto</string>
+
+    <!-- SERVICE -->
+    <string name="sms_service_error">El servicio no responde, intentelo mas tarde</string>
+
+    <!-- Dialogo -->
+    <string name="sms_dialog_body">¿Estas seguro de finalizar la actualización de datos?</string>
+    <string name="sms_full_screen_dialog_title">¡ACTUALIZASTE TU CELULAR!</string>
+    <string name="sms_full_screen_dialog_body">Continúa descubriendo todos los beneficios que tenemos para ti.</string>
+    <string name="sms_full_screen_dialog_button">IR AL HOME</string>
+    <string name="sms_full_screen_dialog_action"><u>Quiero seguir actualizando mis datos</u></string>
+
+</resources>

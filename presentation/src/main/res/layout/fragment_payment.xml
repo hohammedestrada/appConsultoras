@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.payment.PaymentFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/btn_add_payment"
+        android:fillViewport="false">
+
+        <LinearLayout
+            style="@style/PaymentContentHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvw_title"
+                style="@style/DebtPaymentHistoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/debt_history_title" />
+
+            <TextView
+                android:id="@+id/tvw_debt"
+                style="@style/DebtPaymentHistorySubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/debt_history_debt" />
+
+            <TextView
+                android:id="@+id/tvw_amount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/add_payment_how_much_pay"
+                android:textAllCaps="true"
+                android:textColor="#8a8a8a"
+                android:textSize="16sp"
+                tools:ignore="SmallSP" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_bottom_dark">
+
+                <TextView
+                    android:id="@+id/tvw_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    tools:ignore="LabelFor" />
+
+                <biz.belcorp.consultoras.common.component.CurrencyEditText
+                    android:id="@+id/edt_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:maxLength="14"
+                    android:padding="8dp"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvw_send_constancy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:text="@string/payment_send_transaction_label" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/swc_share_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_add_payment"
+        style="@style/BottomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/debt_history_send_payment" />
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <!-- Error message appearance here -->
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="AppTheme.TextLabelAppearance" parent="TextAppearance.Design.Hint">
+        <!-- Floating label appearance here -->
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="ClientSubtitle" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="ClientSubtitleInactive" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#66000000</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="ClientSubtitleMessage" parent="FontLatoRegular">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#8a8a8a</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <style name="ClientLabel" parent="FontLatoRegular">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#66000000</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="ClientValue" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="ClientTextCardButton" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="ClientTextButton" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_third</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+</resources>

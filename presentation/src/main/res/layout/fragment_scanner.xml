@@ -1,0 +1,89 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="biz.belcorp.consultoras.feature.scanner.ScannerFragment">
+
+    <biz.belcorp.mobile.components.scanner.Scanner
+        android:id="@+id/scannerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:borderColor="@color/brand_general"
+        app:borderHorizontal="true"
+        app:borderLength="@dimen/dp12"
+        app:borderWidth="@dimen/dp4"
+        app:laserEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCorner="false"
+        app:squaredFinder="true" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/firstMessageText"
+        style="@style/FontLatoRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/scanner_first_message"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/scanner_text_size_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideLineBottom" />
+
+    <TextView
+        style="@style/FontLatoRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:gravity="center"
+        android:text="@string/scanner_second_message"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/scanner_text_size_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstMessageText" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivw_image_null"
+            style="@style/MyOrdersErrorIcon"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_network_error" />
+
+        <TextView
+            style="@style/MyOrdersErrorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scanner_message_error" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

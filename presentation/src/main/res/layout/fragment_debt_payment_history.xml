@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".feature.history.DebtPaymentHistoryFragment">
+
+    <RelativeLayout
+        android:id="@+id/llt_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llt_header_sin_deuda"
+            style="@style/DebtPaymentHistoryContentHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_header_content"
+            style="@style/DebtPaymentHistoryContentHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llt_header_sin_deuda"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llt_with_debt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvw_title"
+                        style="@style/DebtPaymentHistoryTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/debt_history_title" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvw_debt"
+                            style="@style/DebtPaymentHistorySubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/debt_history_debt" />
+
+                        <ImageView
+                            android:id="@+id/ivw_arrow_down"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_toEndOf="@id/tvw_debt"
+                            android:contentDescription="@null"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/arrow_down"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt_reminder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@null"
+                            app:srcCompat="@drawable/ic_bell_notification"/>
+
+                        <TextView
+                            android:id="@+id/tvw_recordatory"
+                            style="@style/DebtPaymentHistoryItemRecordatorio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/debt_history_recordatorio" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_add_debt"
+                            style="@style/DebtHistoryAddButton"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/debt_history_add_debt" />
+
+                        <Button
+                            android:id="@+id/btn_add_payment"
+                            style="@style/DebtPaymentHistoryButton"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/debt_history_register_payment" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_without_debt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="10dp">
+
+                        <biz.belcorp.consultoras.common.animation.ripple.RippleView
+                            android:id="@+id/ripple_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_circle"
+                            android:contentDescription="@null"
+                            android:padding="8dp"
+                            app:srcCompat="@drawable/ic_confeti_white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/DebtPaymentHistoryLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/debt_history_debt_no_debts"
+                        android:textColor="@color/primary" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlt_send_debt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivw_send"
+                        style="@style/DebtPaymentHistoryInputIcon.Left"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_sent" />
+
+                    <TextView
+                        style="@style/DebtPaymentHistoryLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ivw_send"
+                        android:text="@string/debt_history_send_debt" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvw_movements"
+                        style="@style/DebtPaymentHistoryHeaderTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/debt_history_movements" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@color/accent" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/disabled" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            style="@style/DebtPaymentHistoryItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llt_header_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvw_movements"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="70dp"
+                tools:listitem="@layout/item_debt_payment_history" />
+
+            <LinearLayout
+                android:id="@+id/rlt_no_movements"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/DebtPaymentHistoryMovementsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/debt_history_debt_no_movements_title" />
+
+                <TextView
+                    style="@style/DebtPaymentHistoryMovementsMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/debt_history_debt_no_movements_message" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/llt_confetti"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+
+</ScrollView>

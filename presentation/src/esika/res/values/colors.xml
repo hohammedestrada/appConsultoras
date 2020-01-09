@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors: Themes -->
+    <color name="primary">#E81C36</color>
+    <color name="secundary">#A18328</color>
+    <color name="primary_dark">#BF0206</color>
+    <color name="accent">#E81C36</color>
+    <color name="window_background">#F8F8F8</color>
+    <color name="nav_bar">#D71A32</color>
+    <color name="toolbar_text_secondary">#821827</color>
+
+    <color name="edge_efect">#40D8D8D8</color>
+
+    <color name="toolbar_secondary">#fff</color>
+
+    <color name="text_primary">#000</color>
+    <color name="text_secundary">#7C7C7C</color>
+    <color name="text_tertiary">#999</color>
+    <color name="text_fourth">#801d1d26</color>
+    <color name="purple">#613c87</color>
+    <color name="button_primary">#E81C36</color>
+    <color name="button_primary_pressed">#D71A32</color>
+    <color name="button_primary_text">#FFF</color>
+    <color name="button_disabled">#BBB</color>
+
+    <color name="button_third">#fff</color>
+    <color name="button_third_pressed">#f5f2e9</color>
+    <color name="button_third_text">#000000</color>
+
+    <color name="bg_gradient_primary">#FF335A</color>
+    <color name="bg_gradient_secundary">#FF335A</color>
+
+    <color name="bg_gradient_primary_circle">#821827</color>
+    <color name="bg_gradient_secundary_circle">#E81C36</color>
+
+    <!-- End Colors Themes -->
+
+    <!-- Colors: Controls -->
+
+    <!--    Controls: Tooltip -->
+    <color name="tooltip_inside">#E81C36</color>
+    <color name="tooltip_outside">#00FFFFFF</color>
+    <color name="tooltip_text">#FFF</color>
+    <!--    End Controls Tooltip -->
+
+    <!-- End Colors Controls -->
+
+    <color name="card_view_item">#33a18328</color>
+    <color name="card_view_selected">#a18328</color>
+    <color name="card_view_unselected">#33a18328</color>
+    <color name="card_view_left_line_active">#E81C36</color>
+    <color name="card_view_left_line_inactive">#33E81C36</color>
+    <color name="card_view_text_title_active">#000000</color>
+    <color name="card_view_text_title_inactive">#66000000</color>
+
+    <color name="text_third">#821827</color>
+
+    <!--    Controls: DatePicker -->
+    <color name="datepicker_bg">#E81C36</color>
+    <color name="datepicker_header_bg">#00FFFFFF</color>
+    <color name="datepicker_outside">#00FFFFFF</color>
+    <color name="datepicker_text">#E81C36</color>
+    <!--    End Controls Tooltip -->
+
+    <!--    HOME    -->
+    <color name="home_campaign_color">#a18328</color>
+    <color name="home_material_tap_color">#D9b3914e</color>
+    <!--    End Home-->
+
+    <!--    Payment History     -->
+    <color name="history_item_charge">#821827</color>
+    <color name="history_item_payment">#7F000000</color>
+    <color name="history_link">#821827</color>
+
+    <color name="ripple_color">#b2e81c36</color>
+    <color name="ripple_to_color">#1ee81c36</color>
+
+    <!--    Incentive Card     -->
+    <color name="incentive_item_text">#821827</color>
+    <color name="incentive_blocked">#443b3b3b</color>
+
+    <!--    Search Prompt -->
+    <color name="home_search_prompt">#D9b3914e</color>
+    <color name="toolbar_home">#FF335A</color>
+
+    <color name="new_primary">#ff335a</color>
+
+    <!-- Re-design Home -->
+    <color name="home_offer">#be9040</color>
+    <color name="home_collection">#ff6000</color>
+    <color name="home_beauty">#d21194</color>
+    <color name="home_winclick">#00c7b3</color>
+    <color name="home_catalog">#120ca3</color>
+    <color name="home_order">#ff335a</color>
+</resources>

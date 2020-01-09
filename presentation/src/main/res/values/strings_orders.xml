@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="orders_title">Ingresar pedido</string>
+    <string name="order_detail_title">Pedido Reservado</string>
+    <string name="product_detail_title">Detalle de Producto</string>
+    <string name="walk_success_title">Camino al éxito</string>
+    <string name="orders_error">Hubo un error al consultar Pedidos. Por favor inténtelo nuevamente en unos minutos.</string>
+    <string name="my_history_error">Hubo un error al consultar el historial de pedidos. Por favor inténtelo nuevamente en unos minutos.</string>
+    <string name="my_offers_error">Hubo un error al consultar Ofertas. Por favor inténtelo nuevamente en unos minutos.</string>
+
+    <string name="dg_pedido_facturado_title">Lo sentimos</string>
+    <string name="dg_pedido_facturado_message">En este momento estamos facturando tu pedido. Inténtalo más tarde.</string>
+
+    <string name="dg_pedido_reservado_title">Tu pedido se encuentra reservado</string>
+    <string name="dg_pedido_reservado_message">¿Deseas modificarlo para seguir agregando más productos?</string>
+    <string name="dg_pedido_reservado_accept">Modificar</string>
+    <string name="dg_pedido_reservado_cancel">Cancelar</string>
+
+    <string name="dg_no_existe_title">Lo sentimos</string>
+    <string name="dg_no_existe_message">El producto solicitado no existe.</string>
+
+    <string name="dg_maximo_excedido_title">Lo sentimos</string>
+    <string name="dg_maximo_excedido_message">Usted ya ingresó la cantidad total permitida para éste producto.</string>
+
+    <string name="dg_no_reserva_title">Lo sentimos</string>
+    <string name="kit_inicio_info">Empieza tu negocio ganando con este Kit; que se agrega automáticamente a tu pedido.</string>
+    <string name="socia_info">Productos estratégicos de la campaña adquiridos a un precio exclusivo para Socias Empresarias, con el objetivo de impulsar su demostración en campo. Válido sólo 1 unidad por Socia.</string>
+
+    <string name="no"><u>No, gracias</u></string>
+    <string name="eliminar">Sí, Eliminar</string>
+    <string name="eliminar_item_message">Estás a punto de eliminar este producto.\n¿Deseas continuar?</string>
+
+    <string-array name="order_arrays">
+        <item>VISTA POR PRODUCTO</item>
+        <item>VISTA POR CLIENTE</item>
+    </string-array>
+
+    <string name="backorder_message">No contamos con stock de este producto. ¿Deseas que te lo entreguemos en la siguiente campaña?</string>
+    <string name="backorder_delete">No, Elimínalo</string>
+    <string name="backorder_accept">¡SI, POR FAVOR!</string>
+
+    <!-- Next -->
+    <string name="tvw_tooltip_estas">Estas a punto de eliminar el producto:</string>
+    <string name="tvw_tooltip_deseas">¿Deseas continuar?</string>
+    <string name="btn_tooltip_no">No, gracias.</string>
+    <string name="btn_tooltip_delete">Sí, eliminar</string>
+
+    <string name="excedido">las unidades ingresadas exceden el máximo permitido (%s) en esta campaña.</string>
+    <string name="sin_stock">En estos momentos no tenemos disponibilidad</string>
+</resources>

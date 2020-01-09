@@ -1,0 +1,251 @@
+{
+  "project_info": {
+    "project_number": "838191778869",
+    "firebase_url": "https://consultoras-87a2c.firebaseio.com",
+    "project_id": "consultoras-87a2c",
+    "storage_bucket": "consultoras-87a2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:db164c7270c2acac",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.esika"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:ad903360a3b74fa4",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.esika.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:e7fac685e490db3d",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.esika.develop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:cc2d65383339c1e0",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.esika.review"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:93acb3e2cd481cfb",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.esika.stage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:384fe1eae8dc065e",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.lbel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:26e5f32091c08488",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.lbel.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:c6433814e2ea4a1a",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.lbel.develop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:c8f985d64322d7ad",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.lbel.review"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838191778869:android:b7d6d3c28a8e00c4",
+        "android_client_info": {
+          "package_name": "biz.belcorp.consultoras.lbel.stage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttbl8kMiC4klFWzJxw-sg1zoHee5jsAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838191778869-4c43jddnt872nbfb69tovj6blik7q6c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/lnr_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/view_monto_pagar"/>
+
+
+        <TextView
+            android:id="@+id/tvwTerminos"
+            style="@style/PayTextStyle.Recordatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/terms_pay" />
+        <Button
+            android:id="@+id/btn_paid_continue"
+            style="@style/MiPerfilSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="0dp"
+            android:enabled="false"
+            android:text="@string/contiuar"
+            />
+    </LinearLayout>
+</LinearLayout>

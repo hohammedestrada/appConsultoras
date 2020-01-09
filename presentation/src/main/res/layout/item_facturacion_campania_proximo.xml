@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp7"
+    android:paddingBottom="@dimen/dp7"
+    android:paddingLeft="@dimen/dp14"
+    android:paddingRight="@dimen/dp14"
+    android:background="@color/bg_grey">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/vw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp29"
+            android:paddingRight="@dimen/dp29">
+
+            <TextView
+                style="@style/FontLatoRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proximamente"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvwCampania"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontLatoBold"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/dp20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/vw"
+            android:paddingRight="@dimen/dp29"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/FontLatoBold"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12"
+                android:text="@string/facturacion_"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                style="@style/FontLatoRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvwFechaFacturacion"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                style="@style/FontLatoBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp7"
+                android:id="@+id/tvwInfoFechaPago"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                style="@style/FontLatoRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp18"
+                android:id="@+id/tvwFecha"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/dp14" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

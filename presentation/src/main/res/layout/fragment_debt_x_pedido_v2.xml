@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlt_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="biz.belcorp.consultoras.feature.client.note.NoteActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvw_debt_amount"
+        style="@style/ClientCardSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            style="@style/ClientCardContentActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llt_debt_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvw_debt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="01 Jul | PEDIDO BELCORP" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|bottom"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/CardSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:maxLength="18"
+                        android:text="@string/debt_edit_title_amount"
+                        android:textAllCaps="true" />
+
+                    <TextView
+                        android:id="@+id/tvw_total_antes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:text="S/ 123"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvw_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:text="S/ 456"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llt_aplicar_dcto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        app:srcCompat="@drawable/ic_index" />
+
+                    <TextView
+                        style="@style/ClientSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16sp"
+                        android:text="APLICAR DESCUENTO" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/DebtPaymentHistoryHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:text="PEDIDO" />
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="@color/primary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_enviar_detalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/ic_sent" />
+
+            <TextView
+                style="@style/ClientSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="ENVIAR DETALLE" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svw_pedidos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:fillViewport="true"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rvw_debt_productos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!---->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/linearLayout2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="end"-->
+    <!--android:background="@color/white"-->
+    <!--android:gravity="end"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingRight="16dp">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingRight="24dp"-->
+    <!--android:text="TOTAL"-->
+    <!--android:textSize="20sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvw_total"-->
+    <!--style="@style/FontLatoBold"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="8dp"-->
+    <!--android:text="S/ 123.45"-->
+    <!--android:textSize="20sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/btn_note_add"&ndash;&gt;-->
+    <!--&lt;!&ndash;style="@style/BottomButton"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="48dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentBottom="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentStart="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="@string/debt_history_update_debt" />&ndash;&gt;-->
+
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

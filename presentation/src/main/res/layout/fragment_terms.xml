@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lltOptions"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            style="@style/ActivityContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvw_terms_subtitle"
+                style="@style/ToolbarTitle.Light"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_subtitle"/>
+
+            <TextView
+                android:id="@+id/tvw_terms_description"
+                style="@style/TextAppearance.Message.Normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_descripcion"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:id="@+id/llt_terms_aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/chk_terms_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvw_terms_check"
+                    style="@style/TextAppearance.Message.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/terms_check" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llt_privacity_aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/chk_privacy_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvw_privacy_check"
+                    style="@style/TextAppearance.Message.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/terms_privacy_check" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvw_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="@string/terms_message"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/lltOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/disabled" />
+
+        <Button
+            android:id="@+id/btn_terms_aceptar"
+            style="@style/ButtonTheme.Primary"
+            android:text="@string/terms_finish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="25dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

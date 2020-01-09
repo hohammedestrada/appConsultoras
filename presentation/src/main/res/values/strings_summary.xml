@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="summary_title">RESUMEN</string>
+    <string name="summary_subtitle">%s, esta es la lista de productos:</string>
+    <string name="summary_added">%1$s, se han agregado %2$s productos:</string>
+    <string name="summary_rejected">%1$s, no se han podido agregar estos %2$s productos:</string>
+
+    <plurals name="summary_added_messages">
+        <item quantity="one">%1$s, se ha agregado este producto:</item>
+        <item quantity="other">%1$s, se han agregado estos %2$s productos:</item>
+    </plurals>
+
+    <plurals name="summary_rejected_messages">
+        <item quantity="one">%1$s, no se ha podido agregar este producto:</item>
+        <item quantity="other">%1$s, no se han podido agregar estos %2$s productos:</item>
+    </plurals>
+
+    <string name="tono_label">Tono: </string>
+</resources>

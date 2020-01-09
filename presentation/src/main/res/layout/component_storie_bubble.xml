@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_storie">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".07" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".07" />
+
+
+        <biz.belcorp.consultoras.common.component.stories.bubble.StorieAvatarView
+            android:id="@+id/storieAvatarView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/thumbnailstoriedefault"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline36"
+            app:layout_constraintStart_toStartOf="@+id/lineLeft"
+            app:layout_constraintTop_toTopOf="@+id/guideline43"
+            app:sbb_border_color="@android:color/darker_gray"
+            app:sbb_border_color_end="@android:color/holo_red_dark"
+            app:sbb_border_highlight_color="@color/button_primary"
+            app:sbb_border_highlight_color_end="@color/purple"
+            app:sbb_border_thickness="2dp"
+            app:sbb_border_thickness_highlight="2dp"
+            app:sbb_distance_to_border="2dp"
+            app:sbb_highlighted="true"
+            app:sbb_loading_arches="5"
+
+            />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".22" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/linearEndText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".32" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".268" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textView20"
+            style="@style/FontLatoBold"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/storie_bubble_title"
+            android:textColor="@color/default_magenta"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="4sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/guideline40"
+            app:layout_constraintEnd_toStartOf="@+id/lineRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/linearEndText"
+            app:layout_constraintTop_toTopOf="@+id/guideline39" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".501" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".56" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textView18"
+            style="@style/FontLatoRegular"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/storie_bubble_body"
+            android:textColor="@color/black"
+            app:autoSizeMaxTextSize="50sp"
+            app:autoSizeMinTextSize="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/guideline42"
+            app:layout_constraintEnd_toStartOf="@+id/lineRight"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearEndText"
+            app:layout_constraintTop_toTopOf="@+id/guideline41" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".73" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".892" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

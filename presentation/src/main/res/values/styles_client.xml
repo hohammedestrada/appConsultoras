@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.TextLabelAppearance" parent="TextAppearance.Design.Hint">
+        <!-- Floating label appearance here -->
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <!-- Error message appearance here -->
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:lineSpacingExtra">-1.8sp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="ClientTextInputLayout">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">#66000000</item>
+        <item name="android:textSize">10sp</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">#66000000</item>
+        <item name="colorControlHighlight">@color/black</item>
+        <item name="fontPath">fonts/lato-regular.ttf</item>
+    </style>
+
+    <style name="ClientTextInputEditText" parent="FontLatoRegular">
+        <item name="colorControlNormal">#dbdbdb</item>
+        <item name="colorControlActivated">@android:color/black</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="android:colorFocusedHighlight">@android:color/transparent</item>
+        <item name="android:colorActivatedHighlight">@android:color/transparent</item>
+        <item name="android:background">@drawable/edt_bg_white_selector</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textCursorDrawable">@color/black</item>
+        <item name="android:textColorHint">@color/hint_dark</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSelectHandleLeft">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandleRight">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandle">@drawable/zero_px_transparent</item>
+    </style>
+
+    <style name="ClientTextInputEditTextError" parent="FontLatoRegular">
+        <item name="colorControlNormal">#dbdbdb</item>
+        <item name="colorControlActivated">@android:color/black</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="android:colorFocusedHighlight">@android:color/transparent</item>
+        <item name="android:colorActivatedHighlight">@android:color/transparent</item>
+        <item name="android:background">@drawable/edt_bg_white_selector</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textCursorDrawable">@color/black</item>
+        <item name="android:textColorHint">@color/hint_dark</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSelectHandleLeft">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandleRight">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandle">@drawable/zero_px_transparent</item>
+    </style>
+
+    <style name="ClientTextActivityInputEditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="colorControlNormal">#dbdbdb</item>
+        <item name="colorControlActivated">@android:color/black</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="android:colorFocusedHighlight">@android:color/transparent</item>
+        <item name="android:colorActivatedHighlight">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@color/black</item>
+        <item name="android:background">@drawable/edt_bg_third_selector</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorHint">@color/hint_dark</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontPath">fonts/lato-regular.ttf</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSelectHandleLeft">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandleRight">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandle">@drawable/zero_px_transparent</item>
+    </style>
+
+    <style name="ClientContent">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">30dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@color/content_activity_third</item>
+    </style>
+
+    <style name="ClientCardContent">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@drawable/shape_box_card_view</item>
+    </style>
+
+    <style name="ClientCardContentInactive">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@drawable/shape_box_card_view_client_inactive</item>
+    </style>
+
+    <style name="ClientCardContentActive">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@drawable/shape_box_card_view_client</item>
+    </style>
+
+    <style name="ClientCardContentHeader">
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+    </style>
+
+    <style name="ClientCardContentLevel">
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+    </style>
+
+    <style name="ClientCardContentMultipleLevel" parent="FontLatoBold">
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+    </style>
+
+    <style name="ClientCardOptionContent">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingEnd">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+    </style>
+
+    <style name="ClientCardItemContent">
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <style name="ClientSubtitle" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="ClientSubtitleInactive" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#66000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="ClientSubtitleActive" parent="FontLatoBold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="ClientSubtitleMessage" parent="FontLatoRegular">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#8a8a8a</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <style name="ClientSubtitleDatosPersonales" parent="ClientSubtitle">
+        <item name="android:paddingBottom">26dp</item>
+    </style>
+
+    <style name="ClientSubtitleDireccion" parent="ClientSubtitle">
+        <item name="android:paddingTop">26dp</item>
+    </style>
+
+    <style name="ClientLabel" parent="FontLatoRegular">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#66000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="ClientValue" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="ClientTextCardButton" parent="FontLatoRegular">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_third</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="ClientTextButton" parent="FontLatoRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_third</item>
+        <item name="android:lineSpacingExtra">0.2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="ClientLineBottom">
+        <item name="android:background">#dbdbdb</item>
+    </style>
+
+    <style name="ClientDiv">
+        <item name="android:background">#dbdbdb</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="ClientOptionTitle" parent="FontLatoBold">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--NEW-->
+    <style name="ClientCardSection">
+        <item name="cardElevation">3dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="ClientCardSectionArrow">
+        <item name="android:layout_alignBottom">@+id/tvw_personal_data</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignTop">@+id/tvw_personal_data</item>
+        <item name="android:clickable">false</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="srcCompat">@drawable/ic_arrow_down_black</item>
+    </style>
+
+    <style name="ClientCardSectionBody.Personal">
+
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="ClientCardSectionBody">
+
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="ClientValue.Birthday">
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingStart">40dp</item>
+    </style>
+
+    <style name="ClientBirthdayIcon">
+        <item name="srcCompat">@drawable/ic_calendar</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+</resources>

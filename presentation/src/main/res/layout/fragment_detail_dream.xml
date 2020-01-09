@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctlt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/vwBgHeaderDream"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ba0102"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvwLabelNameDream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dream_meter_margin_top_bottom_header_pantalla_2"
+        android:text="@string/suenio"
+        android:textColor="#FFF"
+        android:textSize="@dimen/dream_meter_text_size_header"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvwNameDream"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvwNameDream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        tools:text="Una nuevo TV"
+        android:textColor="#FFF"
+        android:textSize="@dimen/dream_meter_text_size_header"
+        app:layout_constraintBottom_toBottomOf="@+id/tvwLabelNameDream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvwLabelNameDream"
+        app:layout_constraintTop_toTopOf="@+id/tvwLabelNameDream" />
+
+    <TextView
+        android:id="@+id/tvwLblCosto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/costo"
+        android:textColor="#FFF"
+        android:textSize="@dimen/dream_meter_text_size_header"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvwMoneySymbol"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwLabelNameDream" />
+
+    <TextView
+        android:id="@+id/tvwMoneySymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="4dp"
+        tools:text="S/"
+        android:textColor="#FFF"
+        android:textSize="@dimen/dream_meter_text_size_header"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvwLblCosto"
+        app:layout_constraintEnd_toStartOf="@id/tvwDreamAmount"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tvwLblCosto"
+        app:layout_constraintTop_toTopOf="@+id/tvwLblCosto" />
+
+    <TextView
+        android:id="@+id/tvwDreamAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="400"
+        android:textColor="#FFF"
+        android:textSize="@dimen/dream_meter_text_size_header"
+        app:layout_constraintBottom_toBottomOf="@+id/tvwLblCosto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tvwMoneySymbol"
+        app:layout_constraintTop_toTopOf="@+id/tvwLblCosto" />
+
+    <android.support.constraint.Group
+        android:id="@+id/grpEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="ivwEditar,tvwEditar"/>
+
+    <ImageView
+        android:id="@+id/ivwEditar"
+        android:contentDescription="@null"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginEnd="7.5dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvwEditar"
+        app:layout_constraintEnd_toStartOf="@id/tvwEditar"
+        app:layout_constraintTop_toTopOf="@id/tvwEditar"
+        app:srcCompat="@drawable/ic_editar_dream_meter" />
+
+    <TextView
+        android:id="@+id/tvwEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:padding="0dp"
+        android:text="@string/editar_dream_meter"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dream_meter_margin_top_bottom_header_pantalla_2"
+        app:layout_constraintTop_toBottomOf="@+id/tvwLblCosto" />
+
+    <TextView
+        android:id="@+id/tvwMensaje"
+        style="@style/FontLatoBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="@dimen/dream_meter_margin_top_mensaje"
+        android:layout_marginEnd="28dp"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="@dimen/dream_meter_text_size_mensaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+    <TextView
+        android:id="@+id/tvwMoneySymbolAmountNeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dream_meter_margin_top_money"
+        android:layout_marginEnd="4dp"
+        tools:text="S/"
+        android:textColor="#000"
+        android:textSize="20sp"
+        style="@style/FontLatoBold"
+        app:layout_constraintEnd_toStartOf="@id/tvwAmountNeeded"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvwMensaje" />
+
+    <TextView
+        android:id="@+id/tvwAmountNeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="800"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvwMoneySymbolAmountNeeded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvwMoneySymbolAmountNeeded"
+        app:layout_constraintTop_toTopOf="@+id/tvwMoneySymbolAmountNeeded" />
+
+    <TextView
+        android:id="@+id/tvwComoAlcanzarlo"
+        style="@style/FontLatoBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/como_alcanzarlo"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/ivwStar"
+        app:layout_constraintTop_toBottomOf="@+id/tvwAmountNeeded" />
+
+    <ImageView
+        android:contentDescription="@null"
+        android:id="@+id/ivwAdorno1"
+        android:layout_width="36dp"
+        android:layout_height="63dp"
+        android:src="@drawable/ic_adorno_1_dream_meter"
+        app:layout_constraintBottom_toBottomOf="@+id/vwBgHeaderDream"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="29dp"
+        android:contentDescription="@null"
+        android:layout_height="57.8dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/ic_adorno_2_dream_meter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwMensaje" />
+
+    <biz.belcorp.consultoras.feature.dreammeter.component.TermometroView
+        android:id="@+id/ivwTermometro"
+        android:layout_width="53dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="38dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_cinta_dream_meter"
+        app:layout_constraintBottom_toTopOf="@+id/ivwLazoNudo"
+        app:layout_constraintEnd_toEndOf="@+id/ivwLazoNudo"
+        app:layout_constraintTop_toBottomOf="@+id/tvwAmountNeeded"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageView
+        android:id="@+id/ivwStar"
+        android:layout_width="91dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_star_dream_meter"
+        app:layout_constraintBottom_toTopOf="@id/ivwTermometro"
+        app:layout_constraintEnd_toEndOf="@+id/ivwTermometro"
+        app:layout_constraintStart_toStartOf="@+id/ivwTermometro"
+        app:layout_constraintTop_toTopOf="@+id/ivwTermometro" />
+
+
+    <ImageView
+        android:id="@+id/ivwLazoNudo"
+        android:contentDescription="@null"
+        android:layout_width="90dp"
+        android:layout_height="98.9dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_lazo_dream_meter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvwCampanias"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@id/tvwEstosValoresSonReferenciales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvwComoAlcanzarlo"
+        app:layout_constraintTop_toBottomOf="@+id/tvwComoAlcanzarlo" />
+
+    <TextView
+        android:id="@+id/tvwEstosValoresSonReferenciales"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/terminos_condiciones"
+        android:textColor="#000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivwLazoNudo"
+        app:layout_constraintTop_toBottomOf="@id/rvwCampanias" />
+
+</android.support.constraint.ConstraintLayout>

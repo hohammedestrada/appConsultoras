@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home_error_network_title">No se pudo conectar a la red</string>
+    <string name="home_error_network_message">Comprueba tu conexión a internet.</string>
+
+    <string name="home_card_incentive_title">Ver</string>
+    <string name="home_card_incentive_sub_title">Incentivos</string>
+    <string name="home_card_bonificacion_sub_title">Bonificación</string>
+    <string name="home_card_bonificaciones_sub_title">Bonificación</string>
+    <string name="home_card_clients_title">Gestionar</string>
+    <string name="home_card_clients_sub_title"><![CDATA[<b>Clientes y cobranzas</b>]]></string>
+    <string name="home_card_order_title">Ingresar</string>
+    <string name="home_card_order_sub_title"><![CDATA[<b>Pedidos</b>]]></string>
+    <string name="home_card_offer_title">Ofertas</string>
+    <string name="home_card_offer_sub_title_gana_mas_formato"><![CDATA[<b>Gana+</b>]]></string>
+    <string name="home_card_offer_sub_title_gana_mas">Gana+</string>
+    <string name="home_card_offer_sub_title_offers_digitales">Ofertas Digitales</string>
+    <string name="home_card_offer_sub_title_ofertas_digitales"><![CDATA[<b>Digitales</b>]]></string>
+    <string name="home_card_offer_detail_ofertas_digitales">Descubre más de 150 ofertas hechas a tu medida</string>
+    <string name="home_card_chat_title"><![CDATA[<b>Chatea</b>]]> con nosotros</string>
+    <string name="home_card_new_line_character"><![CDATA[<br/>]]></string>
+    <string name="home_card_chat_sub_title"></string>
+    <string name="home_card_win_click_title"><![CDATA[<b>Conferencia</b>]]></string>
+    <string name="home_card_win_click_sub_title">Digital</string>
+    <string name="home_card_makeup_title"><![CDATA[<b>Asesor</b>]]></string>
+    <string name="home_card_makeup_sub_title">de belleza</string>
+    <string name="home_card_catalog_title"><![CDATA[<b>Catálogo</b>]]></string>
+    <string name="home_card_catalog_sub_title">Digital</string>
+    <string name="home_card_incentivo_colombia"><![CDATA[<b>Incentivos</b>]]>></string>
+    <string name="home_card_bonificacion_no_colombia">Bonificación</string>
+
+
+    <string name="home_card_dream_title"><![CDATA[<b>Medidor</b>]]></string>
+    <string name="home_card_dream_sub_title">de sueños</string>
+
+    <string name="home_welcome_message">¡Hola %s!</string>
+
+    <string name="home_birthday_message">¡Feliz cumpleaños %s!</string>
+    <string name="home_consultant_day_message">¡Feliz Día de la Consultora %s!</string>
+    <string name="home_anniversary_message">¡Feliz aniversario %s!</string>
+    <string name="home_christmas_message">¡Feliz navidad %s!</string>
+
+    <string name="home_christmas_body">La Navidad es más feliz gracias a tí.</string>
+    <string name="home_christmas_title">¡FELIZ NAVIDAD!</string>
+
+    <string name="home_new_year_message">¡Feliz año nuevo %s!</string>
+
+    <string name="home_new_year_body">Celebramos juntos esta fecha con mucha alegría</string>
+    <string name="home_new_year_title">¡FELIZ AÑO NUEVO!</string>
+
+    <string name="home_belcorp_fifty_message">¡Celebremos juntos, %s!</string>
+
+    <string name="home_campaign_label">C%1$S cierra el %3$S - %2$S %4$s</string>
+    <string name="home_past_campaign_label">C%1$S cierra hoy - %2$S  %4$s</string>
+
+    <string name="home_campaign_label_new">C%1$S cierra el %3$S - %2$S\n%4$s</string>
+    <string name="home_past_campaign_label_new">C%1$S cierra hoy - %2$S\n%4$s</string>
+    <string name="home_deuda_now">Tu deuda es de</string>
+    <string name="home_tu_deuda">Tu deuda</string>
+    <string name="home_tu_deuda_multi_order">Deuda</string>
+    <string name="home_linea_disponible">Linea disponible</string>
+    <string name="home_deuda_vence">vence</string>
+    <string name="home_deuda_vencio">venció</string>
+    <string name="home_deuda_empty">No tiene deuda</string>
+
+    <string name="home_no_time_left">El cierre es hoy - %s</string>
+
+    <plurals name="home_time_left">
+        <item quantity="one">(Falta %d día)</item>
+        <item quantity="other">(Faltan %d días)</item>
+    </plurals>
+
+    <string name="home_material_tap_title">DESDE EL MENÚ PODRÁS\nCompartir catálogos,\nVer tus productos agotados…</string>
+    <string name="home_material_tap_description">y mucho más…</string>
+
+    <string name="home_material_tap_title_cliente">AGREGA A TODOS TUS CLIENTES DESDE AQUÍ </string>
+    <string name="home_material_tap_description_cliente">Podrás contactarlos, pasar \npedido y gestionar tu cobranza.</string>
+
+    <string name="home_material_tap_title_deuda">INGRESA LAS DEUDAS DE TUS CLIENTES DESDE AQUÍ </string>
+    <string name="home_material_tap_description_deuda">Y organiza mejor tu cobranza</string>
+
+    <string name="home_add_client">Añadir cliente</string>
+    <string name="home_add_note">Añadir nota</string>
+    <string name="home_my_orders">Ver mis pedidos</string>
+    <string name="home_fanpage_hashtag">PARTICIPA CON\n%s</string>
+    <string name="home_fifty_hashtag">Participa con %s\ndesde el Menú Lateral</string>
+
+    <string name="home_dg_close_session_title">Estás a punto de cerrar sesión</string>
+    <string name="home_dg_close_session_message">¿Deseas cerrar su sesión?</string>
+
+    <plurals name="home_item_incentive_desc">
+        <item quantity="one">A %1$d punto del %2$s</item>
+        <item quantity="other">A %1$d puntosNivel del %2$s</item>
+    </plurals>
+
+    <plurals name="home_item_order_desc">
+        <item quantity="one">%1$d cliente con pedido en C%2$s</item>
+        <item quantity="other">%1$d clientes con pedido en C%2$s</item>
+    </plurals>
+
+    <plurals name="home_item_clients_desc">
+        <item quantity="one">%d cliente\nregistrados</item>
+        <item quantity="other">%d clientes\nregistrados</item>
+    </plurals>
+
+    <plurals name="home_item_clients_desc_simple">
+        <item quantity="one">%d cliente</item>
+        <item quantity="other">%d clientes</item>
+    </plurals>
+
+    <plurals name="home_item_clients_debt_desc_simple">
+        <item quantity="one">%f con pedido.</item>
+        <item quantity="other">%f con pedidos.</item>
+    </plurals>
+
+    <plurals name="home_item_debt_desc">
+        <item quantity="one">%1$s %2$s por cobrar.</item>
+        <item quantity="other">%1$s %2$s por cobrar.</item>
+    </plurals>
+
+    <string name="home_item_clients_vacio">Agrega y cobra las deudas de tus clientes.</string>
+
+    <string name="home_item_client_desc">clientes</string>
+    <string name="home_item_client_pedido_desc">con pedido</string>
+    <string name="home_item_client_none_order_desc">ninguno con pedido.</string>
+    <string name="home_item_client_none_client_desc">Registra y gestiona tus clientes</string>
+
+    <string name="home_item_order_con_ganancia_desc">de</string>
+    <string name="home_item_order_sin_ganancia_desc">Aún no ingresas tu pedido</string>
+    <string name="home_item_order_desc">%1$d clientes con pedido en C%2$s</string>
+    <string name="home_cerrar_sesion">CERRAR SESIÓN</string>
+    <string name="home_option_unavailable">La opción se encuentra restringida</string>
+    <string name="home_page_not_found">No se encontró la página solicitada.</string>
+
+    <string name="home_card_order_message_type_1">Ganancia estimada total</string>
+    <string name="home_card_order_message_type_2">Comisión y ahorro total</string>
+    <string name="home_card_order_message_type_3">Ganancia estimada total</string>
+    <string name="home_card_order_message_type_4">Oport. de ahorro total</string>
+    <string name="home_version_name">Versión %s</string>
+    <string name="notification_see_detail"><u>VER DETALLE</u></string>
+    <string name="notification_edit_order">MODIFICAR PEDIDO</string>
+    <string name="notification_see_later"><u>VER MÁS TARDE</u></string>
+    <string name="notification_accepted_order">ESTAMOS FACTURANDO %s</string>
+    <string name="notification_order_rejected">TU PEDIDO HA SIDO RECHAZADO.</string>
+    <string name="notification_accepted_order_detail">Te notificaremos si tiene alguna observación</string>
+
+    <string name="notification_postulant_title">Sesión en modo de prueba</string>
+    <string name="notification_postulant_detail">Una vez recibas tu código de consultora, podrás acceder a todos los beneficios de tu app %s Conmigo.</string>
+
+    <string name="home_search_prompt">¡Nuevo Buscador!\nEncuentra las mejores ofertas desde aquí.</string>
+
+    <string name="home_popup_update_mail_title">¡Estás perdiéndote las mejores ofertas!</string>
+    <string name="home_popup_update_mail_detail">Actualiza tu mail y entérate de nuestras novedades primero.</string>
+
+
+</resources>

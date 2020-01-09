@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:bottomLeftRadius="75dp" />
+
+    <gradient
+        android:angle="180"
+        android:centerColor="@color/gana_mas_festival_center"
+        android:endColor="@color/gana_mas_festival_end"
+        android:startColor="@color/gana_mas_festival_start"
+        android:type="linear" />
+    <padding
+        android:bottom="18dp"
+        android:left="15dp"
+        android:right="10dp"
+        android:top="12dp" />
+
+</shape>

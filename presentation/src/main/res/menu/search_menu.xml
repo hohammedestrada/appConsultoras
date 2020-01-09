@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:visible="false"
+        android:id="@+id/item_search"
+        android:icon="@drawable/ic_home_search"
+        app:showAsAction="always"
+        android:title="@null"/>
+
+    <item
+        android:id="@+id/item_orders"
+        android:icon="@drawable/ic_pedidos_white"
+        app:showAsAction="always"
+        android:title="@null"/>
+
+</menu>
